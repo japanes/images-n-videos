@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "updated": "2026-10-15",
+  "note": "The only place in the code base where Google model ids live. Prices in USD. Check against Google before each release.",
+  "models": [
+    {
+      "id": "gemini-3.1-flash-lite-image",
+      "kind": "image",
+      "title": "Nano Banana 2 Lite",
+      "region": "global",
+      "api": "generate_content",
+      "default": true,
+      "preview": false,
+      "price": {"input_per_1m": 0.25, "output_per_1m": 30.0, "image_output_tokens": {"1K": 1120}},
+      "caps": {"allowed_resolutions": ["1K"], "max_output_dimension": 1376, "accepts_references": true, "max_references": 10}
+    },
+    {
+      "id": "gemini-3.1-flash-image",
+      "kind": "image",
+      "title": "Nano Banana 2",
+      "region": "global",
+      "api": "generate_content",
+      "default": false,
+      "preview": false,
+      "price": {"input_per_1m": 0.5, "output_per_1m": 60.0, "image_output_tokens": {"512": 747, "1K": 1120, "2K": 1680, "4K": 2520}},
+      "caps": {"allowed_resolutions": ["1K", "2K", "4K"], "max_output_dimension": 5504, "accepts_references": true, "max_references": 14}
+    },
+    {
+      "id": "gemini-3-pro-image-preview",
+      "kind": "image",
+      "title": "Nano Banana Pro",
+      "region": "global",
+      "api": "generate_content",
+      "default": false,
+      "preview": true,
+      "price": {"input_per_1m": 2.0, "output_per_1m": 120.0, "image_output_tokens": {"1K": 1120, "2K": 1120, "4K": 2000}},
+      "caps": {"allowed_resolutions": ["1K", "2K", "4K"], "max_output_dimension": 5504, "accepts_references": true, "max_references": 14}
+    },
+    {
+      "id": "veo-3.1-lite-generate-001",
+      "kind": "video",
+      "title": "Veo 3.1 Lite",
+      "region": "us-central1",
+      "api": "veo",
+      "default": false,
+      "preview": false,
+      "price": {"per_second": {"720p": 0.05, "1080p": 0.08}},
+      "caps": {
+        "allowed_durations": [4, 6, 8], "allowed_resolutions": "720p,1080p@8", "allowed_aspects": ["9:16", "16:9"],
+        "max_duration_seconds": 8, "max_asset_references": 0, "max_input_video_seconds": 0,
+        "supports_negative_prompt": true, "generates_audio": true, "supports_audio_switch": true,
+        "frame_shadows_references": true, "supports_first_frame": true, "supports_last_frame": true
+      }
+    },
+    {
+      "id": "veo-3.1-fast-generate-001",
+      "kind": "video",
+      "title": "Veo 3.1 Fast",
+      "region": "us-central1",
+      "api": "veo",
+      "default": true,
+      "preview": false,
+      "price": {"per_second": {"720p": 0.10, "1080p": 0.12}},
+      "caps": {
+        "allowed_durations": [4, 6, 8], "allowed_resolutions": "720p,1080p@8", "allowed_aspects": ["9:16", "16:9"],
+        "max_duration_seconds": 8, "max_asset_references": 3, "max_input_video_seconds": 0,
+        "supports_negative_prompt": true, "generates_audio": true, "supports_audio_switch": true,
+        "frame_shadows_references": true, "supports_first_frame": true, "supports_last_frame": true
+      }
+    },
+    {
+      "id": "veo-3.1-generate-001",
+      "kind": "video",
+      "title": "Veo 3.1",
+      "region": "us-central1",
+      "api": "veo",
+      "default": false,
+      "preview": false,
+      "price": {"per_second": {"720p": 0.40, "1080p": 0.40, "4k": 0.60}},
+      "caps": {
+        "allowed_durations": [4, 6, 8], "allowed_resolutions": "720p,1080p@8,4k@8", "allowed_aspects": ["9:16", "16:9"],
+        "max_duration_seconds": 8, "max_asset_references": 3, "max_input_video_seconds": 0,
+        "supports_negative_prompt": true, "generates_audio": true, "supports_audio_switch": true,
+        "frame_shadows_references": true, "supports_first_frame": true, "supports_last_frame": true
+      }
+    },
+    {
+      "id": "gemini-omni-1.1-flash-preview",
+      "kind": "video",
+      "title": "Gemini Omni 1.1 Flash",
+      "region": "global",
+      "api": "omni",
+      "default": false,
+      "preview": true,
+      "price": {"input_per_1m": 0.5, "output_per_1m": 17.5, "output_tokens_per_second": 5792},
+      "caps": {
+        "allowed_durations": [3, 4, 5, 6, 7, 8, 9, 10], "allowed_resolutions": "720p,1080p", "allowed_aspects": ["9:16", "16:9"],
+        "max_duration_seconds": 10, "max_asset_references": 6, "max_input_video_seconds": 10,
+        "supports_negative_prompt": false, "generates_audio": true, "supports_audio_switch": false,
+        "frame_shadows_references": false, "supports_first_frame": true, "supports_last_frame": false
+      }
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "kind": "text",
+      "title": "Gemini 3 Flash",
+      "region": "global",
+      "api": "generate_content",
+      "default": true,
+      "preview": true,
+      "price": {"input_per_1m": 0.5, "output_per_1m": 3.0, "search_per_request": 0.014, "search_unit": "query"},
+      "caps": {"accepts_images": true, "json_mode": true, "strict_schema": true, "search": true, "thinking": true}
+    },
+    {
+      "id": "gemini-3.1-flash-lite-preview",
+      "kind": "text",
+      "title": "Gemini 3.1 Flash Lite",
+      "region": "global",
+      "api": "generate_content",
+      "default": false,
+      "preview": true,
+      "price": {"input_per_1m": 0.25, "output_per_1m": 1.5, "search_per_request": 0.014, "search_unit": "query"},
+      "caps": {"accepts_images": true, "json_mode": true, "strict_schema": true, "search": true, "thinking": true}
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "kind": "text",
+      "title": "Gemini 2.5 Flash",
+      "region": "global",
+      "api": "generate_content",
+      "default": false,
+      "preview": false,
+      "price": {"input_per_1m": 0.3, "output_per_1m": 2.5, "search_per_request": 0.035, "search_unit": "prompt"},
+      "caps": {"accepts_images": true, "json_mode": true, "strict_schema": true, "search": true, "thinking": true}
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "kind": "text",
+      "title": "Gemini 3.1 Pro",
+      "region": "global",
+      "api": "generate_content",
+      "default": false,
+      "preview": true,
+      "price": {"input_per_1m": 2.0, "output_per_1m": 12.0, "search_per_request": 0.014, "search_unit": "query"},
+      "caps": {"accepts_images": true, "json_mode": true, "strict_schema": true, "search": true, "thinking": true}
+    }
+  ]
+}

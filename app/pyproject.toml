@@ -1,0 +1,30 @@
+[project]
+name = "vf-app"
+version = "0.0.0"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = ["tests/fixtures"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "TID"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"google.genai".msg = "Only vf.core.google may talk to Google."
+"google.auth".msg = "Only vf.core.google may talk to Google."
+
+[tool.ruff.lint.per-file-ignores]
+"vf/core/google/*" = ["TID251"]
+"tests/*" = ["TID251"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+  "live: calls real Google APIs (needs a key, costs money)",
+]
+addopts = "-m 'not live'"

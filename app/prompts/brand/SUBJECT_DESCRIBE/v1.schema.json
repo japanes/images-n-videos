@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "description": {"type": "string", "maxLength": 1200},
+    "name": {"type": "string", "maxLength": 60}
+  },
+  "required": ["description", "name"]
+}

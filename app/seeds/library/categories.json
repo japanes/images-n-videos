@@ -1,0 +1,5297 @@
+{
+ "version": 1,
+ "categories": [
+  {
+   "slug": "odezhda-fashion",
+   "parent": null,
+   "depth": 0,
+   "sort": 1,
+   "title": "ОДЕЖДА / FASHION"
+  },
+  {
+   "slug": "obuv",
+   "parent": null,
+   "depth": 0,
+   "sort": 2,
+   "title": "ОБУВЬ"
+  },
+  {
+   "slug": "sumki",
+   "parent": null,
+   "depth": 0,
+   "sort": 3,
+   "title": "СУМКИ"
+  },
+  {
+   "slug": "aksessuary",
+   "parent": null,
+   "depth": 0,
+   "sort": 4,
+   "title": "АКСЕССУАРЫ"
+  },
+  {
+   "slug": "kosmetika-i-beauty",
+   "parent": null,
+   "depth": 0,
+   "sort": 5,
+   "title": "КОСМЕТИКА И BEAUTY"
+  },
+  {
+   "slug": "parfyumeriya",
+   "parent": null,
+   "depth": 0,
+   "sort": 6,
+   "title": "ПАРФЮМЕРИЯ"
+  },
+  {
+   "slug": "ukrasheniya",
+   "parent": null,
+   "depth": 0,
+   "sort": 7,
+   "title": "УКРАШЕНИЯ"
+  },
+  {
+   "slug": "chasy",
+   "parent": null,
+   "depth": 0,
+   "sort": 8,
+   "title": "ЧАСЫ"
+  },
+  {
+   "slug": "eda-i-napitki",
+   "parent": null,
+   "depth": 0,
+   "sort": 9,
+   "title": "ЕДА И НАПИТКИ"
+  },
+  {
+   "slug": "mebel-i-interer",
+   "parent": null,
+   "depth": 0,
+   "sort": 10,
+   "title": "МЕБЕЛЬ И ИНТЕРЬЕР"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness",
+   "parent": null,
+   "depth": 0,
+   "sort": 11,
+   "title": "ЗДОРОВЬЕ, СПОРТ И WELLNESS"
+  },
+  {
+   "slug": "stili-foto",
+   "parent": null,
+   "depth": 0,
+   "sort": 12,
+   "title": "СТИЛИ ФОТО"
+  },
+  {
+   "slug": "aksessuary/ochki-solntsezaschitnye-ochki",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 1,
+   "title": "ОЧКИ / СОЛНЦЕЗАЩИТНЫЕ ОЧКИ"
+  },
+  {
+   "slug": "chasy/na-zapyaste",
+   "parent": "chasy",
+   "depth": 1,
+   "sort": 1,
+   "title": "НА ЗАПЯСТЬЕ"
+  },
+  {
+   "slug": "eda-i-napitki/eda",
+   "parent": "eda-i-napitki",
+   "depth": 1,
+   "sort": 1,
+   "title": "ЕДА"
+  },
+  {
+   "slug": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 1,
+   "title": "КАТАЛОЖНАЯ / ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "mebel-i-interer/divany",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 1,
+   "title": "ДИВАНЫ"
+  },
+  {
+   "slug": "obuv/na-noge-na-modeli",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 1,
+   "title": "НА НОГЕ / НА МОДЕЛИ"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 1,
+   "title": "НА МОДЕЛИ"
+  },
+  {
+   "slug": "parfyumeriya/katalozhnaya-predmetnaya-semka",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 1,
+   "title": "КАТАЛОЖНАЯ / ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "stili-foto/fotografiya",
+   "parent": "stili-foto",
+   "depth": 1,
+   "sort": 1,
+   "title": "ФОТОГРАФИЯ"
+  },
+  {
+   "slug": "sumki/na-modeli",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 1,
+   "title": "НА МОДЕЛИ"
+  },
+  {
+   "slug": "ukrasheniya/koltsa",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 1,
+   "title": "КОЛЬЦА"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 1,
+   "title": "СИЛОВОЙ ИНВЕНТАРЬ"
+  },
+  {
+   "slug": "aksessuary/golovnye-ubory",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 2,
+   "title": "ГОЛОВНЫЕ УБОРЫ"
+  },
+  {
+   "slug": "chasy/predmetnaya-semka",
+   "parent": "chasy",
+   "depth": 1,
+   "sort": 2,
+   "title": "ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "eda-i-napitki/napitki",
+   "parent": "eda-i-napitki",
+   "depth": 1,
+   "sort": 2,
+   "title": "НАПИТКИ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 2,
+   "title": "НА МОДЕЛИ / ПРИМЕНЕНИЕ"
+  },
+  {
+   "slug": "mebel-i-interer/kresla",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 2,
+   "title": "КРЕСЛА"
+  },
+  {
+   "slug": "obuv/katalozhnaya-semka",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 2,
+   "title": "КАТАЛОЖНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "odezhda-fashion/maneken",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 2,
+   "title": "МАНЕКЕН"
+  },
+  {
+   "slug": "parfyumeriya/v-ruke-v-ispolzovanii",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 2,
+   "title": "В РУКЕ / В ИСПОЛЬЗОВАНИИ"
+  },
+  {
+   "slug": "stili-foto/commercial-editorial",
+   "parent": "stili-foto",
+   "depth": 1,
+   "sort": 2,
+   "title": "COMMERCIAL / EDITORIAL"
+  },
+  {
+   "slug": "sumki/katalozhnaya-semka",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 2,
+   "title": "КАТАЛОЖНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "ukrasheniya/sergi",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 2,
+   "title": "СЕРЬГИ"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 2,
+   "title": "ФИТНЕС-ИНВЕНТАРЬ"
+  },
+  {
+   "slug": "aksessuary/remni",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 3,
+   "title": "РЕМНИ"
+  },
+  {
+   "slug": "chasy/lifestyle",
+   "parent": "chasy",
+   "depth": 1,
+   "sort": 3,
+   "title": "LIFESTYLE"
+  },
+  {
+   "slug": "kosmetika-i-beauty/tekstura-swatch",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 3,
+   "title": "ТЕКСТУРА / SWATCH"
+  },
+  {
+   "slug": "mebel-i-interer/stulya",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 3,
+   "title": "СТУЛЬЯ"
+  },
+  {
+   "slug": "obuv/lifestyle-v-ispolzovanii",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 3,
+   "title": "LIFESTYLE / В ИСПОЛЬЗОВАНИИ"
+  },
+  {
+   "slug": "odezhda-fashion/studiynaya-semka",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 3,
+   "title": "СТУДИЙНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "parfyumeriya/luxury-still-life",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 3,
+   "title": "LUXURY STILL LIFE"
+  },
+  {
+   "slug": "stili-foto/atmosphere-look",
+   "parent": "stili-foto",
+   "depth": 1,
+   "sort": 3,
+   "title": "ATMOSPHERE / LOOK"
+  },
+  {
+   "slug": "sumki/vmestimost-i-funktsionalnost",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 3,
+   "title": "ВМЕСТИМОСТЬ И ФУНКЦИОНАЛЬНОСТЬ"
+  },
+  {
+   "slug": "ukrasheniya/ozherelya-tsepochki-kulony",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 3,
+   "title": "ОЖЕРЕЛЬЯ / ЦЕПОЧКИ / КУЛОНЫ"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 3,
+   "title": "ЙОГА / ПИЛАТЕС"
+  },
+  {
+   "slug": "aksessuary/sharfy-platki",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 4,
+   "title": "ШАРФЫ / ПЛАТКИ"
+  },
+  {
+   "slug": "chasy/luxury-kreativnaya-semka",
+   "parent": "chasy",
+   "depth": 1,
+   "sort": 4,
+   "title": "LUXURY / КРЕАТИВНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "kosmetika-i-beauty/ingredienty",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 4,
+   "title": "ИНГРЕДИЕНТЫ"
+  },
+  {
+   "slug": "mebel-i-interer/stoly",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 4,
+   "title": "СТОЛЫ"
+  },
+  {
+   "slug": "obuv/kreativnaya-predmetnaya-semka",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 4,
+   "title": "КРЕАТИВНАЯ ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "odezhda-fashion/lifestyle",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 4,
+   "title": "LIFESTYLE"
+  },
+  {
+   "slug": "parfyumeriya/atmosfernaya-kontseptualnaya-semka",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 4,
+   "title": "АТМОСФЕРНАЯ / КОНЦЕПТУАЛЬНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "stili-foto/digital-design",
+   "parent": "stili-foto",
+   "depth": 1,
+   "sort": 4,
+   "title": "DIGITAL / DESIGN"
+  },
+  {
+   "slug": "sumki/lifestyle",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 4,
+   "title": "LIFESTYLE"
+  },
+  {
+   "slug": "ukrasheniya/braslety",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 4,
+   "title": "БРАСЛЕТЫ"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 4,
+   "title": "RECOVERY / МАССАЖ"
+  },
+  {
+   "slug": "aksessuary/perchatki",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 5,
+   "title": "ПЕРЧАТКИ"
+  },
+  {
+   "slug": "chasy/podarochnaya-semka",
+   "parent": "chasy",
+   "depth": 1,
+   "sort": 5,
+   "title": "ПОДАРОЧНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "kosmetika-i-beauty/beauty-routine-lifestyle",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 5,
+   "title": "BEAUTY ROUTINE / LIFESTYLE"
+  },
+  {
+   "slug": "mebel-i-interer/krovati",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 5,
+   "title": "КРОВАТИ"
+  },
+  {
+   "slug": "obuv/flat-lay",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 5,
+   "title": "FLAT LAY"
+  },
+  {
+   "slug": "odezhda-fashion/street-urban",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 5,
+   "title": "STREET / URBAN"
+  },
+  {
+   "slug": "parfyumeriya/lifestyle",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 5,
+   "title": "LIFESTYLE"
+  },
+  {
+   "slug": "stili-foto/creative",
+   "parent": "stili-foto",
+   "depth": 1,
+   "sort": 5,
+   "title": "CREATIVE"
+  },
+  {
+   "slug": "sumki/kreativnaya-predmetnaya-semka",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 5,
+   "title": "КРЕАТИВНАЯ ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "ukrasheniya/broshi-piny",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 5,
+   "title": "БРОШИ / ПИНЫ"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 5,
+   "title": "СПОРТИВНОЕ ПИТАНИЕ"
+  },
+  {
+   "slug": "aksessuary/galstuki-babochki",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 6,
+   "title": "ГАЛСТУКИ / БАБОЧКИ"
+  },
+  {
+   "slug": "chasy/reklamnye-kreativy",
+   "parent": "chasy",
+   "depth": 1,
+   "sort": 6,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 6,
+   "title": "КРЕАТИВНАЯ ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "mebel-i-interer/shkafy-garderoby",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 6,
+   "title": "ШКАФЫ / ГАРДЕРОБЫ"
+  },
+  {
+   "slug": "obuv/seasonal",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 6,
+   "title": "SEASONAL"
+  },
+  {
+   "slug": "odezhda-fashion/magazin-showroom",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 6,
+   "title": "МАГАЗИН / SHOWROOM"
+  },
+  {
+   "slug": "parfyumeriya/po-harakteru-aromata",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 6,
+   "title": "ПО ХАРАКТЕРУ АРОМАТА"
+  },
+  {
+   "slug": "sumki/magazin-showroom",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 6,
+   "title": "МАГАЗИН / SHOWROOM"
+  },
+  {
+   "slug": "ukrasheniya/katalozhnaya-predmetnaya-semka",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 6,
+   "title": "КАТАЛОЖНАЯ / ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 6,
+   "title": "СПОРТИВНЫЕ БУТЫЛКИ / ШЕЙКЕРЫ"
+  },
+  {
+   "slug": "aksessuary/aksessuary-dlya-volos",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 7,
+   "title": "АКСЕССУАРЫ ДЛЯ ВОЛОС"
+  },
+  {
+   "slug": "kosmetika-i-beauty/flat-lay",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 7,
+   "title": "FLAT LAY"
+  },
+  {
+   "slug": "mebel-i-interer/komody-tumby",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 7,
+   "title": "КОМОДЫ / ТУМБЫ"
+  },
+  {
+   "slug": "obuv/detali-obuvi",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 7,
+   "title": "ДЕТАЛИ ОБУВИ"
+  },
+  {
+   "slug": "odezhda-fashion/fashion-editorial",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 7,
+   "title": "FASHION EDITORIAL"
+  },
+  {
+   "slug": "parfyumeriya/seasonal-prazdnichnye",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 7,
+   "title": "SEASONAL / ПРАЗДНИЧНЫЕ"
+  },
+  {
+   "slug": "sumki/seasonal",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 7,
+   "title": "SEASONAL"
+  },
+  {
+   "slug": "ukrasheniya/luxury-kreativnaya-semka",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 7,
+   "title": "LUXURY / КРЕАТИВНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/wellness-self-care",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 7,
+   "title": "WELLNESS / SELF-CARE"
+  },
+  {
+   "slug": "aksessuary/reklamnye-kreativy",
+   "parent": "aksessuary",
+   "depth": 1,
+   "sort": 8,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/seasonal-tematicheskie",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 8,
+   "title": "SEASONAL / ТЕМАТИЧЕСКИЕ"
+  },
+  {
+   "slug": "mebel-i-interer/stellazhi-polki",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 8,
+   "title": "СТЕЛЛАЖИ / ПОЛКИ"
+  },
+  {
+   "slug": "obuv/reklamnye-kreativy",
+   "parent": "obuv",
+   "depth": 1,
+   "sort": 8,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "odezhda-fashion/runway-podium",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 8,
+   "title": "RUNWAY / ПОДИУМ"
+  },
+  {
+   "slug": "parfyumeriya/detali-flakona",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 8,
+   "title": "ДЕТАЛИ ФЛАКОНА"
+  },
+  {
+   "slug": "sumki/detali-sumki",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 8,
+   "title": "ДЕТАЛИ СУМКИ"
+  },
+  {
+   "slug": "ukrasheniya/lifestyle",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 8,
+   "title": "LIFESTYLE"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/reklamnye-kreativy",
+   "parent": "zdorove-sport-i-wellness",
+   "depth": 1,
+   "sort": 8,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/detali-produkta",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 9,
+   "title": "ДЕТАЛИ ПРОДУКТА"
+  },
+  {
+   "slug": "mebel-i-interer/ofisnaya-mebel",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 9,
+   "title": "ОФИСНАЯ МЕБЕЛЬ"
+  },
+  {
+   "slug": "odezhda-fashion/flat-lay",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 9,
+   "title": "FLAT LAY"
+  },
+  {
+   "slug": "parfyumeriya/reklamnye-kreativy",
+   "parent": "parfyumeriya",
+   "depth": 1,
+   "sort": 9,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "sumki/reklamnye-kreativy",
+   "parent": "sumki",
+   "depth": 1,
+   "sort": 9,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "ukrasheniya/flat-lay-kompozitsii",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 9,
+   "title": "FLAT LAY / КОМПОЗИЦИИ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/reklamnye-kreativy",
+   "parent": "kosmetika-i-beauty",
+   "depth": 1,
+   "sort": 10,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "mebel-i-interer/ulichnaya-mebel",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 10,
+   "title": "УЛИЧНАЯ МЕБЕЛЬ"
+  },
+  {
+   "slug": "odezhda-fashion/odezhda-bez-cheloveka",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 10,
+   "title": "ОДЕЖДА БЕЗ ЧЕЛОВЕКА"
+  },
+  {
+   "slug": "ukrasheniya/detali-macro",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 10,
+   "title": "ДЕТАЛИ / MACRO"
+  },
+  {
+   "slug": "mebel-i-interer/predmety-interera",
+   "parent": "mebel-i-interer",
+   "depth": 1,
+   "sort": 11,
+   "title": "ПРЕДМЕТЫ ИНТЕРЬЕРА"
+  },
+  {
+   "slug": "odezhda-fashion/outdoor-priroda",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 11,
+   "title": "OUTDOOR / ПРИРОДА"
+  },
+  {
+   "slug": "ukrasheniya/seasonal-prazdnichnye",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 11,
+   "title": "SEASONAL / ПРАЗДНИЧНЫЕ"
+  },
+  {
+   "slug": "odezhda-fashion/seasonal",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 12,
+   "title": "SEASONAL"
+  },
+  {
+   "slug": "ukrasheniya/reklamnye-kreativy",
+   "parent": "ukrasheniya",
+   "depth": 1,
+   "sort": 12,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "odezhda-fashion/reklamnye-kreativy",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 13,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "odezhda-fashion/detali-tovara",
+   "parent": "odezhda-fashion",
+   "depth": 1,
+   "sort": 14,
+   "title": "ДЕТАЛИ ТОВАРА"
+  },
+  {
+   "slug": "aksessuary/aksessuary-dlya-volos/na-zhenskoy-modeli",
+   "parent": "aksessuary/aksessuary-dlya-volos",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женской модели"
+  },
+  {
+   "slug": "aksessuary/galstuki-babochki/na-muzhskoy-modeli",
+   "parent": "aksessuary/galstuki-babochki",
+   "depth": 2,
+   "sort": 1,
+   "title": "На мужской модели"
+  },
+  {
+   "slug": "aksessuary/golovnye-ubory/na-zhenskoy-modeli",
+   "parent": "aksessuary/golovnye-ubory",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женской модели"
+  },
+  {
+   "slug": "aksessuary/ochki-solntsezaschitnye-ochki/na-zhenskoy-modeli",
+   "parent": "aksessuary/ochki-solntsezaschitnye-ochki",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женской модели"
+  },
+  {
+   "slug": "aksessuary/perchatki/na-zhenskih-rukah",
+   "parent": "aksessuary/perchatki",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женских руках"
+  },
+  {
+   "slug": "aksessuary/reklamnye-kreativy/social-media-ad",
+   "parent": "aksessuary/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "aksessuary/remni/na-zhenskoy-modeli",
+   "parent": "aksessuary/remni",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женской модели"
+  },
+  {
+   "slug": "aksessuary/sharfy-platki/na-shee",
+   "parent": "aksessuary/sharfy-platki",
+   "depth": 2,
+   "sort": 1,
+   "title": "На шее"
+  },
+  {
+   "slug": "chasy/lifestyle/rabochiy-stol-business",
+   "parent": "chasy/lifestyle",
+   "depth": 2,
+   "sort": 1,
+   "title": "Рабочий стол / Business"
+  },
+  {
+   "slug": "chasy/luxury-kreativnaya-semka/dark-luxury",
+   "parent": "chasy/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Dark Luxury"
+  },
+  {
+   "slug": "chasy/na-zapyaste/zhenskoe-zapyaste",
+   "parent": "chasy/na-zapyaste",
+   "depth": 2,
+   "sort": 1,
+   "title": "Женское запястье"
+  },
+  {
+   "slug": "chasy/podarochnaya-semka/v-otkrytoy-korobke",
+   "parent": "chasy/podarochnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "В открытой коробке"
+  },
+  {
+   "slug": "chasy/predmetnaya-semka/chasy-na-poverhnosti",
+   "parent": "chasy/predmetnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Часы на поверхности"
+  },
+  {
+   "slug": "chasy/reklamnye-kreativy/social-media-ad",
+   "parent": "chasy/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "eda-i-napitki/eda/upakovannye-produkty",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 1,
+   "title": "УПАКОВАННЫЕ ПРОДУКТЫ"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/butylka-banka-upakovka",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 1,
+   "title": "БУТЫЛКА / БАНКА / УПАКОВКА"
+  },
+  {
+   "slug": "kosmetika-i-beauty/beauty-routine-lifestyle/vannaya-bathroom",
+   "parent": "kosmetika-i-beauty/beauty-routine-lifestyle",
+   "depth": 2,
+   "sort": 1,
+   "title": "Ванная / Bathroom"
+  },
+  {
+   "slug": "kosmetika-i-beauty/detali-produkta/dozator-pompa-pipetka",
+   "parent": "kosmetika-i-beauty/detali-produkta",
+   "depth": 2,
+   "sort": 1,
+   "title": "Дозатор / помпа / пипетка"
+  },
+  {
+   "slug": "kosmetika-i-beauty/flat-lay/odin-produkt",
+   "parent": "kosmetika-i-beauty/flat-lay",
+   "depth": 2,
+   "sort": 1,
+   "title": "Один продукт"
+  },
+  {
+   "slug": "kosmetika-i-beauty/ingredienty/tsvety",
+   "parent": "kosmetika-i-beauty/ingredienty",
+   "depth": 2,
+   "sort": 1,
+   "title": "Цветы"
+  },
+  {
+   "slug": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka/hero-3-4",
+   "parent": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Hero / 3/4"
+  },
+  {
+   "slug": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka/voda-splash",
+   "parent": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Вода / Splash"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie/guby-pomada-blesk",
+   "parent": "kosmetika-i-beauty/na-modeli-primenenie",
+   "depth": 2,
+   "sort": 1,
+   "title": "Губы / помада / блеск"
+  },
+  {
+   "slug": "kosmetika-i-beauty/reklamnye-kreativy/social-media-ad",
+   "parent": "kosmetika-i-beauty/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "kosmetika-i-beauty/seasonal-tematicheskie/vesna",
+   "parent": "kosmetika-i-beauty/seasonal-tematicheskie",
+   "depth": 2,
+   "sort": 1,
+   "title": "Весна"
+  },
+  {
+   "slug": "kosmetika-i-beauty/tekstura-swatch/krem-gel-mazok",
+   "parent": "kosmetika-i-beauty/tekstura-swatch",
+   "depth": 2,
+   "sort": 1,
+   "title": "Крем / гель / мазок"
+  },
+  {
+   "slug": "mebel-i-interer/divany/sovremennaya-gostinaya",
+   "parent": "mebel-i-interer/divany",
+   "depth": 2,
+   "sort": 1,
+   "title": "Современная гостиная"
+  },
+  {
+   "slug": "mebel-i-interer/komody-tumby/spalnya",
+   "parent": "mebel-i-interer/komody-tumby",
+   "depth": 2,
+   "sort": 1,
+   "title": "Спальня"
+  },
+  {
+   "slug": "mebel-i-interer/kresla/gostinaya",
+   "parent": "mebel-i-interer/kresla",
+   "depth": 2,
+   "sort": 1,
+   "title": "Гостиная"
+  },
+  {
+   "slug": "mebel-i-interer/krovati/sovremennaya-spalnya",
+   "parent": "mebel-i-interer/krovati",
+   "depth": 2,
+   "sort": 1,
+   "title": "Современная спальня"
+  },
+  {
+   "slug": "mebel-i-interer/ofisnaya-mebel/ofisnoe-kreslo",
+   "parent": "mebel-i-interer/ofisnaya-mebel",
+   "depth": 2,
+   "sort": 1,
+   "title": "Офисное кресло"
+  },
+  {
+   "slug": "mebel-i-interer/predmety-interera/svetilniki-torshery",
+   "parent": "mebel-i-interer/predmety-interera",
+   "depth": 2,
+   "sort": 1,
+   "title": "Светильники / торшеры"
+  },
+  {
+   "slug": "mebel-i-interer/shkafy-garderoby/spalnya",
+   "parent": "mebel-i-interer/shkafy-garderoby",
+   "depth": 2,
+   "sort": 1,
+   "title": "Спальня"
+  },
+  {
+   "slug": "mebel-i-interer/stellazhi-polki/gostinaya",
+   "parent": "mebel-i-interer/stellazhi-polki",
+   "depth": 2,
+   "sort": 1,
+   "title": "Гостиная"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/obedennye-stoly",
+   "parent": "mebel-i-interer/stoly",
+   "depth": 2,
+   "sort": 1,
+   "title": "Обеденные столы"
+  },
+  {
+   "slug": "mebel-i-interer/stulya/stolovaya",
+   "parent": "mebel-i-interer/stulya",
+   "depth": 2,
+   "sort": 1,
+   "title": "Столовая"
+  },
+  {
+   "slug": "mebel-i-interer/ulichnaya-mebel/terrasa",
+   "parent": "mebel-i-interer/ulichnaya-mebel",
+   "depth": 2,
+   "sort": 1,
+   "title": "Терраса"
+  },
+  {
+   "slug": "obuv/detali-obuvi/material-tekstura",
+   "parent": "obuv/detali-obuvi",
+   "depth": 2,
+   "sort": 1,
+   "title": "Материал / текстура"
+  },
+  {
+   "slug": "obuv/flat-lay/chistyy-flat-lay",
+   "parent": "obuv/flat-lay",
+   "depth": 2,
+   "sort": 1,
+   "title": "Чистый Flat Lay"
+  },
+  {
+   "slug": "obuv/katalozhnaya-semka/hero-3-4",
+   "parent": "obuv/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Hero 3/4"
+  },
+  {
+   "slug": "obuv/kreativnaya-predmetnaya-semka/na-pedestale",
+   "parent": "obuv/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "На пьедестале"
+  },
+  {
+   "slug": "obuv/lifestyle-v-ispolzovanii/casual-povsednevnaya",
+   "parent": "obuv/lifestyle-v-ispolzovanii",
+   "depth": 2,
+   "sort": 1,
+   "title": "Casual / повседневная"
+  },
+  {
+   "slug": "obuv/na-noge-na-modeli/zhenskaya-model",
+   "parent": "obuv/na-noge-na-modeli",
+   "depth": 2,
+   "sort": 1,
+   "title": "Женская модель"
+  },
+  {
+   "slug": "obuv/reklamnye-kreativy/social-media-ad",
+   "parent": "obuv/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "obuv/seasonal/vesna",
+   "parent": "obuv/seasonal",
+   "depth": 2,
+   "sort": 1,
+   "title": "Весна"
+  },
+  {
+   "slug": "odezhda-fashion/detali-tovara/tkan-tekstura",
+   "parent": "odezhda-fashion/detali-tovara",
+   "depth": 2,
+   "sort": 1,
+   "title": "Ткань / текстура"
+  },
+  {
+   "slug": "odezhda-fashion/fashion-editorial/zhurnalnaya-semka",
+   "parent": "odezhda-fashion/fashion-editorial",
+   "depth": 2,
+   "sort": 1,
+   "title": "Журнальная съёмка"
+  },
+  {
+   "slug": "odezhda-fashion/flat-lay/odezhda-na-poverhnosti",
+   "parent": "odezhda-fashion/flat-lay",
+   "depth": 2,
+   "sort": 1,
+   "title": "Одежда на поверхности"
+  },
+  {
+   "slug": "odezhda-fashion/lifestyle/kafe-restoran",
+   "parent": "odezhda-fashion/lifestyle",
+   "depth": 2,
+   "sort": 1,
+   "title": "Кафе / ресторан"
+  },
+  {
+   "slug": "odezhda-fashion/magazin-showroom/butik-showroom",
+   "parent": "odezhda-fashion/magazin-showroom",
+   "depth": 2,
+   "sort": 1,
+   "title": "Бутик / Showroom"
+  },
+  {
+   "slug": "odezhda-fashion/maneken/obychnyy-maneken",
+   "parent": "odezhda-fashion/maneken",
+   "depth": 2,
+   "sort": 1,
+   "title": "Обычный манекен"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/zhenskaya-model",
+   "parent": "odezhda-fashion/na-modeli",
+   "depth": 2,
+   "sort": 1,
+   "title": "Женская модель"
+  },
+  {
+   "slug": "odezhda-fashion/odezhda-bez-cheloveka/na-veshalke-podveshennaya",
+   "parent": "odezhda-fashion/odezhda-bez-cheloveka",
+   "depth": 2,
+   "sort": 1,
+   "title": "На вешалке / подвешенная"
+  },
+  {
+   "slug": "odezhda-fashion/outdoor-priroda/plyazh",
+   "parent": "odezhda-fashion/outdoor-priroda",
+   "depth": 2,
+   "sort": 1,
+   "title": "Пляж"
+  },
+  {
+   "slug": "odezhda-fashion/reklamnye-kreativy/instagram-ad",
+   "parent": "odezhda-fashion/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Instagram Ad"
+  },
+  {
+   "slug": "odezhda-fashion/runway-podium/fashion-week",
+   "parent": "odezhda-fashion/runway-podium",
+   "depth": 2,
+   "sort": 1,
+   "title": "Fashion Week"
+  },
+  {
+   "slug": "odezhda-fashion/seasonal/vesna",
+   "parent": "odezhda-fashion/seasonal",
+   "depth": 2,
+   "sort": 1,
+   "title": "Весна"
+  },
+  {
+   "slug": "odezhda-fashion/street-urban/gorodskaya-ulitsa-tsentr-goroda",
+   "parent": "odezhda-fashion/street-urban",
+   "depth": 2,
+   "sort": 1,
+   "title": "Городская улица / центр города"
+  },
+  {
+   "slug": "odezhda-fashion/studiynaya-semka/katalozhnaya-belyy-fon",
+   "parent": "odezhda-fashion/studiynaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Каталожная / белый фон"
+  },
+  {
+   "slug": "parfyumeriya/atmosfernaya-kontseptualnaya-semka/dym-tuman",
+   "parent": "parfyumeriya/atmosfernaya-kontseptualnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Дым / туман"
+  },
+  {
+   "slug": "parfyumeriya/detali-flakona/kryshka",
+   "parent": "parfyumeriya/detali-flakona",
+   "depth": 2,
+   "sort": 1,
+   "title": "Крышка"
+  },
+  {
+   "slug": "parfyumeriya/katalozhnaya-predmetnaya-semka/hero-3-4",
+   "parent": "parfyumeriya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Hero / 3/4"
+  },
+  {
+   "slug": "parfyumeriya/lifestyle/tualetnyy-stolik-vanity",
+   "parent": "parfyumeriya/lifestyle",
+   "depth": 2,
+   "sort": 1,
+   "title": "Туалетный столик / Vanity"
+  },
+  {
+   "slug": "parfyumeriya/luxury-still-life/mramor-kamen",
+   "parent": "parfyumeriya/luxury-still-life",
+   "depth": 2,
+   "sort": 1,
+   "title": "Мрамор / камень"
+  },
+  {
+   "slug": "parfyumeriya/po-harakteru-aromata/zhenstvennyy-romantic",
+   "parent": "parfyumeriya/po-harakteru-aromata",
+   "depth": 2,
+   "sort": 1,
+   "title": "Женственный / Romantic"
+  },
+  {
+   "slug": "parfyumeriya/reklamnye-kreativy/social-media-ad",
+   "parent": "parfyumeriya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "parfyumeriya/seasonal-prazdnichnye/vesna",
+   "parent": "parfyumeriya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 1,
+   "title": "Весна"
+  },
+  {
+   "slug": "parfyumeriya/v-ruke-v-ispolzovanii/v-zhenskoy-ruke",
+   "parent": "parfyumeriya/v-ruke-v-ispolzovanii",
+   "depth": 2,
+   "sort": 1,
+   "title": "В женской руке"
+  },
+  {
+   "slug": "sumki/detali-sumki/material-tekstura",
+   "parent": "sumki/detali-sumki",
+   "depth": 2,
+   "sort": 1,
+   "title": "Материал / текстура"
+  },
+  {
+   "slug": "sumki/katalozhnaya-semka/vid-speredi-hero",
+   "parent": "sumki/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Вид спереди / Hero"
+  },
+  {
+   "slug": "sumki/kreativnaya-predmetnaya-semka/na-pedestale",
+   "parent": "sumki/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "На пьедестале"
+  },
+  {
+   "slug": "sumki/lifestyle/casual-povsednevnaya",
+   "parent": "sumki/lifestyle",
+   "depth": 2,
+   "sort": 1,
+   "title": "Casual / повседневная"
+  },
+  {
+   "slug": "sumki/magazin-showroom/na-polke",
+   "parent": "sumki/magazin-showroom",
+   "depth": 2,
+   "sort": 1,
+   "title": "На полке"
+  },
+  {
+   "slug": "sumki/na-modeli/zhenskaya-model",
+   "parent": "sumki/na-modeli",
+   "depth": 2,
+   "sort": 1,
+   "title": "Женская модель"
+  },
+  {
+   "slug": "sumki/reklamnye-kreativy/social-media-ad",
+   "parent": "sumki/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "sumki/seasonal/vesna",
+   "parent": "sumki/seasonal",
+   "depth": 2,
+   "sort": 1,
+   "title": "Весна"
+  },
+  {
+   "slug": "sumki/vmestimost-i-funktsionalnost/otkrytaya-sumka-s-soderzhimym",
+   "parent": "sumki/vmestimost-i-funktsionalnost",
+   "depth": 2,
+   "sort": 1,
+   "title": "Открытая сумка с содержимым"
+  },
+  {
+   "slug": "ukrasheniya/braslety/na-zhenskom-zapyaste",
+   "parent": "ukrasheniya/braslety",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женском запястье"
+  },
+  {
+   "slug": "ukrasheniya/broshi-piny/na-odezhde",
+   "parent": "ukrasheniya/broshi-piny",
+   "depth": 2,
+   "sort": 1,
+   "title": "На одежде"
+  },
+  {
+   "slug": "ukrasheniya/detali-macro/kamen-ogranka",
+   "parent": "ukrasheniya/detali-macro",
+   "depth": 2,
+   "sort": 1,
+   "title": "Камень / огранка"
+  },
+  {
+   "slug": "ukrasheniya/flat-lay-kompozitsii/odno-ukrashenie",
+   "parent": "ukrasheniya/flat-lay-kompozitsii",
+   "depth": 2,
+   "sort": 1,
+   "title": "Одно украшение"
+  },
+  {
+   "slug": "ukrasheniya/katalozhnaya-predmetnaya-semka/chistyy-belyy-fon",
+   "parent": "ukrasheniya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Чистый белый фон"
+  },
+  {
+   "slug": "ukrasheniya/koltsa/na-zhenskoy-ruke",
+   "parent": "ukrasheniya/koltsa",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женской руке"
+  },
+  {
+   "slug": "ukrasheniya/lifestyle/povsednevnyy-obraz",
+   "parent": "ukrasheniya/lifestyle",
+   "depth": 2,
+   "sort": 1,
+   "title": "Повседневный образ"
+  },
+  {
+   "slug": "ukrasheniya/luxury-kreativnaya-semka/barhat-tkan",
+   "parent": "ukrasheniya/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 1,
+   "title": "Бархат / ткань"
+  },
+  {
+   "slug": "ukrasheniya/ozherelya-tsepochki-kulony/na-zhenskoy-modeli",
+   "parent": "ukrasheniya/ozherelya-tsepochki-kulony",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женской модели"
+  },
+  {
+   "slug": "ukrasheniya/reklamnye-kreativy/social-media-ad",
+   "parent": "ukrasheniya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "ukrasheniya/seasonal-prazdnichnye/valentine",
+   "parent": "ukrasheniya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 1,
+   "title": "Valentine"
+  },
+  {
+   "slug": "ukrasheniya/sergi/na-zhenskoy-modeli",
+   "parent": "ukrasheniya/sergi",
+   "depth": 2,
+   "sort": 1,
+   "title": "На женской модели"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar",
+   "depth": 2,
+   "sort": 1,
+   "title": "Резинки / эспандеры"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh",
+   "depth": 2,
+   "sort": 1,
+   "title": "Массажные пистолеты"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/reklamnye-kreativy/fitness-action-ad",
+   "parent": "zdorove-sport-i-wellness/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 1,
+   "title": "Fitness / Action Ad"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar",
+   "depth": 2,
+   "sort": 1,
+   "title": "Гантели / гири"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie",
+   "depth": 2,
+   "sort": 1,
+   "title": "Протеин / порошковые продукты"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery/v-ruke",
+   "parent": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery",
+   "depth": 2,
+   "sort": 1,
+   "title": "В руке"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/wellness-self-care/domashniy-wellness",
+   "parent": "zdorove-sport-i-wellness/wellness-self-care",
+   "depth": 2,
+   "sort": 1,
+   "title": "Домашний wellness"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/kovriki",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates",
+   "depth": 2,
+   "sort": 1,
+   "title": "Коврики"
+  },
+  {
+   "slug": "aksessuary/aksessuary-dlya-volos/krupnyy-plan-pricheski",
+   "parent": "aksessuary/aksessuary-dlya-volos",
+   "depth": 2,
+   "sort": 2,
+   "title": "Крупный план причёски"
+  },
+  {
+   "slug": "aksessuary/galstuki-babochki/na-zhenskoy-modeli-fashion-styling",
+   "parent": "aksessuary/galstuki-babochki",
+   "depth": 2,
+   "sort": 2,
+   "title": "На женской модели / Fashion styling"
+  },
+  {
+   "slug": "aksessuary/golovnye-ubory/na-muzhskoy-modeli",
+   "parent": "aksessuary/golovnye-ubory",
+   "depth": 2,
+   "sort": 2,
+   "title": "На мужской модели"
+  },
+  {
+   "slug": "aksessuary/ochki-solntsezaschitnye-ochki/na-muzhskoy-modeli",
+   "parent": "aksessuary/ochki-solntsezaschitnye-ochki",
+   "depth": 2,
+   "sort": 2,
+   "title": "На мужской модели"
+  },
+  {
+   "slug": "aksessuary/perchatki/na-muzhskih-rukah",
+   "parent": "aksessuary/perchatki",
+   "depth": 2,
+   "sort": 2,
+   "title": "На мужских руках"
+  },
+  {
+   "slug": "aksessuary/reklamnye-kreativy/story-vertical-ad",
+   "parent": "aksessuary/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "aksessuary/remni/na-muzhskoy-modeli",
+   "parent": "aksessuary/remni",
+   "depth": 2,
+   "sort": 2,
+   "title": "На мужской модели"
+  },
+  {
+   "slug": "aksessuary/sharfy-platki/na-golove",
+   "parent": "aksessuary/sharfy-platki",
+   "depth": 2,
+   "sort": 2,
+   "title": "На голове"
+  },
+  {
+   "slug": "chasy/lifestyle/avtomobil-luxury",
+   "parent": "chasy/lifestyle",
+   "depth": 2,
+   "sort": 2,
+   "title": "Автомобиль / Luxury"
+  },
+  {
+   "slug": "chasy/luxury-kreativnaya-semka/kamen-metall",
+   "parent": "chasy/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Камень / металл"
+  },
+  {
+   "slug": "chasy/na-zapyaste/muzhskoe-zapyaste",
+   "parent": "chasy/na-zapyaste",
+   "depth": 2,
+   "sort": 2,
+   "title": "Мужское запястье"
+  },
+  {
+   "slug": "chasy/podarochnaya-semka/premium-gift",
+   "parent": "chasy/podarochnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Premium gift"
+  },
+  {
+   "slug": "chasy/predmetnaya-semka/na-podstavke",
+   "parent": "chasy/predmetnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "На подставке"
+  },
+  {
+   "slug": "chasy/reklamnye-kreativy/story-vertical-ad",
+   "parent": "chasy/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "eda-i-napitki/eda/gotovye-blyuda",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 2,
+   "title": "ГОТОВЫЕ БЛЮДА"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/holod-refreshment",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 2,
+   "title": "ХОЛОД / REFRESHMENT"
+  },
+  {
+   "slug": "kosmetika-i-beauty/beauty-routine-lifestyle/tualetnyy-stolik-vanity",
+   "parent": "kosmetika-i-beauty/beauty-routine-lifestyle",
+   "depth": 2,
+   "sort": 2,
+   "title": "Туалетный столик / Vanity"
+  },
+  {
+   "slug": "kosmetika-i-beauty/detali-produkta/kistochka-applikator",
+   "parent": "kosmetika-i-beauty/detali-produkta",
+   "depth": 2,
+   "sort": 2,
+   "title": "Кисточка / аппликатор"
+  },
+  {
+   "slug": "kosmetika-i-beauty/flat-lay/nabor-kollektsiya",
+   "parent": "kosmetika-i-beauty/flat-lay",
+   "depth": 2,
+   "sort": 2,
+   "title": "Набор / коллекция"
+  },
+  {
+   "slug": "kosmetika-i-beauty/ingredienty/frukty-yagody-tsitrusy",
+   "parent": "kosmetika-i-beauty/ingredienty",
+   "depth": 2,
+   "sort": 2,
+   "title": "Фрукты / ягоды / цитрусы"
+  },
+  {
+   "slug": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka/vid-speredi",
+   "parent": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Вид спереди"
+  },
+  {
+   "slug": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka/pena-puzyrki",
+   "parent": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Пена / пузырьки"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie/glaza-teni-tush-podvodka",
+   "parent": "kosmetika-i-beauty/na-modeli-primenenie",
+   "depth": 2,
+   "sort": 2,
+   "title": "Глаза / тени / тушь / подводка"
+  },
+  {
+   "slug": "kosmetika-i-beauty/reklamnye-kreativy/story-vertical-ad",
+   "parent": "kosmetika-i-beauty/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "kosmetika-i-beauty/seasonal-tematicheskie/leto",
+   "parent": "kosmetika-i-beauty/seasonal-tematicheskie",
+   "depth": 2,
+   "sort": 2,
+   "title": "Лето"
+  },
+  {
+   "slug": "kosmetika-i-beauty/tekstura-swatch/syvorotka-kaplya",
+   "parent": "kosmetika-i-beauty/tekstura-swatch",
+   "depth": 2,
+   "sort": 2,
+   "title": "Сыворотка / капля"
+  },
+  {
+   "slug": "mebel-i-interer/divany/minimalistichnaya-gostinaya",
+   "parent": "mebel-i-interer/divany",
+   "depth": 2,
+   "sort": 2,
+   "title": "Минималистичная гостиная"
+  },
+  {
+   "slug": "mebel-i-interer/komody-tumby/gostinaya",
+   "parent": "mebel-i-interer/komody-tumby",
+   "depth": 2,
+   "sort": 2,
+   "title": "Гостиная"
+  },
+  {
+   "slug": "mebel-i-interer/kresla/ugolok-dlya-chteniya",
+   "parent": "mebel-i-interer/kresla",
+   "depth": 2,
+   "sort": 2,
+   "title": "Уголок для чтения"
+  },
+  {
+   "slug": "mebel-i-interer/krovati/minimal-japandi",
+   "parent": "mebel-i-interer/krovati",
+   "depth": 2,
+   "sort": 2,
+   "title": "Minimal / Japandi"
+  },
+  {
+   "slug": "mebel-i-interer/ofisnaya-mebel/rabochiy-stol",
+   "parent": "mebel-i-interer/ofisnaya-mebel",
+   "depth": 2,
+   "sort": 2,
+   "title": "Рабочий стол"
+  },
+  {
+   "slug": "mebel-i-interer/predmety-interera/zerkala",
+   "parent": "mebel-i-interer/predmety-interera",
+   "depth": 2,
+   "sort": 2,
+   "title": "Зеркала"
+  },
+  {
+   "slug": "mebel-i-interer/shkafy-garderoby/garderobnaya",
+   "parent": "mebel-i-interer/shkafy-garderoby",
+   "depth": 2,
+   "sort": 2,
+   "title": "Гардеробная"
+  },
+  {
+   "slug": "mebel-i-interer/stellazhi-polki/domashniy-ofis",
+   "parent": "mebel-i-interer/stellazhi-polki",
+   "depth": 2,
+   "sort": 2,
+   "title": "Домашний офис"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/zhurnalnye-stoliki",
+   "parent": "mebel-i-interer/stoly",
+   "depth": 2,
+   "sort": 2,
+   "title": "Журнальные столики"
+  },
+  {
+   "slug": "mebel-i-interer/stulya/kuhnya",
+   "parent": "mebel-i-interer/stulya",
+   "depth": 2,
+   "sort": 2,
+   "title": "Кухня"
+  },
+  {
+   "slug": "mebel-i-interer/ulichnaya-mebel/sad",
+   "parent": "mebel-i-interer/ulichnaya-mebel",
+   "depth": 2,
+   "sort": 2,
+   "title": "Сад"
+  },
+  {
+   "slug": "obuv/detali-obuvi/podoshva-protektor",
+   "parent": "obuv/detali-obuvi",
+   "depth": 2,
+   "sort": 2,
+   "title": "Подошва / протектор"
+  },
+  {
+   "slug": "obuv/flat-lay/kreativnyy-flat-lay",
+   "parent": "obuv/flat-lay",
+   "depth": 2,
+   "sort": 2,
+   "title": "Креативный Flat Lay"
+  },
+  {
+   "slug": "obuv/katalozhnaya-semka/bokovoy-profil",
+   "parent": "obuv/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Боковой профиль"
+  },
+  {
+   "slug": "obuv/kreativnaya-predmetnaya-semka/floating-dinamicheskaya-kompozitsiya",
+   "parent": "obuv/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Floating / динамическая композиция"
+  },
+  {
+   "slug": "obuv/lifestyle-v-ispolzovanii/sport-action",
+   "parent": "obuv/lifestyle-v-ispolzovanii",
+   "depth": 2,
+   "sort": 2,
+   "title": "Sport / Action"
+  },
+  {
+   "slug": "obuv/na-noge-na-modeli/muzhskaya-model",
+   "parent": "obuv/na-noge-na-modeli",
+   "depth": 2,
+   "sort": 2,
+   "title": "Мужская модель"
+  },
+  {
+   "slug": "obuv/reklamnye-kreativy/story-vertical-ad",
+   "parent": "obuv/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "obuv/seasonal/leto",
+   "parent": "obuv/seasonal",
+   "depth": 2,
+   "sort": 2,
+   "title": "Лето"
+  },
+  {
+   "slug": "odezhda-fashion/detali-tovara/print-logotip",
+   "parent": "odezhda-fashion/detali-tovara",
+   "depth": 2,
+   "sort": 2,
+   "title": "Принт / логотип"
+  },
+  {
+   "slug": "odezhda-fashion/fashion-editorial/high-fashion",
+   "parent": "odezhda-fashion/fashion-editorial",
+   "depth": 2,
+   "sort": 2,
+   "title": "High Fashion"
+  },
+  {
+   "slug": "odezhda-fashion/flat-lay/seasonal-flat-lay",
+   "parent": "odezhda-fashion/flat-lay",
+   "depth": 2,
+   "sort": 2,
+   "title": "Seasonal Flat Lay"
+  },
+  {
+   "slug": "odezhda-fashion/lifestyle/dom-interer",
+   "parent": "odezhda-fashion/lifestyle",
+   "depth": 2,
+   "sort": 2,
+   "title": "Дом / интерьер"
+  },
+  {
+   "slug": "odezhda-fashion/magazin-showroom/torgovyy-zal",
+   "parent": "odezhda-fashion/magazin-showroom",
+   "depth": 2,
+   "sort": 2,
+   "title": "Торговый зал"
+  },
+  {
+   "slug": "odezhda-fashion/maneken/dizaynerskiy-neobychnyy-maneken",
+   "parent": "odezhda-fashion/maneken",
+   "depth": 2,
+   "sort": 2,
+   "title": "Дизайнерский / необычный манекен"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/muzhskaya-model",
+   "parent": "odezhda-fashion/na-modeli",
+   "depth": 2,
+   "sort": 2,
+   "title": "Мужская модель"
+  },
+  {
+   "slug": "odezhda-fashion/odezhda-bez-cheloveka/na-stoyke-reyle",
+   "parent": "odezhda-fashion/odezhda-bez-cheloveka",
+   "depth": 2,
+   "sort": 2,
+   "title": "На стойке / рейле"
+  },
+  {
+   "slug": "odezhda-fashion/outdoor-priroda/gory",
+   "parent": "odezhda-fashion/outdoor-priroda",
+   "depth": 2,
+   "sort": 2,
+   "title": "Горы"
+  },
+  {
+   "slug": "odezhda-fashion/reklamnye-kreativy/stories-vertical-ad",
+   "parent": "odezhda-fashion/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Stories / Vertical Ad"
+  },
+  {
+   "slug": "odezhda-fashion/runway-podium/minimalistichnyy-podium",
+   "parent": "odezhda-fashion/runway-podium",
+   "depth": 2,
+   "sort": 2,
+   "title": "Минималистичный подиум"
+  },
+  {
+   "slug": "odezhda-fashion/seasonal/leto",
+   "parent": "odezhda-fashion/seasonal",
+   "depth": 2,
+   "sort": 2,
+   "title": "Лето"
+  },
+  {
+   "slug": "odezhda-fashion/street-urban/graffiti-streetwear",
+   "parent": "odezhda-fashion/street-urban",
+   "depth": 2,
+   "sort": 2,
+   "title": "Граффити / Streetwear"
+  },
+  {
+   "slug": "odezhda-fashion/studiynaya-semka/tsvetnoy-fon",
+   "parent": "odezhda-fashion/studiynaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Цветной фон"
+  },
+  {
+   "slug": "parfyumeriya/atmosfernaya-kontseptualnaya-semka/voda-kapli-splash",
+   "parent": "parfyumeriya/atmosfernaya-kontseptualnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Вода / капли / splash"
+  },
+  {
+   "slug": "parfyumeriya/detali-flakona/raspylitel",
+   "parent": "parfyumeriya/detali-flakona",
+   "depth": 2,
+   "sort": 2,
+   "title": "Распылитель"
+  },
+  {
+   "slug": "parfyumeriya/katalozhnaya-predmetnaya-semka/vid-speredi",
+   "parent": "parfyumeriya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Вид спереди"
+  },
+  {
+   "slug": "parfyumeriya/lifestyle/vannaya-interer",
+   "parent": "parfyumeriya/lifestyle",
+   "depth": 2,
+   "sort": 2,
+   "title": "Ванная / интерьер"
+  },
+  {
+   "slug": "parfyumeriya/luxury-still-life/steklo-otrazheniya",
+   "parent": "parfyumeriya/luxury-still-life",
+   "depth": 2,
+   "sort": 2,
+   "title": "Стекло / отражения"
+  },
+  {
+   "slug": "parfyumeriya/po-harakteru-aromata/muzhskoy-strong",
+   "parent": "parfyumeriya/po-harakteru-aromata",
+   "depth": 2,
+   "sort": 2,
+   "title": "Мужской / Strong"
+  },
+  {
+   "slug": "parfyumeriya/reklamnye-kreativy/story-vertical-ad",
+   "parent": "parfyumeriya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "parfyumeriya/seasonal-prazdnichnye/leto",
+   "parent": "parfyumeriya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 2,
+   "title": "Лето"
+  },
+  {
+   "slug": "parfyumeriya/v-ruke-v-ispolzovanii/v-muzhskoy-ruke",
+   "parent": "parfyumeriya/v-ruke-v-ispolzovanii",
+   "depth": 2,
+   "sort": 2,
+   "title": "В мужской руке"
+  },
+  {
+   "slug": "sumki/detali-sumki/logotip",
+   "parent": "sumki/detali-sumki",
+   "depth": 2,
+   "sort": 2,
+   "title": "Логотип"
+  },
+  {
+   "slug": "sumki/katalozhnaya-semka/3-4",
+   "parent": "sumki/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "3/4"
+  },
+  {
+   "slug": "sumki/kreativnaya-predmetnaya-semka/premium-luxury",
+   "parent": "sumki/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Premium / Luxury"
+  },
+  {
+   "slug": "sumki/lifestyle/business-ofis",
+   "parent": "sumki/lifestyle",
+   "depth": 2,
+   "sort": 2,
+   "title": "Business / офис"
+  },
+  {
+   "slug": "sumki/magazin-showroom/vitrina",
+   "parent": "sumki/magazin-showroom",
+   "depth": 2,
+   "sort": 2,
+   "title": "Витрина"
+  },
+  {
+   "slug": "sumki/na-modeli/muzhskaya-model",
+   "parent": "sumki/na-modeli",
+   "depth": 2,
+   "sort": 2,
+   "title": "Мужская модель"
+  },
+  {
+   "slug": "sumki/reklamnye-kreativy/story-vertical-ad",
+   "parent": "sumki/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "sumki/seasonal/leto-resort",
+   "parent": "sumki/seasonal",
+   "depth": 2,
+   "sort": 2,
+   "title": "Лето / Resort"
+  },
+  {
+   "slug": "sumki/vmestimost-i-funktsionalnost/razmer-i-masshtab",
+   "parent": "sumki/vmestimost-i-funktsionalnost",
+   "depth": 2,
+   "sort": 2,
+   "title": "Размер и масштаб"
+  },
+  {
+   "slug": "ukrasheniya/braslety/na-muzhskom-zapyaste",
+   "parent": "ukrasheniya/braslety",
+   "depth": 2,
+   "sort": 2,
+   "title": "На мужском запястье"
+  },
+  {
+   "slug": "ukrasheniya/broshi-piny/na-latskane-pidzhake",
+   "parent": "ukrasheniya/broshi-piny",
+   "depth": 2,
+   "sort": 2,
+   "title": "На лацкане / пиджаке"
+  },
+  {
+   "slug": "ukrasheniya/detali-macro/metall-poverhnost",
+   "parent": "ukrasheniya/detali-macro",
+   "depth": 2,
+   "sort": 2,
+   "title": "Металл / поверхность"
+  },
+  {
+   "slug": "ukrasheniya/flat-lay-kompozitsii/nabor-ukrasheniy",
+   "parent": "ukrasheniya/flat-lay-kompozitsii",
+   "depth": 2,
+   "sort": 2,
+   "title": "Набор украшений"
+  },
+  {
+   "slug": "ukrasheniya/katalozhnaya-predmetnaya-semka/hero-3-4",
+   "parent": "ukrasheniya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Hero 3/4"
+  },
+  {
+   "slug": "ukrasheniya/koltsa/na-muzhskoy-ruke",
+   "parent": "ukrasheniya/koltsa",
+   "depth": 2,
+   "sort": 2,
+   "title": "На мужской руке"
+  },
+  {
+   "slug": "ukrasheniya/lifestyle/vecherniy-event",
+   "parent": "ukrasheniya/lifestyle",
+   "depth": 2,
+   "sort": 2,
+   "title": "Вечерний / Event"
+  },
+  {
+   "slug": "ukrasheniya/luxury-kreativnaya-semka/mramor-kamen",
+   "parent": "ukrasheniya/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 2,
+   "title": "Мрамор / камень"
+  },
+  {
+   "slug": "ukrasheniya/ozherelya-tsepochki-kulony/na-muzhskoy-modeli",
+   "parent": "ukrasheniya/ozherelya-tsepochki-kulony",
+   "depth": 2,
+   "sort": 2,
+   "title": "На мужской модели"
+  },
+  {
+   "slug": "ukrasheniya/reklamnye-kreativy/story-vertical-ad",
+   "parent": "ukrasheniya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "ukrasheniya/seasonal-prazdnichnye/wedding",
+   "parent": "ukrasheniya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 2,
+   "title": "Wedding"
+  },
+  {
+   "slug": "ukrasheniya/sergi/krupnyy-plan-uha",
+   "parent": "ukrasheniya/sergi",
+   "depth": 2,
+   "sort": 2,
+   "title": "Крупный план уха"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/skakalki",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar",
+   "depth": 2,
+   "sort": 2,
+   "title": "Скакалки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh",
+   "depth": 2,
+   "sort": 2,
+   "title": "Массажные ролики / Foam Roller"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/reklamnye-kreativy/wellness-social-media-ad",
+   "parent": "zdorove-sport-i-wellness/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 2,
+   "title": "Wellness Social Media Ad"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar",
+   "depth": 2,
+   "sort": 2,
+   "title": "Штанги / диски"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie",
+   "depth": 2,
+   "sort": 2,
+   "title": "Батончики / спортивные снеки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery/v-sportzale",
+   "parent": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery",
+   "depth": 2,
+   "sort": 2,
+   "title": "В спортзале"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/wellness-self-care/spa-atmosfera",
+   "parent": "zdorove-sport-i-wellness/wellness-self-care",
+   "depth": 2,
+   "sort": 2,
+   "title": "SPA-атмосфера"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates",
+   "depth": 2,
+   "sort": 2,
+   "title": "Блоки / кольца / мячи"
+  },
+  {
+   "slug": "aksessuary/aksessuary-dlya-volos/predmetnoe-foto",
+   "parent": "aksessuary/aksessuary-dlya-volos",
+   "depth": 2,
+   "sort": 3,
+   "title": "Предметное фото"
+  },
+  {
+   "slug": "aksessuary/galstuki-babochki/predmetnoe-foto",
+   "parent": "aksessuary/galstuki-babochki",
+   "depth": 2,
+   "sort": 3,
+   "title": "Предметное фото"
+  },
+  {
+   "slug": "aksessuary/golovnye-ubory/predmetnoe-hero-3-4",
+   "parent": "aksessuary/golovnye-ubory",
+   "depth": 2,
+   "sort": 3,
+   "title": "Предметное Hero / 3/4"
+  },
+  {
+   "slug": "aksessuary/ochki-solntsezaschitnye-ochki/predmetnoe-hero-3-4",
+   "parent": "aksessuary/ochki-solntsezaschitnye-ochki",
+   "depth": 2,
+   "sort": 3,
+   "title": "Предметное Hero / 3/4"
+  },
+  {
+   "slug": "aksessuary/perchatki/para-predmetnoe-foto",
+   "parent": "aksessuary/perchatki",
+   "depth": 2,
+   "sort": 3,
+   "title": "Пара — предметное фото"
+  },
+  {
+   "slug": "aksessuary/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "aksessuary/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "aksessuary/remni/aktsent-na-talii-krupnyy-plan",
+   "parent": "aksessuary/remni",
+   "depth": 2,
+   "sort": 3,
+   "title": "Акцент на талии / крупный план"
+  },
+  {
+   "slug": "aksessuary/sharfy-platki/na-plechah-draped",
+   "parent": "aksessuary/sharfy-platki",
+   "depth": 2,
+   "sort": 3,
+   "title": "На плечах / Draped"
+  },
+  {
+   "slug": "chasy/lifestyle/otel-puteshestvie",
+   "parent": "chasy/lifestyle",
+   "depth": 2,
+   "sort": 3,
+   "title": "Отель / путешествие"
+  },
+  {
+   "slug": "chasy/luxury-kreativnaya-semka/steklo-otrazheniya",
+   "parent": "chasy/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Стекло / отражения"
+  },
+  {
+   "slug": "chasy/na-zapyaste/krupnyy-kadr-ruki-s-chasami",
+   "parent": "chasy/na-zapyaste",
+   "depth": 2,
+   "sort": 3,
+   "title": "Крупный кадр руки с часами"
+  },
+  {
+   "slug": "chasy/podarochnaya-semka/christmas-new-year",
+   "parent": "chasy/podarochnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Christmas / New Year"
+  },
+  {
+   "slug": "chasy/predmetnaya-semka/na-kamne-pedestale",
+   "parent": "chasy/predmetnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "На камне / пьедестале"
+  },
+  {
+   "slug": "chasy/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "chasy/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 3,
+   "title": "В ИСПОЛЬЗОВАНИИ / С ЧЕЛОВЕКОМ"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/vkus-ingredienty",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 3,
+   "title": "ВКУС / ИНГРЕДИЕНТЫ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/beauty-routine-lifestyle/spa-wellness",
+   "parent": "kosmetika-i-beauty/beauty-routine-lifestyle",
+   "depth": 2,
+   "sort": 3,
+   "title": "SPA / Wellness"
+  },
+  {
+   "slug": "kosmetika-i-beauty/detali-produkta/banka-tyubik-kryshka",
+   "parent": "kosmetika-i-beauty/detali-produkta",
+   "depth": 2,
+   "sort": 3,
+   "title": "Банка / тюбик / крышка"
+  },
+  {
+   "slug": "kosmetika-i-beauty/flat-lay/beauty-routine-set",
+   "parent": "kosmetika-i-beauty/flat-lay",
+   "depth": 2,
+   "sort": 3,
+   "title": "Beauty routine set"
+  },
+  {
+   "slug": "kosmetika-i-beauty/ingredienty/travy-rasteniya",
+   "parent": "kosmetika-i-beauty/ingredienty",
+   "depth": 2,
+   "sort": 3,
+   "title": "Травы / растения"
+  },
+  {
+   "slug": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka/otkrytyy-produkt",
+   "parent": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Открытый продукт"
+  },
+  {
+   "slug": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka/steklo-otrazheniya",
+   "parent": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Стекло / отражения"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie/litso-ton-rumyana-makiyazh",
+   "parent": "kosmetika-i-beauty/na-modeli-primenenie",
+   "depth": 2,
+   "sort": 3,
+   "title": "Лицо / тон / румяна / макияж"
+  },
+  {
+   "slug": "kosmetika-i-beauty/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "kosmetika-i-beauty/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "kosmetika-i-beauty/seasonal-tematicheskie/osen",
+   "parent": "kosmetika-i-beauty/seasonal-tematicheskie",
+   "depth": 2,
+   "sort": 3,
+   "title": "Осень"
+  },
+  {
+   "slug": "kosmetika-i-beauty/tekstura-swatch/pomada-lip-swatch",
+   "parent": "kosmetika-i-beauty/tekstura-swatch",
+   "depth": 2,
+   "sort": 3,
+   "title": "Помада / Lip swatch"
+  },
+  {
+   "slug": "mebel-i-interer/divany/luxury-interer",
+   "parent": "mebel-i-interer/divany",
+   "depth": 2,
+   "sort": 3,
+   "title": "Luxury интерьер"
+  },
+  {
+   "slug": "mebel-i-interer/komody-tumby/prihozhaya",
+   "parent": "mebel-i-interer/komody-tumby",
+   "depth": 2,
+   "sort": 3,
+   "title": "Прихожая"
+  },
+  {
+   "slug": "mebel-i-interer/kresla/kabinet-office",
+   "parent": "mebel-i-interer/kresla",
+   "depth": 2,
+   "sort": 3,
+   "title": "Кабинет / Office"
+  },
+  {
+   "slug": "mebel-i-interer/krovati/luxury-spalnya",
+   "parent": "mebel-i-interer/krovati",
+   "depth": 2,
+   "sort": 3,
+   "title": "Luxury спальня"
+  },
+  {
+   "slug": "mebel-i-interer/ofisnaya-mebel/peregovornaya",
+   "parent": "mebel-i-interer/ofisnaya-mebel",
+   "depth": 2,
+   "sort": 3,
+   "title": "Переговорная"
+  },
+  {
+   "slug": "mebel-i-interer/predmety-interera/kovry",
+   "parent": "mebel-i-interer/predmety-interera",
+   "depth": 2,
+   "sort": 3,
+   "title": "Ковры"
+  },
+  {
+   "slug": "mebel-i-interer/shkafy-garderoby/sovremennyy-interer",
+   "parent": "mebel-i-interer/shkafy-garderoby",
+   "depth": 2,
+   "sort": 3,
+   "title": "Современный интерьер"
+  },
+  {
+   "slug": "mebel-i-interer/stellazhi-polki/kabinet-biblioteka",
+   "parent": "mebel-i-interer/stellazhi-polki",
+   "depth": 2,
+   "sort": 3,
+   "title": "Кабинет / библиотека"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/rabochie-stoly",
+   "parent": "mebel-i-interer/stoly",
+   "depth": 2,
+   "sort": 3,
+   "title": "Рабочие столы"
+  },
+  {
+   "slug": "mebel-i-interer/stulya/kafe-restoran",
+   "parent": "mebel-i-interer/stulya",
+   "depth": 2,
+   "sort": 3,
+   "title": "Кафе / ресторан"
+  },
+  {
+   "slug": "mebel-i-interer/ulichnaya-mebel/balkon",
+   "parent": "mebel-i-interer/ulichnaya-mebel",
+   "depth": 2,
+   "sort": 3,
+   "title": "Балкон"
+  },
+  {
+   "slug": "obuv/detali-obuvi/logotip-brending",
+   "parent": "obuv/detali-obuvi",
+   "depth": 2,
+   "sort": 3,
+   "title": "Логотип / брендинг"
+  },
+  {
+   "slug": "obuv/flat-lay/seasonal-flat-lay",
+   "parent": "obuv/flat-lay",
+   "depth": 2,
+   "sort": 3,
+   "title": "Seasonal Flat Lay"
+  },
+  {
+   "slug": "obuv/katalozhnaya-semka/vid-sverhu",
+   "parent": "obuv/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Вид сверху"
+  },
+  {
+   "slug": "obuv/kreativnaya-predmetnaya-semka/tsvetnaya-studiynaya-stsena",
+   "parent": "obuv/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Цветная студийная сцена"
+  },
+  {
+   "slug": "obuv/lifestyle-v-ispolzovanii/elegant-vechernyaya",
+   "parent": "obuv/lifestyle-v-ispolzovanii",
+   "depth": 2,
+   "sort": 3,
+   "title": "Elegant / вечерняя"
+  },
+  {
+   "slug": "obuv/na-noge-na-modeli/krupnyy-plan-na-nogah",
+   "parent": "obuv/na-noge-na-modeli",
+   "depth": 2,
+   "sort": 3,
+   "title": "Крупный план на ногах"
+  },
+  {
+   "slug": "obuv/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "obuv/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "obuv/seasonal/osen-dozhd",
+   "parent": "obuv/seasonal",
+   "depth": 2,
+   "sort": 3,
+   "title": "Осень / дождь"
+  },
+  {
+   "slug": "odezhda-fashion/detali-tovara/shvy-furnitura",
+   "parent": "odezhda-fashion/detali-tovara",
+   "depth": 2,
+   "sort": 3,
+   "title": "Швы / фурнитура"
+  },
+  {
+   "slug": "odezhda-fashion/fashion-editorial/avant-garde-artistic",
+   "parent": "odezhda-fashion/fashion-editorial",
+   "depth": 2,
+   "sort": 3,
+   "title": "Avant-garde / Artistic"
+  },
+  {
+   "slug": "odezhda-fashion/flat-lay/kompozitsiya-dlya-sotssetey",
+   "parent": "odezhda-fashion/flat-lay",
+   "depth": 2,
+   "sort": 3,
+   "title": "Композиция для соцсетей"
+  },
+  {
+   "slug": "odezhda-fashion/lifestyle/otel",
+   "parent": "odezhda-fashion/lifestyle",
+   "depth": 2,
+   "sort": 3,
+   "title": "Отель"
+  },
+  {
+   "slug": "odezhda-fashion/magazin-showroom/primerochnaya",
+   "parent": "odezhda-fashion/magazin-showroom",
+   "depth": 2,
+   "sort": 3,
+   "title": "Примерочная"
+  },
+  {
+   "slug": "odezhda-fashion/maneken/maneken-v-magazine",
+   "parent": "odezhda-fashion/maneken",
+   "depth": 2,
+   "sort": 3,
+   "title": "Манекен в магазине"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/raznye-tipazhi-modeley",
+   "parent": "odezhda-fashion/na-modeli",
+   "depth": 2,
+   "sort": 3,
+   "title": "Разные типажи моделей"
+  },
+  {
+   "slug": "odezhda-fashion/odezhda-bez-cheloveka/predmetnaya-interernaya-kompozitsiya",
+   "parent": "odezhda-fashion/odezhda-bez-cheloveka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Предметная / интерьерная композиция"
+  },
+  {
+   "slug": "odezhda-fashion/outdoor-priroda/les",
+   "parent": "odezhda-fashion/outdoor-priroda",
+   "depth": 2,
+   "sort": 3,
+   "title": "Лес"
+  },
+  {
+   "slug": "odezhda-fashion/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "odezhda-fashion/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "odezhda-fashion/runway-podium/luxury-runway",
+   "parent": "odezhda-fashion/runway-podium",
+   "depth": 2,
+   "sort": 3,
+   "title": "Luxury runway"
+  },
+  {
+   "slug": "odezhda-fashion/seasonal/osen",
+   "parent": "odezhda-fashion/seasonal",
+   "depth": 2,
+   "sort": 3,
+   "title": "Осень"
+  },
+  {
+   "slug": "odezhda-fashion/street-urban/nochnoy-gorod",
+   "parent": "odezhda-fashion/street-urban",
+   "depth": 2,
+   "sort": 3,
+   "title": "Ночной город"
+  },
+  {
+   "slug": "odezhda-fashion/studiynaya-semka/minimal-studio",
+   "parent": "odezhda-fashion/studiynaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Minimal studio"
+  },
+  {
+   "slug": "parfyumeriya/atmosfernaya-kontseptualnaya-semka/svet-i-teni",
+   "parent": "parfyumeriya/atmosfernaya-kontseptualnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Свет и тени"
+  },
+  {
+   "slug": "parfyumeriya/detali-flakona/steklo-forma-flakona",
+   "parent": "parfyumeriya/detali-flakona",
+   "depth": 2,
+   "sort": 3,
+   "title": "Стекло / форма флакона"
+  },
+  {
+   "slug": "parfyumeriya/katalozhnaya-predmetnaya-semka/flakon-korobka",
+   "parent": "parfyumeriya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Флакон + коробка"
+  },
+  {
+   "slug": "parfyumeriya/lifestyle/otel-luxury-interior",
+   "parent": "parfyumeriya/lifestyle",
+   "depth": 2,
+   "sort": 3,
+   "title": "Отель / Luxury interior"
+  },
+  {
+   "slug": "parfyumeriya/luxury-still-life/shelk-tkan",
+   "parent": "parfyumeriya/luxury-still-life",
+   "depth": 2,
+   "sort": 3,
+   "title": "Шёлк / ткань"
+  },
+  {
+   "slug": "parfyumeriya/po-harakteru-aromata/unisex-minimal",
+   "parent": "parfyumeriya/po-harakteru-aromata",
+   "depth": 2,
+   "sort": 3,
+   "title": "Unisex / Minimal"
+  },
+  {
+   "slug": "parfyumeriya/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "parfyumeriya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "parfyumeriya/seasonal-prazdnichnye/osen",
+   "parent": "parfyumeriya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 3,
+   "title": "Осень"
+  },
+  {
+   "slug": "parfyumeriya/v-ruke-v-ispolzovanii/nanesenie-na-zapyaste",
+   "parent": "parfyumeriya/v-ruke-v-ispolzovanii",
+   "depth": 2,
+   "sort": 3,
+   "title": "Нанесение на запястье"
+  },
+  {
+   "slug": "sumki/detali-sumki/furnitura-zamki-molnii",
+   "parent": "sumki/detali-sumki",
+   "depth": 2,
+   "sort": 3,
+   "title": "Фурнитура / замки / молнии"
+  },
+  {
+   "slug": "sumki/katalozhnaya-semka/bokovoy-profil",
+   "parent": "sumki/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Боковой профиль"
+  },
+  {
+   "slug": "sumki/kreativnaya-predmetnaya-semka/tsvetnaya-reklamnaya-kompozitsiya",
+   "parent": "sumki/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Цветная рекламная композиция"
+  },
+  {
+   "slug": "sumki/lifestyle/evening-restoran-meropriyatie",
+   "parent": "sumki/lifestyle",
+   "depth": 2,
+   "sort": 3,
+   "title": "Evening / ресторан / мероприятие"
+  },
+  {
+   "slug": "sumki/magazin-showroom/butik",
+   "parent": "sumki/magazin-showroom",
+   "depth": 2,
+   "sort": 3,
+   "title": "Бутик"
+  },
+  {
+   "slug": "sumki/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "sumki/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "sumki/seasonal/osen",
+   "parent": "sumki/seasonal",
+   "depth": 2,
+   "sort": 3,
+   "title": "Осень"
+  },
+  {
+   "slug": "ukrasheniya/braslety/hero-predmetnaya-semka",
+   "parent": "ukrasheniya/braslety",
+   "depth": 2,
+   "sort": 3,
+   "title": "Hero / предметная съёмка"
+  },
+  {
+   "slug": "ukrasheniya/broshi-piny/na-sumke-aksessuare",
+   "parent": "ukrasheniya/broshi-piny",
+   "depth": 2,
+   "sort": 3,
+   "title": "На сумке / аксессуаре"
+  },
+  {
+   "slug": "ukrasheniya/detali-macro/gravirovka",
+   "parent": "ukrasheniya/detali-macro",
+   "depth": 2,
+   "sort": 3,
+   "title": "Гравировка"
+  },
+  {
+   "slug": "ukrasheniya/flat-lay-kompozitsii/kollektsiya-komplekt",
+   "parent": "ukrasheniya/flat-lay-kompozitsii",
+   "depth": 2,
+   "sort": 3,
+   "title": "Коллекция / комплект"
+  },
+  {
+   "slug": "ukrasheniya/katalozhnaya-predmetnaya-semka/vid-sverhu",
+   "parent": "ukrasheniya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Вид сверху"
+  },
+  {
+   "slug": "ukrasheniya/koltsa/hero-3-4",
+   "parent": "ukrasheniya/koltsa",
+   "depth": 2,
+   "sort": 3,
+   "title": "Hero / 3/4"
+  },
+  {
+   "slug": "ukrasheniya/lifestyle/wedding-bridal",
+   "parent": "ukrasheniya/lifestyle",
+   "depth": 2,
+   "sort": 3,
+   "title": "Wedding / Bridal"
+  },
+  {
+   "slug": "ukrasheniya/luxury-kreativnaya-semka/steklo-otrazheniya",
+   "parent": "ukrasheniya/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 3,
+   "title": "Стекло / отражения"
+  },
+  {
+   "slug": "ukrasheniya/ozherelya-tsepochki-kulony/krupnyy-plan-na-shee-dekolte",
+   "parent": "ukrasheniya/ozherelya-tsepochki-kulony",
+   "depth": 2,
+   "sort": 3,
+   "title": "Крупный план на шее / декольте"
+  },
+  {
+   "slug": "ukrasheniya/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "ukrasheniya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "ukrasheniya/seasonal-prazdnichnye/christmas-gift",
+   "parent": "ukrasheniya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 3,
+   "title": "Christmas / Gift"
+  },
+  {
+   "slug": "ukrasheniya/sergi/para-predmetnaya-semka",
+   "parent": "ukrasheniya/sergi",
+   "depth": 2,
+   "sort": 3,
+   "title": "Пара — предметная съёмка"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar",
+   "depth": 2,
+   "sort": 3,
+   "title": "Мелкий тренировочный инвентарь"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh",
+   "depth": 2,
+   "sort": 3,
+   "title": "Recovery-наборы"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/reklamnye-kreativy/story-vertical",
+   "parent": "zdorove-sport-i-wellness/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 3,
+   "title": "Story / Vertical"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar",
+   "depth": 2,
+   "sort": 3,
+   "title": "Силовые тренажёры"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie",
+   "depth": 2,
+   "sort": 3,
+   "title": "Добавки / банки / упаковки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery/vo-vremya-trenirovki",
+   "parent": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery",
+   "depth": 2,
+   "sort": 3,
+   "title": "Во время тренировки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/wellness-self-care/utrennyaya-routine",
+   "parent": "zdorove-sport-i-wellness/wellness-self-care",
+   "depth": 2,
+   "sort": 3,
+   "title": "Утренняя routine"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates",
+   "depth": 2,
+   "sort": 3,
+   "title": "Комплекты для йоги"
+  },
+  {
+   "slug": "aksessuary/aksessuary-dlya-volos/flat-lay-nabor",
+   "parent": "aksessuary/aksessuary-dlya-volos",
+   "depth": 2,
+   "sort": 4,
+   "title": "Flat Lay / набор"
+  },
+  {
+   "slug": "aksessuary/galstuki-babochki/flat-lay",
+   "parent": "aksessuary/galstuki-babochki",
+   "depth": 2,
+   "sort": 4,
+   "title": "Flat Lay"
+  },
+  {
+   "slug": "aksessuary/golovnye-ubory/flat-lay",
+   "parent": "aksessuary/golovnye-ubory",
+   "depth": 2,
+   "sort": 4,
+   "title": "Flat Lay"
+  },
+  {
+   "slug": "aksessuary/ochki-solntsezaschitnye-ochki/bokovoy-profil",
+   "parent": "aksessuary/ochki-solntsezaschitnye-ochki",
+   "depth": 2,
+   "sort": 4,
+   "title": "Боковой профиль"
+  },
+  {
+   "slug": "aksessuary/perchatki/flat-lay",
+   "parent": "aksessuary/perchatki",
+   "depth": 2,
+   "sort": 4,
+   "title": "Flat Lay"
+  },
+  {
+   "slug": "aksessuary/reklamnye-kreativy/new-collection-launch",
+   "parent": "aksessuary/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "New Collection / Launch"
+  },
+  {
+   "slug": "aksessuary/remni/svernutyy-remen-predmetnoe-foto",
+   "parent": "aksessuary/remni",
+   "depth": 2,
+   "sort": 4,
+   "title": "Свёрнутый ремень / предметное фото"
+  },
+  {
+   "slug": "aksessuary/sharfy-platki/flat-lay",
+   "parent": "aksessuary/sharfy-platki",
+   "depth": 2,
+   "sort": 4,
+   "title": "Flat Lay"
+  },
+  {
+   "slug": "chasy/lifestyle/sport-outdoor",
+   "parent": "chasy/lifestyle",
+   "depth": 2,
+   "sort": 4,
+   "title": "Sport / Outdoor"
+  },
+  {
+   "slug": "chasy/luxury-kreativnaya-semka/premium-pedestal",
+   "parent": "chasy/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Premium pedestal"
+  },
+  {
+   "slug": "chasy/na-zapyaste/business-kostyum",
+   "parent": "chasy/na-zapyaste",
+   "depth": 2,
+   "sort": 4,
+   "title": "Business / костюм"
+  },
+  {
+   "slug": "chasy/podarochnaya-semka/valentine",
+   "parent": "chasy/podarochnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Valentine"
+  },
+  {
+   "slug": "chasy/predmetnaya-semka/chasy-korobka",
+   "parent": "chasy/predmetnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Часы + коробка"
+  },
+  {
+   "slug": "chasy/reklamnye-kreativy/new-model-collection-launch",
+   "parent": "chasy/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "New Model / Collection Launch"
+  },
+  {
+   "slug": "eda-i-napitki/eda/dostavka-takeaway",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 4,
+   "title": "ДОСТАВКА / TAKEAWAY"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 4,
+   "title": "В РУКЕ / В ИСПОЛЬЗОВАНИИ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/beauty-routine-lifestyle/utrenniy-uhod",
+   "parent": "kosmetika-i-beauty/beauty-routine-lifestyle",
+   "depth": 2,
+   "sort": 4,
+   "title": "Утренний уход"
+  },
+  {
+   "slug": "kosmetika-i-beauty/detali-produkta/logotip-etiketka",
+   "parent": "kosmetika-i-beauty/detali-produkta",
+   "depth": 2,
+   "sort": 4,
+   "title": "Логотип / этикетка"
+  },
+  {
+   "slug": "kosmetika-i-beauty/flat-lay/seasonal",
+   "parent": "kosmetika-i-beauty/flat-lay",
+   "depth": 2,
+   "sort": 4,
+   "title": "Seasonal"
+  },
+  {
+   "slug": "kosmetika-i-beauty/ingredienty/masla-naturalnye-komponenty",
+   "parent": "kosmetika-i-beauty/ingredienty",
+   "depth": 2,
+   "sort": 4,
+   "title": "Масла / натуральные компоненты"
+  },
+  {
+   "slug": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka/produkt-upakovka",
+   "parent": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Продукт + упаковка"
+  },
+  {
+   "slug": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka/pedestal-geometricheskie-formy",
+   "parent": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Pedestal / геометрические формы"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie/skincare-na-litse",
+   "parent": "kosmetika-i-beauty/na-modeli-primenenie",
+   "depth": 2,
+   "sort": 4,
+   "title": "Skincare на лице"
+  },
+  {
+   "slug": "kosmetika-i-beauty/reklamnye-kreativy/product-collection-launch",
+   "parent": "kosmetika-i-beauty/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "Product / Collection Launch"
+  },
+  {
+   "slug": "kosmetika-i-beauty/seasonal-tematicheskie/zima",
+   "parent": "kosmetika-i-beauty/seasonal-tematicheskie",
+   "depth": 2,
+   "sort": 4,
+   "title": "Зима"
+  },
+  {
+   "slug": "kosmetika-i-beauty/tekstura-swatch/tonalnyy-krem-concealer-swatch",
+   "parent": "kosmetika-i-beauty/tekstura-swatch",
+   "depth": 2,
+   "sort": 4,
+   "title": "Тональный крем / Concealer swatch"
+  },
+  {
+   "slug": "mebel-i-interer/divany/loft-industrial",
+   "parent": "mebel-i-interer/divany",
+   "depth": 2,
+   "sort": 4,
+   "title": "Loft / Industrial"
+  },
+  {
+   "slug": "mebel-i-interer/komody-tumby/pod-televizor-media-unit",
+   "parent": "mebel-i-interer/komody-tumby",
+   "depth": 2,
+   "sort": 4,
+   "title": "Под телевизор / Media unit"
+  },
+  {
+   "slug": "mebel-i-interer/kresla/otel-lobby",
+   "parent": "mebel-i-interer/kresla",
+   "depth": 2,
+   "sort": 4,
+   "title": "Отель / Lobby"
+  },
+  {
+   "slug": "mebel-i-interer/krovati/hotel-style",
+   "parent": "mebel-i-interer/krovati",
+   "depth": 2,
+   "sort": 4,
+   "title": "Hotel style"
+  },
+  {
+   "slug": "mebel-i-interer/ofisnaya-mebel/executive-office",
+   "parent": "mebel-i-interer/ofisnaya-mebel",
+   "depth": 2,
+   "sort": 4,
+   "title": "Executive office"
+  },
+  {
+   "slug": "mebel-i-interer/predmety-interera/vazy-dekor",
+   "parent": "mebel-i-interer/predmety-interera",
+   "depth": 2,
+   "sort": 4,
+   "title": "Вазы / декор"
+  },
+  {
+   "slug": "mebel-i-interer/shkafy-garderoby/luxury-interer",
+   "parent": "mebel-i-interer/shkafy-garderoby",
+   "depth": 2,
+   "sort": 4,
+   "title": "Luxury интерьер"
+  },
+  {
+   "slug": "mebel-i-interer/stellazhi-polki/sovremennyy-interer",
+   "parent": "mebel-i-interer/stellazhi-polki",
+   "depth": 2,
+   "sort": 4,
+   "title": "Современный интерьер"
+  },
+  {
+   "slug": "mebel-i-interer/stulya/sovremennyy-interer",
+   "parent": "mebel-i-interer/stulya",
+   "depth": 2,
+   "sort": 4,
+   "title": "Современный интерьер"
+  },
+  {
+   "slug": "mebel-i-interer/ulichnaya-mebel/poolside",
+   "parent": "mebel-i-interer/ulichnaya-mebel",
+   "depth": 2,
+   "sort": 4,
+   "title": "Poolside"
+  },
+  {
+   "slug": "obuv/detali-obuvi/shnurovka-zastezhki-furnitura",
+   "parent": "obuv/detali-obuvi",
+   "depth": 2,
+   "sort": 4,
+   "title": "Шнуровка / застёжки / фурнитура"
+  },
+  {
+   "slug": "obuv/flat-lay/social-media-flat-lay",
+   "parent": "obuv/flat-lay",
+   "depth": 2,
+   "sort": 4,
+   "title": "Social Media Flat Lay"
+  },
+  {
+   "slug": "obuv/katalozhnaya-semka/para-obuvi",
+   "parent": "obuv/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Пара обуви"
+  },
+  {
+   "slug": "obuv/kreativnaya-predmetnaya-semka/premium-luxury",
+   "parent": "obuv/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Premium / Luxury"
+  },
+  {
+   "slug": "obuv/lifestyle-v-ispolzovanii/outdoor-trail",
+   "parent": "obuv/lifestyle-v-ispolzovanii",
+   "depth": 2,
+   "sort": 4,
+   "title": "Outdoor / Trail"
+  },
+  {
+   "slug": "obuv/na-noge-na-modeli/v-dvizhenii-walking",
+   "parent": "obuv/na-noge-na-modeli",
+   "depth": 2,
+   "sort": 4,
+   "title": "В движении / Walking"
+  },
+  {
+   "slug": "obuv/reklamnye-kreativy/sale-promo",
+   "parent": "obuv/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "Sale / Promo"
+  },
+  {
+   "slug": "obuv/seasonal/zima-sneg",
+   "parent": "obuv/seasonal",
+   "depth": 2,
+   "sort": 4,
+   "title": "Зима / снег"
+  },
+  {
+   "slug": "odezhda-fashion/fashion-editorial/luxury-campaign",
+   "parent": "odezhda-fashion/fashion-editorial",
+   "depth": 2,
+   "sort": 4,
+   "title": "Luxury campaign"
+  },
+  {
+   "slug": "odezhda-fashion/lifestyle/povsednevnaya-situatsiya",
+   "parent": "odezhda-fashion/lifestyle",
+   "depth": 2,
+   "sort": 4,
+   "title": "Повседневная ситуация"
+  },
+  {
+   "slug": "odezhda-fashion/magazin-showroom/vitrina",
+   "parent": "odezhda-fashion/magazin-showroom",
+   "depth": 2,
+   "sort": 4,
+   "title": "Витрина"
+  },
+  {
+   "slug": "odezhda-fashion/outdoor-priroda/park",
+   "parent": "odezhda-fashion/outdoor-priroda",
+   "depth": 2,
+   "sort": 4,
+   "title": "Парк"
+  },
+  {
+   "slug": "odezhda-fashion/reklamnye-kreativy/sale-promo",
+   "parent": "odezhda-fashion/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "Sale / Promo"
+  },
+  {
+   "slug": "odezhda-fashion/runway-podium/backstage",
+   "parent": "odezhda-fashion/runway-podium",
+   "depth": 2,
+   "sort": 4,
+   "title": "Backstage"
+  },
+  {
+   "slug": "odezhda-fashion/seasonal/zima",
+   "parent": "odezhda-fashion/seasonal",
+   "depth": 2,
+   "sort": 4,
+   "title": "Зима"
+  },
+  {
+   "slug": "odezhda-fashion/street-urban/sovremennaya-arhitektura",
+   "parent": "odezhda-fashion/street-urban",
+   "depth": 2,
+   "sort": 4,
+   "title": "Современная архитектура"
+  },
+  {
+   "slug": "odezhda-fashion/studiynaya-semka/premium-studio",
+   "parent": "odezhda-fashion/studiynaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Premium studio"
+  },
+  {
+   "slug": "parfyumeriya/atmosfernaya-kontseptualnaya-semka/floating-levitatsiya",
+   "parent": "parfyumeriya/atmosfernaya-kontseptualnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Floating / левитация"
+  },
+  {
+   "slug": "parfyumeriya/detali-flakona/zhidkost-tsvet-aromata",
+   "parent": "parfyumeriya/detali-flakona",
+   "depth": 2,
+   "sort": 4,
+   "title": "Жидкость / цвет аромата"
+  },
+  {
+   "slug": "parfyumeriya/katalozhnaya-predmetnaya-semka/otkrytyy-flakon-snyataya-kryshka",
+   "parent": "parfyumeriya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Открытый флакон / снятая крышка"
+  },
+  {
+   "slug": "parfyumeriya/lifestyle/v-sumke-travel",
+   "parent": "parfyumeriya/lifestyle",
+   "depth": 2,
+   "sort": 4,
+   "title": "В сумке / Travel"
+  },
+  {
+   "slug": "parfyumeriya/luxury-still-life/metall-zoloto-serebro",
+   "parent": "parfyumeriya/luxury-still-life",
+   "depth": 2,
+   "sort": 4,
+   "title": "Металл / золото / серебро"
+  },
+  {
+   "slug": "parfyumeriya/po-harakteru-aromata/fresh-clean",
+   "parent": "parfyumeriya/po-harakteru-aromata",
+   "depth": 2,
+   "sort": 4,
+   "title": "Fresh / Clean"
+  },
+  {
+   "slug": "parfyumeriya/reklamnye-kreativy/new-fragrance-collection-launch",
+   "parent": "parfyumeriya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "New Fragrance / Collection Launch"
+  },
+  {
+   "slug": "parfyumeriya/seasonal-prazdnichnye/zima",
+   "parent": "parfyumeriya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 4,
+   "title": "Зима"
+  },
+  {
+   "slug": "parfyumeriya/v-ruke-v-ispolzovanii/nanesenie-na-sheyu",
+   "parent": "parfyumeriya/v-ruke-v-ispolzovanii",
+   "depth": 2,
+   "sort": 4,
+   "title": "Нанесение на шею"
+  },
+  {
+   "slug": "sumki/detali-sumki/ruchki-remen",
+   "parent": "sumki/detali-sumki",
+   "depth": 2,
+   "sort": 4,
+   "title": "Ручки / ремень"
+  },
+  {
+   "slug": "sumki/katalozhnaya-semka/vid-szadi",
+   "parent": "sumki/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Вид сзади"
+  },
+  {
+   "slug": "sumki/kreativnaya-predmetnaya-semka/floating-dinamicheskaya-stsena",
+   "parent": "sumki/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Floating / динамическая сцена"
+  },
+  {
+   "slug": "sumki/lifestyle/travel",
+   "parent": "sumki/lifestyle",
+   "depth": 2,
+   "sort": 4,
+   "title": "Travel"
+  },
+  {
+   "slug": "sumki/magazin-showroom/luxury-showroom",
+   "parent": "sumki/magazin-showroom",
+   "depth": 2,
+   "sort": 4,
+   "title": "Luxury showroom"
+  },
+  {
+   "slug": "sumki/reklamnye-kreativy/new-collection-launch",
+   "parent": "sumki/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "New Collection / Launch"
+  },
+  {
+   "slug": "sumki/seasonal/zima",
+   "parent": "sumki/seasonal",
+   "depth": 2,
+   "sort": 4,
+   "title": "Зима"
+  },
+  {
+   "slug": "ukrasheniya/braslety/neskolko-brasletov-stacking",
+   "parent": "ukrasheniya/braslety",
+   "depth": 2,
+   "sort": 4,
+   "title": "Несколько браслетов / Stacking"
+  },
+  {
+   "slug": "ukrasheniya/broshi-piny/predmetnoe-hero",
+   "parent": "ukrasheniya/broshi-piny",
+   "depth": 2,
+   "sort": 4,
+   "title": "Предметное Hero"
+  },
+  {
+   "slug": "ukrasheniya/detali-macro/zastezhka-kreplenie",
+   "parent": "ukrasheniya/detali-macro",
+   "depth": 2,
+   "sort": 4,
+   "title": "Застёжка / крепление"
+  },
+  {
+   "slug": "ukrasheniya/flat-lay-kompozitsii/seasonal",
+   "parent": "ukrasheniya/flat-lay-kompozitsii",
+   "depth": 2,
+   "sort": 4,
+   "title": "Seasonal"
+  },
+  {
+   "slug": "ukrasheniya/katalozhnaya-predmetnaya-semka/na-yuvelirnoy-podstavke",
+   "parent": "ukrasheniya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "На ювелирной подставке"
+  },
+  {
+   "slug": "ukrasheniya/koltsa/bokovoy-profil",
+   "parent": "ukrasheniya/koltsa",
+   "depth": 2,
+   "sort": 4,
+   "title": "Боковой профиль"
+  },
+  {
+   "slug": "ukrasheniya/lifestyle/business-elegant",
+   "parent": "ukrasheniya/lifestyle",
+   "depth": 2,
+   "sort": 4,
+   "title": "Business / Elegant"
+  },
+  {
+   "slug": "ukrasheniya/luxury-kreativnaya-semka/zoloto-metall",
+   "parent": "ukrasheniya/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 4,
+   "title": "Золото / металл"
+  },
+  {
+   "slug": "ukrasheniya/ozherelya-tsepochki-kulony/predmetnoe-hero",
+   "parent": "ukrasheniya/ozherelya-tsepochki-kulony",
+   "depth": 2,
+   "sort": 4,
+   "title": "Предметное Hero"
+  },
+  {
+   "slug": "ukrasheniya/reklamnye-kreativy/new-collection-launch",
+   "parent": "ukrasheniya/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "New Collection / Launch"
+  },
+  {
+   "slug": "ukrasheniya/seasonal-prazdnichnye/den-rozhdeniya-podarok",
+   "parent": "ukrasheniya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 4,
+   "title": "День рождения / подарок"
+  },
+  {
+   "slug": "ukrasheniya/sergi/hero-3-4",
+   "parent": "ukrasheniya/sergi",
+   "depth": 2,
+   "sort": 4,
+   "title": "Hero / 3/4"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/reklamnye-kreativy/website-banner",
+   "parent": "zdorove-sport-i-wellness/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 4,
+   "title": "Website Banner"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery/running-outdoor",
+   "parent": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery",
+   "depth": 2,
+   "sort": 4,
+   "title": "Running / Outdoor"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/wellness-self-care/vechernyaya-routine",
+   "parent": "zdorove-sport-i-wellness/wellness-self-care",
+   "depth": 2,
+   "sort": 4,
+   "title": "Вечерняя routine"
+  },
+  {
+   "slug": "aksessuary/aksessuary-dlya-volos/material-dekorativnye-detali",
+   "parent": "aksessuary/aksessuary-dlya-volos",
+   "depth": 2,
+   "sort": 5,
+   "title": "Материал / декоративные детали"
+  },
+  {
+   "slug": "aksessuary/galstuki-babochki/business-formal-lifestyle",
+   "parent": "aksessuary/galstuki-babochki",
+   "depth": 2,
+   "sort": 5,
+   "title": "Business / Formal lifestyle"
+  },
+  {
+   "slug": "aksessuary/golovnye-ubory/lifestyle",
+   "parent": "aksessuary/golovnye-ubory",
+   "depth": 2,
+   "sort": 5,
+   "title": "Lifestyle"
+  },
+  {
+   "slug": "aksessuary/ochki-solntsezaschitnye-ochki/lifestyle-outdoor",
+   "parent": "aksessuary/ochki-solntsezaschitnye-ochki",
+   "depth": 2,
+   "sort": 5,
+   "title": "Lifestyle / Outdoor"
+  },
+  {
+   "slug": "aksessuary/perchatki/winter-lifestyle",
+   "parent": "aksessuary/perchatki",
+   "depth": 2,
+   "sort": 5,
+   "title": "Winter / Lifestyle"
+  },
+  {
+   "slug": "aksessuary/remni/razlozhennyy-remen-flat-lay",
+   "parent": "aksessuary/remni",
+   "depth": 2,
+   "sort": 5,
+   "title": "Разложенный ремень / Flat Lay"
+  },
+  {
+   "slug": "aksessuary/sharfy-platki/seasonal-lifestyle",
+   "parent": "aksessuary/sharfy-platki",
+   "depth": 2,
+   "sort": 5,
+   "title": "Seasonal / Lifestyle"
+  },
+  {
+   "slug": "chasy/lifestyle/vecherniy-elegant",
+   "parent": "chasy/lifestyle",
+   "depth": 2,
+   "sort": 5,
+   "title": "Вечерний / Elegant"
+  },
+  {
+   "slug": "chasy/luxury-kreativnaya-semka/kontseptualnaya-reklamnaya-stsena",
+   "parent": "chasy/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Концептуальная рекламная сцена"
+  },
+  {
+   "slug": "chasy/na-zapyaste/casual",
+   "parent": "chasy/na-zapyaste",
+   "depth": 2,
+   "sort": 5,
+   "title": "Casual"
+  },
+  {
+   "slug": "chasy/podarochnaya-semka/anniversary-podarok",
+   "parent": "chasy/podarochnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Anniversary / подарок"
+  },
+  {
+   "slug": "chasy/predmetnaya-semka/nabor-kollektsiya",
+   "parent": "chasy/predmetnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Набор / коллекция"
+  },
+  {
+   "slug": "eda-i-napitki/eda/lifestyle",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 5,
+   "title": "LIFESTYLE"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/lifestyle",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 5,
+   "title": "LIFESTYLE"
+  },
+  {
+   "slug": "kosmetika-i-beauty/beauty-routine-lifestyle/vecherniy-uhod",
+   "parent": "kosmetika-i-beauty/beauty-routine-lifestyle",
+   "depth": 2,
+   "sort": 5,
+   "title": "Вечерний уход"
+  },
+  {
+   "slug": "kosmetika-i-beauty/detali-produkta/upakovka-material-detali",
+   "parent": "kosmetika-i-beauty/detali-produkta",
+   "depth": 2,
+   "sort": 5,
+   "title": "Упаковка / материал / детали"
+  },
+  {
+   "slug": "kosmetika-i-beauty/flat-lay/dlya-sotssetey",
+   "parent": "kosmetika-i-beauty/flat-lay",
+   "depth": 2,
+   "sort": 5,
+   "title": "Для соцсетей"
+  },
+  {
+   "slug": "kosmetika-i-beauty/ingredienty/aktivnye-ingredienty",
+   "parent": "kosmetika-i-beauty/ingredienty",
+   "depth": 2,
+   "sort": 5,
+   "title": "Активные ингредиенты"
+  },
+  {
+   "slug": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka/nabor-lineyka-produktov",
+   "parent": "kosmetika-i-beauty/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Набор / линейка продуктов"
+  },
+  {
+   "slug": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka/floating-levitatsiya",
+   "parent": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Floating / левитация"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie/ruki-nogti-hand-care",
+   "parent": "kosmetika-i-beauty/na-modeli-primenenie",
+   "depth": 2,
+   "sort": 5,
+   "title": "Руки / ногти / hand care"
+  },
+  {
+   "slug": "kosmetika-i-beauty/seasonal-tematicheskie/christmas",
+   "parent": "kosmetika-i-beauty/seasonal-tematicheskie",
+   "depth": 2,
+   "sort": 5,
+   "title": "Christmas"
+  },
+  {
+   "slug": "kosmetika-i-beauty/tekstura-swatch/teni-pigment",
+   "parent": "kosmetika-i-beauty/tekstura-swatch",
+   "depth": 2,
+   "sort": 5,
+   "title": "Тени / пигмент"
+  },
+  {
+   "slug": "mebel-i-interer/divany/otel-lounge",
+   "parent": "mebel-i-interer/divany",
+   "depth": 2,
+   "sort": 5,
+   "title": "Отель / Lounge"
+  },
+  {
+   "slug": "mebel-i-interer/komody-tumby/katalozhnaya-semka",
+   "parent": "mebel-i-interer/komody-tumby",
+   "depth": 2,
+   "sort": 5,
+   "title": "Каталожная съёмка"
+  },
+  {
+   "slug": "mebel-i-interer/kresla/luxury-interer",
+   "parent": "mebel-i-interer/kresla",
+   "depth": 2,
+   "sort": 5,
+   "title": "Luxury интерьер"
+  },
+  {
+   "slug": "mebel-i-interer/krovati/detskaya-spalnya",
+   "parent": "mebel-i-interer/krovati",
+   "depth": 2,
+   "sort": 5,
+   "title": "Детская спальня"
+  },
+  {
+   "slug": "mebel-i-interer/ofisnaya-mebel/modern-workspace",
+   "parent": "mebel-i-interer/ofisnaya-mebel",
+   "depth": 2,
+   "sort": 5,
+   "title": "Modern workspace"
+  },
+  {
+   "slug": "mebel-i-interer/predmety-interera/nastennyy-dekor",
+   "parent": "mebel-i-interer/predmety-interera",
+   "depth": 2,
+   "sort": 5,
+   "title": "Настенный декор"
+  },
+  {
+   "slug": "mebel-i-interer/shkafy-garderoby/katalozhnaya-semka",
+   "parent": "mebel-i-interer/shkafy-garderoby",
+   "depth": 2,
+   "sort": 5,
+   "title": "Каталожная съёмка"
+  },
+  {
+   "slug": "mebel-i-interer/stellazhi-polki/katalozhnaya-semka",
+   "parent": "mebel-i-interer/stellazhi-polki",
+   "depth": 2,
+   "sort": 5,
+   "title": "Каталожная съёмка"
+  },
+  {
+   "slug": "mebel-i-interer/stulya/katalozhnaya-studiynaya",
+   "parent": "mebel-i-interer/stulya",
+   "depth": 2,
+   "sort": 5,
+   "title": "Каталожная / студийная"
+  },
+  {
+   "slug": "mebel-i-interer/ulichnaya-mebel/resort-villa",
+   "parent": "mebel-i-interer/ulichnaya-mebel",
+   "depth": 2,
+   "sort": 5,
+   "title": "Resort / Villa"
+  },
+  {
+   "slug": "obuv/katalozhnaya-semka/vid-szadi-pyatka",
+   "parent": "obuv/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Вид сзади / пятка"
+  },
+  {
+   "slug": "obuv/kreativnaya-predmetnaya-semka/kontseptualnaya-reklamnaya-stsena",
+   "parent": "obuv/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Концептуальная рекламная сцена"
+  },
+  {
+   "slug": "obuv/lifestyle-v-ispolzovanii/travel-resort",
+   "parent": "obuv/lifestyle-v-ispolzovanii",
+   "depth": 2,
+   "sort": 5,
+   "title": "Travel / Resort"
+  },
+  {
+   "slug": "obuv/na-noge-na-modeli/sidyachaya-poza",
+   "parent": "obuv/na-noge-na-modeli",
+   "depth": 2,
+   "sort": 5,
+   "title": "Сидячая поза"
+  },
+  {
+   "slug": "obuv/reklamnye-kreativy/new-model-collection-launch",
+   "parent": "obuv/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 5,
+   "title": "New Model / Collection Launch"
+  },
+  {
+   "slug": "obuv/seasonal/christmas-prazdnichnaya",
+   "parent": "obuv/seasonal",
+   "depth": 2,
+   "sort": 5,
+   "title": "Christmas / праздничная"
+  },
+  {
+   "slug": "odezhda-fashion/magazin-showroom/luxury-showroom",
+   "parent": "odezhda-fashion/magazin-showroom",
+   "depth": 2,
+   "sort": 5,
+   "title": "Luxury showroom"
+  },
+  {
+   "slug": "odezhda-fashion/outdoor-priroda/kurort",
+   "parent": "odezhda-fashion/outdoor-priroda",
+   "depth": 2,
+   "sort": 5,
+   "title": "Курорт"
+  },
+  {
+   "slug": "odezhda-fashion/reklamnye-kreativy/new-collection-product-launch",
+   "parent": "odezhda-fashion/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 5,
+   "title": "New Collection / Product Launch"
+  },
+  {
+   "slug": "odezhda-fashion/seasonal/christmas",
+   "parent": "odezhda-fashion/seasonal",
+   "depth": 2,
+   "sort": 5,
+   "title": "Christmas"
+  },
+  {
+   "slug": "parfyumeriya/atmosfernaya-kontseptualnaya-semka/abstraktnaya-reklamnaya-stsena",
+   "parent": "parfyumeriya/atmosfernaya-kontseptualnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Абстрактная рекламная сцена"
+  },
+  {
+   "slug": "parfyumeriya/detali-flakona/logotip-etiketka",
+   "parent": "parfyumeriya/detali-flakona",
+   "depth": 2,
+   "sort": 5,
+   "title": "Логотип / этикетка"
+  },
+  {
+   "slug": "parfyumeriya/katalozhnaya-predmetnaya-semka/nabor-kollektsiya-aromatov",
+   "parent": "parfyumeriya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Набор / коллекция ароматов"
+  },
+  {
+   "slug": "parfyumeriya/lifestyle/podgotovka-k-vyhodu-vecherniy-obraz",
+   "parent": "parfyumeriya/lifestyle",
+   "depth": 2,
+   "sort": 5,
+   "title": "Подготовка к выходу / вечерний образ"
+  },
+  {
+   "slug": "parfyumeriya/luxury-still-life/premium-pedestal",
+   "parent": "parfyumeriya/luxury-still-life",
+   "depth": 2,
+   "sort": 5,
+   "title": "Premium pedestal"
+  },
+  {
+   "slug": "parfyumeriya/po-harakteru-aromata/dark-sensual",
+   "parent": "parfyumeriya/po-harakteru-aromata",
+   "depth": 2,
+   "sort": 5,
+   "title": "Dark / Sensual"
+  },
+  {
+   "slug": "parfyumeriya/seasonal-prazdnichnye/christmas-gift",
+   "parent": "parfyumeriya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 5,
+   "title": "Christmas / Gift"
+  },
+  {
+   "slug": "parfyumeriya/v-ruke-v-ispolzovanii/raspylenie-oblako-parfyuma",
+   "parent": "parfyumeriya/v-ruke-v-ispolzovanii",
+   "depth": 2,
+   "sort": 5,
+   "title": "Распыление / облако парфюма"
+  },
+  {
+   "slug": "sumki/detali-sumki/shvy-kachestvo-izgotovleniya",
+   "parent": "sumki/detali-sumki",
+   "depth": 2,
+   "sort": 5,
+   "title": "Швы / качество изготовления"
+  },
+  {
+   "slug": "sumki/katalozhnaya-semka/otkrytaya-sumka-vid-sverhu",
+   "parent": "sumki/katalozhnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Открытая сумка / вид сверху"
+  },
+  {
+   "slug": "sumki/kreativnaya-predmetnaya-semka/kontseptualnaya-kompozitsiya",
+   "parent": "sumki/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Концептуальная композиция"
+  },
+  {
+   "slug": "sumki/lifestyle/resort-otdyh",
+   "parent": "sumki/lifestyle",
+   "depth": 2,
+   "sort": 5,
+   "title": "Resort / отдых"
+  },
+  {
+   "slug": "sumki/seasonal/christmas-prazdnichnaya",
+   "parent": "sumki/seasonal",
+   "depth": 2,
+   "sort": 5,
+   "title": "Christmas / праздничная"
+  },
+  {
+   "slug": "ukrasheniya/braslety/macro-zastezhka-detali",
+   "parent": "ukrasheniya/braslety",
+   "depth": 2,
+   "sort": 5,
+   "title": "Macro / застёжка / детали"
+  },
+  {
+   "slug": "ukrasheniya/broshi-piny/macro-dekorativnye-detali",
+   "parent": "ukrasheniya/broshi-piny",
+   "depth": 2,
+   "sort": 5,
+   "title": "Macro / декоративные детали"
+  },
+  {
+   "slug": "ukrasheniya/detali-macro/yuvelirnaya-rabota-melkie-detali",
+   "parent": "ukrasheniya/detali-macro",
+   "depth": 2,
+   "sort": 5,
+   "title": "Ювелирная работа / мелкие детали"
+  },
+  {
+   "slug": "ukrasheniya/flat-lay-kompozitsii/dlya-sotssetey",
+   "parent": "ukrasheniya/flat-lay-kompozitsii",
+   "depth": 2,
+   "sort": 5,
+   "title": "Для соцсетей"
+  },
+  {
+   "slug": "ukrasheniya/katalozhnaya-predmetnaya-semka/nabor-kollektsiya",
+   "parent": "ukrasheniya/katalozhnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Набор / коллекция"
+  },
+  {
+   "slug": "ukrasheniya/koltsa/neskolko-kolets-stacking",
+   "parent": "ukrasheniya/koltsa",
+   "depth": 2,
+   "sort": 5,
+   "title": "Несколько колец / Stacking"
+  },
+  {
+   "slug": "ukrasheniya/lifestyle/luxury-lifestyle",
+   "parent": "ukrasheniya/lifestyle",
+   "depth": 2,
+   "sort": 5,
+   "title": "Luxury lifestyle"
+  },
+  {
+   "slug": "ukrasheniya/luxury-kreativnaya-semka/premium-pedestal",
+   "parent": "ukrasheniya/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 5,
+   "title": "Premium pedestal"
+  },
+  {
+   "slug": "ukrasheniya/ozherelya-tsepochki-kulony/flat-lay",
+   "parent": "ukrasheniya/ozherelya-tsepochki-kulony",
+   "depth": 2,
+   "sort": 5,
+   "title": "Flat Lay"
+  },
+  {
+   "slug": "ukrasheniya/seasonal-prazdnichnye/drugie-prazdnichnye-stseny",
+   "parent": "ukrasheniya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 5,
+   "title": "Другие праздничные сцены"
+  },
+  {
+   "slug": "ukrasheniya/sergi/podveshennye-sergi",
+   "parent": "ukrasheniya/sergi",
+   "depth": 2,
+   "sort": 5,
+   "title": "Подвешенные серьги"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/reklamnye-kreativy/product-launch",
+   "parent": "zdorove-sport-i-wellness/reklamnye-kreativy",
+   "depth": 2,
+   "sort": 5,
+   "title": "Product Launch"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery/na-sportivnoy-skame",
+   "parent": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery",
+   "depth": 2,
+   "sort": 5,
+   "title": "На спортивной скамье"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/wellness-self-care/meditation-relax",
+   "parent": "zdorove-sport-i-wellness/wellness-self-care",
+   "depth": 2,
+   "sort": 5,
+   "title": "Meditation / Relax"
+  },
+  {
+   "slug": "aksessuary/galstuki-babochki/tkan-uzor-detali",
+   "parent": "aksessuary/galstuki-babochki",
+   "depth": 2,
+   "sort": 6,
+   "title": "Ткань / узор / детали"
+  },
+  {
+   "slug": "aksessuary/golovnye-ubory/logotip-material-detali",
+   "parent": "aksessuary/golovnye-ubory",
+   "depth": 2,
+   "sort": 6,
+   "title": "Логотип / материал / детали"
+  },
+  {
+   "slug": "aksessuary/ochki-solntsezaschitnye-ochki/detali-opravy-linz",
+   "parent": "aksessuary/ochki-solntsezaschitnye-ochki",
+   "depth": 2,
+   "sort": 6,
+   "title": "Детали оправы / линз"
+  },
+  {
+   "slug": "aksessuary/perchatki/material-shvy-detali",
+   "parent": "aksessuary/perchatki",
+   "depth": 2,
+   "sort": 6,
+   "title": "Материал / швы / детали"
+  },
+  {
+   "slug": "aksessuary/remni/pryazhka-kozha-detali",
+   "parent": "aksessuary/remni",
+   "depth": 2,
+   "sort": 6,
+   "title": "Пряжка / кожа / детали"
+  },
+  {
+   "slug": "aksessuary/sharfy-platki/tkan-print-detali",
+   "parent": "aksessuary/sharfy-platki",
+   "depth": 2,
+   "sort": 6,
+   "title": "Ткань / принт / детали"
+  },
+  {
+   "slug": "chasy/na-zapyaste/sport-active",
+   "parent": "chasy/na-zapyaste",
+   "depth": 2,
+   "sort": 6,
+   "title": "Sport / Active"
+  },
+  {
+   "slug": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 6,
+   "title": "КРЕАТИВНАЯ ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 6,
+   "title": "КРЕАТИВНАЯ ПРЕДМЕТНАЯ СЪЁМКА"
+  },
+  {
+   "slug": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka/premium-luxury",
+   "parent": "kosmetika-i-beauty/kreativnaya-predmetnaya-semka",
+   "depth": 2,
+   "sort": 6,
+   "title": "Premium / Luxury"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie/telo-body-care",
+   "parent": "kosmetika-i-beauty/na-modeli-primenenie",
+   "depth": 2,
+   "sort": 6,
+   "title": "Тело / body care"
+  },
+  {
+   "slug": "kosmetika-i-beauty/seasonal-tematicheskie/valentine-drugie-prazdniki",
+   "parent": "kosmetika-i-beauty/seasonal-tematicheskie",
+   "depth": 2,
+   "sort": 6,
+   "title": "Valentine / другие праздники"
+  },
+  {
+   "slug": "kosmetika-i-beauty/tekstura-swatch/pudra-shimmer-powder",
+   "parent": "kosmetika-i-beauty/tekstura-swatch",
+   "depth": 2,
+   "sort": 6,
+   "title": "Пудра / shimmer / powder"
+  },
+  {
+   "slug": "mebel-i-interer/divany/katalozhnaya-studiynaya-semka",
+   "parent": "mebel-i-interer/divany",
+   "depth": 2,
+   "sort": 6,
+   "title": "Каталожная / студийная съёмка"
+  },
+  {
+   "slug": "mebel-i-interer/kresla/katalozhnaya-studiynaya",
+   "parent": "mebel-i-interer/kresla",
+   "depth": 2,
+   "sort": 6,
+   "title": "Каталожная / студийная"
+  },
+  {
+   "slug": "mebel-i-interer/krovati/katalozhnaya-semka",
+   "parent": "mebel-i-interer/krovati",
+   "depth": 2,
+   "sort": 6,
+   "title": "Каталожная съёмка"
+  },
+  {
+   "slug": "mebel-i-interer/stulya/nabor-stulev",
+   "parent": "mebel-i-interer/stulya",
+   "depth": 2,
+   "sort": 6,
+   "title": "Набор стульев"
+  },
+  {
+   "slug": "odezhda-fashion/seasonal/drugie-prazdniki",
+   "parent": "odezhda-fashion/seasonal",
+   "depth": 2,
+   "sort": 6,
+   "title": "Другие праздники"
+  },
+  {
+   "slug": "parfyumeriya/po-harakteru-aromata/elegant-luxury",
+   "parent": "parfyumeriya/po-harakteru-aromata",
+   "depth": 2,
+   "sort": 6,
+   "title": "Elegant / Luxury"
+  },
+  {
+   "slug": "parfyumeriya/seasonal-prazdnichnye/valentine",
+   "parent": "parfyumeriya/seasonal-prazdnichnye",
+   "depth": 2,
+   "sort": 6,
+   "title": "Valentine"
+  },
+  {
+   "slug": "ukrasheniya/koltsa/macro-kamen-oprava",
+   "parent": "ukrasheniya/koltsa",
+   "depth": 2,
+   "sort": 6,
+   "title": "Macro / камень / оправа"
+  },
+  {
+   "slug": "ukrasheniya/luxury-kreativnaya-semka/dark-dramatic-luxury",
+   "parent": "ukrasheniya/luxury-kreativnaya-semka",
+   "depth": 2,
+   "sort": 6,
+   "title": "Dark / dramatic luxury"
+  },
+  {
+   "slug": "ukrasheniya/ozherelya-tsepochki-kulony/layering-neskolko-tsepochek",
+   "parent": "ukrasheniya/ozherelya-tsepochki-kulony",
+   "depth": 2,
+   "sort": 6,
+   "title": "Layering / несколько цепочек"
+  },
+  {
+   "slug": "ukrasheniya/sergi/macro-kamni-zastezhka",
+   "parent": "ukrasheniya/sergi",
+   "depth": 2,
+   "sort": 6,
+   "title": "Macro / камни / застёжка"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery/butylka-sportivnaya-sumka",
+   "parent": "zdorove-sport-i-wellness/sportivnye-butylki-sheykery",
+   "depth": 2,
+   "sort": 6,
+   "title": "Бутылка + спортивная сумка"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/wellness-self-care/wellness-nabor",
+   "parent": "zdorove-sport-i-wellness/wellness-self-care",
+   "depth": 2,
+   "sort": 6,
+   "title": "Wellness-набор"
+  },
+  {
+   "slug": "eda-i-napitki/eda/seasonal-prazdnichnye",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 7,
+   "title": "SEASONAL / ПРАЗДНИЧНЫЕ"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/seasonal-prazdnichnye",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 7,
+   "title": "SEASONAL / ПРАЗДНИЧНЫЕ"
+  },
+  {
+   "slug": "kosmetika-i-beauty/na-modeli-primenenie/volosy-haircare",
+   "parent": "kosmetika-i-beauty/na-modeli-primenenie",
+   "depth": 2,
+   "sort": 7,
+   "title": "Волосы / Haircare"
+  },
+  {
+   "slug": "mebel-i-interer/divany/showroom",
+   "parent": "mebel-i-interer/divany",
+   "depth": 2,
+   "sort": 7,
+   "title": "Showroom"
+  },
+  {
+   "slug": "mebel-i-interer/kresla/showroom",
+   "parent": "mebel-i-interer/kresla",
+   "depth": 2,
+   "sort": 7,
+   "title": "Showroom"
+  },
+  {
+   "slug": "eda-i-napitki/eda/reklamnye-kreativy",
+   "parent": "eda-i-napitki/eda",
+   "depth": 2,
+   "sort": 8,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/reklamnye-kreativy",
+   "parent": "eda-i-napitki/napitki",
+   "depth": 2,
+   "sort": 8,
+   "title": "РЕКЛАМНЫЕ КРЕАТИВЫ"
+  },
+  {
+   "slug": "eda-i-napitki/eda/dostavka-takeaway/eda-v-zakrytoy-upakovke",
+   "parent": "eda-i-napitki/eda/dostavka-takeaway",
+   "depth": 3,
+   "sort": 1,
+   "title": "Еда в закрытой упаковке"
+  },
+  {
+   "slug": "eda-i-napitki/eda/gotovye-blyuda/restorannaya-podacha",
+   "parent": "eda-i-napitki/eda/gotovye-blyuda",
+   "depth": 3,
+   "sort": 1,
+   "title": "Ресторанная подача"
+  },
+  {
+   "slug": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka/pedestal-studiynaya-stsena",
+   "parent": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 1,
+   "title": "Pedestal / студийная сцена"
+  },
+  {
+   "slug": "eda-i-napitki/eda/lifestyle/kafe-restoran",
+   "parent": "eda-i-napitki/eda/lifestyle",
+   "depth": 3,
+   "sort": 1,
+   "title": "Кафе / ресторан"
+  },
+  {
+   "slug": "eda-i-napitki/eda/reklamnye-kreativy/social-media-ad",
+   "parent": "eda-i-napitki/eda/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "eda-i-napitki/eda/seasonal-prazdnichnye/leto",
+   "parent": "eda-i-napitki/eda/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 1,
+   "title": "Лето"
+  },
+  {
+   "slug": "eda-i-napitki/eda/upakovannye-produkty/hero-produkt-krupno",
+   "parent": "eda-i-napitki/eda/upakovannye-produkty",
+   "depth": 3,
+   "sort": 1,
+   "title": "Hero / продукт крупно"
+  },
+  {
+   "slug": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom/chelovek-est-blyudo",
+   "parent": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom",
+   "depth": 3,
+   "sort": 1,
+   "title": "Человек ест блюдо"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/butylka-banka-upakovka/hero-produkt-krupno",
+   "parent": "eda-i-napitki/napitki/butylka-banka-upakovka",
+   "depth": 3,
+   "sort": 1,
+   "title": "Hero / продукт крупно"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/holod-refreshment/v-ldu",
+   "parent": "eda-i-napitki/napitki/holod-refreshment",
+   "depth": 3,
+   "sort": 1,
+   "title": "В льду"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka/pedestal",
+   "parent": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 1,
+   "title": "Pedestal"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/lifestyle/kafe",
+   "parent": "eda-i-napitki/napitki/lifestyle",
+   "depth": 3,
+   "sort": 1,
+   "title": "Кафе"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/reklamnye-kreativy/social-media-ad",
+   "parent": "eda-i-napitki/napitki/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 1,
+   "title": "Social Media Ad"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/seasonal-prazdnichnye/leto",
+   "parent": "eda-i-napitki/napitki/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 1,
+   "title": "Лето"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii/butylka-v-ruke",
+   "parent": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii",
+   "depth": 3,
+   "sort": 1,
+   "title": "Бутылка в руке"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/vkus-ingredienty/frukty-yagody",
+   "parent": "eda-i-napitki/napitki/vkus-ingredienty",
+   "depth": 3,
+   "sort": 1,
+   "title": "Фрукты / ягоды"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/obedennye-stoly/stolovaya",
+   "parent": "mebel-i-interer/stoly/obedennye-stoly",
+   "depth": 3,
+   "sort": 1,
+   "title": "Столовая"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/rabochie-stoly/domashniy-kabinet",
+   "parent": "mebel-i-interer/stoly/rabochie-stoly",
+   "depth": 3,
+   "sort": 1,
+   "title": "Домашний кабинет"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/zhurnalnye-stoliki/gostinaya",
+   "parent": "mebel-i-interer/stoly/zhurnalnye-stoliki",
+   "depth": 3,
+   "sort": 1,
+   "title": "Гостиная"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/muzhskaya-model/polnyy-rost",
+   "parent": "odezhda-fashion/na-modeli/muzhskaya-model",
+   "depth": 3,
+   "sort": 1,
+   "title": "Полный рост"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/zhenskaya-model/polnyy-rost",
+   "parent": "odezhda-fashion/na-modeli/zhenskaya-model",
+   "depth": 3,
+   "sort": 1,
+   "title": "Полный рост"
+  },
+  {
+   "slug": "sumki/na-modeli/muzhskaya-model/v-ruke",
+   "parent": "sumki/na-modeli/muzhskaya-model",
+   "depth": 3,
+   "sort": 1,
+   "title": "В руке"
+  },
+  {
+   "slug": "sumki/na-modeli/zhenskaya-model/v-ruke",
+   "parent": "sumki/na-modeli/zhenskaya-model",
+   "depth": 3,
+   "sort": 1,
+   "title": "В руке"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar/v-ispolzovanii",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar",
+   "depth": 3,
+   "sort": 1,
+   "title": "В использовании"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery/uprazhnenie-rukami",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery",
+   "depth": 3,
+   "sort": 1,
+   "title": "Упражнение руками"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/skakalki/v-pryzhke-action",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/skakalki",
+   "depth": 3,
+   "sort": 1,
+   "title": "В прыжке / Action"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety/massazh-nogi",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety",
+   "depth": 3,
+   "sort": 1,
+   "title": "Массаж ноги"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller/uprazhnenie-na-spinu",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller",
+   "depth": 3,
+   "sort": 1,
+   "title": "Упражнение на спину"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory/posle-trenirovki",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory",
+   "depth": 3,
+   "sort": 1,
+   "title": "После тренировки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri/v-rukah-vo-vremya-uprazhneniya",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri",
+   "depth": 3,
+   "sort": 1,
+   "title": "В руках / во время упражнения"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski/vo-vremya-uprazhneniya",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski",
+   "depth": 3,
+   "sort": 1,
+   "title": "Во время упражнения"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery/domashniy-sportzal",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery",
+   "depth": 3,
+   "sort": 1,
+   "title": "Домашний спортзал"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki/upakovka-otkrytyy-produkt",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki",
+   "depth": 3,
+   "sort": 1,
+   "title": "Упаковка + открытый продукт"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki/chistaya-predmetnaya-stsena",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki",
+   "depth": 3,
+   "sort": 1,
+   "title": "Чистая предметная сцена"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty/banka-upakovka-hero",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty",
+   "depth": 3,
+   "sort": 1,
+   "title": "Банка / упаковка Hero"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi/v-uprazhnenii",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi",
+   "depth": 3,
+   "sort": 1,
+   "title": "В упражнении"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi/gotovoe-mesto-dlya-trenirovki",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi",
+   "depth": 3,
+   "sort": 1,
+   "title": "Готовое место для тренировки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/kovriki/chelovek-zanimaetsya-yogoy",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/kovriki",
+   "depth": 3,
+   "sort": 1,
+   "title": "Человек занимается йогой"
+  },
+  {
+   "slug": "eda-i-napitki/eda/dostavka-takeaway/otkrytaya-upakovka-s-blyudom",
+   "parent": "eda-i-napitki/eda/dostavka-takeaway",
+   "depth": 3,
+   "sort": 2,
+   "title": "Открытая упаковка с блюдом"
+  },
+  {
+   "slug": "eda-i-napitki/eda/gotovye-blyuda/domashnyaya-podacha",
+   "parent": "eda-i-napitki/eda/gotovye-blyuda",
+   "depth": 3,
+   "sort": 2,
+   "title": "Домашняя подача"
+  },
+  {
+   "slug": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka/floating-levitatsiya",
+   "parent": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 2,
+   "title": "Floating / левитация"
+  },
+  {
+   "slug": "eda-i-napitki/eda/lifestyle/zavtrak",
+   "parent": "eda-i-napitki/eda/lifestyle",
+   "depth": 3,
+   "sort": 2,
+   "title": "Завтрак"
+  },
+  {
+   "slug": "eda-i-napitki/eda/reklamnye-kreativy/story-vertical-ad",
+   "parent": "eda-i-napitki/eda/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "eda-i-napitki/eda/seasonal-prazdnichnye/osen",
+   "parent": "eda-i-napitki/eda/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 2,
+   "title": "Осень"
+  },
+  {
+   "slug": "eda-i-napitki/eda/upakovannye-produkty/produkt-otkrytaya-upakovka",
+   "parent": "eda-i-napitki/eda/upakovannye-produkty",
+   "depth": 3,
+   "sort": 2,
+   "title": "Продукт + открытая упаковка"
+  },
+  {
+   "slug": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom/ruki-s-produktom",
+   "parent": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom",
+   "depth": 3,
+   "sort": 2,
+   "title": "Руки с продуктом"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/butylka-banka-upakovka/produkt-stakan",
+   "parent": "eda-i-napitki/napitki/butylka-banka-upakovka",
+   "depth": 3,
+   "sort": 2,
+   "title": "Продукт + стакан"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/holod-refreshment/holodnaya-butylka-s-kondensatom",
+   "parent": "eda-i-napitki/napitki/holod-refreshment",
+   "depth": 3,
+   "sort": 2,
+   "title": "Холодная бутылка с конденсатом"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka/floating-levitatsiya",
+   "parent": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 2,
+   "title": "Floating / левитация"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/lifestyle/kuhnya-zavtrak",
+   "parent": "eda-i-napitki/napitki/lifestyle",
+   "depth": 3,
+   "sort": 2,
+   "title": "Кухня / завтрак"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/reklamnye-kreativy/story-vertical-ad",
+   "parent": "eda-i-napitki/napitki/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 2,
+   "title": "Story / Vertical Ad"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/seasonal-prazdnichnye/osen",
+   "parent": "eda-i-napitki/napitki/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 2,
+   "title": "Осень"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii/banka-v-ruke",
+   "parent": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii",
+   "depth": 3,
+   "sort": 2,
+   "title": "Банка в руке"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/vkus-ingredienty/tsitrusy",
+   "parent": "eda-i-napitki/napitki/vkus-ingredienty",
+   "depth": 3,
+   "sort": 2,
+   "title": "Цитрусы"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/obedennye-stoly/kuhnya-stolovaya",
+   "parent": "mebel-i-interer/stoly/obedennye-stoly",
+   "depth": 3,
+   "sort": 2,
+   "title": "Кухня-столовая"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/rabochie-stoly/sovremennyy-ofis",
+   "parent": "mebel-i-interer/stoly/rabochie-stoly",
+   "depth": 3,
+   "sort": 2,
+   "title": "Современный офис"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/zhurnalnye-stoliki/lounge-otel",
+   "parent": "mebel-i-interer/stoly/zhurnalnye-stoliki",
+   "depth": 3,
+   "sort": 2,
+   "title": "Lounge / отель"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/muzhskaya-model/po-poyas",
+   "parent": "odezhda-fashion/na-modeli/muzhskaya-model",
+   "depth": 3,
+   "sort": 2,
+   "title": "По пояс"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/zhenskaya-model/po-poyas",
+   "parent": "odezhda-fashion/na-modeli/zhenskaya-model",
+   "depth": 3,
+   "sort": 2,
+   "title": "По пояс"
+  },
+  {
+   "slug": "sumki/na-modeli/muzhskaya-model/na-pleche",
+   "parent": "sumki/na-modeli/muzhskaya-model",
+   "depth": 3,
+   "sort": 2,
+   "title": "На плече"
+  },
+  {
+   "slug": "sumki/na-modeli/zhenskaya-model/na-pleche",
+   "parent": "sumki/na-modeli/zhenskaya-model",
+   "depth": 3,
+   "sort": 2,
+   "title": "На плече"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar/na-trenirovochnoy-poverhnosti",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar",
+   "depth": 3,
+   "sort": 2,
+   "title": "На тренировочной поверхности"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery/uprazhnenie-nogami",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery",
+   "depth": 3,
+   "sort": 2,
+   "title": "Упражнение ногами"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/skakalki/sportzal",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/skakalki",
+   "depth": 3,
+   "sort": 2,
+   "title": "Спортзал"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety/massazh-ruki-plecha",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety",
+   "depth": 3,
+   "sort": 2,
+   "title": "Массаж руки / плеча"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller/uprazhnenie-na-nogi",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller",
+   "depth": 3,
+   "sort": 2,
+   "title": "Упражнение на ноги"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory/home-wellness",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory",
+   "depth": 3,
+   "sort": 2,
+   "title": "Home wellness"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri/domashniy-sportzal",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri",
+   "depth": 3,
+   "sort": 2,
+   "title": "Домашний спортзал"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski/na-stoyke",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski",
+   "depth": 3,
+   "sort": 2,
+   "title": "На стойке"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery/professionalnyy-zal",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery",
+   "depth": 3,
+   "sort": 2,
+   "title": "Профессиональный зал"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki/v-ruke",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki",
+   "depth": 3,
+   "sort": 2,
+   "title": "В руке"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki/utrennyaya-wellness-routine",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki",
+   "depth": 3,
+   "sort": 2,
+   "title": "Утренняя wellness-routine"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty/produkt-shaker",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty",
+   "depth": 3,
+   "sort": 2,
+   "title": "Продукт + shaker"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi/yoga-pilates-studio",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi",
+   "depth": 3,
+   "sort": 2,
+   "title": "Yoga / Pilates studio"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi/studio",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi",
+   "depth": 3,
+   "sort": 2,
+   "title": "Studio"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/kovriki/chelovek-zanimaetsya-pilates",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/kovriki",
+   "depth": 3,
+   "sort": 2,
+   "title": "Человек занимается Pilates"
+  },
+  {
+   "slug": "eda-i-napitki/eda/dostavka-takeaway/nabor-dostavki",
+   "parent": "eda-i-napitki/eda/dostavka-takeaway",
+   "depth": 3,
+   "sort": 3,
+   "title": "Набор доставки"
+  },
+  {
+   "slug": "eda-i-napitki/eda/gotovye-blyuda/vid-sverhu-overhead",
+   "parent": "eda-i-napitki/eda/gotovye-blyuda",
+   "depth": 3,
+   "sort": 3,
+   "title": "Вид сверху / Overhead"
+  },
+  {
+   "slug": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka/ingredienty-v-dvizhenii",
+   "parent": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 3,
+   "title": "Ингредиенты в движении"
+  },
+  {
+   "slug": "eda-i-napitki/eda/lifestyle/piknik",
+   "parent": "eda-i-napitki/eda/lifestyle",
+   "depth": 3,
+   "sort": 3,
+   "title": "Пикник"
+  },
+  {
+   "slug": "eda-i-napitki/eda/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "eda-i-napitki/eda/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "eda-i-napitki/eda/seasonal-prazdnichnye/zima",
+   "parent": "eda-i-napitki/eda/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 3,
+   "title": "Зима"
+  },
+  {
+   "slug": "eda-i-napitki/eda/upakovannye-produkty/produkt-sredi-ingredientov",
+   "parent": "eda-i-napitki/eda/upakovannye-produkty",
+   "depth": 3,
+   "sort": 3,
+   "title": "Продукт среди ингредиентов"
+  },
+  {
+   "slug": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom/podacha-blyuda-na-stol",
+   "parent": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom",
+   "depth": 3,
+   "sort": 3,
+   "title": "Подача блюда на стол"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/butylka-banka-upakovka/otkrytaya-butylka-banka",
+   "parent": "eda-i-napitki/napitki/butylka-banka-upakovka",
+   "depth": 3,
+   "sort": 3,
+   "title": "Открытая бутылка / банка"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/holod-refreshment/voda-splash",
+   "parent": "eda-i-napitki/napitki/holod-refreshment",
+   "depth": 3,
+   "sort": 3,
+   "title": "Вода / Splash"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka/steklo-otrazheniya",
+   "parent": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 3,
+   "title": "Стекло / отражения"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/lifestyle/piknik-outdoor",
+   "parent": "eda-i-napitki/napitki/lifestyle",
+   "depth": 3,
+   "sort": 3,
+   "title": "Пикник / Outdoor"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/reklamnye-kreativy/website-marketplace-banner",
+   "parent": "eda-i-napitki/napitki/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 3,
+   "title": "Website / Marketplace Banner"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/seasonal-prazdnichnye/zima",
+   "parent": "eda-i-napitki/napitki/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 3,
+   "title": "Зима"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii/stakan-chashka-v-ruke",
+   "parent": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii",
+   "depth": 3,
+   "sort": 3,
+   "title": "Стакан / чашка в руке"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/vkus-ingredienty/travy-rasteniya",
+   "parent": "eda-i-napitki/napitki/vkus-ingredienty",
+   "depth": 3,
+   "sort": 3,
+   "title": "Травы / растения"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/obedennye-stoly/luxury-interer",
+   "parent": "mebel-i-interer/stoly/obedennye-stoly",
+   "depth": 3,
+   "sort": 3,
+   "title": "Luxury интерьер"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/rabochie-stoly/executive-office",
+   "parent": "mebel-i-interer/stoly/rabochie-stoly",
+   "depth": 3,
+   "sort": 3,
+   "title": "Executive office"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/zhurnalnye-stoliki/minimal-interer",
+   "parent": "mebel-i-interer/stoly/zhurnalnye-stoliki",
+   "depth": 3,
+   "sort": 3,
+   "title": "Minimal интерьер"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/muzhskaya-model/krupnyy-plan-odezhdy",
+   "parent": "odezhda-fashion/na-modeli/muzhskaya-model",
+   "depth": 3,
+   "sort": 3,
+   "title": "Крупный план одежды"
+  },
+  {
+   "slug": "odezhda-fashion/na-modeli/zhenskaya-model/krupnyy-plan-odezhdy",
+   "parent": "odezhda-fashion/na-modeli/zhenskaya-model",
+   "depth": 3,
+   "sort": 3,
+   "title": "Крупный план одежды"
+  },
+  {
+   "slug": "sumki/na-modeli/muzhskaya-model/crossbody-cherez-plecho",
+   "parent": "sumki/na-modeli/muzhskaya-model",
+   "depth": 3,
+   "sort": 3,
+   "title": "Crossbody / через плечо"
+  },
+  {
+   "slug": "sumki/na-modeli/zhenskaya-model/crossbody-cherez-plecho",
+   "parent": "sumki/na-modeli/zhenskaya-model",
+   "depth": 3,
+   "sort": 3,
+   "title": "Crossbody / через плечо"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar/home-workout",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar",
+   "depth": 3,
+   "sort": 3,
+   "title": "Home workout"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery/domashnyaya-trenirovka",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery",
+   "depth": 3,
+   "sort": 3,
+   "title": "Домашняя тренировка"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/skakalki/outdoor-trenirovka",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/skakalki",
+   "depth": 3,
+   "sort": 3,
+   "title": "Outdoor-тренировка"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety/posle-trenirovki",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety",
+   "depth": 3,
+   "sort": 3,
+   "title": "После тренировки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller/sportzal",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller",
+   "depth": 3,
+   "sort": 3,
+   "title": "Спортзал"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory/sportivnaya-sumka-gym",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory",
+   "depth": 3,
+   "sort": 3,
+   "title": "Спортивная сумка / Gym"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri/professionalnyy-zal",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri",
+   "depth": 3,
+   "sort": 3,
+   "title": "Профессиональный зал"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski/v-trenazhernom-zale",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski",
+   "depth": 3,
+   "sort": 3,
+   "title": "В тренажёрном зале"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery/chelovek-treniruetsya",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery",
+   "depth": 3,
+   "sort": 3,
+   "title": "Человек тренируется"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki/posle-trenirovki",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki",
+   "depth": 3,
+   "sort": 3,
+   "title": "После тренировки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki/na-kuhne",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki",
+   "depth": 3,
+   "sort": 3,
+   "title": "На кухне"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty/gotovyy-napitok",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty",
+   "depth": 3,
+   "sort": 3,
+   "title": "Готовый напиток"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi/domashnyaya-trenirovka",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi",
+   "depth": 3,
+   "sort": 3,
+   "title": "Домашняя тренировка"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi/home-wellness",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi",
+   "depth": 3,
+   "sort": 3,
+   "title": "Home wellness"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/kovriki/domashniy-interer",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/kovriki",
+   "depth": 3,
+   "sort": 3,
+   "title": "Домашний интерьер"
+  },
+  {
+   "slug": "eda-i-napitki/eda/dostavka-takeaway/takeaway-na-stole-v-rukah",
+   "parent": "eda-i-napitki/eda/dostavka-takeaway",
+   "depth": 3,
+   "sort": 4,
+   "title": "Takeaway на столе / в руках"
+  },
+  {
+   "slug": "eda-i-napitki/eda/gotovye-blyuda/appetitnyy-krupnyy-kadr",
+   "parent": "eda-i-napitki/eda/gotovye-blyuda",
+   "depth": 3,
+   "sort": 4,
+   "title": "Аппетитный крупный кадр"
+  },
+  {
+   "slug": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka/tsvetnaya-reklamnaya-kompozitsiya",
+   "parent": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 4,
+   "title": "Цветная рекламная композиция"
+  },
+  {
+   "slug": "eda-i-napitki/eda/lifestyle/semeynyy-prazdnichnyy-stol",
+   "parent": "eda-i-napitki/eda/lifestyle",
+   "depth": 3,
+   "sort": 4,
+   "title": "Семейный / праздничный стол"
+  },
+  {
+   "slug": "eda-i-napitki/eda/reklamnye-kreativy/product-menu-launch",
+   "parent": "eda-i-napitki/eda/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 4,
+   "title": "Product / Menu Launch"
+  },
+  {
+   "slug": "eda-i-napitki/eda/seasonal-prazdnichnye/christmas-new-year",
+   "parent": "eda-i-napitki/eda/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 4,
+   "title": "Christmas / New Year"
+  },
+  {
+   "slug": "eda-i-napitki/eda/upakovannye-produkty/na-kuhne-stole",
+   "parent": "eda-i-napitki/eda/upakovannye-produkty",
+   "depth": 3,
+   "sort": 4,
+   "title": "На кухне / столе"
+  },
+  {
+   "slug": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom/prigotovlenie-servirovka",
+   "parent": "eda-i-napitki/eda/v-ispolzovanii-s-chelovekom",
+   "depth": 3,
+   "sort": 4,
+   "title": "Приготовление / сервировка"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/butylka-banka-upakovka/nabor-lineyka-napitkov",
+   "parent": "eda-i-napitki/napitki/butylka-banka-upakovka",
+   "depth": 3,
+   "sort": 4,
+   "title": "Набор / линейка напитков"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/holod-refreshment/napitok-nalivaetsya-v-stakan",
+   "parent": "eda-i-napitki/napitki/holod-refreshment",
+   "depth": 3,
+   "sort": 4,
+   "title": "Напиток наливается в стакан"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka/tsvetnaya-reklamnaya-stsena",
+   "parent": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 4,
+   "title": "Цветная рекламная сцена"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/lifestyle/plyazh-summer",
+   "parent": "eda-i-napitki/napitki/lifestyle",
+   "depth": 3,
+   "sort": 4,
+   "title": "Пляж / Summer"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/reklamnye-kreativy/new-flavor-product-launch",
+   "parent": "eda-i-napitki/napitki/reklamnye-kreativy",
+   "depth": 3,
+   "sort": 4,
+   "title": "New Flavor / Product Launch"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/seasonal-prazdnichnye/christmas-new-year",
+   "parent": "eda-i-napitki/napitki/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 4,
+   "title": "Christmas / New Year"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii/chelovek-pet-napitok",
+   "parent": "eda-i-napitki/napitki/v-ruke-v-ispolzovanii",
+   "depth": 3,
+   "sort": 4,
+   "title": "Человек пьёт напиток"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/vkus-ingredienty/kofe-kakao-spetsii",
+   "parent": "eda-i-napitki/napitki/vkus-ingredienty",
+   "depth": 3,
+   "sort": 4,
+   "title": "Кофе / какао / специи"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/obedennye-stoly/katalozhnaya-semka",
+   "parent": "mebel-i-interer/stoly/obedennye-stoly",
+   "depth": 3,
+   "sort": 4,
+   "title": "Каталожная съёмка"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/rabochie-stoly/katalozhnaya-semka",
+   "parent": "mebel-i-interer/stoly/rabochie-stoly",
+   "depth": 3,
+   "sort": 4,
+   "title": "Каталожная съёмка"
+  },
+  {
+   "slug": "mebel-i-interer/stoly/zhurnalnye-stoliki/katalozhnaya-semka",
+   "parent": "mebel-i-interer/stoly/zhurnalnye-stoliki",
+   "depth": 3,
+   "sort": 4,
+   "title": "Каталожная съёмка"
+  },
+  {
+   "slug": "sumki/na-modeli/muzhskaya-model/na-spine",
+   "parent": "sumki/na-modeli/muzhskaya-model",
+   "depth": 3,
+   "sort": 4,
+   "title": "На спине"
+  },
+  {
+   "slug": "sumki/na-modeli/zhenskaya-model/na-sgibe-ruki",
+   "parent": "sumki/na-modeli/zhenskaya-model",
+   "depth": 3,
+   "sort": 4,
+   "title": "На сгибе руки"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar/nabor-oborudovaniya",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/melkiy-trenirovochnyy-inventar",
+   "depth": 3,
+   "sort": 4,
+   "title": "Набор оборудования"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery/sportzal",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery",
+   "depth": 3,
+   "sort": 4,
+   "title": "Спортзал"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/skakalki/predmetnaya-kompozitsiya",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/skakalki",
+   "depth": 3,
+   "sort": 4,
+   "title": "Предметная композиция"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety/domashnee-vosstanovlenie",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety",
+   "depth": 3,
+   "sort": 4,
+   "title": "Домашнее восстановление"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller/domashnee-vosstanovlenie",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-roliki-foam-roller",
+   "depth": 3,
+   "sort": 4,
+   "title": "Домашнее восстановление"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory/komplekt-tovarov",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/recovery-nabory",
+   "depth": 3,
+   "sort": 4,
+   "title": "Комплект товаров"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri/na-sportivnom-pokrytii-predmetnaya-stsena",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri",
+   "depth": 3,
+   "sort": 4,
+   "title": "На спортивном покрытии / предметная сцена"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski/komplekt-oborudovaniya",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/shtangi-diski",
+   "depth": 3,
+   "sort": 4,
+   "title": "Комплект оборудования"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery/chistaya-reklamnaya-stsena",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/silovye-trenazhery",
+   "depth": 3,
+   "sort": 4,
+   "title": "Чистая рекламная сцена"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki/sportivnaya-outdoor-stsena",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/batonchiki-sportivnye-sneki",
+   "depth": 3,
+   "sort": 4,
+   "title": "Спортивная / outdoor сцена"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki/ryadom-so-sportivnym-inventarem",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki",
+   "depth": 3,
+   "sort": 4,
+   "title": "Рядом со спортивным инвентарём"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty/na-kuhne-prigotovlenie",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty",
+   "depth": 3,
+   "sort": 4,
+   "title": "На кухне / приготовление"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi/nabor-aksessuarov",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/bloki-koltsa-myachi",
+   "depth": 3,
+   "sort": 4,
+   "title": "Набор аксессуаров"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi/outdoor",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/komplekty-dlya-yogi",
+   "depth": 3,
+   "sort": 4,
+   "title": "Outdoor"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/kovriki/yoga-studio",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/kovriki",
+   "depth": 3,
+   "sort": 4,
+   "title": "Yoga studio"
+  },
+  {
+   "slug": "eda-i-napitki/eda/gotovye-blyuda/neskolko-blyud-table-spread",
+   "parent": "eda-i-napitki/eda/gotovye-blyuda",
+   "depth": 3,
+   "sort": 5,
+   "title": "Несколько блюд / Table Spread"
+  },
+  {
+   "slug": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka/premium-kontseptualnaya-stsena",
+   "parent": "eda-i-napitki/eda/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 5,
+   "title": "Premium / концептуальная сцена"
+  },
+  {
+   "slug": "eda-i-napitki/eda/lifestyle/outdoor",
+   "parent": "eda-i-napitki/eda/lifestyle",
+   "depth": 3,
+   "sort": 5,
+   "title": "Outdoor"
+  },
+  {
+   "slug": "eda-i-napitki/eda/seasonal-prazdnichnye/drugie-prazdniki",
+   "parent": "eda-i-napitki/eda/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 5,
+   "title": "Другие праздники"
+  },
+  {
+   "slug": "eda-i-napitki/eda/upakovannye-produkty/nabor-lineyka-produktov",
+   "parent": "eda-i-napitki/eda/upakovannye-produkty",
+   "depth": 3,
+   "sort": 5,
+   "title": "Набор / линейка продуктов"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka/premium-dark",
+   "parent": "eda-i-napitki/napitki/kreativnaya-predmetnaya-semka",
+   "depth": 3,
+   "sort": 5,
+   "title": "Premium / Dark"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/lifestyle/sport-active",
+   "parent": "eda-i-napitki/napitki/lifestyle",
+   "depth": 3,
+   "sort": 5,
+   "title": "Sport / Active"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/seasonal-prazdnichnye/prazdnichnaya-vecherinka",
+   "parent": "eda-i-napitki/napitki/seasonal-prazdnichnye",
+   "depth": 3,
+   "sort": 5,
+   "title": "Праздничная вечеринка"
+  },
+  {
+   "slug": "eda-i-napitki/napitki/vkus-ingredienty/drugie-ingredienty-vkusa",
+   "parent": "eda-i-napitki/napitki/vkus-ingredienty",
+   "depth": 3,
+   "sort": 5,
+   "title": "Другие ингредиенты вкуса"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery/nabor-komplekt",
+   "parent": "zdorove-sport-i-wellness/fitnes-inventar/rezinki-espandery",
+   "depth": 3,
+   "sort": 5,
+   "title": "Набор / комплект"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety/premium-product-scene",
+   "parent": "zdorove-sport-i-wellness/recovery-massazh/massazhnye-pistolety",
+   "depth": 3,
+   "sort": 5,
+   "title": "Premium product scene"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri/nabor-komplekt",
+   "parent": "zdorove-sport-i-wellness/silovoy-inventar/ganteli-giri",
+   "depth": 3,
+   "sort": 5,
+   "title": "Набор / комплект"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki/nabor-lineyka-produktov",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/dobavki-banki-upakovki",
+   "depth": 3,
+   "sort": 5,
+   "title": "Набор / линейка продуктов"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty/v-sportzale",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty",
+   "depth": 3,
+   "sort": 5,
+   "title": "В спортзале"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/yoga-pilates/kovriki/outdoor-priroda",
+   "parent": "zdorove-sport-i-wellness/yoga-pilates/kovriki",
+   "depth": 3,
+   "sort": 5,
+   "title": "Outdoor / природа"
+  },
+  {
+   "slug": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty/ingredienty-vokrug-produkta",
+   "parent": "zdorove-sport-i-wellness/sportivnoe-pitanie/protein-poroshkovye-produkty",
+   "depth": 3,
+   "sort": 6,
+   "title": "Ингредиенты вокруг продукта"
+  }
+ ]
+}

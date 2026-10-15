@@ -1,0 +1,4 @@
+# Test and lint tools (not installed in the image).
+pytest==9.1.1
+ruff==0.16.10
+httpx==0.28.1

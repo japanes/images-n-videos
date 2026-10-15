@@ -1,0 +1,24 @@
+[project]
+name = "vf-stt"
+version = "0.0.0"
+description = "Local speech-to-text service of Vertex AI Factory (faster-whisper, CPU int8)"
+requires-python = ">=3.12"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = [
+    # starlette's TestClient nags about its httpx backend; irrelevant for the service.
+    "ignore:Using `httpx` with `starlette.testclient`",
+]
+addopts = "-m 'not slow' -p no:cacheprovider"
+markers = [
+    "slow: downloads a real model from Hugging Face and runs it (pytest -m slow)",
+]

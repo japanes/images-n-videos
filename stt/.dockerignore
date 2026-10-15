@@ -1,0 +1,6 @@
+# Only requirements.txt and the stt/ package go into the image.
+*
+!requirements.txt
+!stt/
+**/__pycache__
+**/*.pyc

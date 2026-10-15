@@ -1,0 +1,29 @@
+# Local temp files (project rule: never use global /tmp)
+tmp/
+
+# Local config and data
+.env
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node / Nuxt
+node_modules/
+.nuxt/
+.output/
+dist/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Docs, plans and agent instructions stay local (repo holds runnable code only)
+docs/
+CLAUDE.md

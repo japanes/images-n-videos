@@ -1,0 +1,133 @@
+{
+  "media": {
+    "title": "Media",
+    "subtitle": "All your pictures, videos and audio in one place: what you uploaded and what the app made. Files stay on this computer.",
+    "refresh": "Refresh",
+    "kinds": {
+      "image": "Pictures",
+      "video": "Videos",
+      "audio": "Audio",
+      "font": "Fonts",
+      "other": "Other"
+    },
+    "sources": {
+      "upload": "Uploaded by you",
+      "generation": "Made by the app",
+      "avatar": "Avatars",
+      "editor": "Video editor",
+      "export": "Finished videos"
+    },
+    "filters": {
+      "allKinds": "All",
+      "search": "Search",
+      "searchHint": "File name",
+      "source": "Where it came from",
+      "allSources": "Anywhere",
+      "from": "From",
+      "to": "To",
+      "reset": "Reset filters"
+    },
+    "select": {
+      "one": "Select",
+      "oneNamed": "Select {name}",
+      "count": "{n} file selected | {n} files selected",
+      "total": "{n} file | {n} files",
+      "page": "Select all on this page",
+      "clear": "Clear selection",
+      "delete": "Delete selected"
+    },
+    "delete": {
+      "oneTitle": "Delete the file?",
+      "oneAsk": "\"{name}\" will be removed from this computer. This cannot be undone.",
+      "doneOne": "File deleted",
+      "manyTitle": "Delete the selected files?",
+      "manyAsk": "{n} file will be removed from this computer. This cannot be undone. | {n} files will be removed from this computer. This cannot be undone.",
+      "manyInUse": "{n} of them is used somewhere else and will be kept. | {n} of them are used somewhere else and will be kept.",
+      "doneMany": "{n} file deleted | {n} files deleted",
+      "blocked": "Not deleted because it is in use: {names} | Not deleted because they are in use: {names}"
+    },
+    "empty": {
+      "title": "Nothing here yet",
+      "text": "Upload pictures, videos or audio, or make something in the chat: results land here by themselves.",
+      "filteredTitle": "Nothing found",
+      "filteredText": "No files match these filters. Change them or reset."
+    },
+    "pager": {
+      "prev": "Back",
+      "next": "Next",
+      "page": "Page {page} of {pages}"
+    },
+    "tile": {
+      "processing": "Preparing a preview…",
+      "noPreview": "No preview",
+      "used": "In use",
+      "usedTitle": "Used in {n} place | Used in {n} places"
+    },
+    "viewer": {
+      "prev": "Previous file",
+      "next": "Next file",
+      "name": "Name",
+      "nameHint": "Only the name in the library changes; the file itself stays the same.",
+      "type": "Type",
+      "dimensions": "Size in pixels",
+      "duration": "Length",
+      "fileSize": "File size",
+      "added": "Added",
+      "source": "Where it came from",
+      "originalName": "Original file name",
+      "missing": "This file is no longer in the library."
+    },
+    "ingest": {
+      "title": "Preview",
+      "busyVideo": "Making a cover picture and a short preview…",
+      "busyAudio": "Reading the length of the recording…",
+      "failed": "Could not prepare the preview. The file itself is fine.",
+      "doneVideo": "Cover picture and preview are ready.",
+      "doneAudio": "Length of the recording is known.",
+      "none": "Not prepared yet.",
+      "again": "Prepare again"
+    },
+    "usages": {
+      "title": "Where it is used",
+      "unknown": "Could not check where this file is used, so it cannot be deleted right now. Try again later.",
+      "none": "Not used anywhere. It can be deleted.",
+      "blocked": "While the file is used here, it cannot be deleted. Remove it from these places first."
+    },
+    "usageTypes": {
+      "avatar": "Avatar",
+      "subject": "Brand subject",
+      "brand_kit": "Brand kit",
+      "style": "Style preview",
+      "project": "Video editor project",
+      "chat": "Chat"
+    },
+    "upload": {
+      "button": "Upload",
+      "drop": "Drop files here to upload",
+      "hint": "Pictures up to {image} MB, videos up to {video} MB, audio up to {audio} MB. You can also drag files onto this page.",
+      "queueBusy": "Uploading: {n} file left | Uploading: {n} files left",
+      "queueDone": "Upload finished",
+      "clear": "Clear list",
+      "leave": "Leave",
+      "leaveAsk": "{n} file is still uploading. If you leave this page, the upload stops. | {n} files are still uploading. If you leave this page, the upload stops.",
+      "status": {
+        "waiting": "Waiting",
+        "uploading": "Uploading",
+        "done": "Uploaded",
+        "error": "Error",
+        "cancelled": "Cancelled"
+      }
+    },
+    "storage": {
+      "title": "On disk",
+      "total": "All files together: {size}",
+      "service": "Temporary files: {size}",
+      "serviceHint": "Intermediate files the app made along the way. Old ones are cleaned up by themselves; your uploads are never touched.",
+      "free": "Free on disk: {free} of {total}",
+      "lowDisk": "Little free space is left. Long videos may not fit: delete what you do not need."
+    },
+    "jobs": {
+      "ingest": "Preparing a file preview"
+    }
+  }
+}

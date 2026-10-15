@@ -1,0 +1,190 @@
+{
+  "brand": {
+    "title": "Brand",
+    "subtitle": "Your brand kits and the things you shoot: products, people, props. The chat and the studio take them from here.",
+    "tabs": {
+      "kits": "Brand kits",
+      "subjects": "Subjects"
+    },
+    "kits": {
+      "newKit": "New kit",
+      "createTitle": "New brand kit",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. Coffee shop",
+      "create": "Create",
+      "emptyTitle": "No brand kits yet",
+      "emptyText": "A kit keeps your colors, fonts, logo and tone of voice in one place, so every picture and video looks like your brand.",
+      "open": "Open",
+      "delete": "Delete kit",
+      "deleteConfirm": "Delete the kit “{name}” with its logos, fonts and pictures?",
+      "deleted": "Kit deleted",
+      "noColors": "No colors yet",
+      "fonts": "Fonts: {n}",
+      "elements": "Elements: {n}",
+      "references": "References: {n}"
+    },
+    "kit": {
+      "back": "All kits",
+      "nameLabel": "Kit name",
+      "colors": {
+        "title": "Colors",
+        "hint": "Brand colors, most important first. The label says what a color is for, e.g. “background” or “accents”.",
+        "add": "Add color",
+        "hexLabel": "Color code",
+        "labelPlaceholder": "What it is for",
+        "moveUp": "Move up",
+        "remove": "Remove color",
+        "max": "Up to {n} colors.",
+        "empty": "No colors yet."
+      },
+      "tone": {
+        "title": "Tone of voice",
+        "hint": "How the brand speaks: words to use and to avoid, how long sentences are, emoji or not. Used when texts and captions are written.",
+        "placeholder": "e.g. Friendly and short. No slang, at most one emoji."
+      },
+      "fonts": {
+        "title": "Fonts",
+        "hint": "Upload TTF or OTF files. The type (serif, sans serif…) is read from the file itself, without AI. Change it if it is wrong.",
+        "upload": "Upload font",
+        "formats": "TTF or OTF, up to {mb} MB.",
+        "empty": "No fonts yet.",
+        "sample": "The quick brown fox jumps over the lazy dog 0123456789",
+        "category": "Type",
+        "categories": {
+          "sans": "Sans serif",
+          "serif": "Serif",
+          "mono": "Monospace",
+          "display": "Display (decorative)",
+          "handwriting": "Handwriting"
+        },
+        "detected": "Read from the file: {category}.",
+        "guessed": "The file does not say its type, so “{category}” was picked. Check it.",
+        "catalog": "From the font catalog",
+        "remove": "Delete font",
+        "removeConfirm": "Delete the font “{name}”?"
+      },
+      "elements": {
+        "title": "Brand elements",
+        "hint": "Logos, frames, stickers and other pictures the brand reuses. The first logo is the main logo of the kit. Drag a picture by its handle to change the order.",
+        "all": "All",
+        "kinds": {
+          "logo": "Logos",
+          "frame": "Frames",
+          "sticker": "Stickers",
+          "plate": "Plates",
+          "badge": "Badges",
+          "background": "Backgrounds",
+          "other": "Other"
+        },
+        "kindHints": {
+          "logo": "Your logo. The first one is the main logo of the kit.",
+          "frame": "A frame around a picture.",
+          "sticker": "A small picture to put on top of a picture.",
+          "plate": "A backing for text: the caption goes on top of it.",
+          "badge": "A badge or tag: price, discount, “new”.",
+          "background": "A ready-made background.",
+          "other": "Everything else."
+        },
+        "uploadAs": "Upload as",
+        "upload": "Upload pictures",
+        "empty": "Nothing here yet."
+      },
+      "references": {
+        "title": "Style references",
+        "hint": "Pictures that show the look you want: light, colors, mood. They are examples of style, not things to copy.",
+        "upload": "Upload references",
+        "empty": "No references yet."
+      },
+      "formats": "PNG, JPEG or WebP, up to {mb} MB.",
+      "uploading": "Uploading {done} of {total}…",
+      "reorder": "Drag to change the order",
+      "asset": {
+        "edit": "Edit",
+        "editTitle": "Picture details",
+        "name": "Name",
+        "namePlaceholder": "e.g. Main logo (white)",
+        "kind": "Kind",
+        "positionHint": "Where to place it",
+        "positionHintPlaceholder": "e.g. top right corner",
+        "note": "How to use it",
+        "notePlaceholder": "When and how to use this picture",
+        "untitled": "Untitled",
+        "remove": "Delete",
+        "removeConfirm": "Delete “{name}”?"
+      }
+    },
+    "subjects": {
+      "hint": "Products, people and props that must look the same in every picture. Add a few photos from different angles and a short description.",
+      "tabs": {
+        "library": "Library",
+        "oneOff": "One-off"
+      },
+      "oneOffHint": "Quick subjects added in a chat for one job. Move the ones you want to keep to the library.",
+      "new": "New subject",
+      "search": "Search by name or description",
+      "kind": "Kind",
+      "allKinds": "All kinds",
+      "kinds": {
+        "product": "Product",
+        "person": "Person",
+        "prop": "Prop"
+      },
+      "emptyTitle": "No subjects yet",
+      "emptyText": "Add a product, a person or a prop with a few photos, then use it in the chat.",
+      "oneOffEmptyTitle": "No one-off subjects",
+      "oneOffEmptyText": "They appear when you add a quick subject in a chat.",
+      "filteredTitle": "Nothing found",
+      "filteredText": "Try another word or kind.",
+      "card": {
+        "namePlaceholder": "Name",
+        "unnamed": "Untitled subject",
+        "oneOff": "One-off",
+        "remove": "Delete subject",
+        "removeConfirm": "Delete the subject “{name}” with its photos?",
+        "promote": "Move to library",
+        "promoted": "Moved to the library",
+        "removePhoto": "Delete photo",
+        "removePhotoConfirm": "Delete this photo?",
+        "addPhoto": "Add photo",
+        "moveUp": "Move forward",
+        "anglePlaceholder": "Angle: front, profile…",
+        "noPhotos": "Without a photo this subject never reaches generation. Add at least one.",
+        "photosHint": "The first {sent} photos in this order are sent to the model (up to {max} can be kept). Reorder them to pick the angles you want.",
+        "photoMax": "No more than {n} photos per subject.",
+        "sentHint": "This photo is sent to the model (first {n}).",
+        "notSentHint": "This photo is not sent to the model. Move it forward.",
+        "description": "Description",
+        "descriptionPlaceholder": "What this is: shape, color, details that must not change.",
+        "sourceManual": "Written by hand",
+        "sourcePhoto": "Written by AI from the photos",
+        "describe": "Describe from photos (AI)",
+        "describeNeedsPhoto": "Upload at least one photo first.",
+        "describeHint": "The AI looks at the first {n} photos and writes the description. If the subject has no name, it suggests one.",
+        "described": "Description is ready",
+        "describeOverwrite": "This description was written by hand. Replace it with the AI one?",
+        "describeOverwriteConfirm": "Replace",
+        "focusPlaceholder": "What to take from the photo: e.g. the bracelet only",
+        "focusHint": "The AI describes whatever fills the frame. Say what you actually need: everything else in the photo is treated as background and stays out of the description."
+      }
+    },
+    "errors": {
+      "name_required": "Give it a name.",
+      "bad_colors": "The colors could not be saved.",
+      "too_many_colors": "Up to {max} colors per kit.",
+      "bad_color": "“{value}” is not a color. Use a code like #1A2B3C.",
+      "bad_kind": "This kind is not supported.",
+      "bad_image_type": "Only PNG, JPEG and WebP pictures can be added.",
+      "empty_file": "The file is empty.",
+      "file_too_large": "The file is too big: up to {max_mb} MB.",
+      "font_unreadable": "This is not a TTF or OTF font, or the file is damaged.",
+      "bad_font_category": "Unknown font type.",
+      "bad_order": "The order could not be saved. Reload the page.",
+      "too_many_assets": "Up to {max} pictures of one kind per kit.",
+      "subject_photo_limit": "No more than {max} photos per subject.",
+      "subject_no_photos": "Upload at least one photo first.",
+      "subject_describe_empty": "The AI returned an empty description. Try again.",
+      "bad_cover": "The cover must be one of the subject’s photos.",
+      "bad_file": "Pick a file."
+    }
+  }
+}

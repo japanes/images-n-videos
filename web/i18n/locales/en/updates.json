@@ -1,0 +1,148 @@
+{
+  "updates": {
+    "title": "Updates",
+    "subtitle": "New versions of the app come from GitHub. Your files, key and settings stay on this computer.",
+    "loadFailed": "Could not load the update information",
+    "restarting": "The app is restarting. This page will come back by itself in a minute or two.",
+    "dev": "Developer mode: the app was started from source code, so installing updates and stopping the app from here are turned off.",
+    "check": {
+      "button": "Check now"
+    },
+    "unreachable": {
+      "title": "Updates are not available right now",
+      "text": "The update helper does not answer. Everything else in the app works. If this lasts, stop the app and start it again."
+    },
+    "current": {
+      "version": "Installed version: {version}",
+      "channel": "Channel: {channel}",
+      "checkedAt": "Last checked: {at}",
+      "neverChecked": "Not checked yet",
+      "checkFailed": "Could not check for new versions: {message}",
+      "upToDate": "You have the newest version."
+    },
+    "channel": {
+      "stable": "Stable",
+      "beta": "Beta (test versions)"
+    },
+    "versions": {
+      "title": "Available versions",
+      "hint": "You can install any of them, not only the newest.",
+      "version": "Version {version}",
+      "newest": "Newest",
+      "prerelease": "Test version",
+      "published": "Released {date}",
+      "onGithub": "On GitHub",
+      "install": "Install",
+      "needsFrom": "This version can be installed only from version {version} or newer, and you have {current}. Install an earlier version from the list first.",
+      "notInstallable": "This version cannot be installed directly. Install an earlier version from the list first.",
+      "failedBefore": "Installing this version failed before. You can try again."
+    },
+    "notes": {
+      "show": "What's new",
+      "hide": "Hide what's new",
+      "empty": "No notes for this version."
+    },
+    "install": {
+      "confirmTitle": "Install version {version}?",
+      "confirmText": "First a copy of the database is made, then the app downloads the new version and restarts. It takes a few minutes; the page will be unavailable for a short while.",
+      "confirmBusy": "{n} job is running. The update waits until it finishes. | {n} jobs are running. The update waits until they finish.",
+      "confirmButton": "Update",
+      "started": "Update to {version} started"
+    },
+    "force": {
+      "button": "Update anyway",
+      "hint": "Running jobs will be interrupted.",
+      "requested": "Updating without waiting for running jobs.",
+      "confirmTitle": "Update without waiting?",
+      "confirmText": "Running jobs will be interrupted, and you may need to start them again."
+    },
+    "progress": {
+      "updating": "Updating to {version}",
+      "updated": "Updated to {version}",
+      "rolledBack": "Update to {version} failed, version {from} was put back",
+      "failed": "Update to {version} failed",
+      "startedAt": "started {at}",
+      "restartNote": "The app will restart during the update. You can leave this page open.",
+      "waiting": "Waiting for {n} running job to finish: | Waiting for {n} running jobs to finish:",
+      "steps": "Steps"
+    },
+    "state": {
+      "idle": "Nothing is going on",
+      "checking": "Checking for new versions",
+      "preparing": "Getting ready",
+      "backing_up": "Copying the database",
+      "pulling": "Downloading the new version",
+      "applying": "Switching to the new version",
+      "verifying": "Checking that the new version works",
+      "rolling_back": "Putting the previous version back",
+      "done": "Finished",
+      "failed": "Failed",
+      "unknown": "Working"
+    },
+    "result": {
+      "success": "Done",
+      "failed": "Failed",
+      "rolled_back": "Rolled back",
+      "unknown": "Unknown"
+    },
+    "source": {
+      "manual": "Started by you",
+      "auto": "Automatic",
+      "startup": "At app start",
+      "unknown": "Other"
+    },
+    "backupFile": "Database copy: {file}",
+    "settings": {
+      "title": "Settings",
+      "devNote": "In developer mode these settings have no effect.",
+      "auto": "Update automatically",
+      "time": "Update time",
+      "tz": "Time zone",
+      "timeHint": "Updates start at this time if the computer is on. If jobs are running, the update waits for them.",
+      "tzMismatch": "The update time is set in {saved}, but this computer uses {local}.",
+      "useLocalTz": "Use {local}",
+      "channel": "Channel",
+      "stableHint": "Only finished versions.",
+      "betaHint": "Test versions come earlier but may have bugs. With automatic updates on, they are installed too.",
+      "saved": "Update settings saved"
+    },
+    "history": {
+      "title": "Update log",
+      "empty": "No updates yet.",
+      "versions": "{from} → {to}"
+    },
+    "stop": {
+      "title": "Stop the app",
+      "text": "Turns off all parts of the app on this computer. To start it again, open start.command (Mac) or start.bat (Windows) in the app folder.",
+      "button": "Stop the app",
+      "confirmTitle": "Stop the app?",
+      "confirmText": "Running jobs will be interrupted and this page will stop working. To start the app again, open start.command (Mac) or start.bat (Windows) in the app folder.",
+      "started": "The app is stopping. To start it again, open start.command (Mac) or start.bat (Windows)."
+    },
+    "notice": {
+      "available": "Version {version} is available",
+      "whatsNew": "What's new",
+      "updateNow": "Update now",
+      "later": "Remind me about the next version",
+      "running": "Updating to version {version}…",
+      "details": "Details",
+      "notesTitle": "What's new in {version}",
+      "allVersions": "All versions",
+      "updated": "The app was updated to version {version}. Reload the page to use it.",
+      "reload": "Reload"
+    },
+    "errors": {
+      "updates_dev_mode": "Developer mode: installing updates and stopping the app from here are turned off.",
+      "update_busy": "An update is already running. Try again when it ends.",
+      "update_not_newer": "This version is not newer than the installed one.",
+      "update_needs_beta": "This is a test version. Switch the channel to Beta first.",
+      "update_check_failed": "Could not check for new versions: {message}",
+      "update_conflict": "The update did not start: {message}",
+      "update_not_found": "This version was not found on GitHub. Check for updates and try again.",
+      "update_bad_request": "The update helper did not accept the request: {message}",
+      "updater_unavailable": "The update helper does not answer. Everything else in the app works.",
+      "updater_failed": "The update helper failed: {message}",
+      "forbidden": "The request came from another site and was blocked."
+    }
+  }
+}

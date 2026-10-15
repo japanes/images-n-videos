@@ -1,0 +1,265 @@
+{
+  "connection": {
+    "title": "Google connection",
+    "subtitle": "Your Google Cloud key and what it can do.",
+    "openGuide": "Instruction",
+    "loadFailed": "Could not load the connection state.",
+    "stubNote": "Test mode: Google is simulated, nothing is charged.",
+    "links": {
+      "freeTrial": "Free trial page",
+      "pricing": "Google prices",
+      "createProject": "Create a project",
+      "billing": "Billing of the project",
+      "api": "Vertex AI API page",
+      "serviceAccounts": "Service accounts",
+      "iam": "IAM page",
+      "orgPolicies": "Policies page",
+      "budgets": "Budgets",
+      "quotas": "Quotas page",
+      "cloudShell": "Open Cloud Shell"
+    },
+    "wizard": {
+      "title": "Connect Google Cloud",
+      "subtitle": "A one-time setup, about 20 minutes. You need a Google account and a bank card: Google only checks it, nothing is charged during the free trial.",
+      "stepOf": "Step {n} of {total}",
+      "steps": {
+        "guide": "Instruction",
+        "upload": "Key file",
+        "checks": "Check",
+        "ban": "Restore the ban",
+        "trial": "Trial date"
+      },
+      "next": "Next",
+      "back": "Back",
+      "skip": "Skip",
+      "finish": "Finish",
+      "later": "Finish setup later",
+      "haveKey": "I have the key file",
+      "done": "Google is connected.",
+      "uploadIntro": "Upload the JSON key you downloaded in step 7 of the instruction.",
+      "checksIntro": "Let's make sure Google accepts the key. The app sends a few small requests; only the test text is paid, a fraction of a cent.",
+      "checksPassed": "The key works. You can go on.",
+      "checksFailed": "Something is not set up yet. Fix it using the hint and check again.",
+      "otherFile": "Upload a different file",
+      "banIntro": "To download the key you lifted the ban on key files. We recommend turning it back on: it stops new keys from being created by mistake. The key you already have keeps working.",
+      "banNothing": "If in part 2 there were no rows to turn off and you changed nothing, there is nothing to restore: press Skip.",
+      "banDone": "I restored the ban",
+      "trialIntro": "When did your free trial start? The app will show how many days of credit are left. Optional."
+    },
+    "guide": {
+      "title": "How to get the key",
+      "intro": "Do this once in the Google Cloud console. The links open the right pages. Use the same Google account everywhere.",
+      "stepLabel": "Step {n}",
+      "optional": "optional",
+      "showPolicy": "Show how",
+      "hidePolicy": "Hide",
+      "steps": {
+        "register": {
+          "title": "Sign up for Google Cloud",
+          "text": "Open the free trial page and start the trial. Choose the **Individual** account type. Google checks your card with a small charge of about $1 and returns it. You get $300 for 90 days. During the free trial Google does not charge the card: payment starts only if you upgrade the account yourself."
+        },
+        "project": {
+          "title": "Create a project",
+          "text": "Create a project with any name, or use **My First Project** if the console already made one. Write down its **Project ID**: the short code like `my-project-123456`, not the name."
+        },
+        "billing": {
+          "title": "Check that billing is linked",
+          "text": "The project must be linked to the billing account with your free credit. Without it Google refuses requests even when you have credit. If the page says the project has no billing account, link the one with the free trial."
+        },
+        "api": {
+          "title": "Turn on the Vertex AI API",
+          "text": "Open the API page and press **Enable**. The page may be called **Agent Platform API**: it is the same thing. Do not press **Create credentials**: it makes a different kind of key (OAuth) that does not fit."
+        },
+        "account": {
+          "title": "Create a service account and give it a role",
+          "text": "A service account is a separate login for the app. Press **Create service account**, give it any name (for example `vertex-factory`). On the permissions step add the role **Agent Platform User**, code `roles/aiplatform.user` (it used to be called **Vertex AI User**); search for it by the code. Forgot the role? Add it on the IAM page: find the service account and give it the role there."
+        },
+        "ban": {
+          "title": "Lift the ban on key files",
+          "text": "New accounts forbid downloading service account keys. Lift the ban by the instruction below, parts 1 and 2. If you don't see the rows it talks about, or they are not active, skip this step."
+        },
+        "key": {
+          "title": "Download the JSON key",
+          "text": "Open your service account, then **Keys**, **Add key**, **Create new key**, **JSON**, **Create**. The file downloads by itself. Keep it like a password."
+        },
+        "budget": {
+          "title": "Set a budget",
+          "text": "A budget sends you an e-mail when spending reaches a sum you choose. It only warns: it does not stop spending."
+        }
+      }
+    },
+    "policy": {
+      "title": "The ban on key files",
+      "whyTitle": "Why this is needed",
+      "why": "With the free trial Google creates an organization for you with “secure by default” settings. Since 3 May 2024 such organizations forbid creating key files for service accounts. In the list of policies the ban shows as two rows named **Disable service account key creation**: `iam.disableServiceAccountKeyCreation` (old) and `iam.managed.disableServiceAccountKeyCreation` (managed). Turn off **both**.",
+      "part1": "Part 1. Give yourself the right to change the ban",
+      "part2": "Part 2. Turn the ban off and download the key",
+      "part3": "Part 3. Turn the ban back on",
+      "lift": {
+        "iam": "Open the IAM page.",
+        "org": "At the top, in the project picker, switch to the **organization**: the building icon, a name like `something-org` or your domain. No organization in the list? Then there is most likely no ban: go to part 2 and check.",
+        "grant": "Press **Grant access**. In **New principals** type your own Google e-mail. In **Role** choose **Organization Policy Administrator** (`roles/orgpolicy.policyAdmin`). Press **Save**.",
+        "project": "Switch the picker back to **your project**.",
+        "policies": "Open the policies page and type `service account key creation` into the filter.",
+        "override": "For each row that says **Enforced** or **Active**: open it, press **Manage policy**, in **Policy source** choose **Override parent's policy**, set **Enforcement** to **Off** (if you see a list of rules: **Add rule**, then **Enforcement: Off**), press **Set policy**.",
+        "wait": "Wait a couple of minutes, sometimes up to 15.",
+        "key": "Create the key: **IAM & Admin**, **Service accounts**, your service account, **Keys**, **Add key**, **Create new key**, **JSON**. The file downloads by itself."
+      },
+      "restore": {
+        "policies": "Switch to **your project**, open the policies page and type `service account key creation` into the filter.",
+        "inherit": "For each row you changed: **Manage policy**, in **Policy source** choose **Inherit parent's policy**, press **Set policy**.",
+        "role": "Remove the extra role: switch to the organization, open the IAM page, find your row, press the pencil, delete **Organization Policy Administrator**, press **Save**.",
+        "keeps": "The key you downloaded keeps working: the ban does not touch keys that already exist."
+      },
+      "again": "You will need parts 1 and 2 again if the key is lost or deleted, when you replace it, or for a new project.",
+      "troubleTitle": "If something goes wrong",
+      "trouble": {
+        "noGrant": "No **Grant access** button for the organization: this is probably a work (Google Workspace) account. Ask your administrator, or use a personal Gmail account.",
+        "inactive": "**Manage policy** is not active: the role has not applied yet. Wait a minute and refresh the page.",
+        "stillBanned": "Still “Key creation is not allowed on this service account” or “Service account key creation is disabled”: check that both rows are off, in the right project, and wait up to 15 minutes.",
+        "noKeys": "No service accounts or no **Keys** tab (“Missing permissions: iam.serviceAccounts.list”): sign in with the account that created the project."
+      },
+      "shellTitle": "The same with commands (Cloud Shell)",
+      "shellText": "If you are fine with a terminal: open Cloud Shell, paste the commands and press Enter. Google may ask to enable `orgpolicy.googleapis.com`: agree.",
+      "shellLift": "Turn the ban off (parts 1 and 2):",
+      "shellRestore": "Turn the ban back on (part 3). An error about a row that does not exist is normal:"
+    },
+    "upload": {
+      "title": "Upload the key file",
+      "drop": "Drag the JSON key file here",
+      "or": "or",
+      "choose": "Choose file",
+      "busy": "Uploading…",
+      "hint": "The file stays on this computer. The app never shows it again and sends it only to Google.",
+      "uploaded": "Key uploaded.",
+      "replaced": "New key uploaded. Run the check to see what it can do.",
+      "reasons": {
+        "too_large": "The file is too big for a key. Probably it is a different file.",
+        "empty": "The file is empty.",
+        "not_json": "This is not a JSON file, or it is cut off. Download the key again: step 7.",
+        "oauth_client": "This is an OAuth client file, but a service account key is needed: see step 5.",
+        "not_service_account": "This is not a service account key. Create a service account and download its key: steps 5 and 7.",
+        "missing_fields": "Some fields are missing in the key file ({fields}). Download a new key: step 7.",
+        "bad_private_key": "The private key inside the file is damaged. Download a new key: step 7."
+      }
+    },
+    "key": {
+      "title": "Key",
+      "projectId": "Project ID",
+      "account": "Service account",
+      "keyId": "Key ID",
+      "uploaded": "Uploaded",
+      "lastCheck": "Last checked",
+      "never": "not yet",
+      "unreadable": "The key file cannot be read. Upload it again.",
+      "replace": "Replace key",
+      "delete": "Delete key",
+      "password": "The key file works like a password: anyone who has it can spend money in your project. Don't send it to anyone. If it leaks, delete it in the console (Service accounts, Keys) and upload a new one.",
+      "replaceTitle": "Replace the key?",
+      "replaceText": "To download a new key file you will have to lift the ban on key files again (parts 1 and 2 of the instruction) and then restore it (part 3). The current key keeps working until you upload the new one.",
+      "replaceConfirm": "Choose a new file",
+      "deleteTitle": "Delete the key?",
+      "deleteText": "The key file is removed from this computer, and the app stops working with Google until you upload a key again. In Google Cloud the key stays active: delete it there too (Service accounts, Keys) if you no longer need it.",
+      "deleted": "Key deleted."
+    },
+    "checks": {
+      "title": "Checks",
+      "run": "Run the check",
+      "rerun": "Check again",
+      "hint": "Google accepts the key, lists the models, answers a test text. Only the text is paid.",
+      "names": {
+        "token": "Google accepts the key",
+        "models": "List of models",
+        "text": "Test text",
+        "image": "Test picture",
+        "omni": "Omni video"
+      },
+      "status": {
+        "ok": "works",
+        "error": "error",
+        "skipped": "skipped",
+        "none": "not checked"
+      },
+      "listed": "Google listed {count} models in {region}.",
+      "skippedHint": "Skipped because of the error above."
+    },
+    "caps": {
+      "title": "What works",
+      "names": {
+        "images": "Pictures",
+        "text": "Text and photo analysis",
+        "veo": "Veo video",
+        "omni": "Omni video"
+      },
+      "state": {
+        "ok": "works",
+        "seen": "available",
+        "not_listed": "not in the list",
+        "error": "error",
+        "blocked": "blocked",
+        "unknown": "not checked",
+        "no_model": "no model"
+      },
+      "hint": {
+        "ok": "A real request went through.",
+        "seen": "Google lists this model for your project. The first real request will confirm it.",
+        "not_listed": "Google did not list this model. It may still work: a real request will tell.",
+        "blocked": "Fix the error in the checks first.",
+        "unknown": "Not checked yet.",
+        "unknownOmni": "Omni answers only to a real request: use “Check Omni”.",
+        "no_model": "No model of this kind is turned on. Turn one on in the model list."
+      },
+      "preview": "preview",
+      "imageRun": "Draw a test picture",
+      "imageHint": "One small picture with the default model: proves that pictures work.",
+      "imageResult": "Test picture",
+      "omniRun": "Check Omni",
+      "omniHint": "Makes a short {seconds}-second video with Omni.",
+      "omniUnavailable": "The Omni check comes with the video module."
+    },
+    "errors": {
+      "billing_disabled": "Billing is not linked to the project. Link it: step 3 of the instruction.",
+      "api_disabled": "The Vertex AI API is turned off in the project. Turn it on: step 4.",
+      "permission_denied": "The service account has no rights for Vertex AI. Give it the role **Agent Platform User** (`roles/aiplatform.user`): step 5.",
+      "invalid_grant": "Google does not accept the key: it was deleted in the console, or the clock on this computer is wrong. Check the time; if it is right, download a new key (step 7) and upload it.",
+      "model_not_found": "This model is not available to your project or region. For models marked “preview” this is normal: Google opens them gradually.",
+      "rate_limited": "Google asks to slow down: the limit per minute is used up. Wait a minute and try again. If it keeps happening, look at the quotas page (filter `generate content`).",
+      "no_key": "Upload the key file first.",
+      "check_running": "A check is already running. Wait for it to finish.",
+      "check_unavailable": "This check is not available yet."
+    },
+    "help": {
+      "step": "Instruction, step {n}",
+      "googleAnswer": "Google's answer"
+    },
+    "ban": {
+      "title": "Ban on key files",
+      "notRestored": "To get this key you probably lifted the ban on key files. We recommend turning it back on. The key you have keeps working.",
+      "restored": "The ban on key files is back on.",
+      "how": "How to restore",
+      "mark": "I restored the ban",
+      "unmark": "Not restored yet",
+      "nothing": "If you did not change any policy, there is nothing to restore."
+    },
+    "trial": {
+      "title": "Free trial",
+      "text": "Enter the day your free trial started, and the app will show how many days of credit are left.",
+      "label": "Trial start date",
+      "save": "Save",
+      "clear": "Clear",
+      "daysLeft": "{n} day left | {n} days left",
+      "ends": "Ends on {date}.",
+      "over": "The trial period is over.",
+      "invalid": "Enter a real date, not in the future.",
+      "saved": "Date saved."
+    },
+    "regions": {
+      "title": "Regions (for advanced users)",
+      "text": "Where requests go. The region is part of the model settings; here it is only for reference.",
+      "list": "The list of models is requested from {region}.",
+      "capability": "What",
+      "model": "Model",
+      "region": "Region"
+    }
+  }
+}

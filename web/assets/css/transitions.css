@@ -1,0 +1,6 @@
+.vf-fade-enter-active, .vf-fade-leave-active { transition: opacity 0.18s ease; }
+.vf-fade-enter-from, .vf-fade-leave-to { opacity: 0; }
+.vf-slide-enter-active, .vf-slide-leave-active { transition: transform 0.2s ease; }
+.vf-slide-enter-from, .vf-slide-leave-to { transform: translateX(-100%); }
+.vf-slide-right-enter-active, .vf-slide-right-leave-active { transition: transform 0.2s ease; }
+.vf-slide-right-enter-from, .vf-slide-right-leave-to { transform: translateX(100%); }

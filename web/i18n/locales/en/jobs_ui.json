@@ -1,0 +1,114 @@
+{
+  "jobsPage": {
+    "title": "Jobs",
+    "subtitle": "Everything the app does in the background: pictures, videos, renders, subtitles. Here you can see what is running, what is waiting, and what failed.",
+    "refresh": "Refresh",
+    "runnerDown": "Background work is not running inside the app. Restart the app; until then new jobs will only wait in the queue.",
+    "loadMore": "Show more",
+    "tabs": {
+      "all": "All",
+      "active": "Running and waiting",
+      "problems": "Failed",
+      "done": "Done",
+      "cancelled": "Stopped"
+    },
+    "status": {
+      "queued": "Waiting",
+      "running": "Running",
+      "done": "Done",
+      "error": "Error",
+      "cancelled": "Stopped",
+      "interrupted": "Interrupted"
+    },
+    "groups": {
+      "image": "Pictures",
+      "avatar": "Avatars",
+      "video": "Video",
+      "render": "Video assembly",
+      "stt": "Speech to text",
+      "text": "Text",
+      "default": "Other"
+    },
+    "filters": {
+      "search": "Search",
+      "searchHint": "Name, type or job number",
+      "group": "Kind of work",
+      "allGroups": "All kinds",
+      "kind": "Job type",
+      "allKinds": "All types",
+      "reset": "Clear filters",
+      "owner": "Only jobs of {type} #{id}"
+    },
+    "empty": {
+      "title": "No jobs yet",
+      "text": "When you make a picture or a video, its job shows up here.",
+      "filteredTitle": "Nothing found",
+      "filteredText": "No jobs match these filters."
+    },
+    "row": {
+      "created": "started {time}",
+      "running": "running for {duration}",
+      "took": "took {duration}",
+      "attempt": "attempt {n}",
+      "retry": "Run again",
+      "retryAsk": "Run “{title}” again? Google may charge for it again.",
+      "unknownKind": "This app version does not know this job type, so it cannot be run again.",
+      "waiting": "waiting",
+      "interruptedHint": "The app stopped while this job was running. It was not restarted by itself, so nothing is paid twice. Press “Run again” if you still need it.",
+      "details": "Full error text"
+    },
+    "services": {
+      "title": "Helper services",
+      "checkedAt": "checked {time}",
+      "check": "Check",
+      "state": {
+        "ok": "working",
+        "problem": "has a problem",
+        "unreachable": "not responding"
+      },
+      "names": {
+        "render": "Video assembly",
+        "stt": "Speech to text",
+        "updater": "Updates"
+      },
+      "version": "version {v}",
+      "ffmpeg": "ffmpeg {v}",
+      "queue": "running {running}, waiting {queued}",
+      "busy": "busy right now",
+      "notResponding": "The service is not responding. Check that all app containers are running in Docker.",
+      "problem": "The service reports a problem."
+    },
+    "load": {
+      "title": "How many jobs run at once",
+      "change": "Change",
+      "hint": "Extra jobs wait in the queue. Fewer at once means fewer “too many requests” answers from Google on a new project.",
+      "running": "{running} of {limit}",
+      "queued": "nothing waiting | {n} waiting | {n} waiting"
+    },
+    "upkeep": {
+      "title": "Upkeep",
+      "backupOff": "Daily database backup is off.",
+      "backupLast": "Last database backup: {time}, {size}.",
+      "backupCount": "Copies kept: {n} of {keep}.",
+      "backupNone": "No database backup yet: the first one is made within a day.",
+      "stuck": "A job without progress for {n} minute is stopped. | A job without progress for {n} minutes is stopped.",
+      "stuckOff": "Jobs without progress are never stopped by the app.",
+      "keep": "Finished jobs are removed from this list after {n} day. | Finished jobs are removed from this list after {n} days.",
+      "keepForever": "Finished jobs stay in this list forever.",
+      "where": "Backups are in the backups folder inside the app data folder. Removing a job from the list does not delete its files or spend records."
+    },
+    "settings": {
+      "title": "Jobs settings",
+      "limitsTitle": "Jobs at once",
+      "limitsHint": "From 1 to 8 for each kind of work. On a new Google project keep pictures and video at 2 or less.",
+      "upkeepTitle": "Upkeep",
+      "stuckMinutes": "Stop a job without progress after, minutes",
+      "stuckHint": "0 — never stop. Long videos can take a while, so do not set this too low.",
+      "keepDays": "Remove finished jobs from the list after, days",
+      "keepHint": "0 — keep forever. Files and spend records stay either way.",
+      "backupDaily": "Back up the database every day",
+      "backupKeep": "How many daily copies to keep",
+      "backupHint": "Older copies are deleted. Each copy is about the size of the database."
+    }
+  }
+}

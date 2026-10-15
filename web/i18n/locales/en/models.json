@@ -1,0 +1,154 @@
+{
+  "models": {
+    "title": "Models",
+    "subtitle": "Which Google models the app uses, what they cost and what they can do.",
+    "tabs": {
+      "image": "Pictures",
+      "video": "Video",
+      "text": "Text",
+      "roles": "Roles"
+    },
+    "loadFailed": "Could not load the models.",
+    "empty": "There are no models of this kind in the list.",
+    "region": "Region: {region}",
+    "check": {
+      "button": "Check my project",
+      "hint": "Asks Google which models your project can use. Free.",
+      "never": "Not checked yet",
+      "last": "Last check: {time}",
+      "done": "Done: {found} of {total} models are in your project.",
+      "inconclusive": "Google's list did not include any of the app's models, so nothing was marked. Try again later.",
+      "forget": "Forget the check",
+      "forgetAsk": "Forget the results of the last check? All models will show as not checked, and the defaults you chose will be used again.",
+      "forgotten": "The check results are cleared."
+    },
+    "badge": {
+      "default": "Default",
+      "inUse": "Used now",
+      "preview": "Preview",
+      "available": "In your project",
+      "unavailable": "Not in your project",
+      "unchecked": "Not checked",
+      "off": "Hidden",
+      "userPrice": "Your price"
+    },
+    "badgeHint": {
+      "preview": "Google is still testing this model: it may change or go away.",
+      "unchecked": "Press \"Check my project\" to find out whether your project can use it."
+    },
+    "replaced": "The default model {default} is not in your project, so {used} is used instead.",
+    "noUsable": "None of these models can be used right now.",
+    "actions": {
+      "show": "Show in lists",
+      "showDefaultHint": "The default model cannot be hidden. Make another model the default first.",
+      "makeDefault": "Make default",
+      "makeDefaultUnavailable": "This model is not in your project, so it cannot be the default.",
+      "madeDefault": "{model} is now the default.",
+      "editPrice": "Edit price",
+      "shown": "{model} is shown in lists.",
+      "hidden": "{model} is hidden."
+    },
+    "price": {
+      "title": "Price",
+      "tokens": "Per 1M tokens: in {input}, out {output}",
+      "perImage": "One {size} picture: about {usd}, plus the prompt",
+      "perSecond": "{res}: {usd} per second",
+      "perSecondApprox": "About {usd} per second of video, plus what you send in",
+      "searchQuery": "Google Search: {usd} per search",
+      "searchPrompt": "Google Search: {usd} per request",
+      "none": "No price in the list"
+    },
+    "priceModal": {
+      "title": "Price of {model}",
+      "intro": "US dollars. Change it only if Google changed its prices and the app has not been updated yet. Your price is used for the price on buttons and in the spend log.",
+      "registry": "From the list: {usd}",
+      "fields": {
+        "input_per_1m": "What you send, per 1M tokens",
+        "output_per_1m": "What you get back, per 1M tokens",
+        "search_per_request": "Google Search, per search",
+        "per_second": "{res} video, per second"
+      },
+      "bad": "Enter a number of 0 or more.",
+      "useRegistry": "Use the price from the list",
+      "saved": "The price is saved.",
+      "reset": "The price from the list is used again."
+    },
+    "caps": {
+      "sizes": "Sizes: {list}",
+      "maxSide": "Up to {px} px on a side",
+      "references": "Up to {count} reference pictures",
+      "referencesAny": "Takes reference pictures",
+      "noReferences": "No reference pictures",
+      "durations": "Length: {list} s",
+      "resolution": "{res}",
+      "resolutionOnly": "{res} only at {seconds} s",
+      "aspects": "Shapes: {list}",
+      "extends": "Can continue a video (takes up to {seconds} s)",
+      "negativePrompt": "What to avoid",
+      "audioSwitch": "Sound, can be turned off",
+      "audioAlways": "Sound always on",
+      "frameShadowsReferences": "A first frame turns references off",
+      "readsImages": "Reads pictures",
+      "json": "Answers in a set format",
+      "strictSchema": "Keeps the exact answer format",
+      "search": "Google Search",
+      "thinking": "Thinks before answering"
+    },
+    "roles": {
+      "intro": "Each task that needs text or reading pictures uses the default text model, unless you choose another model for that task below.",
+      "defaultModel": "Default text model",
+      "defaultHint": "Models that are not in your project cannot be chosen.",
+      "notInProject": "not in your project",
+      "hidden": "hidden",
+      "listTitle": "Choose a model for one task",
+      "changed": "{count} changed",
+      "useDefault": "Default text model ({model})",
+      "nowUsed": "Now used: {model}",
+      "noModel": "No model in the list can do this task. Show or add a suitable text model.",
+      "overrideIgnored": "The chosen model is hidden, so the default text model is used.",
+      "needsTitle": "Needs:",
+      "saved": "Saved. New calls use {model}.",
+      "needs": {
+        "accepts_images": "reads pictures",
+        "json_mode": "answers in a set format",
+        "strict_schema": "keeps the exact answer format",
+        "search": "Google Search",
+        "thinking": "thinks before answering"
+      },
+      "items": {
+        "vision_describe": {
+          "name": "Describe a photo",
+          "description": "Describes a product or a person from a photo. Used by subjects and avatars."
+        },
+        "image_regions": {
+          "name": "Find objects in a picture",
+          "description": "Finds objects and their frames in a picture, so one part can be edited."
+        },
+        "text_placement": {
+          "name": "Place text on a picture",
+          "description": "Decides where text fits on a picture."
+        },
+        "shot_ideas": {
+          "name": "Shot ideas",
+          "description": "Comes up with a series of shots from a brief."
+        },
+        "research": {
+          "name": "Research",
+          "description": "A short look into a niche with Google Search. Used by shot ideas and video."
+        },
+        "video_brief": {
+          "name": "Write a video shot for me",
+          "description": "Writes the text of a video shot from a photo."
+        },
+        "image_text": {
+          "name": "Texts for pictures",
+          "description": "Writes text for a picture, offers variants of a line, makes it sound natural."
+        },
+        "prompt_enhance": {
+          "name": "Improve the prompt",
+          "description": "The \"Improve prompt\" switch in the chat: turns your words into a detailed prompt for a picture or a video."
+        }
+      }
+    }
+  }
+}

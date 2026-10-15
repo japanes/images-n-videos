@@ -1,0 +1,222 @@
+{
+  "settings": {
+    "title": "Settings",
+    "subtitle": "How the app works for you. Changes take effect after you press Save.",
+    "loadFailed": "Could not load the settings.",
+    "language": {
+      "title": "Interface language",
+      "help": "Kept in this browser. It does not change the language of texts the models write.",
+      "names": {
+        "ru": "Русский",
+        "uk": "Українська",
+        "en": "English"
+      }
+    },
+    "groups": {
+      "general": {
+        "title": "General",
+        "hint": "Defaults for creating pictures, videos and texts."
+      },
+      "google": {
+        "title": "Requests to Google",
+        "hint": "Pace and limits for every request to Google."
+      },
+      "jobs": {
+        "title": "Background jobs",
+        "hint": "How many jobs run at once, and upkeep."
+      },
+      "spend": {
+        "title": "Spending",
+        "hint": "Used to show how much of the free credit is left."
+      },
+      "connection": {
+        "title": "Google connection",
+        "hint": "Usually filled in on the Google connection screen."
+      },
+      "media": {
+        "title": "Media library",
+        "hint": "Uploads and helper files."
+      },
+      "stt": {
+        "title": "Speech recognition",
+        "hint": "Runs on this computer, free."
+      },
+      "updates": {
+        "title": "Updates",
+        "hint": "How the app updates itself."
+      }
+    },
+    "default": "Default: {value}",
+    "notSet": "not set",
+    "reset": "Back to default",
+    "changed": "Changed",
+    "unsaved": "{count} change not saved | {count} changes not saved",
+    "discard": "Undo changes",
+    "save": "Save",
+    "saved": "Settings saved.",
+    "fixFirst": "Some values are not right. Fix the marked fields first.",
+    "leaveAsk": "Your changes are not saved. Leave anyway?",
+    "leave": "Leave",
+    "errors": {
+      "number": "Enter a number.",
+      "whole": "Enter a whole number.",
+      "range": "From {min} to {max}.",
+      "json": "This is not valid JSON.",
+      "sizes": "Each side is a whole number from {min} to {max}."
+    },
+    "aspect": {
+      "shape": "Shape",
+      "width": "Width, px",
+      "height": "Height, px"
+    },
+    "keys": {
+      "general": {
+        "text_language": {
+          "label": "Language of written texts",
+          "help": "The language models write in by default: captions, ideas, briefs. It does not change the interface language.",
+          "choices": {
+            "ru": "Russian",
+            "uk": "Ukrainian",
+            "en": "English"
+          }
+        },
+        "variants": {
+          "label": "Variants per request",
+          "help": "How many pictures one request makes by default. Each one is paid."
+        },
+        "max_attachments": {
+          "label": "Pictures per message",
+          "help": "The most pictures you can attach to one message. Models take up to 14."
+        },
+        "aspect_sizes": {
+          "label": "Size for each shape",
+          "help": "Width and height in pixels of finished files for each shape, for example 1080 × 1350 for 4:5."
+        }
+      },
+      "google": {
+        "max_concurrency": {
+          "label": "Requests at once",
+          "help": "How many requests to Google can run at the same time."
+        },
+        "max_rpm": {
+          "label": "Requests per minute",
+          "help": "A new project usually allows about 10 requests a minute. Raise this only after Google raised your limit."
+        },
+        "timeout_seconds": {
+          "label": "Wait for an answer, seconds",
+          "help": "How long to wait for one answer from Google before trying again."
+        },
+        "max_attempts": {
+          "label": "Tries per request",
+          "help": "How many times one request is tried when Google returns an error or a broken answer. Paid failed tries also go to the spend log."
+        },
+        "video_wait_minutes": {
+          "label": "Wait for a video, minutes",
+          "help": "How long to wait for Google to finish one video before giving up."
+        },
+        "daily_cap_usd": {
+          "label": "Daily spending limit, USD",
+          "help": "0 means no limit. Once today's spending (counted in UTC time) reaches this sum, new paid requests are refused until the next day."
+        },
+        "refusal_retries": {
+          "label": "Repeats after an empty answer",
+          "help": "When the model returns nothing (for example, its filter stopped the result), the request is sent again up to this many times. Each repeat is paid."
+        },
+        "refusal_retry_seconds": {
+          "label": "Pause before a repeat, seconds",
+          "help": "How long to wait before repeating a request after an empty answer."
+        }
+      },
+      "jobs": {
+        "limit": {
+          "image": {
+            "label": "Picture jobs at once",
+            "help": "How many picture jobs run at the same time. The rest wait in line."
+          },
+          "avatar": {
+            "label": "Avatar jobs at once",
+            "help": "How many avatar jobs run at the same time. The rest wait in line."
+          },
+          "video": {
+            "label": "Video jobs at once",
+            "help": "How many video jobs run at the same time. The rest wait in line."
+          },
+          "render": {
+            "label": "Video assembly at once",
+            "help": "How many videos are put together on this computer at the same time. Each one loads the computer heavily."
+          },
+          "stt": {
+            "label": "Speech recognition at once",
+            "help": "How many recordings are turned into text at the same time. Each one loads the computer heavily."
+          },
+          "text": {
+            "label": "Text jobs at once",
+            "help": "How many text jobs run at the same time. The rest wait in line."
+          },
+          "default": {
+            "label": "Other jobs at once",
+            "help": "How many other jobs run at the same time. The rest wait in line."
+          }
+        },
+        "stuck_minutes": {
+          "label": "Stop a silent job after, minutes",
+          "help": "A job that shows no progress for this long is stopped, and you can restart it by hand. 0 turns this off."
+        },
+        "keep_days": {
+          "label": "Keep finished jobs, days",
+          "help": "Finished jobs older than this are removed from the jobs list. 0 keeps them forever."
+        },
+        "backup_daily": {
+          "label": "Daily database copy",
+          "help": "Once a day a copy of the app's database is saved to the backups folder."
+        },
+        "backup_keep": {
+          "label": "Copies to keep",
+          "help": "Only this many newest daily copies are kept; older ones are deleted."
+        }
+      },
+      "spend": {
+        "credit_usd": {
+          "label": "Free credit, USD",
+          "help": "The sum Google gave you for the trial. Used to show how much is left."
+        },
+        "credit_days": {
+          "label": "Free credit lasts, days",
+          "help": "How long the trial credit is valid, counted from the trial start date. Usually 90 days."
+        }
+      },
+      "connection": {
+        "trial_started_on": {
+          "label": "Trial start date",
+          "help": "The day your Google trial began, written as YYYY-MM-DD. Used to count the days left. Leave empty if you do not know it."
+        },
+        "key_ban_restored": {
+          "label": "JSON key ban is back on",
+          "help": "Turn on once the rule that forbids JSON keys in your Google organization is back on (or was never turned off). Reminders about it stop."
+        }
+      },
+      "media": {
+        "auto_ingest": {
+          "label": "Prepare videos and sound",
+          "help": "Makes a cover picture and a short preview for each video in the library. Done on this computer, free."
+        },
+        "cleanup_service_hours": {
+          "label": "Delete helper files after, hours",
+          "help": "Files the app makes along the way are deleted after this many hours if nothing uses them. Your results are never deleted."
+        },
+        "max_image_mb": {
+          "label": "Largest picture to upload, MB",
+          "help": "Bigger pictures are refused on upload."
+        },
+        "max_video_mb": {
+          "label": "Largest video to upload, MB",
+          "help": "Bigger videos are refused on upload."
+        },
+        "max_audio_mb": {
+          "label": "Largest sound file to upload, MB",
+          "help": "Bigger sound files are refused on upload."
+        }
+      }
+    }
+  }
+}

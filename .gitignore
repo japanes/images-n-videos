@@ -27,3 +27,4 @@ Thumbs.db
 # Docs, plans and agent instructions stay local (repo holds runnable code only)
 docs/
 CLAUDE.md
+web/dist

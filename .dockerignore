@@ -1,0 +1,19 @@
+# Build context is the repository root (app/Dockerfile needs app/ and web/).
+# Send only what the images need.
+**/.git
+**/node_modules
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+**/.venv
+**/.nuxt
+**/.output
+**/dist
+tmp
+docs
+data
+CLAUDE.md
+.github
+app/tests
+web/tests

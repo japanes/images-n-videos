@@ -1,0 +1,88 @@
+# Full Vertex AI Factory stack of one version.
+# Shipped inside the updater image as /stack/compose.yml and started by the
+# updater helper with VF_VERSION set to that version. Do not run it by hand.
+name: ${VF_PROJECT:-vertexai-factory}
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  app:
+    image: ${VF_IMAGE_PREFIX:-ghcr.io/japanes/images-n-videos}/app:${VF_VERSION:?VF_VERSION is required}
+    restart: unless-stopped
+    stop_grace_period: 30s
+    ports:
+      - "127.0.0.1:${VF_PORT:-8787}:8787"
+    environment:
+      VF_DATA_DIR: /data
+      VF_VERSION: ${VF_VERSION}
+      VF_RENDER_URL: http://render:3000
+      VF_STT_URL: http://stt:8000
+      VF_UPDATER_URL: http://updater:8080
+      VF_GOOGLE_MODE: ${VF_GOOGLE_MODE:-live}
+    volumes:
+      - data:/data
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8787/health', timeout=4)"]
+      interval: 30s
+      timeout: 6s
+      start_period: 60s
+      retries: 3
+    logging: *logging
+
+  render:
+    image: ${VF_IMAGE_PREFIX:-ghcr.io/japanes/images-n-videos}/render:${VF_VERSION:?VF_VERSION is required}
+    restart: unless-stopped
+    environment:
+      VF_DATA_DIR: /data
+      VF_VERSION: ${VF_VERSION}
+    volumes:
+      - data:/data
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 6s
+      start_period: 30s
+      retries: 3
+    logging: *logging
+
+  stt:
+    image: ${VF_IMAGE_PREFIX:-ghcr.io/japanes/images-n-videos}/stt:${VF_VERSION:?VF_VERSION is required}
+    restart: unless-stopped
+    environment:
+      VF_DATA_DIR: /data
+      VF_VERSION: ${VF_VERSION}
+    volumes:
+      - data:/data
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4)"]
+      interval: 30s
+      timeout: 6s
+      start_period: 30s
+      retries: 3
+    logging: *logging
+
+  updater:
+    image: ${VF_IMAGE_PREFIX:-ghcr.io/japanes/images-n-videos}/updater:${VF_VERSION:?VF_VERSION is required}
+    restart: unless-stopped
+    environment:
+      VF_DATA_DIR: /data
+      VF_PORT: ${VF_PORT:-8787}
+      VF_PROJECT: ${VF_PROJECT:-vertexai-factory}
+      VF_DATA_VOLUME: ${VF_DATA_VOLUME:-vertexai-factory-data}
+      VF_IMAGE_PREFIX: ${VF_IMAGE_PREFIX:-ghcr.io/japanes/images-n-videos}
+      VF_REPO: ${VF_REPO:-japanes/images-n-videos}
+      VF_RELEASES_API: ${VF_RELEASES_API:-}
+      VF_GOOGLE_MODE: ${VF_GOOGLE_MODE:-live}
+      VF_VERIFY_TIMEOUT: ${VF_VERIFY_TIMEOUT:-120}
+    volumes:
+      - data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    logging: *logging
+
+volumes:
+  data:
+    name: ${VF_DATA_VOLUME:-vertexai-factory-data}

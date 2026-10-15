@@ -1,0 +1,72 @@
+name: Nightly
+
+# Every night: build the whole app from the source on amd64 and arm64
+# (arm64 = the same CPU family as Apple Silicon Macs), start it without
+# Google (stub mode) and run the smoke test; repeat the updater end-to-end test.
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stack:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    env:
+      VF_GOOGLE_MODE: stub
+      VF_UPDATER_DEV: "1"
+      VF_PORT: "8787"
+      COMPOSE_PROJECT_NAME: vf-nightly
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and start
+        id: up
+        run: |
+          if [ ! -f docker-compose.dev.yml ]; then
+            echo "::warning::docker-compose.dev.yml is not in the repository yet, nothing to start"
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          docker compose -f docker-compose.dev.yml up -d --build
+      - name: Wait for the app
+        if: steps.up.outputs.skip != '1'
+        run: |
+          for _ in $(seq 1 120); do
+            if curl -fsS --max-time 3 "http://127.0.0.1:$VF_PORT/health"; then exit 0; fi
+            sleep 5
+          done
+          echo "::error::the app did not answer in 10 minutes"
+          exit 1
+      - name: Smoke test
+        if: steps.up.outputs.skip != '1'
+        run: release/smoke.sh "$VF_PORT"
+      - name: Logs
+        if: failure() && steps.up.outputs.skip != '1'
+        run: |
+          docker compose -f docker-compose.dev.yml ps -a
+          docker compose -f docker-compose.dev.yml logs --tail 200
+      - name: Clean up
+        if: always() && steps.up.outputs.skip != '1'
+        run: docker compose -f docker-compose.dev.yml down -v --remove-orphans
+
+  updater-e2e:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install and update with fake images
+        env:
+          E2E_WORK: ${{ runner.temp }}/updater-e2e
+        run: updater/tests/e2e.sh

@@ -1,0 +1,31 @@
+# Vertex AI Factory launcher.
+# Starts only the updater. The updater downloads and starts the rest of the
+# app (app, render, stt) and keeps it up to date.
+name: ${VF_PROJECT:-vertexai-factory}
+
+services:
+  updater:
+    image: ${VF_IMAGE_PREFIX:-ghcr.io/japanes/images-n-videos}/updater:${VF_CHANNEL_TAG:-stable}
+    restart: unless-stopped
+    environment:
+      VF_DATA_DIR: /data
+      VF_PORT: ${VF_PORT:-8787}
+      VF_PROJECT: ${VF_PROJECT:-vertexai-factory}
+      VF_DATA_VOLUME: ${VF_DATA_VOLUME:-vertexai-factory-data}
+      VF_IMAGE_PREFIX: ${VF_IMAGE_PREFIX:-ghcr.io/japanes/images-n-videos}
+      VF_REPO: ${VF_REPO:-japanes/images-n-videos}
+      VF_RELEASES_API: ${VF_RELEASES_API:-}
+      VF_GOOGLE_MODE: ${VF_GOOGLE_MODE:-live}
+      VF_VERIFY_TIMEOUT: ${VF_VERIFY_TIMEOUT:-120}
+    volumes:
+      - data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  data:
+    name: ${VF_DATA_VOLUME:-vertexai-factory-data}

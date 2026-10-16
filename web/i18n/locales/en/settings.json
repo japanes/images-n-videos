@@ -44,6 +44,10 @@
       "updates": {
         "title": "Updates",
         "hint": "How the app updates itself."
+      },
+      "video": {
+        "title": "Video",
+        "hint": "How videos are extended and how long a niche read is kept."
       }
     },
     "default": "Default: {value}",

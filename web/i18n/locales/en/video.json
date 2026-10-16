@@ -1,0 +1,322 @@
+{
+  "video": {
+    "list": {
+      "title": "Videos",
+      "new": "New video",
+      "empty": "No videos yet",
+      "emptyHint": "Press “New video” and describe what should happen in it."
+    },
+    "workspace": {
+      "titleLabel": "Video name",
+      "untitled": "Untitled video",
+      "missing": "This video was not found",
+      "deleted": "This video was deleted",
+      "spent": "Spent: {usd}",
+      "spentHint": "All money spent on this video, failed attempts included",
+      "removeAsk": "Delete the video “{title}”? Its files stay in the media library."
+    },
+    "statuses": {
+      "idle": "Draft",
+      "running": "Being made",
+      "paused": "Paused",
+      "done": "Ready",
+      "error": "Error"
+    },
+    "stepStatuses": {
+      "pending": "Waiting",
+      "running": "Being made",
+      "done": "Ready",
+      "error": "Error",
+      "stopped": "Stopped"
+    },
+    "form": {
+      "model": "Model",
+      "modelUnavailable": "This model is turned off or not available. Pick another one.",
+      "preview": "test version",
+      "unavailable": "not available",
+      "resolution": "Quality",
+      "duration": "Length",
+      "seconds": "{n} s",
+      "aspect": "Shape",
+      "cameraMove": "Camera move",
+      "sound": "Sound",
+      "soundAlways": "This model always makes the video with sound."
+    },
+    "cameraMove": {
+      "title": "Camera move",
+      "pickHint": "The chosen move is added after your text as one sentence. The whole text for the model is shown next to the button.",
+      "none": "No camera move",
+      "empty": "The camera move list is empty",
+      "groups": {
+        "basic": "Camera movement",
+        "advanced": "Techniques",
+        "framing": "Camera position"
+      },
+      "moves": {
+        "static": "Static",
+        "zoom_in": "Zoom in",
+        "fast_zoom_in": "Fast zoom in",
+        "crash_zoom_in": "Crash zoom in",
+        "zoom_out": "Zoom out",
+        "fast_zoom_out": "Fast zoom out",
+        "crash_zoom_out": "Crash zoom out",
+        "pan_left": "Pan left",
+        "pan_right": "Pan right",
+        "tilt_up": "Tilt up",
+        "tilt_down": "Tilt down",
+        "dolly_in": "Dolly in",
+        "dolly_out": "Dolly out",
+        "pass_by": "Pass-by",
+        "truck_left": "Truck left",
+        "truck_right": "Truck right",
+        "slider_left": "Slider left",
+        "slider_right": "Slider right",
+        "pedestal_up": "Pedestal up",
+        "pedestal_down": "Pedestal down",
+        "tracking": "Tracking shot",
+        "follow_shot": "Follow shot",
+        "reverse_tracking": "Reverse tracking",
+        "side_tracking": "Side tracking",
+        "vehicle_tracking": "Vehicle tracking",
+        "chase": "Chase shot",
+        "handheld": "Handheld",
+        "snorricam": "Body-mounted camera",
+        "steadicam": "Steadicam",
+        "dolly_zoom": "Dolly zoom (Vertigo)",
+        "orbit": "Orbit",
+        "orbit_ccw": "Orbit counterclockwise",
+        "arc_left": "Arc left",
+        "arc_right": "Arc right",
+        "whip_pan": "Whip pan",
+        "whip_pan_left": "Whip pan left",
+        "crane_up": "Crane up",
+        "crane_down": "Crane down",
+        "drone": "Drone shot",
+        "drone_pull_back": "Drone pull back",
+        "fpv_dive": "FPV dive",
+        "rack_focus": "Rack focus",
+        "push_in": "Slow push in",
+        "low_angle_tracking": "Ground-level tracking",
+        "high_angle_aerial": "Rise to aerial",
+        "loop": "Loop transition",
+        "time_lapse": "Time-lapse",
+        "tilt_shift": "Tilt-shift",
+        "pass_through": "Pass-through",
+        "hyper_zoom": "Hyper zoom",
+        "earth_zoom_out": "Earth zoom out",
+        "eye_level": "Eye level",
+        "high_angle": "High angle",
+        "overhead": "Overhead",
+        "dutch_angle": "Dutch angle",
+        "ots": "Over the shoulder",
+        "extreme_close_up": "Extreme close-up",
+        "low_angle": "Low angle",
+        "worms_eye": "Worm's eye",
+        "pov": "First person"
+      }
+    },
+    "brief": {
+      "niche": "What the video is about",
+      "nichePlaceholder": "For example: coffee shop, yoga classes",
+      "platform": "Where it will be posted",
+      "platformPlaceholder": "For example: Reels, Shorts, a website",
+      "label": "What happens in the video",
+      "placeholder": "Who or what is in the shot, what happens, where, the light and the mood",
+      "verbatim": "This text goes to the video model word for word.",
+      "research": "Search Google for this topic first",
+      "researchOn": "Before writing, the model looks up what works in such videos now. It costs a little more.",
+      "researchOff": "The text is written without a search.",
+      "researchCached": "The search from {date} is used again, free of charge.",
+      "researchFailed": "The search did not work, so the text was written without it.",
+      "nicheNeeded": "Fill in what the video is about: the search needs it.",
+      "withPhoto": "The model also sees the first frame picture.",
+      "write": "Write the text for me",
+      "restore": "Bring back the previous text",
+      "priceParts": "Text: {brief}, search: {research}",
+      "replace": "Replace",
+      "replaceAsk": "The box already has a text. Write a new one instead? The old one can be brought back.",
+      "durationChanged": "The text was written for {was} s, but the video is now {now} s long.",
+      "rewrite": "Rewrite for {n} s",
+      "cameraSuggested": "Suggested camera move: {move}",
+      "cameraApply": "Use it"
+    },
+    "attach": {
+      "first": {
+        "title": "First frame",
+        "hint": "The video starts from this picture.",
+        "unsupported": "This model cannot start from a picture."
+      },
+      "last": {
+        "title": "Last frame",
+        "hint": "The video ends on this picture. Works only with a first frame.",
+        "unsupported": "This model cannot end on a picture.",
+        "dropped": "This model does not take a last frame, so it will not be sent."
+      },
+      "references": {
+        "title": "Reference pictures",
+        "hint": "Up to {max} pictures of people, objects or style. The model keeps them in the video.",
+        "unsupported": "This model does not take reference pictures."
+      },
+      "remove": "Remove the picture"
+    },
+    "warnings": {
+      "frame_shadows_references": "With a first frame this model does not take reference pictures, so they will not be sent."
+    },
+    "storyboard": {
+      "open": "Storyboard",
+      "title": "Storyboard",
+      "shot": "What the storyboard shows",
+      "shotPlaceholder": "Describe the shot for the storyboard",
+      "shotHelp": "At first it is the video text. Changing it here does not change the video text.",
+      "shotReset": "Take the video text again",
+      "autoPanels": "Let the model choose the number of panels",
+      "panels": "Panels",
+      "grid": "{panels} panels: {cols} columns, {rows} rows",
+      "fullText": "The whole text for the picture model",
+      "sent": "Pictures sent along: {count}. Model: {model}, size {size}.",
+      "make": "Draw the storyboard",
+      "remake": "Draw again",
+      "own": "Use my own picture",
+      "ownSheet": "Your own picture",
+      "current": "Current storyboard",
+      "none": "No storyboard yet",
+      "madeSheet": "Drawn storyboard, panels: {panels}",
+      "attach": "Send it with the video",
+      "attachHelp": "The storyboard goes to the video model as one of the reference pictures and shows the order of the shots.",
+      "clear": "Remove the storyboard",
+      "clearAsk": "Remove the storyboard from this video? The picture stays in the media library.",
+      "attached": "The storyboard is sent with the video",
+      "notAttached": "The storyboard is not sent"
+    },
+    "take": {
+      "make": "Make video",
+      "reshoot": "Reshoot",
+      "reshootAsk": "Make a new take? It replaces the video here. The old ones stay in the media library.",
+      "saving": "Saving the changes…",
+      "sent": "What goes to the model",
+      "about": "{seconds} s, {resolution}, {aspect}, pictures: {pictures}"
+    },
+    "player": {
+      "empty": "No video yet",
+      "emptyHint": "Describe what happens and press “Make video”.",
+      "making": {
+        "take": "Making the video ({n} s). It takes a few minutes.",
+        "extend": "Making the next piece ({n} s). It takes a few minutes.",
+        "continue": "Making a clip from the last frame ({n} s). It takes a few minutes."
+      },
+      "stop": "Stop",
+      "failed": "The video was not made",
+      "googleSaid": "Google's answer: {text}",
+      "about": "Version {n}, {seconds} s, {kind}",
+      "kinds": {
+        "take": "first take",
+        "extend": "extended",
+        "continue": "continued from the last frame"
+      },
+      "frameFirst": "Save the first frame",
+      "frameNow": "Save this frame",
+      "frameLast": "Save the last frame",
+      "frameHelp": "A frame is saved to the media library as a picture, free of charge. It can go to the image studio or start a new video.",
+      "frameSaved": "The frame is saved to the media library",
+      "extend": "Extend",
+      "reshoot": "Reshoot",
+      "openEditor": "Open in the video editor",
+      "versions": "Versions",
+      "version": "{n}: {seconds} s"
+    },
+    "extend": {
+      "title": "Extend the video",
+      "noVideo": "Make the video first, then it can be extended.",
+      "model": "Model",
+      "otherModel": "This video was made by another model. {model} will extend it, so the picture may change a little.",
+      "downscale": "The video is {from}, and the model extends only in {to}. The whole video will become {to}.",
+      "tail": "The model gets the last {n} s of the video (it is {length} s long) and continues from there.",
+      "piece": "Piece {n}",
+      "whatNext": "What happens next. Leave it empty to use the video text.",
+      "removePiece": "Remove the piece",
+      "addPiece": "Add a piece",
+      "pauseEach": "Stop after each piece",
+      "pauseOn": "After each piece you look at it and press “Next piece”. You pay only for the pieces made.",
+      "pauseOff": "All pieces are made one after another without stopping.",
+      "start": "Extend",
+      "startMany": "Extend (pieces: {n})",
+      "lengthAfter": "Length after: about {n} s",
+      "worstCase": "The price is for all pieces. If you stop earlier, you pay only for what was made.",
+      "stepBrief": "As in the video text",
+      "stop": "Stop",
+      "next": "Next piece",
+      "drop": "Drop the rest",
+      "restHelp": "Press “Next piece” to go on, or drop the rest.",
+      "undo": "Undo the last extension",
+      "undoAsk": "Undo the last extension? The video goes back to the previous version. The removed piece stays in the media library.",
+      "plan": {
+        "running": "Extending",
+        "paused": "Paused: look at the new piece",
+        "done": "Extension is done",
+        "error": "Extension stopped with an error",
+        "stopped": "Extension stopped",
+        "progress": "Pieces: {done} of {total}"
+      },
+      "fromLast": {
+        "title": "Continue from the last frame",
+        "help": "A new clip starts from the last frame of this video and is joined to its end. Any model that starts from a picture can do it.",
+        "start": "Make and join"
+      }
+    },
+    "errors": {
+      "video_busy": "This video is being made. Wait or press “Stop”.",
+      "video_field_unknown": "The app sent something the video does not know. Reload the page.",
+      "video_text_too_long": "The text is too long: at most {max} characters.",
+      "video_frame_not_image": "This file is not a picture. Pick a picture.",
+      "video_too_many_references": "Too many pictures: {count}. The model takes at most {max}.",
+      "video_brief_empty": "Describe the video first: the text is what gets filmed.",
+      "video_first_frame_unsupported": "This model cannot start from a picture. Remove the first frame or pick another model.",
+      "video_last_frame_needs_first": "A last frame works only together with a first frame.",
+      "video_last_frame_unsupported": "This model cannot end on a picture. Remove the last frame or pick another model.",
+      "video_camera_unknown": "This camera move is not in the list. Pick another one.",
+      "video_extend_unsupported": "No model can extend the video now. Turn one on in the models screen.",
+      "video_extend_no_steps": "Add at least one piece.",
+      "video_extend_too_many": "Too many pieces: {count}. At most {max}.",
+      "video_extend_length_unsupported": "The model cannot make a piece of {seconds} s. It can make: {allowed} s.",
+      "video_extend_no_video": "Make the video first.",
+      "video_extend_no_plan": "There is nothing to continue.",
+      "video_aspect_unsupported": "This model does not make {aspect} videos. Pick another shape or model.",
+      "video_nothing_to_undo": "There is no extension to undo.",
+      "video_interrupted": "The app stopped while Google was making this clip. Start it again if you still want it (it will be paid again).",
+      "video_input_too_large": "The video is too big for the model: {size_mb} MB, at most {max_mb} MB.",
+      "video_extend_format": "The model does not take this video file. It takes: {mimes}.",
+      "video_niche_empty": "Say what the video is about first.",
+      "video_brief_exists": "The box already has a text.",
+      "video_brief_busy": "The text is being written. Wait a moment.",
+      "video_brief_bad_answer": "The model answered without a text. Try again.",
+      "video_no_previous_brief": "There is no previous text.",
+      "video_storyboard_empty": "The model answered without a picture. Try again.",
+      "video_storyboard_busy": "The storyboard is being drawn. Wait a moment.",
+      "video_storyboard_none": "There is no storyboard yet.",
+      "video_frame_at": "There is no frame at {at} s in this video."
+    },
+    "settings": {
+      "tailSeconds": {
+        "label": "Seconds the model gets for an extension",
+        "help": "How many last seconds of the video go to the model when it is extended. More seconds keep the look better, but the file is bigger."
+      },
+      "align": {
+        "label": "Join pieces on the matching frame",
+        "help": "The app finds where the new piece repeats the end of the video and joins them there, so the motion does not jump."
+      },
+      "crossfade": {
+        "label": "Smooth joint, seconds",
+        "help": "How long two pieces blend into each other at the joint. 0 means a straight cut."
+      },
+      "researchDays": {
+        "label": "Keep a topic search, days",
+        "help": "A search for the same topic is used again for this many days, so you do not pay twice. 0 means search every time."
+      }
+    },
+    "jobs": {
+      "take": "Video",
+      "extend": "Video extension",
+      "continue": "Video from the last frame"
+    }
+  }
+}

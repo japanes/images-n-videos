@@ -100,7 +100,8 @@
       "style": "Style preview",
       "project": "Video editor project",
       "chat": "Chat",
-      "studio": "Image studio"
+      "studio": "Image studio",
+      "video": "Video"
     },
     "upload": {
       "button": "Upload",

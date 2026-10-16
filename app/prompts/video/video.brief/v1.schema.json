@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "brief": {"type": "string"},
+    "camera_move": {"type": "string"}
+  },
+  "required": ["brief", "camera_move"]
+}

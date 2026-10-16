@@ -82,7 +82,10 @@
       "research": "Looking things up",
       "prompt_enhance": "Prompt improvement",
       "brief": "Brief",
-      "chat": "Chat reply"
+      "chat": "Chat reply",
+      "shot_ideas": "Shot ideas",
+      "shot_research": "Niche search for shot ideas",
+      "shot_idea_frame": "New idea for a frame"
     },
     "refTypes": {
       "file": "File",
@@ -97,7 +100,8 @@
       "brand_kit": "Brand kit",
       "style": "Style",
       "prompt": "Prompt",
-      "chat_message": "Chat message"
+      "chat_message": "Chat message",
+      "ideas_set": "Shot ideas"
     },
     "units": {
       "tokens": "Tokens: {in} in, {out} out",

@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {"type": "string"},
+    "prompt": {"type": "string"}
+  },
+  "required": ["title", "prompt"]
+}

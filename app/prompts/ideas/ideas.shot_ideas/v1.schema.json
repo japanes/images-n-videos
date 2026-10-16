@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "concept": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "direction": {"type": "string"}
+      },
+      "required": ["name", "direction"]
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {"type": "integer"},
+          "title": {"type": "string"},
+          "prompt": {"type": "string"}
+        },
+        "required": ["n", "title", "prompt"]
+      }
+    }
+  },
+  "required": ["concept", "images"]
+}

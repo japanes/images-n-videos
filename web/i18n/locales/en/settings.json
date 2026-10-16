@@ -48,6 +48,10 @@
       "video": {
         "title": "Video",
         "hint": "How videos are extended and how long a niche read is kept."
+      },
+      "ideas": {
+        "title": "Shot ideas",
+        "hint": "How long a niche search is kept."
       }
     },
     "default": "Default: {value}",

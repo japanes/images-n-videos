@@ -102,7 +102,8 @@
       "project": "Video editor project",
       "chat": "Chat",
       "studio": "Image studio",
-      "video": "Video"
+      "video": "Video",
+      "ideas": "Shot ideas"
     },
     "upload": {
       "button": "Upload",

@@ -1,0 +1,1432 @@
+{
+ "version": 2,
+ "note": "The setting a person can pick by hand instead of leaving it to the model. Ported from factory api/config/shot-blocks.json (version 2). Labels live in web/i18n/locales/*/ideas.json (ideas.scene.axes.<axis>, ideas.scene.items.<item>); 'en' is the phrase the model reads.",
+ "axes": [
+  {
+   "id": "surface",
+   "name": "Surface",
+   "note": "What the subject stands on, and what that surface does to the light.",
+   "max": 1,
+   "roll": "always",
+   "items": [
+    {
+     "id": "cracked_earth",
+     "en": "standing on cracked dry earth, the plates curling at their edges",
+     "tags": [
+      "dry",
+      "hard",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "terrazzo_slab",
+     "en": "standing on a terrazzo slab flecked with chips of colour",
+     "tags": [
+      "hard"
+     ]
+    },
+    {
+     "id": "brushed_steel",
+     "en": "standing on brushed steel, fine parallel grain catching the light",
+     "tags": [
+      "hard",
+      "reflective"
+     ]
+    },
+    {
+     "id": "rusted_iron",
+     "en": "standing on a sheet of rusted iron, orange bloom eating through it",
+     "tags": [
+      "hard",
+      "dry"
+     ]
+    },
+    {
+     "id": "charred_wood",
+     "en": "standing on charred wood, the burnt grain cracked into black scales",
+     "tags": [
+      "hard",
+      "dry"
+     ]
+    },
+    {
+     "id": "velvet_drape",
+     "en": "resting on deep velvet that swallows the light where it folds",
+     "tags": [
+      "soft"
+     ]
+    },
+    {
+     "id": "sheepskin",
+     "en": "sunk into thick sheepskin, the wool parting around it",
+     "tags": [
+      "soft",
+      "dry"
+     ]
+    },
+    {
+     "id": "crumpled_foil",
+     "en": "standing on crumpled foil that scatters light in a hundred directions",
+     "tags": [
+      "hard",
+      "reflective"
+     ]
+    },
+    {
+     "id": "bubble_wrap",
+     "en": "resting on bubble wrap, the cells flattening under the weight",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "corrugated_card",
+     "en": "resting on corrugated cardboard with the fluting exposed at the cut edge",
+     "tags": [
+      "paper",
+      "dry"
+     ]
+    },
+    {
+     "id": "wet_newspaper",
+     "en": "resting on wet newspaper, the print bleeding into the fibres",
+     "tags": [
+      "paper",
+      "wet"
+     ]
+    },
+    {
+     "id": "glass_shelf",
+     "en": "standing on a thick glass shelf with a green edge glowing along it",
+     "tags": [
+      "hard",
+      "reflective"
+     ]
+    },
+    {
+     "id": "frosted_glass",
+     "en": "standing on frosted glass lit from underneath",
+     "tags": [
+      "hard"
+     ]
+    },
+    {
+     "id": "sea_foam",
+     "en": "standing in retreating sea foam, bubbles bursting around the base",
+     "tags": [
+      "wet",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "dry_river_stones",
+     "en": "standing on a bed of smooth dry river stones",
+     "tags": [
+      "dry",
+      "hard",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "cracked_ice_sheet",
+     "en": "standing on a sheet of cracked ice, fracture lines running out from underfoot",
+     "tags": [
+      "ice",
+      "hard",
+      "reflective"
+     ]
+    },
+    {
+     "id": "snow_crust",
+     "en": "pressed into wind-hardened snow crust",
+     "tags": [
+      "ice",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "dune_ridge",
+     "en": "balanced on the sharp ridge of a sand dune",
+     "tags": [
+      "dry",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "fallen_leaves",
+     "en": "resting on a drift of fallen autumn leaves",
+     "tags": [
+      "outdoor",
+      "dry"
+     ]
+    },
+    {
+     "id": "pine_needles",
+     "en": "resting on a forest floor of pine needles and cones",
+     "tags": [
+      "outdoor",
+      "dry"
+     ]
+    },
+    {
+     "id": "petal_bed",
+     "en": "resting on a dense bed of fresh petals",
+     "tags": [
+      "soft"
+     ]
+    },
+    {
+     "id": "coffee_grounds_bed",
+     "en": "pressed into damp ground coffee, the imprint holding its edge",
+     "tags": [
+      "wet",
+      "dry"
+     ]
+    },
+    {
+     "id": "flour_dusted_table",
+     "en": "standing on a wooden table dusted with flour, handprints still in it",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "honey_pool",
+     "en": "standing in a slow pool of honey that draws threads as it moves",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "spilled_milk",
+     "en": "standing in spilled milk spreading in a clean white circle",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "wax_drips",
+     "en": "standing among hardened wax drips built up in layers",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "cork_slab",
+     "en": "resting on a slab of cork with its grain and pits showing",
+     "tags": [
+      "dry",
+      "soft"
+     ]
+    },
+    {
+     "id": "woven_rattan",
+     "en": "resting on woven rattan, the weave throwing a fine shadow pattern",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "leather_hide",
+     "en": "resting on worn leather, its creases and grain lit across the surface",
+     "tags": [
+      "soft"
+     ]
+    },
+    {
+     "id": "gravel_bed",
+     "en": "standing on loose grey gravel",
+     "tags": [
+      "dry",
+      "hard",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "salt_flat",
+     "en": "standing on a cracked white salt flat running out flat in every direction",
+     "tags": [
+      "dry",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "raw_plaster_slab",
+     "en": "standing on a slab of raw plaster, still chalky and unpolished",
+     "tags": [
+      "dry",
+      "hard"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "backdrop",
+   "name": "Backdrop",
+   "note": "What is behind it, near or far.",
+   "max": 1,
+   "roll": "always",
+   "items": [
+    {
+     "id": "brick_wall",
+     "en": "against a bare brick wall with crumbling mortar",
+     "tags": [
+      "indoor"
+     ]
+    },
+    {
+     "id": "rusted_shutter",
+     "en": "against a rusted roller shutter, paint peeling off in sheets",
+     "tags": [
+      "outdoor"
+     ]
+    },
+    {
+     "id": "greenhouse_glass",
+     "en": "inside a greenhouse, misted glass and leaves pressing against it",
+     "tags": [
+      "indoor"
+     ]
+    },
+    {
+     "id": "sunlit_curtain",
+     "en": "against a thin curtain with the sun burning through it",
+     "tags": [
+      "indoor"
+     ]
+    },
+    {
+     "id": "bookshelf_blur",
+     "en": "against a wall of books thrown out of focus",
+     "tags": [
+      "indoor"
+     ]
+    },
+    {
+     "id": "kitchen_counter",
+     "en": "on a working kitchen counter, utensils and crumbs left where they fell",
+     "tags": [
+      "indoor"
+     ]
+    },
+    {
+     "id": "linen_backdrop",
+     "en": "against a hanging linen backdrop with soft creases down it",
+     "tags": [
+      "studio"
+     ]
+    },
+    {
+     "id": "painted_canvas",
+     "en": "against a hand-painted mottled canvas backdrop, old-master style",
+     "tags": [
+      "studio"
+     ]
+    },
+    {
+     "id": "colour_block_paper",
+     "en": "against two sheets of coloured paper butted together in a hard line",
+     "tags": [
+      "studio",
+      "paper"
+     ]
+    },
+    {
+     "id": "mirror_wall",
+     "en": "against a mirrored wall that repeats the scene back into itself",
+     "tags": [
+      "studio",
+      "reflective"
+     ]
+    },
+    {
+     "id": "fogged_window",
+     "en": "against a fogged window with condensation running down it",
+     "tags": [
+      "indoor",
+      "wet"
+     ]
+    },
+    {
+     "id": "pool_water",
+     "en": "against turquoise pool water rippling behind it",
+     "tags": [
+      "outdoor",
+      "wet",
+      "reflective"
+     ]
+    },
+    {
+     "id": "ocean_horizon",
+     "en": "against open ocean running flat to the horizon",
+     "tags": [
+      "outdoor",
+      "wide",
+      "wet"
+     ]
+    },
+    {
+     "id": "cliff_edge",
+     "en": "on the edge of a cliff with the drop falling away behind",
+     "tags": [
+      "outdoor",
+      "wide"
+     ]
+    },
+    {
+     "id": "lavender_field",
+     "en": "against rows of lavender running into the distance",
+     "tags": [
+      "outdoor",
+      "wide"
+     ]
+    },
+    {
+     "id": "wheat_field",
+     "en": "against ripe wheat bending in the wind",
+     "tags": [
+      "outdoor",
+      "wide"
+     ]
+    },
+    {
+     "id": "birch_forest",
+     "en": "against pale birch trunks standing close together",
+     "tags": [
+      "outdoor"
+     ]
+    },
+    {
+     "id": "rock_canyon",
+     "en": "against the layered red walls of a narrow canyon",
+     "tags": [
+      "outdoor",
+      "wide"
+     ]
+    },
+    {
+     "id": "city_rooftops",
+     "en": "against a spread of city rooftops and aerials",
+     "tags": [
+      "outdoor",
+      "wide"
+     ]
+    },
+    {
+     "id": "neon_alley",
+     "en": "in a narrow alley lined with neon signs",
+     "tags": [
+      "outdoor"
+     ]
+    },
+    {
+     "id": "industrial_pipes",
+     "en": "against a tangle of industrial pipes and valves",
+     "tags": [
+      "indoor"
+     ]
+    },
+    {
+     "id": "stage_curtain",
+     "en": "against heavy stage curtains parted just enough to hold it",
+     "tags": [
+      "indoor"
+     ]
+    },
+    {
+     "id": "cloud_sky",
+     "en": "against nothing but sky and slow-moving cloud",
+     "tags": [
+      "outdoor",
+      "wide"
+     ]
+    },
+    {
+     "id": "stone_ruins",
+     "en": "among weathered stone ruins and fallen columns",
+     "tags": [
+      "outdoor"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "light",
+   "name": "Light",
+   "note": "Where the light comes from and how hard it is.",
+   "max": 1,
+   "roll": "always",
+   "items": [
+    {
+     "id": "overcast_flat",
+     "en": "lit by flat overcast daylight, no shadow with an edge to it",
+     "tags": [
+      "soft_light",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "ring_light",
+     "en": "lit head-on by a ring light, a circular catchlight on every glossy part",
+     "tags": [
+      "studio_light"
+     ]
+    },
+    {
+     "id": "beauty_dish",
+     "en": "lit by a beauty dish from just above, crisp but gentle falloff",
+     "tags": [
+      "studio_light",
+      "soft_light"
+     ]
+    },
+    {
+     "id": "top_spot",
+     "en": "lit by a tight spot from directly overhead, a bright pool and dark around it",
+     "tags": [
+      "hard_light"
+     ]
+    },
+    {
+     "id": "rim_only",
+     "en": "lit only along the edges, two thin rims and darkness between them",
+     "tags": [
+      "backlit"
+     ]
+    },
+    {
+     "id": "silhouette",
+     "en": "lit from behind so it reads as a black silhouette against the glow",
+     "tags": [
+      "backlit"
+     ],
+     "avoid": [
+      "top_down"
+     ]
+    },
+    {
+     "id": "firelight",
+     "en": "lit by an open fire, the light unsteady and orange",
+     "tags": [
+      "warm_light",
+      "flame"
+     ]
+    },
+    {
+     "id": "street_lamp",
+     "en": "lit by a sodium street lamp, warm and falling off fast",
+     "tags": [
+      "warm_light",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "car_headlights",
+     "en": "lit by car headlights from low and to one side",
+     "tags": [
+      "hard_light",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "screen_glow",
+     "en": "lit by the glow of a screen, cold and close",
+     "tags": [
+      "cool_light"
+     ]
+    },
+    {
+     "id": "uv_blacklight",
+     "en": "lit by ultraviolet, whites blazing violet and everything else sinking away",
+     "tags": [
+      "colour_light"
+     ]
+    },
+    {
+     "id": "red_darkroom",
+     "en": "lit by a single red darkroom lamp",
+     "tags": [
+      "colour_light"
+     ]
+    },
+    {
+     "id": "lightning_flash",
+     "en": "lit by a lightning flash, everything frozen white for an instant",
+     "tags": [
+      "hard_light",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "sunrise_haze",
+     "en": "lit by hazy sunrise light coming through mist",
+     "tags": [
+      "warm_light",
+      "soft_light",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "blue_hour",
+     "en": "lit by the blue hour after sunset, deep and even",
+     "tags": [
+      "cool_light",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "harsh_flash",
+     "en": "lit by a direct on-camera flash, hard shadow snapped behind it",
+     "tags": [
+      "hard_light"
+     ]
+    },
+    {
+     "id": "mixed_light",
+     "en": "lit by daylight on one side and warm tungsten on the other",
+     "tags": [
+      "warm_light"
+     ]
+    },
+    {
+     "id": "grid_shadow",
+     "en": "lit through a grid so a lattice of shadow falls over everything",
+     "tags": [
+      "hard_light"
+     ]
+    },
+    {
+     "id": "window_frame_shadow",
+     "en": "lit so the shadow of a window frame lands across the scene",
+     "tags": [
+      "hard_light"
+     ]
+    },
+    {
+     "id": "spot_in_dark",
+     "en": "lit by one narrow beam in an otherwise black room",
+     "tags": [
+      "hard_light"
+     ]
+    },
+    {
+     "id": "underlit",
+     "en": "lit from below, shadows thrown upward",
+     "tags": [
+      "hard_light"
+     ]
+    },
+    {
+     "id": "lightbox_below",
+     "en": "lit from underneath through a translucent surface",
+     "tags": [
+      "studio_light"
+     ]
+    },
+    {
+     "id": "colour_gradient_wash",
+     "en": "lit by a coloured wash that shifts from one hue to another across the frame",
+     "tags": [
+      "colour_light"
+     ]
+    },
+    {
+     "id": "sunset_in_frame",
+     "en": "lit by a low sun sitting in the frame itself, flaring wide",
+     "tags": [
+      "warm_light",
+      "outdoor"
+     ]
+    },
+    {
+     "id": "fluorescent_office",
+     "en": "lit by overhead fluorescent tubes, green-tinged and unflattering",
+     "tags": [
+      "cool_light"
+     ]
+    },
+    {
+     "id": "disco_beams",
+     "en": "lit by beams from a mirror ball, points of light travelling over everything",
+     "tags": [
+      "colour_light"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "camera",
+   "name": "Camera",
+   "note": "Where the camera stands and how much of the subject it takes.",
+   "max": 1,
+   "roll": "always",
+   "items": [
+    {
+     "id": "macro_lip",
+     "en": "macro on one edge or opening, the rest of it out of frame",
+     "tags": [
+      "macro"
+     ],
+     "avoid": [
+      "wide"
+     ]
+    },
+    {
+     "id": "cropped_edge",
+     "en": "framed so the product runs off two sides of the picture",
+     "tags": []
+    },
+    {
+     "id": "over_shoulder",
+     "en": "shot over someone's shoulder, their back dark in the near foreground",
+     "tags": []
+    },
+    {
+     "id": "through_glass",
+     "en": "shot through a pane of glass with reflections layered over it",
+     "tags": []
+    },
+    {
+     "id": "through_doorway",
+     "en": "shot through a doorway, the dark frame closing in on all sides",
+     "tags": []
+    },
+    {
+     "id": "mirror_pair",
+     "en": "framed to hold both the product and its reflection at once",
+     "tags": [],
+     "requires": [
+      "reflective"
+     ]
+    },
+    {
+     "id": "shadow_only",
+     "en": "framed so the shadow takes most of the picture and the product little of it",
+     "tags": []
+    },
+    {
+     "id": "negative_space",
+     "en": "framed with the product far to one side and empty space filling the rest",
+     "tags": [
+      "wide"
+     ]
+    },
+    {
+     "id": "corner_frame",
+     "en": "framed with the product pushed into one corner",
+     "tags": []
+    },
+    {
+     "id": "symmetry_center",
+     "en": "framed dead symmetrical, both halves mirroring each other",
+     "tags": []
+    },
+    {
+     "id": "top_down_tilt",
+     "en": "shot from above but tipped slightly off flat",
+     "tags": [
+      "top_down"
+     ]
+    },
+    {
+     "id": "eye_level_table",
+     "en": "shot from table height, the surface running out of frame at the bottom",
+     "tags": []
+    },
+    {
+     "id": "ground_level",
+     "en": "shot with the lens right down on the surface, everything looming",
+     "tags": []
+    },
+    {
+     "id": "tele_compressed",
+     "en": "shot long, the background pulled close and compressed flat",
+     "tags": []
+    },
+    {
+     "id": "wide_distort",
+     "en": "shot on a wide lens up close, the near edge stretched",
+     "tags": [
+      "wide"
+     ],
+     "avoid": [
+      "macro"
+     ]
+    },
+    {
+     "id": "motion_pan",
+     "en": "shot with a slow pan, everything but the product smeared sideways",
+     "tags": []
+    },
+    {
+     "id": "double_exposure",
+     "en": "a double exposure, a second image printed through it",
+     "tags": []
+    },
+    {
+     "id": "through_liquid",
+     "en": "shot through a glass of liquid that bends and doubles what is behind it",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "mid_fall",
+     "en": "caught mid-fall, still in the air and about to land",
+     "tags": [
+      "levitation"
+     ],
+     "avoid": [
+      "reflective"
+     ]
+    },
+    {
+     "id": "hands_applying",
+     "en": "hands in frame using it, caught in the middle of the motion",
+     "tags": []
+    },
+    {
+     "id": "half_out_of_frame",
+     "en": "framed so half the product is already outside the picture",
+     "tags": []
+    },
+    {
+     "id": "scale_figure",
+     "en": "a tiny human figure standing beside it, turning it into architecture",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "id": "atmosphere",
+   "name": "Atmosphere",
+   "note": "What hangs in the air or sits on the surfaces: water, dust, smoke, frost.",
+   "max": 1,
+   "roll": "sometimes",
+   "items": [
+    {
+     "id": "condensation",
+     "en": "cold condensation beading over every surface",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "honey_drip",
+     "en": "a thick drip of honey caught halfway down",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "oil_bubbles",
+     "en": "beads of oil suspended in liquid around it",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "ink_in_water",
+     "en": "ink unfurling in clear water in slow ribbons",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "confetti",
+     "en": "confetti thrown through the frame and still falling",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "feathers",
+     "en": "soft feathers drifting down around it",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "blown_sand",
+     "en": "sand lifted by the wind streaking past",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "flour_puff",
+     "en": "a puff of flour hanging in the air",
+     "tags": [
+      "dry"
+     ],
+     "avoid": [
+      "wet"
+     ]
+    },
+    {
+     "id": "glitter_shower",
+     "en": "glitter falling and catching the light on the way down",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "bokeh_lights",
+     "en": "out-of-focus lights blooming into circles behind it",
+     "tags": []
+    },
+    {
+     "id": "lens_flare",
+     "en": "a flare streaking across the lens from a light just out of frame",
+     "tags": []
+    },
+    {
+     "id": "heat_haze",
+     "en": "air shimmering with heat, the edges rippling",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "falling_snow",
+     "en": "heavy snow falling through the frame",
+     "tags": [
+      "ice"
+     ]
+    },
+    {
+     "id": "icicles",
+     "en": "icicles hanging around it, tips about to drop",
+     "tags": [
+      "ice"
+     ]
+    },
+    {
+     "id": "shattering_glass",
+     "en": "glass shattering outward, the fragments still in the air",
+     "tags": []
+    },
+    {
+     "id": "pouring_stream",
+     "en": "a stream of liquid pouring in and splitting on impact",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "smoke_swirl",
+     "en": "smoke turning over itself in slow heavy curls",
+     "tags": []
+    },
+    {
+     "id": "dewy_web",
+     "en": "a spider web strung nearby, every thread beaded with dew",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "ash_flakes",
+     "en": "flakes of grey ash settling over everything",
+     "tags": [
+      "dry"
+     ],
+     "avoid": [
+      "wet"
+     ]
+    },
+    {
+     "id": "gas_bubbles",
+     "en": "strings of bubbles rising past it through liquid",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "melting_drips",
+     "en": "meltwater running off in fast clear drips",
+     "tags": [
+      "wet",
+      "ice"
+     ]
+    },
+    {
+     "id": "leaf_swirl",
+     "en": "dry leaves caught in a gust and spinning around it",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "fireflies",
+     "en": "fireflies drifting through the dark around it",
+     "tags": []
+    },
+    {
+     "id": "heavy_mist",
+     "en": "thick mist filling the whole scene, distance dissolving into it",
+     "tags": [
+      "ground_fog"
+     ]
+    },
+    {
+     "id": "electric_arcs",
+     "en": "small electric arcs snapping across the gap beside it",
+     "tags": []
+    },
+    {
+     "id": "water_wall",
+     "en": "a curtain of falling water directly behind it",
+     "tags": [
+      "wet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "props",
+   "name": "Props",
+   "note": "What lies beside the subject. Two at most, or the frame turns into a shop window.",
+   "max": 2,
+   "roll": "sometimes",
+   "items": [
+    {
+     "id": "fresh_berries",
+     "en": "fresh berries scattered close, some split open",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "whole_nuts",
+     "en": "whole and cracked nuts spilled around the base",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "warm_spices",
+     "en": "cinnamon quills and star anise laid in a loose pile",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "vanilla_pods",
+     "en": "split vanilla pods with the seeds showing",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "cacao_nibs",
+     "en": "cacao beans and broken nibs drifted to one side",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "honeycomb",
+     "en": "a piece of dripping honeycomb beside it",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "fresh_herbs",
+     "en": "sprigs of fresh herbs strewn around",
+     "tags": []
+    },
+    {
+     "id": "chili_peppers",
+     "en": "whole and halved chili peppers arranged nearby",
+     "tags": []
+    },
+    {
+     "id": "raw_cotton",
+     "en": "raw cotton bolls still on their dry stems",
+     "tags": [
+      "dry",
+      "soft"
+     ]
+    },
+    {
+     "id": "eucalyptus",
+     "en": "eucalyptus branches leaning in from the edge",
+     "tags": []
+    },
+    {
+     "id": "dry_grass",
+     "en": "a bundle of dry grass and wheat ears tied off",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "pine_cones",
+     "en": "pine cones and needles gathered at the base",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "marble_offcuts",
+     "en": "broken offcuts of marble stacked into low plinths",
+     "tags": [
+      "hard"
+     ]
+    },
+    {
+     "id": "concrete_blocks",
+     "en": "rough concrete blocks set as steps around it",
+     "tags": [
+      "hard"
+     ]
+    },
+    {
+     "id": "rough_gems",
+     "en": "uncut gemstones and geode halves placed close",
+     "tags": [
+      "hard"
+     ]
+    },
+    {
+     "id": "pearls",
+     "en": "loose pearls rolled across the surface",
+     "tags": [
+      "reflective"
+     ]
+    },
+    {
+     "id": "chain_links",
+     "en": "heavy chain coiled beside it",
+     "tags": [
+      "hard"
+     ]
+    },
+    {
+     "id": "mirror_shards",
+     "en": "shards of mirror laid flat, each holding a piece of the scene",
+     "tags": [
+      "reflective",
+      "hard"
+     ]
+    },
+    {
+     "id": "chrome_spheres",
+     "en": "polished chrome spheres of different sizes around it",
+     "tags": [
+      "reflective",
+      "hard"
+     ]
+    },
+    {
+     "id": "glass_of_water",
+     "en": "a glass of water beside it, bending what shows through",
+     "tags": [
+      "wet",
+      "reflective"
+     ]
+    },
+    {
+     "id": "ice_sphere",
+     "en": "a clear ice sphere resting next to it",
+     "tags": [
+      "ice",
+      "wet"
+     ]
+    },
+    {
+     "id": "melting_cube",
+     "en": "a single ice cube melting into a ring of water",
+     "tags": [
+      "ice",
+      "wet"
+     ]
+    },
+    {
+     "id": "silk_ribbon",
+     "en": "a silk ribbon trailing across and off the frame",
+     "tags": [
+      "soft"
+     ]
+    },
+    {
+     "id": "lace_veil",
+     "en": "lace draped half over it, the pattern printed in shadow",
+     "tags": [
+      "soft"
+     ]
+    },
+    {
+     "id": "velvet_cushion",
+     "en": "a small velvet cushion holding it like a jewel",
+     "tags": [
+      "soft"
+     ]
+    },
+    {
+     "id": "antique_book",
+     "en": "an old book lying open beside it",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "old_letters",
+     "en": "handwritten letters and old stamps spread underneath",
+     "tags": [
+      "paper",
+      "dry"
+     ]
+    },
+    {
+     "id": "brass_scales",
+     "en": "a set of small brass scales standing next to it",
+     "tags": [
+      "hard"
+     ]
+    },
+    {
+     "id": "lab_glassware",
+     "en": "beakers and pipettes arranged around it",
+     "tags": [
+      "reflective"
+     ]
+    },
+    {
+     "id": "clock_gears",
+     "en": "tiny clock gears and springs laid out in order",
+     "tags": [
+      "hard"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "palette",
+   "name": "Palette",
+   "note": "The colours the whole frame is held to.",
+   "max": 1,
+   "roll": "sometimes",
+   "items": [
+    {
+     "id": "red_and_black",
+     "en": "red and black only, nothing in between",
+     "tags": [
+      "dark"
+     ]
+    },
+    {
+     "id": "deep_green_gold",
+     "en": "deep emerald green with gold",
+     "tags": [
+      "dark"
+     ]
+    },
+    {
+     "id": "terracotta_cream",
+     "en": "terracotta against cream, warm and dusty",
+     "tags": []
+    },
+    {
+     "id": "blush_bronze",
+     "en": "blush pink lifted with bronze",
+     "tags": []
+    },
+    {
+     "id": "greyscale",
+     "en": "no colour at all, greyscale from black to white",
+     "tags": []
+    },
+    {
+     "id": "sepia_warm",
+     "en": "warm sepia throughout, like an old print",
+     "tags": []
+    },
+    {
+     "id": "duotone_print",
+     "en": "two inks only, printed one over the other",
+     "tags": []
+    },
+    {
+     "id": "primary_bold",
+     "en": "flat primary red, yellow and blue at full strength",
+     "tags": []
+    },
+    {
+     "id": "candy_pink",
+     "en": "candy pink with a lighter pink behind it",
+     "tags": []
+    },
+    {
+     "id": "lilac_lavender",
+     "en": "lilac and lavender, cool and soft",
+     "tags": []
+    },
+    {
+     "id": "seafoam_sand",
+     "en": "pale seafoam green against warm sand",
+     "tags": []
+    },
+    {
+     "id": "midnight_silver",
+     "en": "midnight blue with cold silver highlights",
+     "tags": [
+      "dark"
+     ]
+    },
+    {
+     "id": "burgundy_wine",
+     "en": "deep burgundy and oxblood",
+     "tags": [
+      "dark"
+     ]
+    },
+    {
+     "id": "mustard_teal",
+     "en": "mustard yellow against deep teal",
+     "tags": []
+    },
+    {
+     "id": "copper_rust",
+     "en": "copper and rust, metal going warm as it ages",
+     "tags": []
+    },
+    {
+     "id": "forest_moss",
+     "en": "moss green and bark brown, everything from a forest floor",
+     "tags": []
+    },
+    {
+     "id": "sunset_warm",
+     "en": "a sunset run of orange into pink into violet",
+     "tags": []
+    },
+    {
+     "id": "clinical_blue",
+     "en": "clinical white with pale surgical blue",
+     "tags": [
+      "bright"
+     ]
+    },
+    {
+     "id": "charcoal_chalk",
+     "en": "charcoal black against chalk white, nothing warm anywhere",
+     "tags": []
+    },
+    {
+     "id": "iridescent",
+     "en": "iridescent pearl that shifts hue with the angle",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "id": "state",
+   "name": "State",
+   "note": "What the product itself is doing at the moment the shutter opens.",
+   "max": 1,
+   "roll": "sometimes",
+   "items": [
+    {
+     "id": "lid_beside",
+     "en": "the product open with its lid set down beside it",
+     "tags": []
+    },
+    {
+     "id": "mid_pour",
+     "en": "caught mid-pour, the stream still connected",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "dripping_side",
+     "en": "the product overflowing, a slow line running down its side",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "swatch_on_skin",
+     "en": "a swatch of it drawn on skin right beside the product",
+     "tags": []
+    },
+    {
+     "id": "unwrapped",
+     "en": "just unwrapped, the packaging still falling away from it",
+     "tags": []
+    },
+    {
+     "id": "stacked_tower",
+     "en": "several of them stacked into a tall unsteady tower",
+     "tags": []
+    },
+    {
+     "id": "exploded_view",
+     "en": "taken apart, every component laid out in order",
+     "tags": []
+    },
+    {
+     "id": "floating_pieces",
+     "en": "broken into pieces that hang apart in mid-air",
+     "tags": [
+      "levitation"
+     ],
+     "avoid": [
+      "reflective"
+     ]
+    },
+    {
+     "id": "wrapped_in_fabric",
+     "en": "half wrapped in fabric, only part of it showing",
+     "tags": []
+    },
+    {
+     "id": "partly_buried",
+     "en": "half buried, the surface heaped up against it",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "covered_in_droplets",
+     "en": "covered in fine droplets standing on its surface",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "dusted_with_powder",
+     "en": "dusted over with fine powder that settles in its grooves",
+     "tags": [
+      "dry"
+     ]
+    },
+    {
+     "id": "melting_state",
+     "en": "softening and melting, its edges no longer holding",
+     "tags": [
+      "wet"
+     ]
+    },
+    {
+     "id": "mirrored_pair",
+     "en": "two of them set face to face in exact mirror",
+     "tags": []
+    },
+    {
+     "id": "size_duo",
+     "en": "the travel size standing in front of the full size",
+     "tags": []
+    },
+    {
+     "id": "refill_beside",
+     "en": "the refill pack standing open next to the product",
+     "tags": []
+    }
+   ]
+  }
+ ]
+}

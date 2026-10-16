@@ -96,7 +96,8 @@
       "chat": "Chat",
       "brand_kit": "Brand kit",
       "style": "Style",
-      "prompt": "Prompt"
+      "prompt": "Prompt",
+      "chat_message": "Chat message"
     },
     "units": {
       "tokens": "Tokens: {in} in, {out} out",

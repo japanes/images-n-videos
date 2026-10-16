@@ -3,7 +3,7 @@ tmp/
 
 # Local config and data
 .env
-data/
+/data/
 
 # Python
 __pycache__/

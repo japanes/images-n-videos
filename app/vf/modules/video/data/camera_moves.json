@@ -1,0 +1,490 @@
+{
+ "_readme": "Camera moves for video clips (ported from factory). clip_phrase is added to the clip prompt when a move is chosen; frame_phrase is for still pictures (empty for movement). Labels live in the web locales under video.cameraMove.<code>.",
+ "categories": [
+  "basic",
+  "advanced",
+  "framing"
+ ],
+ "moves": [
+  {
+   "code": "static",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "the camera is locked off on one fixed position for the whole shot, still and steady, its angle, height, lens and composition never changing, only what is in front of it moving, ending framed exactly as it began",
+   "frame_phrase": ""
+  },
+  {
+   "code": "zoom_in",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a slow zoom in, the lens tightening steadily and evenly toward a closer frame, the main subject staying readable as it grows larger, ending on a stable tighter composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "fast_zoom_in",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a fast zoom in, the lens driving quickly and decisively toward the main subject, the subject kept centred and readable through the change of scale, ending on a stable tighter composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "crash_zoom_in",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a crash zoom in, the lens snapping rapidly toward the subject, very fast and punchy, the subject staying readable through the sudden change of scale, ending landed on a bold tighter composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "zoom_out",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a slow zoom out, the lens widening steadily and evenly, the main subject staying readable as more of the surrounding space appears, ending on a stable wider composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "fast_zoom_out",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a fast zoom out, the lens widening quickly and decisively away from the main subject, the subject kept readable as the surrounding space opens up, ending on a stable wider composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "crash_zoom_out",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a crash zoom out, the lens snapping rapidly away from the subject, very fast and punchy, the subject staying readable as the surrounding space bursts into view, ending landed on a bold wider composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "pan_left",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a pan left, the camera rotating horizontally from right to left from one fixed point at a smooth constant rate, the horizon staying level as new space enters from the left, ending settled on a clear composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "pan_right",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a pan right, the camera rotating horizontally from left to right from one fixed point at a smooth constant rate, the horizon staying level as new space enters from the right, ending settled on a clear composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "tilt_up",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a tilt up, the camera pivoting upward from one fixed point at a smooth constant rate, the main subject staying centred as the frame travels up it, ending landed on its upper end",
+   "frame_phrase": ""
+  },
+  {
+   "code": "tilt_down",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a tilt down, the camera pivoting downward from one fixed point at a smooth constant rate, the main subject staying centred as the frame travels down it, ending landed on its lower end",
+   "frame_phrase": ""
+  },
+  {
+   "code": "dolly_in",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a dolly in, the whole camera gliding physically forward in a straight line toward the subject on a smooth controlled push, its height and lens direction unchanged while the distance closes, ending in a tighter composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "dolly_out",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a dolly out, the whole camera gliding physically backward in a straight line away from the subject on a smooth controlled retreat, its height and lens direction unchanged while more of the surroundings enters the frame, ending in a wider composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "pass_by",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a push past, the camera moving forward past a foreground object, edge or opening on a smooth forward glide, that foreground passing close to the lens while the space beyond it becomes clear, ending arrived inside or beyond the foreground layer",
+   "frame_phrase": ""
+  },
+  {
+   "code": "truck_left",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a truck left, the whole camera travelling on a straight horizontal path to the left at a smooth constant rate, the lens facing the same direction throughout so the scene slides across the frame, ending on a clean lateral composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "truck_right",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a truck right, the whole camera travelling on a straight horizontal path to the right at a smooth constant rate, the lens facing the same direction throughout so the scene slides across the frame, ending on a clean lateral composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "slider_left",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a slider left, the camera sliding a short distance to the left on a slow controlled constant motion, foreground, subject and background all staying readable as the parallax between them shifts, ending on a refined composition with the new left-side angle visible",
+   "frame_phrase": ""
+  },
+  {
+   "code": "slider_right",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a slider right, the camera sliding a short distance to the right on a slow controlled constant motion, foreground, subject and background all staying readable as the parallax between them shifts, ending on a refined composition with the new right-side angle visible",
+   "frame_phrase": ""
+  },
+  {
+   "code": "pedestal_up",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a pedestal up, the whole camera rising vertically in a straight line on a smooth constant lift, the lens staying level and pointed the same way so the frame climbs without tilting, ending with the higher framing clearly readable",
+   "frame_phrase": ""
+  },
+  {
+   "code": "pedestal_down",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a pedestal down, the whole camera lowering vertically in a straight line on a smooth constant descent, the lens staying level and pointed the same way so the frame drops without tilting, ending with the lower framing clearly readable",
+   "frame_phrase": ""
+  },
+  {
+   "code": "tracking",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a tracking shot, the camera travelling through the scene with the main subject at its own pace, holding it consistently readable in the same part of the frame while the surroundings move around it, ending still moving with it on a clear composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "follow_shot",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a follow shot from behind, the camera moving along the main subject's route just behind it at its own height and matching its pace, the back of the subject held as the foreground guide while the route ahead stays readable, ending still following with the subject leading the frame",
+   "frame_phrase": ""
+  },
+  {
+   "code": "reverse_tracking",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a reverse tracking shot, the camera moving backward in front of the moving main subject at its own forward pace, its front held stable and facing the lens while the background slides away behind it, ending on a clear front-facing moving composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "side_tracking",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a side tracking shot, the camera moving parallel to the main subject along its direction of travel and matching its motion, holding it in side or three-quarter profile at a steady distance, ending with the horizontal movement still clearly running",
+   "frame_phrase": ""
+  },
+  {
+   "code": "vehicle_tracking",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a travelling-mount shot, the camera rigged beside the moving main subject and carried along with it at its own speed, the subject held stable and sharp in frame while the ground and the surroundings rush past it, ending on a clear moving composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "chase",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a chase shot, the camera following the moving main subject fast and physically close along the route of the action, reactive and energetic, the subject staying visible through loose urgent reframing, ending still connected to it in motion",
+   "frame_phrase": ""
+  },
+  {
+   "code": "handheld",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a handheld shot carried at operator height with natural body movement, responsive and organic, the subject staying readable through a subtle sway and constant micro-adjustments, ending on a natural handheld composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "snorricam",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a subject-mounted snorricam shot, the camera fixed rigidly to the main subject itself so that it never moves relative to it however the subject moves, matching its motion exactly, keeping it close, centred and facing the lens while the whole background swings around it, ending with the subject still locked in frame",
+   "frame_phrase": ""
+  },
+  {
+   "code": "steadicam",
+   "category": "basic",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a steadicam move, the camera gliding continuously through the space on a stabilised rig with no shake at all, at an even walking pace, the main subject staying readable as the geography of the place opens up around it, ending settled but still in motion",
+   "frame_phrase": ""
+  },
+  {
+   "code": "dolly_zoom",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a dolly zoom, the camera tracking backward while the lens zooms in at exactly the same rate, slow and continuous, the main subject held at precisely the same size in frame while the background stretches and distorts behind it, ending with the perspective visibly wrong and the subject unchanged",
+   "frame_phrase": ""
+  },
+  {
+   "code": "orbit",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a clockwise orbit, the camera circling the main subject at a constant radius on a smooth controlled arc, the subject held centred while the background rotates around it, ending with the intended arc completed on stable framing",
+   "frame_phrase": ""
+  },
+  {
+   "code": "orbit_ccw",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a counterclockwise orbit, the camera circling the main subject at a constant radius on a smooth controlled arc, the subject held centred while the background rotates around it, ending with the intended arc completed on stable framing",
+   "frame_phrase": ""
+  },
+  {
+   "code": "arc_left",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "an arc left, the camera moving on a shallow curved path around the main subject toward its left on a smooth measured curve, its distance, its height and the subject's readability all unchanged while the angle turns, ending from a new left-side angle",
+   "frame_phrase": ""
+  },
+  {
+   "code": "arc_right",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "an arc right, the camera moving on a shallow curved path around the main subject toward its right on a smooth measured curve, its distance, its height and the subject's readability all unchanged while the angle turns, ending from a new right-side angle",
+   "frame_phrase": ""
+  },
+  {
+   "code": "whip_pan",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a whip pan right, the camera rotating rapidly from where it started toward a new target on the right, a fast snap that smears the picture into brief motion blur, opening on one readable composition and landing on a second, ending settled into a sharp final frame",
+   "frame_phrase": ""
+  },
+  {
+   "code": "whip_pan_left",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a whip pan left, the camera rotating rapidly from where it started toward a new target on the left, a fast snap that smears the picture into brief motion blur, opening on one readable composition and landing on a second, ending settled into a sharp final frame",
+   "frame_phrase": ""
+  },
+  {
+   "code": "crane_up",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a crane up, the camera travelling smoothly upward through open space on a slow controlled lift, the main subject or the place staying readable as the camera rises above it, ending with the higher scale clearly visible",
+   "frame_phrase": ""
+  },
+  {
+   "code": "crane_down",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a crane down, the camera travelling smoothly downward through open space on a slow controlled descent, the main subject or the place staying readable as the camera comes down to it, ending with the lower subject or destination clearly visible",
+   "frame_phrase": ""
+  },
+  {
+   "code": "drone",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "an aerial drone push in, the camera flying smoothly forward through open space toward the subject or destination on a controlled aerial glide, the route and the destination staying readable as it approaches, ending arrived at a closer aerial composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "drone_pull_back",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "an aerial drone pull back, the camera flying smoothly backward away from the subject or destination on a controlled aerial retreat, the subject staying readable as more of the landscape appears, ending on a wider aerial composition",
+   "frame_phrase": ""
+  },
+  {
+   "code": "fpv_dive",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "an fpv drone dive, the camera plunging downward at speed on one aggressive continuous line, the surroundings streaking past in motion blur while the target of the dive stays readable ahead, ending pulled level close to the ground",
+   "frame_phrase": ""
+  },
+  {
+   "code": "rack_focus",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a rack focus, the camera itself holding still while the focus travels from the foreground to the background at a smooth measured rate, the shot opening sharp on the near subject with the far one soft, ending sharp on the far one with the near one soft",
+   "frame_phrase": ""
+  },
+  {
+   "code": "push_in",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a slow push in, the camera creeping forward toward the subject without pause, so gradual the movement is barely noticed, its height and lens direction unchanged while the distance closes, ending noticeably tighter than it began",
+   "frame_phrase": ""
+  },
+  {
+   "code": "low_angle_tracking",
+   "category": "advanced",
+   "behaviour": "viewpoint",
+   "version": 3,
+   "clip_phrase": "a low tracking shot, the camera travelling at ground height alongside the main subject's path and matching its pace, whatever moves along the ground staying readable while the ground plane rushes through the frame, ending with the low perspective held",
+   "frame_phrase": "shot from ground level, the lens low to the floor and angled slightly up at the main subject, the ground plane running across the bottom of the frame"
+  },
+  {
+   "code": "high_angle_aerial",
+   "category": "advanced",
+   "behaviour": "viewpoint",
+   "version": 2,
+   "clip_phrase": "a helicopter-style aerial shot, the camera moving high above the scene along a broad gradual flight path, steady and controlled, the landscape or the distant moving subject staying readable at that wide scale, ending on a stable high-altitude composition",
+   "frame_phrase": "shot from high altitude looking down across the scene, the landscape spread out at wide scale and the subject small within it"
+  },
+  {
+   "code": "loop",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a loop move, the camera pushing in on the subject and then pulling rapidly back to reveal the whole space, one continuous accelerating gesture, the subject held centred throughout, ending framed exactly as it began so the shot can play again without a seam",
+   "frame_phrase": ""
+  },
+  {
+   "code": "time_lapse",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 3,
+   "clip_phrase": "a locked-camera time-lapse, one fixed camera position held while time runs rapidly forward, the composition and horizon never changing as the light and everything that moves in the place pour through the frame, ending on the same angle with the passage of time visible",
+   "frame_phrase": ""
+  },
+  {
+   "code": "tilt_shift",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a tilt-shift miniature view, the camera high above the scene and holding or gliding a small precise distance, a narrow band of sharp focus lying across the key subject with soft blur above and below it so the world reads as a scale model, ending with that miniature look intact",
+   "frame_phrase": ""
+  },
+  {
+   "code": "pass_through",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "a pass-through move, the camera moving forward toward an object, surface or barrier and continuing into the space beyond it on a smooth centred glide, the opening held in the middle of the frame as the transition point, ending arrived inside the revealed space",
+   "frame_phrase": ""
+  },
+  {
+   "code": "hyper_zoom",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "an infinite zoom, the camera zooming continuously inward toward one exact point at the centre, smooth and accelerating, that point held dead centre as it expands to fill everything, ending when the next world fills the frame",
+   "frame_phrase": ""
+  },
+  {
+   "code": "earth_zoom_out",
+   "category": "advanced",
+   "behaviour": "motion",
+   "version": 2,
+   "clip_phrase": "an earth zoom out, the camera pulling upward from the starting point through street, city, landscape and planet scale in one rapid expanding move, the original location held centred as the scale grows, ending on a planet-scale view with the starting point still implied at the centre",
+   "frame_phrase": ""
+  },
+  {
+   "code": "eye_level",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 3,
+   "clip_phrase": "the camera stays level with the main subject for the whole shot, at the height of its eyes or, if it has none, at the height of its middle, looking neither up nor down at it, any movement holding that height, ending at the level it began",
+   "frame_phrase": "shot at eye level, the lens exactly level with the main subject — its eyes if it has them, its middle if it does not — looking neither up nor down at it, the horizon crossing the frame at that height"
+  },
+  {
+   "code": "high_angle",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 3,
+   "clip_phrase": "the camera holds its high position above the main subject for the whole shot and never drops to its level, looking down at it throughout, ending from the same height",
+   "frame_phrase": "shot from a high angle looking down at the main subject, the lens well above it, so it sits small against the ground and whatever surrounds it"
+  },
+  {
+   "code": "overhead",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 2,
+   "clip_phrase": "the camera holds the overhead position for the whole shot, looking straight down and never dropping to eye level, ending from the same place above the scene",
+   "frame_phrase": "shot from directly overhead, the lens pointing straight down at the scene, everything read as a flat top-down composition with the shadows falling outward from the subject"
+  },
+  {
+   "code": "dutch_angle",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 2,
+   "clip_phrase": "the camera holds its roll for the whole shot, the horizon staying diagonal through any movement, ending as tilted as it began",
+   "frame_phrase": "shot at a dutch angle, the camera rolled on its lens axis so the horizon and every vertical run diagonally across the frame"
+  },
+  {
+   "code": "ots",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 3,
+   "clip_phrase": "the camera stays behind the near subject for the whole shot, holding the two of them in the same relationship, ending from the same place behind it",
+   "frame_phrase": "an over-the-shoulder shot: the near subject fills one side of the frame from behind — a shoulder and the back of a head, or whatever its nearest edge is — close and out of focus, while the far subject is sharp, facing the lens and framed in the space beside it"
+  },
+  {
+   "code": "extreme_close_up",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 2,
+   "clip_phrase": "the camera stays this close for the whole shot and never pulls back, the subject filling the frame throughout, ending as tight as it began",
+   "frame_phrase": "an extreme close-up, one detail of the subject filling the entire frame, the focus falling off within centimetres and nothing of the surroundings readable"
+  },
+  {
+   "code": "low_angle",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 3,
+   "clip_phrase": "the camera holds its low position below the main subject for the whole shot and never rises to its level, looking up at it throughout, ending from the same height",
+   "frame_phrase": "shot from a low angle looking up at the main subject, the lens below it, so it stands tall against the sky or the ceiling behind it"
+  },
+  {
+   "code": "worms_eye",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 3,
+   "clip_phrase": "the camera stays down on the ground for the whole shot, looking almost straight up throughout, ending from the same place on the floor",
+   "frame_phrase": "a worm's-eye view: the lens on the ground looking almost straight up, so the main subject and everything around it tower over the frame and converge above it"
+  },
+  {
+   "code": "pov",
+   "category": "framing",
+   "behaviour": "viewpoint",
+   "version": 3,
+   "clip_phrase": "the shot stays inside the main subject's own point of view for its whole length, moving as it moves at its own natural pace, whatever belongs to it and reaches ahead — hands, arms, what it carries — entering the frame as the viewer's physical reference, ending arrived at the next point of the action from the same point of view",
+   "frame_phrase": "a point-of-view shot: exactly what the main subject sees from its own position at its own height, whatever it holds or reaches with entering the bottom of the frame"
+  }
+ ]
+}

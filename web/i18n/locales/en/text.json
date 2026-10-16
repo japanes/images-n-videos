@@ -1,0 +1,298 @@
+{
+  "text": {
+    "chat": {
+      "action": "Text on the picture"
+    },
+    "jobs": {
+      "background": "New backgrounds for text"
+    },
+    "tabs": {
+      "words": "Words",
+      "layers": "Layers",
+      "generate": "New background"
+    },
+    "tool": {
+      "title": "Text on the picture",
+      "titleOf": "Text on the picture · {title}",
+      "failed": "The tool did not open.",
+      "retry": "Try again",
+      "syncing": "Keeping your changes…",
+      "draftHint": "Changes are kept as a draft. «Save» puts the picture with the words into the chat.",
+      "spent": "Spent here: {usd}",
+      "save": "Save to the chat",
+      "saved": "Saved. The picture with the words is now a new message in the chat."
+    },
+    "languages": {
+      "ru": "Russian",
+      "uk": "Ukrainian",
+      "en": "English"
+    },
+    "roles": {
+      "headline": "Headline",
+      "body": "Main text",
+      "accent": "Accent"
+    },
+    "sizes": {
+      "sm": "Small",
+      "md": "Medium",
+      "lg": "Large",
+      "xl": "Very large"
+    },
+    "aligns": {
+      "left": "Left",
+      "center": "Center",
+      "right": "Right"
+    },
+    "verticals": {
+      "top": "At the top of the box",
+      "middle": "In the middle of the box",
+      "bottom": "At the bottom of the box"
+    },
+    "words": {
+      "title": "Words on the picture",
+      "language": "Language",
+      "empty": "No words yet. Add a headline, a main text or an accent below, or let the model write them.",
+      "role": "What this is",
+      "size": "Letter size",
+      "locked": "Keep",
+      "lockedHint": "The model will not change these words when it writes or rewrites.",
+      "remove": "Delete these words",
+      "max": "Up to {n} blocks of words.",
+      "placeholder": {
+        "headline": "A short headline",
+        "body": "One or two sentences",
+        "accent": "A price, a date, a call to action"
+      }
+    },
+    "place": {
+      "title": "Put the words on the picture",
+      "hint": "Each block of words gets its own box on the picture. Free: boxes you already have, then the picture's text map from its style, then the bottom third.",
+      "unplaced": "{n} block has no box yet | {n} blocks have no box yet",
+      "vision": "Let the model look at the picture",
+      "visionHint": "Paid. The model gets a small copy of the picture and finds calm places for the words, away from faces and objects.",
+      "replace": "Move boxes that are already there",
+      "replaceHint": "Off: only blocks without a box get one. On: every box is placed again.",
+      "button": "Put the words",
+      "result": "Placed:",
+      "sources": {
+        "layer": "{n} kept where it was | {n} kept where they were",
+        "zone": "{n} by the style's text map | {n} by the style's text map",
+        "vision": "{n} by the model | {n} by the model",
+        "fallback": "{n} at the bottom | {n} at the bottom"
+      },
+      "visionFailed": "The model did not answer; the words went to the free places."
+    },
+    "preview": {
+      "button": "What will be sent",
+      "title": "What goes to Google",
+      "hint": "Word for word. Nothing is sent from this window.",
+      "nothing": "Nothing will be sent to Google with these settings: this step is free.",
+      "system": "Instructions for the model",
+      "text": "The request",
+      "calls": "{n} request | {n} requests",
+      "pictures": "{n} picture to draw | {n} pictures to draw",
+      "blocks": "{n} block of words | {n} blocks of words",
+      "withPicture": "With the picture attached",
+      "steps": {
+        "place": "Put the words",
+        "write": "Write the words",
+        "variants": "Variants of a line",
+        "humanize": "Make it sound human",
+        "backgrounds": "New background"
+      }
+    },
+    "write": {
+      "title": "Write the words",
+      "hint": "The model writes all the blocks at once. Blocks marked «Keep» stay as they are.",
+      "useBrief": "Use the frame's description",
+      "useTone": "Use the brand kit's tone of voice",
+      "useNeighbours": "Use the words of the other frames of this work",
+      "maxChars": "Longest block, characters",
+      "maxCharsHint": "0 means no limit.",
+      "note": "What to write about",
+      "notePlaceholder": "For example: a spring sale, minus 20% on everything until Sunday",
+      "button": "Write",
+      "undo": "Bring back the old words",
+      "needBlocks": "Add at least one block of words first: the model fills the blocks you have."
+    },
+    "variants": {
+      "title": "Variants of one line",
+      "hint": "A few versions of one line to pick from. Each variant is a separate request.",
+      "block": "Which block",
+      "noBlock": "No block, just show the variants",
+      "note": "The line or what it is about",
+      "notePlaceholder": "Type the line to rework, or what it should say",
+      "count": "How many variants",
+      "useSystem": "Use the instructions for picture words",
+      "useRules": "Short, no hashtags or emoji",
+      "useLanguage": "Write in the chosen language",
+      "useTone": "Use the brand kit's tone of voice",
+      "useBrief": "Use the frame's description",
+      "feedback": "What to change compared with last time",
+      "feedbackPlaceholder": "For example: shorter, without the word «best»",
+      "button": "Show variants",
+      "needSomething": "Type a line or turn on at least one switch.",
+      "put": "Put in",
+      "pickBlock": "Pick a block above to put a variant into it",
+      "done": "The variant is in the block"
+    },
+    "humanize": {
+      "title": "Make it sound human",
+      "hint": "The model rewrites the words so they read like a person wrote them, not a robot. Blocks marked «Keep» stay as they are.",
+      "useLanguage": "Keep the chosen language",
+      "button": "Rewrite",
+      "nothing": "There is nothing to rewrite: the blocks are empty or kept.",
+      "done": "{n} block rewritten | {n} blocks rewritten",
+      "same": "The model left the words as they were."
+    },
+    "kit": {
+      "title": "Brand kit",
+      "none": "No brand kit",
+      "hint": "Fonts, logos and colors come from the brand kit."
+    },
+    "fonts": {
+      "default": "Font for new words",
+      "fallback": "Standard ({font})",
+      "defaultHint": "New text layers get this font. You can change it for each layer.",
+      "google": "Add a font from Google Fonts",
+      "needKit": "Pick a brand kit first: the font is added to it.",
+      "broken": "the file does not open"
+    },
+    "layouts": {
+      "title": "Ready layouts",
+      "hint": "A layout puts boxes for the words, a logo and shapes in one click. The words stay yours.",
+      "remove": "Delete the layout",
+      "namePlaceholder": "Name of a new layout",
+      "save": "Save the current layers as a layout",
+      "replaceAsk": "The layout will replace the layers you have now. Go on?",
+      "apply": "Use the layout",
+      "saved": "Layout saved",
+      "removeAsk": "Delete the layout «{title}»?",
+      "bottom_caption": "Caption at the bottom",
+      "top_title": "Headline at the top",
+      "center_card": "Card in the middle",
+      "bottom_band": "Band at the bottom",
+      "corner_badge": "Badge in the corner"
+    },
+    "layers": {
+      "title": "Layers",
+      "addText": "Text",
+      "logo": "Logo",
+      "rect": "Rectangle",
+      "ellipse": "Ellipse",
+      "noLogos": "The brand kit has no logos",
+      "empty": "No layers yet. Use «Put the words», a layout, or the buttons above.",
+      "show": "Show",
+      "hide": "Hide",
+      "up": "Move up",
+      "down": "Move down",
+      "remove": "Delete the layer",
+      "max": "Up to {n} layers.",
+      "emptyText": "Empty text"
+    },
+    "props": {
+      "title": "Layer settings",
+      "block": "Words from block",
+      "ownWords": "Own words of this layer",
+      "words": "Words",
+      "font": "Font",
+      "size": "Size",
+      "exact": "Exact size",
+      "exactSize": "Letter height: {p}% of the picture",
+      "vertical": "Where in the box",
+      "align": "Align",
+      "color": "Color",
+      "bold": "Bold",
+      "uppercase": "CAPITAL LETTERS",
+      "scrim": "Dark plate under the words",
+      "shadow": "Shadow",
+      "scrimHint": "The plate makes light words readable on a busy picture.",
+      "lineHeight": "Line spacing: {v}",
+      "logo": "Which logo",
+      "firstLogo": "The kit's first logo",
+      "shape": "Shape",
+      "fill": "Fill",
+      "radius": "Rounded corners",
+      "opacity": "Opacity: {p}%",
+      "pick": "Click a layer on the picture or in the list to change it."
+    },
+    "generate": {
+      "title": "New background",
+      "hint": "Draw a new picture to put the words on. The words and layers stay where they are. You can close the window while it draws.",
+      "placeholder": "Describe the background: what is on it, the light, the colors",
+      "count": "How many",
+      "noLettering": "No letters on the picture",
+      "noLetteringHint": "Asks the model not to draw any letters, so your words are the only ones.",
+      "useCurrent": "Base it on the current picture",
+      "useCurrentHint": "The model gets the current background and changes it as described.",
+      "button": "Draw {n} background | Draw {n} backgrounds",
+      "stop": "Stop",
+      "stopAsk": "Stop drawing? Backgrounds that are already done stay.",
+      "running": "Drawing… You can keep working or close the window.",
+      "results": "Backgrounds",
+      "original": "Back to the original",
+      "empty": "No new backgrounds yet.",
+      "use": "Use",
+      "inUse": "On the canvas",
+      "status": {
+        "queued": "Waiting",
+        "running": "Drawing",
+        "done": "Done",
+        "error": "Failed",
+        "cancelled": "Stopped"
+      }
+    },
+    "google": {
+      "title": "Fonts from Google Fonts",
+      "hint": "The list is kept in the app. «Add» downloads one font file from Google into the brand kit; then it works on pictures.",
+      "search": "Search by name",
+      "anyCategory": "Any kind",
+      "categories": {
+        "sans": "Without serifs",
+        "serif": "With serifs",
+        "display": "Decorative",
+        "handwriting": "Handwritten",
+        "mono": "Monospaced"
+      },
+      "cyrillic": "Only with Cyrillic letters",
+      "nothing": "Nothing found.",
+      "hasCyrillic": "Cyrillic",
+      "weights": "{n} weight | {n} weights",
+      "added": "In the kit",
+      "add": "Add",
+      "addedToast": "Font «{family}» added to the brand kit",
+      "shown": "Shown {n} of {total}",
+      "takenAt": "list from {date}",
+      "more": "Show more"
+    },
+    "report": {
+      "fallback": "Some letters are not in the font and were drawn with {font}: {chars}",
+      "missing": "These letters are in no font and were left out: {chars}",
+      "clipped": "{n} block of words does not fit its box. Make the box bigger or the letters smaller. | {n} blocks of words do not fit their boxes. Make the boxes bigger or the letters smaller.",
+      "missingFiles": "{n} file (a font or a logo) is gone and was skipped. | {n} files (fonts or logos) are gone and were skipped."
+    },
+    "errors": {
+      "bad_image": "The background does not open as a picture.",
+      "bad_layer": "One of the layers is broken. Delete it and add it again.",
+      "builtin_layout": "A ready layout that comes with the app cannot be deleted.",
+      "busy": "New backgrounds are still drawing. Wait or press «Stop».",
+      "empty_layout": "There are no layers to keep as a layout.",
+      "empty_prompt": "Describe what you want first.",
+      "font_download_failed": "Could not download the font from Google Fonts. Try again later.",
+      "font_in_kit": "The font «{family}» is already in the brand kit.",
+      "fonts_unreachable": "Google Fonts cannot be reached. Check the internet connection.",
+      "font_unreadable": "The font file does not open.",
+      "no_picture": "There is no picture to put words on.",
+      "no_text": "There are no words yet.",
+      "not_an_image": "This file is not a picture.",
+      "not_ready": "The picture is not ready yet.",
+      "placement_empty": "The model did not say where to put the words.",
+      "text_empty": "The model returned no words. Try again or change the request.",
+      "too_long": "Too many words for one rewrite (more than {max} characters). Rewrite fewer blocks at a time.",
+      "too_many_layers": "Too many layers: up to {max}.",
+      "too_many_layouts": "Too many layouts of your own: up to {max}. Delete one you do not need.",
+      "too_many_texts": "Too many blocks of words: up to {max}.",
+      "no_design": "Open a picture first."
+    }
+  }
+}

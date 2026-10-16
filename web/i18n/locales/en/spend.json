@@ -85,7 +85,12 @@
       "chat": "Chat reply",
       "shot_ideas": "Shot ideas",
       "shot_research": "Niche search for shot ideas",
-      "shot_idea_frame": "New idea for a frame"
+      "shot_idea_frame": "New idea for a frame",
+      "text_placement": "Where to put text on a picture",
+      "text_write": "Words for a picture",
+      "text_variants": "Line variants for a picture",
+      "text_humanize": "Picture words made human",
+      "text_background": "New background for text"
     },
     "refTypes": {
       "file": "File",
@@ -101,7 +106,8 @@
       "style": "Style",
       "prompt": "Prompt",
       "chat_message": "Chat message",
-      "ideas_set": "Shot ideas"
+      "ideas_set": "Shot ideas",
+      "text_design": "Text on a picture"
     },
     "units": {
       "tokens": "Tokens: {in} in, {out} out",

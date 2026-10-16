@@ -103,7 +103,8 @@
       "chat": "Chat",
       "studio": "Image studio",
       "video": "Video",
-      "ideas": "Shot ideas"
+      "ideas": "Shot ideas",
+      "text": "Text on a picture"
     },
     "upload": {
       "button": "Upload",

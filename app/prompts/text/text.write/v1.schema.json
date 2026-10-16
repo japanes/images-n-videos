@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {"type": "string", "enum": ["headline", "body", "accent"]},
+          "text": {"type": "string"},
+          "size": {"type": "string", "enum": ["sm", "md", "lg", "xl"]}
+        },
+        "required": ["role", "text", "size"]
+      }
+    }
+  },
+  "required": ["blocks"]
+}

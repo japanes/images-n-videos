@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "box": {
+            "type": "object",
+            "properties": {
+              "x": {"type": "number"},
+              "y": {"type": "number"},
+              "w": {"type": "number"},
+              "h": {"type": "number"}
+            },
+            "required": ["x", "y", "w", "h"]
+          },
+          "align": {"type": "string", "enum": ["left", "center", "right"]},
+          "vertical": {"type": "string", "enum": ["top", "middle", "bottom"]},
+          "text_color": {"type": "string"},
+          "needs_scrim": {"type": "boolean"}
+        },
+        "required": ["box", "align", "vertical", "text_color", "needs_scrim"]
+      }
+    }
+  },
+  "required": ["blocks"]
+}

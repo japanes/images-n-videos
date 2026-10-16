@@ -6,6 +6,8 @@ import os
 from dataclasses import dataclass, field, replace
 from pathlib import Path
 
+DEFAULT_HOSTS = ("localhost", "127.0.0.1", "::1", "app")
+
 
 @dataclass(frozen=True)
 class Config:
@@ -18,6 +20,8 @@ class Config:
     updater_url: str = "http://updater:8080"
     web_dir: Path | None = None
     repo: str = "japanes/images-n-videos"
+    # Host names the app answers to (see core/guard.py); "app" is the compose service name.
+    allowed_hosts: tuple[str, ...] = DEFAULT_HOSTS
     extra: dict = field(default_factory=dict)
 
     @property
@@ -61,6 +65,8 @@ def load_config() -> Config:
         updater_url=env.get("VF_UPDATER_URL", "http://updater:8080").rstrip("/"),
         web_dir=Path(web_dir) if web_dir else None,
         repo=env.get("VF_REPO", "japanes/images-n-videos"),
+        allowed_hosts=DEFAULT_HOSTS + tuple(h.strip() for h in env.get("VF_ALLOWED_HOSTS", "").split(",")
+                                            if h.strip()),
     )
 
 

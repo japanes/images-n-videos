@@ -16,6 +16,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from vf.core import db, errors, events, jobs, logs, migrations, models_registry, prompts
 from vf.core.config import Config, get_config, set_config
 from vf.core.google import journal
+from vf.core.guard import SameSiteGuard
 from vf.core.routes import router as core_router
 from vf.core.routes import spa_fallback
 from vf.core.scheduler import scheduler
@@ -99,6 +100,7 @@ def create_app(config: Config | None = None, *, run_background: bool = True) -> 
 
     app = FastAPI(title="Vertex AI Factory", version=cfg.version, lifespan=lifespan,
                   docs_url="/api/docs", openapi_url="/api/openapi.json", redoc_url=None)
+    app.add_middleware(SameSiteGuard, allowed_hosts=cfg.allowed_hosts)
     errors.install(app)
     app.include_router(core_router)
     for mod in modules:

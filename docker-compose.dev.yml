@@ -32,6 +32,7 @@ services:
       VF_STT_URL: http://stt:8000
       VF_UPDATER_URL: http://updater:8080
       VF_GOOGLE_MODE: ${VF_GOOGLE_MODE:-stub}
+      VF_ALLOWED_HOSTS: ${VF_ALLOWED_HOSTS:-}
     volumes:
       - data:/data
     logging: *logging

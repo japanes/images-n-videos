@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "objects": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {"type": "string"},
+          "box_2d": {"type": "array", "items": {"type": "integer"}}
+        },
+        "required": ["label", "box_2d"]
+      }
+    }
+  },
+  "required": ["objects"]
+}

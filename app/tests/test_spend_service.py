@@ -206,7 +206,7 @@ def test_call_card_has_everything():
                        role="frame_writer",
                        attachments=[{"mime": "image/png", "size": 72, "sha256": "ab", "file_id": image["id"]},
                                     {"mime": "image/jpeg", "size": 10, "sha256": "cd", "file_id": None}],
-                       refs=[("file", image["id"]), ("job", job_id), ("work", 3)])
+                       refs=[("file", image["id"]), ("job", job_id), ("unknown_t", 3)])
     card = service.get_call(call_id)
     assert card["error_text"] == google_text
     assert (card["prompt_code"], card["prompt_version"], card["prompt_text"]) == ("STUDIO_FRAME", 3,
@@ -219,8 +219,8 @@ def test_call_card_has_everything():
     assert refs["file"]["exists"] is True and refs["file"]["title"] == "ref.png"
     assert refs["file"]["url"] == f"/files/{image['id']}" and refs["file"]["link"] is None
     assert refs["job"]["title"] == "Test job"
-    assert refs["work"] == {"type": "work", "id": 3, "title": None, "link": None, "url": None,
-                            "thumb_url": None, "exists": None}
+    assert refs["unknown_t"] == {"type": "unknown_t", "id": 3, "title": None, "link": None, "url": None,
+                                 "thumb_url": None, "exists": None}
 
 
 def test_registered_ref_resolver_and_broken_one():

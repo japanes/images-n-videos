@@ -1,0 +1,348 @@
+{
+  "studio": {
+    "gallery": {
+      "tabs": {
+        "active": "Works",
+        "archived": "Archive"
+      },
+      "search": "Search by name",
+      "new": "New work",
+      "empty": "No works yet",
+      "emptyHint": "A work is one picture or a series of up to 10 frames in one look.",
+      "emptyArchived": "The archive is empty",
+      "more": "Show more",
+      "open": "Open the work",
+      "rename": "Rename",
+      "progress": "Pictures: {done} of {total}",
+      "untitled": "Untitled",
+      "archived": "In the archive",
+      "archive": "To archive",
+      "unarchive": "Back from archive",
+      "removeAsk": "Delete the work “{title}”? Its pictures stay in the media library."
+    },
+    "workspace": {
+      "missing": "This work was not found",
+      "settings": "Settings"
+    },
+    "grid": {
+      "progress": "Pictures: {done} of {total}",
+      "busy": "Being drawn: {n}",
+      "errors": "With an error: {n}",
+      "zip": "Download ZIP",
+      "drawAll": "Draw all",
+      "nothingToDraw": "No frame can be drawn now: they are being drawn, have your own pictures or wait for the first frame.",
+      "pilotReady": "The first frame is ready. If you like it, accept it: the other frames will follow its look.",
+      "pilotWait": "This is a series: draw the first frame first. The other frames will follow its look.",
+      "pilotAccept": "Accept and draw the rest",
+      "skipped": "Not drawn — frames {frames}: {reason}",
+      "addFrame": "Add a frame"
+    },
+    "frame": {
+      "title": "Frame {n}",
+      "pilot": "First",
+      "pilotHint": "The other frames of the series follow the look of this one",
+      "open": "Open the frame",
+      "waiting": "Google asks to wait",
+      "briefPlaceholder": "What should the picture show?",
+      "brief": "Description",
+      "cancel": "Stop",
+      "redraw": "Redraw",
+      "draw": "Draw",
+      "moveLeft": "Move left",
+      "moveRight": "Move right",
+      "remove": "Delete the frame",
+      "removeAsk": "Delete frame {n}? Its pictures stay in the media library."
+    },
+    "statuses": {
+      "empty": "Not drawn",
+      "queued": "In the queue",
+      "drawing": "Drawing",
+      "waiting": "Waiting for Google",
+      "done": "Ready",
+      "error": "Error"
+    },
+    "viewer": {
+      "prev": "Previous frame",
+      "next": "Next frame",
+      "noPicture": "No picture yet",
+      "focusPlaceholder": "What to look for, for example: cup, logo",
+      "focus": "What to look for",
+      "findObjects": "Find objects",
+      "pickHint": "Click an object, or draw a box around the part you want to change.",
+      "drawHint": "Draw a box around the part you want to change, or find the objects first.",
+      "wholePicture": "Whole picture",
+      "editPart": "What to change in this part",
+      "editWhole": "What to change in the picture",
+      "editPlaceholder": "For example: make the background blue",
+      "edit": "Change",
+      "versions": "Versions",
+      "versionGone": "Picture deleted",
+      "current": "Current",
+      "restoreHint": "Make this version the current one. It is free.",
+      "restore": "Bring back",
+      "ownPicture": "Use my picture",
+      "madeWith": "{model}, {size}",
+      "sizeFallback": "{wanted} was asked, the model draws {size}",
+      "ownSettings": "Settings of this frame",
+      "ownSettingsHint": "What you set here is for this frame only. The rest comes from the work.",
+      "asWork": "As in the work",
+      "ownReferences": "Own reference pictures",
+      "attachments": "Attachments",
+      "attachmentsHint": "Pictures for this frame only, for example a photo of the product.",
+      "feedback": "Feedback",
+      "feedbackPlaceholder": "What to fix in this frame",
+      "words": "Text in the picture",
+      "sent": "What went to the model",
+      "spent": "Spent on this frame: {usd}",
+      "ownArea": "Selected area"
+    },
+    "settings": {
+      "title": "Name",
+      "kit": "Brand kit",
+      "noKit": "No kit",
+      "kitChanged": "The kit was changed after this work took it.",
+      "kitRefresh": "Take the new version",
+      "model": "Model",
+      "modelDefault": "Default ({name})",
+      "aspect": "Proportions",
+      "size": "Size",
+      "frames": "Frames",
+      "sizeFallback": "This model cannot draw {size}: it uses the nearest size it has.",
+      "series": "Series in one look",
+      "seriesHint": "Draw the first frame and accept it: the other frames then follow its look.",
+      "ideasBrief": "Description for all frames",
+      "ideasBriefHint": "Used by the frames that have no description of their own",
+      "references": "Reference pictures",
+      "referencesHint": "Examples of the look you want. The model takes the mood and style from them.",
+      "kitReferences": "Also send the kit's pictures",
+      "subjects": "Subjects",
+      "noSubjects": "No subjects yet. Add products, people or props on the Brand screen.",
+      "look": "Look",
+      "photoStyle": "Photo style",
+      "plainPhoto": "No photo style",
+      "style": "Style",
+      "styleKinds": {
+        "none": "None",
+        "library": "From the library",
+        "words": "In my words"
+      },
+      "stylePick": "Pick a style",
+      "styleWords": "Describe the style in your own words",
+      "styleSample": "Also send the style's sample picture",
+      "textMode": "Text in the picture",
+      "feedback": "Feedback",
+      "feedbackHint": "What to fix next time, for example: less background, brighter colors",
+      "blocks": "What goes to the model",
+      "blocksHint": "The parts of the request to the model. Grey ones do not apply right now.",
+      "framesDropAsk": "Frames with a picture or a description will be deleted: {n}. Go on?"
+    },
+    "blocksPanel": {
+      "changed": "changed",
+      "reset": "Back to defaults"
+    },
+    "text": {
+      "role": "Kind of text",
+      "placeholder": "Words for the picture",
+      "remove": "Remove the text",
+      "add": "Add text",
+      "limit": "At most {max} texts per frame."
+    },
+    "textRoles": {
+      "headline": "Headline",
+      "body": "Main text",
+      "accent": "Accent"
+    },
+    "textModes": {
+      "none": {
+        "name": "No text",
+        "hint": "The picture has no words."
+      },
+      "overlay": {
+        "name": "Text on top",
+        "hint": "The model leaves room for the words; you put them on top later in the editor."
+      },
+      "model": {
+        "name": "Model draws the text",
+        "hint": "The model writes the words right in the picture. Letters can come out with mistakes."
+      }
+    },
+    "picker": {
+      "title": "Choose pictures",
+      "tabs": {
+        "upload": "Upload",
+        "library": "Media library"
+      },
+      "dropMany": "Drop pictures here or click to choose (up to {max})",
+      "dropOne": "Drop a picture here or click to choose",
+      "types": "PNG, JPEG or WebP",
+      "uploading": "Uploading… {percent}%",
+      "search": "Search",
+      "empty": "No pictures",
+      "more": "Show more",
+      "chosen": "Chosen: {n} of {max}",
+      "take": "Use",
+      "full": "You can choose at most {max} pictures."
+    },
+    "pictures": {
+      "remove": "Remove the picture",
+      "add": "Add pictures"
+    },
+    "blocks": {
+      "output_size": {
+        "name": "Exact size",
+        "hint": "Tells the model the size of the picture in pixels."
+      },
+      "language": {
+        "name": "Text language",
+        "hint": "Asks the model to write the words in the app language."
+      },
+      "brand_colors": {
+        "name": "Brand colors",
+        "hint": "Sends the kit colors."
+      },
+      "brand_fonts": {
+        "name": "Brand fonts",
+        "hint": "Describes the kit fonts so the lettering looks alike."
+      },
+      "tone_of_voice": {
+        "name": "Tone of voice",
+        "hint": "Adds the kit tone of voice to set the mood."
+      },
+      "logo": {
+        "name": "Logo",
+        "hint": "Sends the kit logo so the model can place it."
+      },
+      "project_references": {
+        "name": "Reference pictures",
+        "hint": "Sends the reference pictures of the work as examples of the look."
+      },
+      "task_attachments": {
+        "name": "Frame attachments",
+        "hint": "Sends the pictures attached to this frame."
+      },
+      "subjects": {
+        "name": "Subjects",
+        "hint": "Sends photos and descriptions of the chosen products, people or props."
+      },
+      "identity_assets": {
+        "name": "Brand elements",
+        "hint": "Sends the kit elements: patterns, icons, mascots."
+      },
+      "image_style": {
+        "name": "Style",
+        "hint": "Adds the chosen style."
+      },
+      "photo_style": {
+        "name": "Photo style",
+        "hint": "Adds the chosen photo style: light, camera, colors."
+      },
+      "slide_position": {
+        "name": "Place in the series",
+        "hint": "Tells the model which frame of the series this is, so it does not draw numbers or arrows."
+      },
+      "slide_text": {
+        "name": "Room for the text",
+        "hint": "Tells the model which words go on top later, so it leaves room for them."
+      },
+      "draw_text": {
+        "name": "Draw the text",
+        "hint": "Asks the model to draw the words from the frame texts."
+      },
+      "no_lettering": {
+        "name": "No letters",
+        "hint": "Asks the model not to draw any letters or words."
+      },
+      "quality": {
+        "name": "Quality",
+        "hint": "Asks for sharp focus and clean detail."
+      },
+      "variant_diversity": {
+        "name": "New variant",
+        "hint": "On a redraw, asks for a different composition and angle."
+      },
+      "feedback": {
+        "name": "Feedback",
+        "hint": "Adds your notes on what to fix."
+      }
+    },
+    "reasons": {
+      "no_size": "This picture has no exact size",
+      "large_size": "2K and 4K keep the model's own size",
+      "text_not_drawn": "Only when the model draws the text",
+      "no_brand": "The work has no brand kit",
+      "no_colors": "The kit has no colors",
+      "no_fonts": "The kit has no fonts",
+      "no_tone": "The kit has no tone of voice",
+      "no_logo": "The kit has no logo",
+      "no_references": "No reference pictures",
+      "no_attachments": "The frame has no attachments",
+      "no_subjects": "No subjects chosen",
+      "no_elements": "The kit has no brand elements",
+      "no_style": "No style chosen",
+      "no_photo_style": "No photo style chosen",
+      "single_frame": "Only in a work with 2 or more frames",
+      "text_drawn": "Off while the model draws the text",
+      "no_overlay": "Only with “Text on top”",
+      "no_words": "The frame has no texts",
+      "first_version": "Only when redrawing",
+      "no_feedback": "No feedback written"
+    },
+    "skip": {
+      "not_generated": "they have your own pictures",
+      "frame_busy": "they are being drawn already",
+      "pilot_not_ready": "they wait for the first frame"
+    },
+    "roles": {
+      "subject": "Subject",
+      "logo": "Logo",
+      "element": "Brand element",
+      "anchor": "First frame of the series",
+      "reference": "Reference",
+      "style_sample": "Style sample",
+      "attachment": "Attachment",
+      "edit_base": "Picture to change",
+      "edit_marker": "Marked part"
+    },
+    "sources": {
+      "generated": "Drawn by the model",
+      "upload": "Uploaded",
+      "library": "From the media library",
+      "avatar": "Avatar",
+      "video_frame": "Frame from a video",
+      "editor": "From the editor"
+    },
+    "versionModes": {
+      "full": "Drawn",
+      "edit": "Changed",
+      "source": "Own picture"
+    },
+    "jobs": {
+      "frame": "Studio picture"
+    },
+    "errors": {
+      "empty_file": "The file is empty.",
+      "bad_image_type": "Only PNG, JPEG and WebP pictures work here.",
+      "bad_file": "This picture is gone or is not a picture.",
+      "too_many_pictures": "Too many pictures: at most {max}.",
+      "frame_busy": "The frame is being drawn. Wait or stop it first.",
+      "frame_no_picture": "The frame has no picture yet.",
+      "edit_text_required": "Write what to change.",
+      "pilot_not_ready": "The first frame has no picture yet. Draw it first.",
+      "too_many_frames": "A work has from 1 to {max} frames.",
+      "too_many_images": "Too many pictures for this model. Remove some reference pictures or attachments.",
+      "bad_aspect": "These proportions are not supported.",
+      "bad_size": "This size is not supported.",
+      "bad_text_mode": "Unknown text mode. Reload the page.",
+      "version_unknown": "This version is gone: its picture was deleted.",
+      "brief_required": "Write what the picture should show.",
+      "too_many_text_blocks": "At most {max} texts per frame.",
+      "bad_style": "This style is no longer in the library. Choose another one.",
+      "no_kit": "The work has no brand kit.",
+      "last_frame": "A work keeps at least one frame.",
+      "bad_order": "The frame order is out of date. Reload the page.",
+      "model_wrong_kind": "This model cannot draw pictures. Choose another one.",
+      "nothing_to_export": "No frame has a picture yet.",
+      "stuck": "The drawing showed no progress for too long and was stopped."
+    }
+  }
+}

@@ -75,7 +75,8 @@
       "added": "Added",
       "source": "Where it came from",
       "originalName": "Original file name",
-      "missing": "This file is no longer in the library."
+      "missing": "This file is no longer in the library.",
+      "openEditor": "Open in video editor"
     },
     "ingest": {
       "title": "Preview",

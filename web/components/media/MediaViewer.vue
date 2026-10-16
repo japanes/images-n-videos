@@ -151,6 +151,9 @@
       <a v-if="file" :href="`${file.url}?download=1`" class="btn-secondary" download>
         <AppIcon name="download" :size="16" />{{ t('common.download') }}
       </a>
+      <button v-if="file?.kind === 'video'" type="button" class="btn-secondary" @click="openEditor">
+        <AppIcon name="scissors" :size="16" />{{ t('media.viewer.openEditor') }}
+      </button>
       <button
         type="button"
         class="btn-danger"
@@ -167,6 +170,7 @@
 <script setup>
 import { useEventListener } from '@vueuse/core'
 import { apiErrorText } from '~/utils/apiErrorText.js'
+import { clipEditorRoute } from '~/utils/clipState.js'
 import { formatBytes, formatDateTime, formatDuration } from '~/utils/format.js'
 import {
   mediaDisplayName, mediaIngestBusy, mediaIngestFailed, mediaSizeText, mediaUsageLink,
@@ -280,6 +284,13 @@ async function reingest() {
   } finally {
     reingesting.value = false
   }
+}
+
+function openEditor() {
+  const target = file.value
+  if (!target) return
+  emit('close')
+  navigateTo(clipEditorRoute(target.id))
 }
 
 async function remove() {

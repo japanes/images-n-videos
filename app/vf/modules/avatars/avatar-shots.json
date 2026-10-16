@@ -1,0 +1,395 @@
+{
+  "_readme": [
+    "The built-in avatar shot pack (module 09), ported from factory api/config/avatar-shots.json.",
+    "Read by app/vf/modules/avatars/catalog.py; one avatar gets one slot per shot.",
+    "",
+    "Each shot is ONE photograph. Everything that is true of every frame —",
+    "the locked identity, the lens and light, the realism rules, the ban on",
+    "collages — lives in the AVATAR_* prompt layers (app/prompts/layers/avatar), not here.",
+    "What is here is only what makes this frame different from the others.",
+    "",
+    "A shot names no other shot: the frames are drawn one request at a time,",
+    "so the model never sees the other frames.",
+    "",
+    "Left and right are the viewer's: 'left three-quarter' is the left side of",
+    "the face as you look at the picture (the head turned toward the subject's own right).",
+    "",
+    "`code` is the stable key, kept in avatar_photos.shot_code. SHOT_01 is the face:",
+    "it is chosen from the candidates, not drawn with the pack.",
+    "Titles shown in the app come from web/i18n/locales/*/avatars.json (shots.SHOT_xx);",
+    "the English `prompt` is what goes to the model."
+  ],
+  "categories": [
+    {
+      "slug": "identity",
+      "parent": null,
+      "depth": 0,
+      "sort": 900,
+      "title": "АВАТАРЫ / IDENTITY",
+      "title_uk": "АВАТАРИ / IDENTITY",
+      "title_en": "AVATARS / IDENTITY"
+    },
+    {
+      "slug": "identity/full-36",
+      "parent": "identity",
+      "depth": 1,
+      "sort": 1,
+      "title": "Полный пак — 36 кадров",
+      "title_uk": "Повний пак — 36 кадрів",
+      "title_en": "Full pack — 36 shots"
+    },
+    {
+      "slug": "identity/full-36/portraits",
+      "parent": "identity/full-36",
+      "depth": 2,
+      "sort": 1,
+      "title": "Портреты",
+      "title_uk": "Портрети",
+      "title_en": "Portraits"
+    },
+    {
+      "slug": "identity/full-36/angles",
+      "parent": "identity/full-36",
+      "depth": 2,
+      "sort": 2,
+      "title": "Ракурсы",
+      "title_uk": "Ракурси",
+      "title_en": "Angles"
+    },
+    {
+      "slug": "identity/full-36/body",
+      "parent": "identity/full-36",
+      "depth": 2,
+      "sort": 3,
+      "title": "Ростовые и корпус",
+      "title_uk": "Зростові та корпус",
+      "title_en": "Body"
+    },
+    {
+      "slug": "identity/full-36/scenes",
+      "parent": "identity/full-36",
+      "depth": 2,
+      "sort": 4,
+      "title": "Сцены и действия",
+      "title_uk": "Сцени та дії",
+      "title_en": "Scenes"
+    },
+    {
+      "slug": "identity/full-36/speech",
+      "parent": "identity/full-36",
+      "depth": 2,
+      "sort": 5,
+      "title": "Речь",
+      "title_uk": "Мовлення",
+      "title_en": "Speech"
+    },
+    {
+      "slug": "identity/full-36/emotions",
+      "parent": "identity/full-36",
+      "depth": 2,
+      "sort": 6,
+      "title": "Эмоции",
+      "title_uk": "Емоції",
+      "title_en": "Emotions"
+    },
+    {
+      "slug": "identity/full-36/gaze",
+      "parent": "identity/full-36",
+      "depth": 2,
+      "sort": 7,
+      "title": "Взгляд",
+      "title_uk": "Погляд",
+      "title_en": "Gaze"
+    }
+  ],
+  "shots": [
+    {
+      "code": "SHOT_01",
+      "title": "Master Frontal Portrait",
+      "category": "identity/full-36/portraits",
+      "sort": 1,
+      "description": "Канонический фас. С него начинается пак — этот кадр эталон для всех остальных.",
+      "prompt": "Canonical frontal portrait. Eye-level camera. Head and upper chest in frame. Neutral background. Relaxed neutral-positive expression with a very subtle closed-mouth smile. This frame is the canonical reference for the whole pack."
+    },
+    {
+      "code": "SHOT_02",
+      "title": "Left Three-Quarter Face",
+      "category": "identity/full-36/angles",
+      "sort": 2,
+      "description": "Ракурс 3/4 слева — базовый разворот для баннеров и превью.",
+      "prompt": "Head turned 35–45 degrees toward the subject's RIGHT, so the viewer sees the LEFT three-quarter of the face. Both eyes visible."
+    },
+    {
+      "code": "SHOT_03",
+      "title": "Left Semi-Profile",
+      "category": "identity/full-36/angles",
+      "sort": 3,
+      "description": "Полупрофиль слева — между 3/4 и чистым профилем.",
+      "prompt": "Head turned 60–70 degrees toward the subject's RIGHT, so the viewer sees the LEFT semi-profile. Not a full profile — the far eye stays partly visible."
+    },
+    {
+      "code": "SHOT_04",
+      "title": "Waist-Up Body Reference",
+      "category": "identity/full-36/body",
+      "sort": 4,
+      "description": "Поясной кадр: пропорции корпуса и руки в кадре.",
+      "prompt": "Natural standing waist-up photograph. Both arms and hands visible and correctly formed."
+    },
+    {
+      "code": "SHOT_05",
+      "title": "Full-Body Front",
+      "category": "identity/full-36/body",
+      "sort": 5,
+      "description": "Ростовой фас — рост, сложение, обувь.",
+      "prompt": "Full body from head to soles. Natural stance. Both hands visible. Neutral trousers and plain sneakers."
+    },
+    {
+      "code": "SHOT_06",
+      "title": "Right Three-Quarter Face",
+      "category": "identity/full-36/angles",
+      "sort": 6,
+      "description": "Ракурс 3/4 справа. Не зеркало левого — другая сторона лица.",
+      "prompt": "Head turned 35–45 degrees toward the subject's LEFT, so the viewer sees the RIGHT three-quarter of the face. Both eyes visible. Preserve the face's true asymmetry — this is the other side of the head, not a mirrored copy of the left three-quarter."
+    },
+    {
+      "code": "SHOT_07",
+      "title": "Right Semi-Profile",
+      "category": "identity/full-36/angles",
+      "sort": 7,
+      "description": "Полупрофиль справа.",
+      "prompt": "Head turned 60–70 degrees toward the subject's LEFT, so the viewer sees the RIGHT semi-profile. Not a full profile. Draw the real anatomy of this side of the face rather than a mirrored version of the other side."
+    },
+    {
+      "code": "SHOT_08",
+      "title": "Natural Smile",
+      "category": "identity/full-36/portraits",
+      "sort": 8,
+      "description": "Живая улыбка в фас — самый ходовой кадр для рекламы.",
+      "prompt": "Frontal portrait with a genuine, natural smile. Teeth visible. The eyes and cheeks move the way they do in a real smile."
+    },
+    {
+      "code": "SHOT_09",
+      "title": "Seated With Hands Visible",
+      "category": "identity/full-36/body",
+      "sort": 9,
+      "description": "Сидя, руки в кадре — проверка кистей и посадки.",
+      "prompt": "Natural seated pose. Both forearms and hands visible, resting naturally."
+    },
+    {
+      "code": "SHOT_10",
+      "title": "Natural Standing UGC Gesture",
+      "category": "identity/full-36/scenes",
+      "sort": 10,
+      "description": "Стоя, разговорный жест — подача обычного пользовательского видео.",
+      "prompt": "Standing conversational pose. One small open-hand gesture; the other arm relaxed."
+    },
+    {
+      "code": "SHOT_11",
+      "title": "Product In Both Hands",
+      "category": "identity/full-36/scenes",
+      "sort": 11,
+      "description": "Товар в двух руках — база для продуктовых постов.",
+      "prompt": "Holding a small generic unbranded personal-care or skincare container in both hands. Physically correct two-handed grip: the fingers wrap the object and the object has weight."
+    },
+    {
+      "code": "SHOT_12",
+      "title": "Smartphone UGC",
+      "category": "identity/full-36/scenes",
+      "sort": 12,
+      "description": "Со смартфоном — обзоры, распаковки, отзывы.",
+      "prompt": "A generic modern smartphone in one hand. The other hand makes a small conversational gesture."
+    },
+    {
+      "code": "SHOT_13",
+      "title": "Mug / Lifestyle",
+      "category": "identity/full-36/scenes",
+      "sort": 13,
+      "description": "С кружкой на домашней кухне — тёплый лайфстайл.",
+      "prompt": "Holding a generic ceramic mug. Believable casual home kitchen or dining environment."
+    },
+    {
+      "code": "SHOT_14",
+      "title": "Outdoor Daylight",
+      "category": "identity/full-36/scenes",
+      "sort": 14,
+      "description": "На улице при мягком дневном свете.",
+      "prompt": "Natural outdoor portrait in soft open shade or on an overcast day. No harsh direct sunlight."
+    },
+    {
+      "code": "SHOT_15",
+      "title": "Warm Indoor Light",
+      "category": "identity/full-36/scenes",
+      "sort": 15,
+      "description": "Тёплый домашний свет вечером.",
+      "prompt": "Natural residential interior lit by warm household light, approximately 2800–3200K. The warm light must not change the underlying skin, eye or hair colour."
+    },
+    {
+      "code": "SHOT_16",
+      "title": "Bathroom / Skincare Ready",
+      "category": "identity/full-36/scenes",
+      "sort": 16,
+      "description": "Ванная, подготовка к уходу — под бьюти-контент.",
+      "prompt": "Believable residential bathroom. No product in frame. Simple light neutral T-shirt. Natural getting-ready pose."
+    },
+    {
+      "code": "SHOT_17",
+      "title": "Sofa / Living Room",
+      "category": "identity/full-36/scenes",
+      "sort": 17,
+      "description": "На диване в гостиной.",
+      "prompt": "Seated naturally on a sofa in a realistic home living room. Both hands visible."
+    },
+    {
+      "code": "SHOT_18",
+      "title": "Desk / Home Office",
+      "category": "identity/full-36/scenes",
+      "sort": 18,
+      "description": "За столом с ноутбуком — рабочие и экспертные посты.",
+      "prompt": "Seated naturally at a desk with a generic laptop. Correct hand-to-device interaction: fingers on the keys, wrists at a natural angle."
+    },
+    {
+      "code": "SHOT_19",
+      "title": "Natural Walking Full Body",
+      "category": "identity/full-36/body",
+      "sort": 19,
+      "description": "Ростовой в шаге на улице.",
+      "prompt": "Outdoor full-body walking frame. Correct reciprocal gait — opposite arm and leg forward. Natural mid-stride anatomy."
+    },
+    {
+      "code": "SHOT_20",
+      "title": "Camera Slightly Above",
+      "category": "identity/full-36/angles",
+      "sort": 20,
+      "description": "Камера чуть выше глаз — привычный ракурс селфи.",
+      "prompt": "Camera approximately 20–35 cm above eye level, angled roughly 10–15 degrees downward. The change of angle must not change the face."
+    },
+    {
+      "code": "SHOT_21",
+      "title": "Camera Slightly Below",
+      "category": "identity/full-36/angles",
+      "sort": 21,
+      "description": "Камера чуть ниже глаз.",
+      "prompt": "Camera approximately 20–35 cm below eye level, angled roughly 10–15 degrees upward. Do not turn this into a heroic or hypermasculine low-angle look."
+    },
+    {
+      "code": "SHOT_22",
+      "title": "True Left Side Profile",
+      "category": "identity/full-36/angles",
+      "sort": 22,
+      "description": "Чистый профиль слева — форма носа, подбородка и черепа.",
+      "prompt": "A true side profile, head at approximately 90 degrees, viewer sees the LEFT side. Document the nose, lips, chin, jawline, ear, skull shape, hairline and neck clearly."
+    },
+    {
+      "code": "SHOT_23",
+      "title": "True Right Side Profile",
+      "category": "identity/full-36/angles",
+      "sort": 23,
+      "description": "Чистый профиль справа.",
+      "prompt": "A true side profile of the other side, head at approximately 90 degrees, viewer sees the RIGHT side. Draw this side from life rather than as a mirrored copy of the left profile — keep the real asymmetry."
+    },
+    {
+      "code": "SHOT_24",
+      "title": "Rear Three-Quarter / Over Shoulder",
+      "category": "identity/full-36/angles",
+      "sort": 24,
+      "description": "Со спины через плечо.",
+      "prompt": "Body mainly facing away from the camera; the head turns naturally back over the shoulder. Neck rotation stays within what a human body can do."
+    },
+    {
+      "code": "SHOT_25",
+      "title": "Full-Body Rear",
+      "category": "identity/full-36/body",
+      "sort": 25,
+      "description": "Ростовой со спины — затылок, стрижка, силуэт.",
+      "prompt": "Complete rear full-body view, head facing away. Document the back of the skull, the haircut and the body silhouette."
+    },
+    {
+      "code": "SHOT_26",
+      "title": "Frontal Speaking",
+      "category": "identity/full-36/speech",
+      "sort": 26,
+      "description": "Говорит в камеру — стартовый кадр для говорящей головы.",
+      "prompt": "A natural mid-speech moment, frontal. Mouth moderately open, some teeth naturally visible. Not shouting, not posing."
+    },
+    {
+      "code": "SHOT_27",
+      "title": "Speaking Left 3/4",
+      "category": "identity/full-36/speech",
+      "sort": 27,
+      "description": "Говорит, 3/4 слева.",
+      "prompt": "A natural mid-speech frame at three-quarters, viewer sees the LEFT three-quarter. Facial and dental identity stay exactly as they are everywhere else in the pack."
+    },
+    {
+      "code": "SHOT_28",
+      "title": "Speaking Right 3/4",
+      "category": "identity/full-36/speech",
+      "sort": 28,
+      "description": "Говорит, 3/4 справа.",
+      "prompt": "A natural mid-speech frame at three-quarters from the other side, viewer sees the RIGHT three-quarter. Draw the real side of the face, not a mirrored one."
+    },
+    {
+      "code": "SHOT_29",
+      "title": "Light Natural Laughter",
+      "category": "identity/full-36/emotions",
+      "sort": 29,
+      "description": "Лёгкий смех — эмоция без переигрывания.",
+      "prompt": "A genuine, restrained laugh at about 6/10 intensity. Natural teeth, cheek lift and eye compression."
+    },
+    {
+      "code": "SHOT_30",
+      "title": "Serious / Focused",
+      "category": "identity/full-36/emotions",
+      "sort": 30,
+      "description": "Серьёзно и сосредоточенно.",
+      "prompt": "Calm, focused expression. No smile. About 4/10 seriousness — not angry, not intimidating."
+    },
+    {
+      "code": "SHOT_31",
+      "title": "Mild Surprise / Interest",
+      "category": "identity/full-36/emotions",
+      "sort": 31,
+      "description": "Лёгкое удивление и интерес.",
+      "prompt": "About 4/10 surprise: eyebrows slightly raised, eyes only slightly more open, lips subtly parted. No exaggerated reaction."
+    },
+    {
+      "code": "SHOT_32",
+      "title": "Eyes Look Left / Head Frontal",
+      "category": "identity/full-36/gaze",
+      "sort": 32,
+      "description": "Взгляд влево при прямой голове.",
+      "prompt": "Head stays almost frontal; the eyes move approximately 15–25 degrees toward the subject's LEFT. Natural listening behaviour."
+    },
+    {
+      "code": "SHOT_33",
+      "title": "Eyes Look Right / Head Frontal",
+      "category": "identity/full-36/gaze",
+      "sort": 33,
+      "description": "Взгляд вправо при прямой голове.",
+      "prompt": "Head stays almost frontal; the eyes move the same amount in the opposite direction. Only the gaze changes — do not mirror the whole face."
+    },
+    {
+      "code": "SHOT_34",
+      "title": "Head Slightly Down / Eyes To Camera",
+      "category": "identity/full-36/gaze",
+      "sort": 34,
+      "description": "Голова чуть опущена, взгляд в камеру.",
+      "prompt": "Head pitches 10–15 degrees downward while the eyes come back up to the camera. No threatening under-brow stare."
+    },
+    {
+      "code": "SHOT_35",
+      "title": "Head Slightly Up / Eyes To Camera",
+      "category": "identity/full-36/gaze",
+      "sort": 35,
+      "description": "Голова чуть поднята, взгляд в камеру.",
+      "prompt": "Head pitches 10–15 degrees upward, the eyes compensating naturally back toward the camera. Do not enlarge the nostrils, chin or jaw."
+    },
+    {
+      "code": "SHOT_36",
+      "title": "Natural Blink",
+      "category": "identity/full-36/gaze",
+      "sort": 36,
+      "description": "Естественное моргание — кадр, который оживляет видео.",
+      "prompt": "Caught about 80–90 percent through an ordinary blink: both eyes almost closed, with a tiny natural difference in timing between them. Not asleep, not tired, not a wink."
+    }
+  ]
+}

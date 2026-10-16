@@ -1,0 +1,7 @@
+{
+  "type": "object",
+  "properties": {
+    "identity": {"type": "string", "maxLength": 6000}
+  },
+  "required": ["identity"]
+}

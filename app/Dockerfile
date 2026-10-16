@@ -1,10 +1,11 @@
 # app: FastAPI backend + the built web interface, one image.
 # Build context is the repository root: docker build -f app/Dockerfile .
 # Multi-arch (linux/amd64 + linux/arm64). The web stage runs on the build
-# machine's own platform: its output is plain static files.
+# machine's own platform: its output is plain static files. BuildKit sets
+# BUILDPLATFORM; the classic builder does not, so it falls back to amd64.
 
-ARG BUILDPLATFORM=linux/amd64
-FROM --platform=$BUILDPLATFORM node:22-bookworm-slim AS web
+ARG WEB_PLATFORM=${BUILDPLATFORM:-linux/amd64}
+FROM --platform=$WEB_PLATFORM node:22-bookworm-slim AS web
 ENV NUXT_TELEMETRY_DISABLED=1 CI=1
 WORKDIR /web
 COPY web/package.json web/package-lock.json web/.npmrc ./

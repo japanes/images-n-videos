@@ -1,0 +1,350 @@
+{
+  "clip": {
+    "page": {
+      "title": "Video editor",
+      "intro": "Trim a video, add text, pictures, subtitles and sound. The original file stays as it is: the result is saved as a new file.",
+      "pick": "Choose a video",
+      "recent": "Recent projects",
+      "opening": "Opening the video…",
+      "errorTitle": "Could not open the editor",
+      "notFound": "This project was not found. It may have been deleted.",
+      "startOver": "Choose another video",
+      "back": "Back",
+      "name": "Project name",
+      "undo": "Undo",
+      "undoHint": "Undo (Ctrl+Z)",
+      "redo": "Redo",
+      "redoHint": "Redo (Ctrl+Shift+Z)",
+      "aspect": "Frame",
+      "fit": "Fit",
+      "export": "Save video",
+      "delete": "Delete project",
+      "deleteAsk": "Delete this project? The video and the saved results stay in the media library.",
+      "deleted": "Project deleted",
+      "leave": "Leave",
+      "leaveAsk": "The last changes are not saved. Leave anyway?",
+      "sourceMissing": "The original video is gone from the media library. You can look at the project, but cannot save a new video.",
+      "save": {
+        "saved": "Saved",
+        "saving": "Saving…",
+        "unsaved": "Not saved yet",
+        "failed": "Not saved"
+      }
+    },
+    "aspects": {
+      "source": "As in the video",
+      "vertical": "Vertical 9:16",
+      "square": "Square 1:1",
+      "portrait": "Portrait 4:5",
+      "wide": "Wide 16:9"
+    },
+    "cropModes": {
+      "cover": "Crop to fill",
+      "blur": "Blurred background",
+      "pad": "Black bars"
+    },
+    "tabs": {
+      "layers": "Text and pictures",
+      "subtitles": "Subtitles",
+      "audio": "Sound",
+      "export": "Save"
+    },
+    "canvas": {
+      "resize": "Drag to change the size",
+      "removedHere": "This part is cut out and will not be in the result"
+    },
+    "time": {
+      "now": "Now",
+      "nowHint": "Take the current moment of the video"
+    },
+    "timeline": {
+      "play": "Play",
+      "pause": "Pause",
+      "playHint": "Play or pause (Space)",
+      "asResult": "Skip cut parts",
+      "result": "Result: {time}",
+      "startHere": "Start here",
+      "startHereHint": "The result will start at the current moment",
+      "endHere": "End here",
+      "endHereHint": "The result will end at the current moment",
+      "markIn": "From",
+      "markInHint": "Mark where a part to cut out begins",
+      "markOut": "To",
+      "markOutHint": "Mark where a part to cut out ends",
+      "remove": "Cut out",
+      "removeHint": "Cut out the part between the marks",
+      "restore": "Bring back",
+      "split": "Split here",
+      "unsplit": "Remove split",
+      "splitHint": "Mark a place where the video will be divided into separate files when you save it",
+      "splitAt": "Split into files at {time}",
+      "removedHint": "Cut out: {from} – {to}",
+      "trimStart": "Drag to move the start",
+      "trimEnd": "Drag to move the end"
+    },
+    "layers": {
+      "addText": "Add text",
+      "addPicture": "Add picture",
+      "empty": "Nothing added yet. Text and pictures appear on top of the video.",
+      "emptyText": "Empty text",
+      "newText": "Your text",
+      "picture": "Picture",
+      "limit": "At most {layers} items, of them {pictures} pictures.",
+      "orderHint": "Items higher in the list are in front.",
+      "selectHint": "Click an item in the list or on the video to change it.",
+      "up": "Move up (to the front)",
+      "down": "Move down (to the back)",
+      "hide": "Hide",
+      "show": "Show",
+      "remove": "Remove",
+      "removeAsk": "Remove “{name}”?",
+      "text": "Text",
+      "textHint": "Type the text",
+      "font": "Font",
+      "brandFonts": "Brand kit fonts",
+      "builtinFonts": "Built-in fonts",
+      "brandPictures": "Brand kit pictures",
+      "bold": "Bold",
+      "italic": "Italic",
+      "color": "Color",
+      "outline": "Outline",
+      "plate": "Box behind the text",
+      "plateColor": "Box color",
+      "plateOpacity": "Box visibility: {pct}%",
+      "size": "Size: {pct}%",
+      "width": "Width: {pct}%",
+      "opacity": "Visibility: {pct}%",
+      "replacePicture": "Replace picture",
+      "centerX": "Center left to right",
+      "centerY": "Center top to bottom",
+      "dragHint": "You can also drag it on the video.",
+      "from": "Show from",
+      "to": "Show until",
+      "toEnd": "Until the end",
+      "toEndShort": "end"
+    },
+    "brand": {
+      "title": "Brand kit",
+      "none": "No brand kit",
+      "hint": "Fonts, colors and pictures of the brand kit become available in the editor.",
+      "layersHint": "Its fonts and pictures appear in the lists below.",
+      "subtitlesHint": "The “Brand” subtitle look takes its color and font from here.",
+      "changed": "The brand kit has changed since you picked it.",
+      "refresh": "Use the new version"
+    },
+    "picker": {
+      "search": "Search",
+      "searchHint": "Search by name",
+      "upload": "Upload from computer",
+      "uploading": "Uploading… {pct}%",
+      "empty": "Nothing here yet. Upload a file from your computer.",
+      "more": "Show more"
+    },
+    "subtitles": {
+      "enabled": "Show subtitles in the video",
+      "recognizeTitle": "Make subtitles from speech",
+      "againTitle": "Recognize speech again",
+      "recognizeHint": "The app listens to the video and writes the speech down. It works on this computer and is free.",
+      "noSound": "This video has no sound, so there is nothing to recognize.",
+      "model": "Model",
+      "language": "Language of speech",
+      "models": "Speech models",
+      "recognize": "Recognize speech",
+      "again": "Recognize again",
+      "againAsk": "Recognize the speech again? Your edits to the subtitle text will be lost.",
+      "cancelAsk": "Stop recognizing speech?",
+      "estimateGuess": "It will take about {time}. This is a rough guess: the app has not measured your computer yet.",
+      "estimateMeasured": "It will take about {time} (measured on your last {n} run). | It will take about {time} (measured on your last {n} runs).",
+      "seconds": "{n} second | {n} seconds",
+      "minutes": "{n} minute | {n} minutes",
+      "modelFirst": "The first time, the model will be downloaded: {size}.",
+      "modelDownloading": "The model is being downloaded…",
+      "notDownloaded": "not downloaded, {size}",
+      "recognized": "No speech found in the video | Speech recognized: {n} word | Speech recognized: {n} words",
+      "reused": "Took the text recognized earlier: {n} word | Took the text recognized earlier: {n} words",
+      "style": "Look",
+      "mode": "How to show",
+      "modes": {
+        "preset": "As in the look",
+        "line": "Whole line",
+        "word": "One word at a time"
+      },
+      "position": "Where",
+      "positions": {
+        "preset": "As in the look",
+        "bottom": "Bottom",
+        "middle": "Middle",
+        "top": "Top"
+      },
+      "brandMissing": "Pick a brand kit, or the subtitles will use the usual colors.",
+      "lines": "Text: {n} line | Text: {n} lines",
+      "clear": "Delete subtitles",
+      "clearAsk": "Delete all subtitle text? To get it back you will need to recognize the speech again.",
+      "editHint": "Fix mistakes right in the lines. Click the time to jump there.",
+      "lineLabel": "Subtitle line at {time}"
+    },
+    "presets": {
+      "clean": {
+        "name": "Clean",
+        "text": "White text with a dark outline, the spoken word is highlighted."
+      },
+      "boxed": {
+        "name": "Boxed",
+        "text": "Text on a dark box, easy to read over any picture."
+      },
+      "pop": {
+        "name": "Pop",
+        "text": "One big word at a time in the middle of the frame."
+      },
+      "brand": {
+        "name": "Brand",
+        "text": "Like Clean, but with the color and font of the brand kit."
+      }
+    },
+    "stt": {
+      "title": "Speech models",
+      "intro": "Subtitles are made on this computer, for free. For this the app needs a speech model. It is downloaded once from the internet, after that it works without it.",
+      "size": "Size: {size}",
+      "ready": "Downloaded",
+      "download": "Download ({size})",
+      "downloading": "Downloading: {done} of {size} ({pct}%)",
+      "failed": "The download failed. Check the internet and try again.",
+      "delete": "Delete",
+      "deleteAsk": "Delete this model? It frees {size}. You can download it again later.",
+      "where": "Models are kept in the app data folder on this computer.",
+      "continue": "Recognize speech",
+      "gb": "{n} GB",
+      "mb": "{n} MB",
+      "models": {
+        "turbo": "Accurate",
+        "small": "Fast"
+      },
+      "modelHint": {
+        "turbo": "Makes fewer mistakes, but works slower and takes more disk space.",
+        "small": "Works faster and takes less space, but makes more mistakes."
+      },
+      "languages": {
+        "auto": "Find automatically",
+        "ru": "Russian",
+        "uk": "Ukrainian",
+        "en": "English"
+      },
+      "phase": {
+        "starting": "Getting ready…",
+        "downloading": "Downloading the speech model…",
+        "decoding": "Taking the sound out of the video…",
+        "loading": "Loading the speech model…",
+        "transcribing": "Recognizing speech…",
+        "done": "Done"
+      }
+    },
+    "audio": {
+      "original": "Sound of the video",
+      "noSound": "This video has no sound.",
+      "keepOriginal": "Keep the sound of the video",
+      "volume": "Volume: {pct}%",
+      "louderHint": "Above 100% the sound may crackle. Check it in the preview on the “Save” tab.",
+      "tracks": "Added sound",
+      "add": "Add sound",
+      "tracksHint": "Music, voice-over or sound effects from the media library or your computer.",
+      "limit": "At most {n} added sounds.",
+      "empty": "Nothing added yet.",
+      "remove": "Remove",
+      "removeAsk": "Remove “{name}” from the video? The file stays in the media library.",
+      "missing": "This file is gone from the media library. Remove it from the project.",
+      "role": "What it is",
+      "roles": {
+        "music": "Music",
+        "voice": "Voice-over",
+        "sfx": "Sound effect"
+      },
+      "roleHint": {
+        "music": "Plays under the video.",
+        "voice": "Only one voice-over per video. Other sounds can get quieter while it speaks.",
+        "sfx": "A sound at the chosen moment."
+      },
+      "trackVolume": "Volume: {pct}%",
+      "delay": "Starts at, seconds",
+      "fadeIn": "Fade in, seconds",
+      "fadeOut": "Fade out, seconds",
+      "duck": "Quieter under the voice",
+      "duckHint": "This sound gets quieter while the voice-over speaks.",
+      "duckNeedsVoice": "Works when one of the sounds is a voice-over.",
+      "previewHint": "The player above plays only the sound of the video. Added sound is heard in the preview on the “Save” tab.",
+      "pick": "Choose a sound"
+    },
+    "export": {
+      "length": "Length",
+      "frame": "Frame size",
+      "pieces": "Pieces",
+      "previewTitle": "Preview",
+      "previewHint": "A quick small video to check how it all looks and sounds. It is not added to the media library.",
+      "preview": "Make preview",
+      "previewAgain": "Make preview again",
+      "previewRunning": "Making the preview…",
+      "title": "Save the video",
+      "hint": "The result is saved as a new file in the media library. The original video stays as it is.",
+      "parts": "Cut into {n} file | Cut into {n} files",
+      "partsHint": "You marked split places on the timeline. Each part becomes a separate file.",
+      "start": "Save video",
+      "startParts": "Save {n} file | Save {n} files",
+      "running": "Saving the video…",
+      "done": "The video is saved to the media library",
+      "cancelAsk": "Stop? What is done so far will be lost.",
+      "results": "Saved earlier",
+      "noResults": "Nothing saved yet.",
+      "deleted": "File deleted",
+      "part": "part {i} of {n}",
+      "openInLibrary": "Show in the media library",
+      "warnings": {
+        "image_skipped": "Some pictures were left out: their files are missing or are not pictures.",
+        "too_many_overlays": "Too many pictures over the cut pieces, some were left out. Use fewer pictures or fewer cuts."
+      }
+    },
+    "jobs": {
+      "queued": "Waiting in line…",
+      "cancel": "Stop",
+      "export": "Saving a video",
+      "preview": "Video preview",
+      "transcribe": "Speech recognition"
+    },
+    "settings": {
+      "model": {
+        "label": "Speech model",
+        "help": "Which model makes subtitles by default. “Accurate” makes fewer mistakes, “Fast” works faster and takes less disk space."
+      },
+      "language": {
+        "label": "Language of speech",
+        "help": "Which language to expect by default. “Find automatically” lets the model decide."
+      },
+      "speedTurbo": {
+        "label": "Speed of the accurate model",
+        "help": "Seconds of work per minute of video. Used for the time estimate until the app has measured a few runs on this computer."
+      },
+      "speedSmall": {
+        "label": "Speed of the fast model",
+        "help": "Seconds of work per minute of video. Used for the time estimate until the app has measured a few runs on this computer."
+      }
+    },
+    "errors": {
+      "clip_not_video": "This file is not a video. The editor opens only videos.",
+      "clip_file_missing": "The video file is gone from the media library.",
+      "clip_title_empty": "Enter a name.",
+      "clip_no_brand": "This project has no brand kit.",
+      "clip_empty": "Nothing is left: the whole video is cut out.",
+      "clip_too_many_pieces": "Too many pieces: at most {max} in one video. Bring back some cut parts.",
+      "clip_no_duration": "Could not find out how long the video is. The file may be damaged.",
+      "clip_stt_model": "This speech model is not known.",
+      "clip_stt_language": "This language is not supported.",
+      "stt_bad_request": "The speech service did not understand the request. Details are in the log.",
+      "stt_not_found": "The speech service could not find the video file.",
+      "stt_model_not_found": "The speech model was not found. Download it again.",
+      "stt_busy": "Speech recognition is busy with another video. Try again when it finishes.",
+      "stt_no_audio": "There is no sound in this video.",
+      "stt_download_failed": "Could not download the speech model. Check the internet and try again.",
+      "stt_transcribe_failed": "Could not recognize the speech. Details are in the log.",
+      "stt_internal_error": "The speech service failed. Details are in the log.",
+      "stt_failed": "Speech recognition failed. Details are in the log."
+    }
+  }
+}

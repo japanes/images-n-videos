@@ -59,7 +59,7 @@
             @example="(text) => composer?.setText(text)"
           />
         </div>
-        <ChatComposer v-if="!room.chat.archived" ref="composer" :room="room" @open-field="openField" @sent="feed?.scrollToBottom(true)" />
+        <ChatComposer v-if="!room.chat.archived" ref="composer" :room="room" @sent="feed?.scrollToBottom(true)" />
       </template>
     </div>
 
@@ -72,7 +72,7 @@
         class="fixed inset-y-0 right-0 z-50 w-[min(22rem,92vw)] overflow-y-auto border-l border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 xl:static xl:z-auto xl:w-80 xl:shrink-0"
         :aria-label="t('chat.settings.title')"
       >
-        <ChatSettingsPanel ref="panel" :room="room" @close="panelOpen = false" />
+        <ChatSettingsPanel :room="room" @close="panelOpen = false" />
       </aside>
     </template>
 
@@ -100,7 +100,6 @@ onMounted(() => { if (!models.loaded.value && !models.loading.value) models.load
 
 const feed = ref(null)
 const composer = ref(null)
-const panel = ref(null)
 
 const gone = computed(() => Number(room.error?.status) === 404)
 
@@ -109,12 +108,6 @@ const gone = computed(() => Number(room.error?.status) === 404)
 const wide = useMediaQuery('(min-width: 1280px)')
 const panelOpen = ref(false)
 watch(wide, (v) => { panelOpen.value = v }, { immediate: true })
-
-async function openField(key) {
-  panelOpen.value = true
-  await nextTick()
-  panel.value?.openField(key)
-}
 
 // ── archived chat ──
 

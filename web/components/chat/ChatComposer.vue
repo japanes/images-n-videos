@@ -81,7 +81,7 @@
       <div class="rounded-card border border-slate-300 bg-white focus-within:border-primary dark:border-slate-700 dark:bg-slate-900">
         <textarea
           ref="input"
-          rows="1"
+          rows="3"
           class="block w-full resize-none bg-transparent px-3 pt-3 text-sm outline-none placeholder:text-slate-400"
           :style="{ maxHeight: `${MAX_HEIGHT}px` }"
           :value="d.text"
@@ -158,14 +158,6 @@
         </div>
       </div>
 
-      <!-- what the request is made with; a click opens that setting -->
-      <div class="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-xs muted">
-        <template v-for="(p, i) in summary" :key="`${p.key}-${i}`">
-          <span v-if="i" aria-hidden="true">·</span>
-          <button v-if="p.key" type="button" class="hover:text-primary hover:underline" @click="$emit('open-field', p.key)">{{ p.text }}</button>
-          <span v-else>{{ p.text }}</span>
-        </template>
-      </div>
       <p v-for="w in warnings" :key="w" class="flex items-start gap-1.5 text-xs text-amber-700 dark:text-amber-400">
         <AppIcon name="alert" :size="14" class="mt-px shrink-0" />{{ chatWarningText(w, t, te) }}
       </p>
@@ -199,21 +191,20 @@ import { formatUsd } from '~/utils/format.js'
 import { videoAttachWarnings, videoModelById } from '~/utils/videoView.js'
 import {
   CHAT_LIMITS, CHAT_MODES, chatAddPictures, chatCanSend, chatComposerButtons, chatErrorText, chatFileThumb, chatItems,
-  chatNextRole, chatReasonText, chatSendBody, chatSummaryParts, chatWarningText, chatWarnings,
+  chatNextRole, chatReasonText, chatSendBody, chatWarningText, chatWarnings,
 } from '~/utils/chatView.js'
 
 const props = defineProps({
   room: { type: Object, required: true }, // reactive(useChatRoom(…))
 })
-const emit = defineEmits(['open-field', 'sent'])
+const emit = defineEmits(['sent'])
 const { t, te } = useI18n()
 const api = useApi()
 const toast = useToast()
-const modelTitle = inject('chatModelTitle', (id) => id)
 const catalog = useVideoCatalog()
 
 const DRAG_TYPE = 'application/x-vf-chat-item'
-const MAX_HEIGHT = 240
+const MAX_HEIGHT = 320
 const COUNTER_FROM = 0.8 // the counter shows from 80% of the limit
 
 const input = ref(null)
@@ -453,20 +444,6 @@ function useBrief(brief) {
 const extraButtons = computed(() => chatComposerButtons(mode.value))
 const buttonLabel = (b) => (b.labelKey ? t(b.labelKey) : b.label || b.id)
 const buttonContext = () => ({ room: props.room, mode: mode.value, text: d.value.text, draft: d.value, setText, addFiles })
-
-// ── the line under the input ──
-
-const summary = computed(() => {
-  if (replyKind.value === 'video') {
-    const e = estimate.value
-    const parts = [{ key: null, text: t('chat.composer.extending') }]
-    if (e?.model_id) parts.push({ key: null, text: modelTitle(e.model_id) || e.model_id })
-    if (e?.extra?.resolution) parts.push({ key: null, text: e.extra.resolution })
-    if (e?.extra?.length_after) parts.push({ key: null, text: t('chat.composer.lengthAfter', { n: e.extra.length_after }) })
-    return parts
-  }
-  return chatSummaryParts(chat.value, replyKind.value || mode.value, t, { modelTitle, estimate: estimate.value })
-})
 
 const videoModel = computed(() => videoModelById(catalog.models.value, chat.value?.video_settings?.model_id))
 const warnings = computed(() => {

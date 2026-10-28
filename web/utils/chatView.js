@@ -160,37 +160,6 @@ export function chatCanSend({ text, replyKind } = {}) {
   return Boolean(String(text || '').trim()) || replyKind === 'video'
 }
 
-/**
- * Parts of the summary line under the composer: [{ key, text }]. A click on a
- * part opens that setting in the panel (`key` is the field id there).
- * `modelTitle(id)` gives a readable model name.
- */
-export function chatSummaryParts(chat, mode, t, { modelTitle = (id) => id, estimate = null } = {}) {
-  if (!chat) return []
-  const title = (id) => (id ? modelTitle(id) || id : t('chat.summary.defaultModel'))
-  if (mode === 'video') {
-    const v = chat.video_settings || {}
-    const parts = [{ key: 'mode', text: t('chat.modes.video') }, { key: 'model', text: title(v.model_id) }]
-    if (v.resolution) parts.push({ key: 'resolution', text: v.resolution })
-    if (v.duration) parts.push({ key: 'duration', text: t('chat.summary.seconds', { n: v.duration }) })
-    if (v.aspect) parts.push({ key: 'aspect', text: v.aspect })
-    parts.push({ key: 'sound', text: v.sound === false ? t('chat.summary.noSound') : t('chat.summary.sound') })
-    return parts
-  }
-  const s = chat.image_settings || {}
-  const count = Number(s.count || 1)
-  const size = estimate?.extra?.image_size || s.image_size
-  const parts = [
-    { key: 'mode', text: t('chat.modes.image') },
-    { key: 'model', text: title(s.model_id) },
-    { key: 'aspect', text: s.aspect || '1:1' },
-    { key: 'size', text: size || '1K' },
-    { key: 'count', text: t('chat.summary.variants', { n: count }, count) },
-  ]
-  if (s.series && count > 1) parts.push({ key: 'series', text: t('chat.summary.series') })
-  return parts
-}
-
 // ── messages and live updates ──────────────────────────────────────────────
 
 export function chatItems(message) {

@@ -21,12 +21,7 @@
       "viewer": "Changed in the viewer"
     },
     "summary": {
-      "defaultModel": "Default model",
-      "seconds": "{n} s",
-      "noSound": "No sound",
-      "sound": "With sound",
-      "variants": "{n} variant | {n} variants",
-      "series": "Series in one look"
+      "seconds": "{n} s"
     },
     "composer": {
       "placeholderImage": "Describe the picture you want…",
@@ -49,8 +44,6 @@
       "regionBox": "Only the marked area",
       "regionClear": "Change the whole picture",
       "extendBy": "Add",
-      "extending": "Extension",
-      "lengthAfter": "{n} s in total",
       "enhance": "Improve the prompt",
       "enhanceHint": "Before sending, a text model rewrites your words in more detail. It costs a little; you will see both texts.",
       "brief": "Write it for me",

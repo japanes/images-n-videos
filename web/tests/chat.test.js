@@ -5,7 +5,7 @@ import {
   chatEventTouches, chatFileThumb, chatFindQuery, chatImageActions, chatItemError, chatItemRatio, chatItemReady,
   chatKindComponent, chatKindFileName, chatMediaLink, chatMergeMessages, chatMessageBusy, chatNextRole, chatProgress,
   chatQueryId, chatReasonText, chatRegisterComposerButton, chatRegisterImageAction, chatRegisterKind,
-  chatResetRegistries, chatRolesFor, chatRolesForMode, chatSendBody, chatSummaryParts, chatTime, chatWaitingCount,
+  chatResetRegistries, chatRolesFor, chatRolesForMode, chatSendBody, chatTime, chatWaitingCount,
   chatWarnings, chatWarningText,
 } from '../utils/chatView.js'
 import en from '../i18n/locales/en/chat.json'
@@ -135,31 +135,6 @@ describe('the composer', () => {
     expect(chatCanSend({ text: 'a' })).toBe(true)
     expect(chatCanSend({ text: '', replyKind: 'video' })).toBe(true)
     expect(chatCanSend({ text: '', replyKind: 'image' })).toBe(false)
-  })
-
-  it('builds the summary of the picture settings', () => {
-    const chat = { image_settings: { model_id: 'm1', aspect: '4:5', image_size: '2K', count: 3, series: true } }
-    const parts = chatSummaryParts(chat, 'image', t, { modelTitle: (id) => `Model ${id}` })
-    expect(parts.map((p) => p.key)).toEqual(['mode', 'model', 'aspect', 'size', 'count', 'series'])
-    expect(parts[1].text).toBe('Model m1')
-    expect(parts[4].text).toContain('3')
-    const plain = chatSummaryParts({ image_settings: {} }, 'image', t)
-    expect(plain.find((p) => p.key === 'model').text).toBe(dict['chat.summary.defaultModel'])
-    expect(plain.find((p) => p.key === 'series')).toBeUndefined()
-  })
-
-  it('takes the size the estimate settled on', () => {
-    const parts = chatSummaryParts({ image_settings: { image_size: '1K' } }, 'image', t, { estimate: { extra: { image_size: '4K' } } })
-    expect(parts.find((p) => p.key === 'size').text).toBe('4K')
-  })
-
-  it('builds the summary of the video settings', () => {
-    const chat = { video_settings: { resolution: '720p', duration: 8, aspect: '16:9', sound: false } }
-    const parts = chatSummaryParts(chat, 'video', t)
-    expect(parts.map((p) => p.key)).toEqual(['mode', 'model', 'resolution', 'duration', 'aspect', 'sound'])
-    expect(parts[3].text).toBe('8 s')
-    expect(parts[5].text).toBe(dict['chat.summary.noSound'])
-    expect(chatSummaryParts(null, 'video', t)).toEqual([])
   })
 })
 

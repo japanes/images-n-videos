@@ -34,7 +34,6 @@ const notices = computed(() => {
   if (!meta.hasKey && !meta.stub && route.path !== '/connection') {
     list.push({ key: 'nokey', tone: 'warn', text: t('shell.noKey'), to: hasPage('/connection') ? '/connection' : null, action: t('shell.connect') })
   }
-  if (meta.jobsPaused) list.push({ key: 'paused', tone: 'warn', text: t('shell.jobsPaused') })
   return list
 })
 </script>

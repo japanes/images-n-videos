@@ -37,7 +37,6 @@
         <ThemeToggle />
       </div>
     </div>
-    <p v-if="meta.version" class="px-4 pb-2 text-[11px] muted">v{{ meta.version }}</p>
   </aside>
 </template>
 
@@ -47,7 +46,6 @@ import { NAV_SECTIONS } from '~/utils/nav.js'
 defineEmits(['navigate', 'close'])
 const { t } = useI18n()
 const router = useRouter()
-const meta = useMetaStore()
 
 const exists = (path) => router.resolve(path).matched.length > 0 && router.resolve(path).name !== 'all'
 const sections = computed(() => NAV_SECTIONS

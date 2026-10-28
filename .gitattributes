@@ -1,9 +1,5 @@
-# Line endings that the release zip needs on the user's machine.
+# Line endings of scripts and configs (they run inside Linux containers).
 * text=auto
-*.bat text eol=crlf
-*.cmd text eol=crlf
-release/README.txt text eol=crlf
-*.command text eol=lf
 *.sh text eol=lf
 .env text eol=lf
 Dockerfile text eol=lf

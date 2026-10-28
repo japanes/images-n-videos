@@ -16,7 +16,6 @@ async def runner(database):
     await jobs.runner.start()
     yield jobs.runner
     await jobs.runner.stop()
-    jobs.runner.paused = None
 
 
 def _ago(**delta) -> str:
@@ -114,8 +113,8 @@ def test_backup_is_a_checked_standalone_copy(database):
 def test_rotation_keeps_newest_and_leaves_other_files(database):
     folder = get_config().backups_dir
     folder.mkdir(parents=True, exist_ok=True)
-    updater_copy = folder / "app-1.0.0-20260101T000000Z.db"
-    updater_copy.write_bytes(b"x")
+    other_copy = folder / "app-1.0.0-20260101T000000Z.db"
+    other_copy.write_bytes(b"x")
     stray = folder / "notes.txt"
     stray.write_text("mine")
     (folder / "daily-20260101T000000Z.db.part").write_bytes(b"half")
@@ -125,7 +124,7 @@ def test_rotation_keeps_newest_and_leaves_other_files(database):
 
     assert maintenance.rotate_backups(3) == made[:2]
     assert [p.name for p in maintenance.backup_files()] == made[2:]
-    assert updater_copy.exists() and stray.exists()
+    assert other_copy.exists() and stray.exists()
 
 
 def test_daily_backup_follows_settings(database):

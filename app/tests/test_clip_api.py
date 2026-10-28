@@ -70,7 +70,6 @@ async def runner(database):
     await jobs.runner.start()
     yield jobs.runner
     await jobs.runner.stop()
-    jobs.runner.paused = None
 
 
 async def _wait(job_id, timeout=5.0):

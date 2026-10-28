@@ -21,7 +21,7 @@ def test_host_name(value, name):
     {"host": "127.0.0.1:8787"},
     {"host": "localhost:8787", "sec-fetch-site": "same-origin"},
     {"host": "localhost:3000", "sec-fetch-site": "same-origin", "origin": "http://localhost:3000"},
-    {"host": "app:8787"},  # the updater inside the compose network
+    {"host": "app:8787"},  # another container in the compose network
     {"host": "127.0.0.1:8787", "origin": "http://localhost:8787"},
     {"host": "127.0.0.1:8787", "sec-fetch-site": "none"},  # typed in the address bar
 ])

@@ -10,36 +10,19 @@ import { apiErrorText } from './apiErrorText.js'
 // Mirrors of the backend limits (app/vf/modules/studio/common.py).
 export const STUDIO_ASPECTS = ['1:1', '4:5', '3:4', '2:3', '9:16', '5:4', '4:3', '3:2', '16:9', '21:9']
 export const STUDIO_SIZES = ['1K', '2K', '4K']
-export const STUDIO_TEXT_MODES = ['none', 'overlay', 'model']
-export const STUDIO_TEXT_ROLES = ['headline', 'body', 'accent']
 export const STUDIO_MAX_FRAMES = 10
 export const STUDIO_MAX_PICTURES = 14
-export const STUDIO_MAX_TEXT_BLOCKS = 6
-export const STUDIO_LIMITS = { title: 120, brief: 4000, edit: 2000, feedback: 2000, focus: 300, words: 600, style: 2000 }
+export const STUDIO_LIMITS = { title: 120, brief: 4000, edit: 2000, feedback: 2000, focus: 300 }
 export const STUDIO_BUSY = ['queued', 'drawing']
 export const STUDIO_STATUSES = ['empty', 'queued', 'drawing', 'waiting', 'done', 'error']
 export const STUDIO_IMAGE_ACCEPT = 'image/png,image/jpeg,image/webp'
-
-// Prompt blocks in the order the backend joins them (app/vf/modules/studio/blocks.py).
-export const STUDIO_BLOCKS = [
-  'output_size', 'language', 'brand_colors', 'brand_fonts', 'tone_of_voice', 'logo', 'project_references',
-  'task_attachments', 'subjects', 'identity_assets', 'image_style', 'photo_style', 'slide_position',
-  'slide_text', 'draw_text', 'no_lettering', 'quality', 'variant_diversity', 'feedback',
-]
 
 // Error codes the studio API answers with (its own texts are in studio.errors.*).
 export const STUDIO_ERROR_CODES = [
   'empty_file', 'bad_image_type', 'bad_file', 'too_many_pictures', 'frame_busy', 'frame_no_picture',
   'edit_text_required', 'pilot_not_ready', 'too_many_frames', 'too_many_images', 'bad_aspect', 'bad_size',
-  'bad_text_mode', 'version_unknown', 'brief_required', 'too_many_text_blocks', 'bad_style', 'no_kit',
+  'version_unknown', 'brief_required', 'too_many_text_blocks', 'bad_style', 'no_kit',
   'last_frame', 'bad_order', 'model_wrong_kind', 'nothing_to_export', 'stuck',
-]
-
-// Why a block is greyed out (blocks[].reason).
-export const STUDIO_BLOCK_REASONS = [
-  'no_size', 'large_size', 'text_not_drawn', 'no_brand', 'no_colors', 'no_fonts', 'no_tone', 'no_logo',
-  'no_references', 'no_attachments', 'no_subjects', 'no_elements', 'no_style', 'no_photo_style',
-  'single_frame', 'text_drawn', 'no_overlay', 'no_words', 'first_version', 'no_feedback',
 ]
 
 // Why "Generate all" left a frame out (skipped[].reason) besides plain error codes.
@@ -188,46 +171,11 @@ export function studioBoxStyle(box) {
   return { left: pct(box.x), top: pct(box.y), width: pct(box.w), height: pct(box.h) }
 }
 
-/**
- * The saved style setting as the panel shows it:
- * { kind: 'library', id, title } | { kind: 'words', text } | null.
- */
-export function studioStyleValue(style) {
-  if (style === null || style === undefined || style === '') return null
-  let value = style
-  if (typeof value === 'string' && value.trim().startsWith('{"preset":')) {
-    try { value = JSON.parse(value) } catch { return { kind: 'words', text: style } }
-  }
-  if (value && typeof value === 'object') {
-    if (value.preset === undefined || value.preset === null) return null
-    return { kind: 'library', id: value.preset, title: value.title || '' }
-  }
-  const text = String(value).trim()
-  return text ? { kind: 'words', text } : null
-}
-
-/** What to save for a style: a library reference, plain words or null. */
-export function studioStyleSetting(value) {
-  if (!value) return null
-  if (value.kind === 'library' && value.id !== undefined && value.id !== null) {
-    return { preset: value.id, title: value.title || '' }
-  }
-  if (value.kind === 'words') return String(value.text || '').trim() || null
-  return null
-}
-
 /** Copy of a frame's overrides with `key` set; `undefined` removes it (the frame follows the work again). */
 export function studioOverridesWith(overrides, key, value) {
   const out = { ...(overrides || {}) }
   if (value === undefined) delete out[key]
   else out[key] = value
-  return out
-}
-
-/** Full `{code: on}` map of the blocks list (the API saves only differences from the defaults). */
-export function studioBlocksMap(blocks) {
-  const out = {}
-  for (const b of blocks || []) if (b?.code) out[b.code] = Boolean(b.on)
   return out
 }
 
@@ -237,4 +185,41 @@ export function studioEstimateRequest(action, { work, frame, ...rest } = {}) {
   if (work) { req.work_id = work.id; req.rev = studioWorkRevision(work) }
   if (frame) { req.frame_id = frame.id; req.frame_rev = `${frame.updated_at || ''}:${frame.status || ''}` }
   return req
+}
+
+/** A library style's category name in the person's language (the library keeps Russian, uk/en when known). */
+export function studioCategoryTitle(style, locale) {
+  const path = style?.category_path || []
+  const last = path[path.length - 1]
+  if (!last) return ''
+  return last[`title_${locale}`] || last.title || last.slug || ''
+}
+
+/**
+ * The photo style picker's lists: `categories` in the order they first appear
+ * and `groups` of styles that match the search words and the picked category
+ * ('' means all). Search looks at the name, the description and the category.
+ */
+export function studioPhotoStyleGroups(items, { q = '', category = '' } = {}, locale = 'en') {
+  const categories = []
+  const byKey = new Map()
+  for (const st of items || []) {
+    const key = st.category || ''
+    if (!byKey.has(key)) {
+      const c = { key, title: studioCategoryTitle(st, locale), items: [] }
+      byKey.set(key, c)
+      categories.push(c)
+    }
+  }
+  const words = String(q || '').trim().toLowerCase().split(/\s+/).filter(Boolean)
+  for (const st of items || []) {
+    const c = byKey.get(st.category || '')
+    if (category && c.key !== category) continue
+    const text = `${st.title || ''} ${st.description || ''} ${c.title}`.toLowerCase()
+    if (words.every((w) => text.includes(w))) c.items.push(st)
+  }
+  return {
+    categories: categories.map(({ key, title }) => ({ key, title })),
+    groups: categories.filter((c) => c.items.length),
+  }
 }

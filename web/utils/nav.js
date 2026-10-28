@@ -6,7 +6,6 @@ export const NAV_SECTIONS = [
     key: 'work',
     items: [
       { to: '/media', icon: 'media', labelKey: 'nav.media' },
-      { to: '/library', icon: 'library', labelKey: 'nav.library' },
       { to: '/brand', icon: 'brand', labelKey: 'nav.brand' },
     ],
   },
@@ -18,7 +17,6 @@ export const NAV_SECTIONS = [
       { to: '/connection', icon: 'key', labelKey: 'nav.connection' },
       { to: '/models', icon: 'models', labelKey: 'nav.models' },
       { to: '/settings', icon: 'settings', labelKey: 'nav.settings' },
-      { to: '/updates', icon: 'update', labelKey: 'nav.updates' },
     ],
   },
 ]

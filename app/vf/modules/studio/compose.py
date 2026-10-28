@@ -1,13 +1,12 @@
 """What goes to the image model for one frame: the pictures with their captions,
-then the text (the brief or the correction, then the prompt blocks that are on).
+then the text (the brief or the correction, then the prompt blocks that apply).
 
-Nothing is added that the person cannot see and switch off: a block that is off
-sends neither its words nor its pictures.
+A block goes only when the frame has what it is made from (see ``blocks``);
+style and lettering are the person's own words in the brief.
 
 Order of the parts (the text goes last):
   edit:  the picture being corrected, the marked copy (when an object is picked)
-  full:  subjects -> logo -> brand elements -> references (pilot first) ->
-         style sample (only when turned on) -> attached photos
+  full:  subjects -> logo -> references (pilot first) -> attached photos
 """
 
 from __future__ import annotations
@@ -15,7 +14,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
-from vf.core import files, google, prompts, settings
+from vf.core import files, google, prompts
 from vf.core.errors import AppError
 from vf.modules import brand, library
 from vf.modules.models import service as models_service
@@ -26,10 +25,10 @@ from vf.modules.studio.common import MAX_EDIT, clean_block
 
 @dataclass
 class Picture:
-    """One picture of the request. ``file_id`` None: made on the fly (marked copy, a
-    built-in style example) and then ``data`` holds the bytes."""
+    """One picture of the request. ``file_id`` None: made on the fly (the marked copy)
+    and then ``data`` holds the bytes."""
 
-    role: str            # subject | logo | element | anchor | reference | style_sample | attachment | edit_base | edit_marker
+    role: str            # subject | logo | anchor | reference | attachment | edit_base | edit_marker
     label: str
     file_id: int | None = None
     data: bytes | None = None
@@ -97,10 +96,6 @@ def _part(code: str, **values: Any) -> str:
     return prompts.render(code, **values).text.strip()
 
 
-def _language() -> str:
-    return str(settings.get("general.text_language", "en") or "en")
-
-
 def output_target(work: dict, eff: dict) -> tuple[int, int] | None:
     """The configured output size for the work's aspect; only for 1K pictures
     (2K and 4K keep the model's own, larger, size)."""
@@ -109,59 +104,24 @@ def output_target(work: dict, eff: dict) -> tuple[int, int] | None:
     return models_service.output_size(work["aspect"])
 
 
-def _style_text(eff: dict) -> tuple[str | None, int | None]:
-    style = library.resolve_style_value(eff["style"]) if eff["style"] else None
-    if not style:
-        return None, None
-    return style["prompt"], style.get("preset_id")
-
-
 def generated_count(frame: dict) -> int:
     return sum(1 for v in frame.get("versions_json") or [] if v.get("mode") == "full")
 
 
 def facts(work: dict, frame: dict, eff: dict) -> blocks.Facts:
-    """What the blocks of this frame are made from (also drives the panel's greyed-out rows)."""
-    style, _ = _style_text(eff)
+    """What the blocks of this frame are made from."""
     anchor = W.anchor_file(work, frame)
-    count = len(W.frames_of(work["id"]))
     return blocks.Facts(
-        text_mode=eff["text_mode"],
-        words=frame.get("text_blocks_json") or [],
         brand=work.get("brand_json"),
         references=len(eff["references"]) + (1 if anchor else 0),
         attachments=len(eff["attachments"]),
         subjects=brand.describe_subjects(eff["subjects"]),
-        style=style,
         photo_style=library.photo_style_text(eff["photo_style"]),
-        position=frame["position"] + 1,
-        frame_count=count,
         size=output_target(work, eff),
         large=eff["image_size"] != "1K",
         variant=generated_count(frame) + 1,
         feedback=eff["feedback"] or "",
-        language=_language(),
     )
-
-
-def _style_sample(eff: dict, codes: list[str]) -> Picture | None:
-    """The example picture of the photo style (else of the image style) whose block is on."""
-    if not eff["style_sample"]:
-        return None
-    candidates = []
-    if "photo_style" in codes and eff["photo_style"]:
-        candidates.append(eff["photo_style"])
-    if "image_style" in codes:
-        _, preset_id = _style_text(eff)
-        if preset_id:
-            candidates.append(preset_id)
-    for style_id in candidates:
-        blob = library.preview_blob(style_id)
-        if blob is not None:
-            if blob.file_id:
-                return Picture("style_sample", "style sample", file_id=blob.file_id, mime=blob.mime, shrink=True)
-            return Picture("style_sample", "style sample", data=blob.data, mime=blob.mime, shrink=True)
-    return None
 
 
 def _file_picture(role: str, label: str, file_id: int, *, shrink: bool = False) -> Picture | None:
@@ -173,7 +133,7 @@ def _file_picture(role: str, label: str, file_id: int, *, shrink: bool = False) 
 
 
 def full_text(work: dict, frame: dict, codes: list[str], f: blocks.Facts) -> str:
-    """The brief, then the texts of the blocks that are on."""
+    """The brief, then the texts of the blocks that apply."""
     brief = (frame.get("brief") or "").strip() or (W.settings_of(work).get("ideas_brief") or "").strip()
     if not brief:
         raise AppError("brief_required", 400, "Write what the picture should show")
@@ -183,7 +143,7 @@ def full_text(work: dict, frame: dict, codes: list[str], f: blocks.Facts) -> str
 def plan_full(work: dict, frame: dict, eff: dict | None = None) -> Plan:
     eff = eff or W.effective(work, frame)
     f = facts(work, frame, eff)
-    codes = blocks.active(eff["blocks"], f)
+    codes = blocks.active(f)
     snap = work.get("brand_json") or {}
     groups: list[Group] = []
 
@@ -214,21 +174,12 @@ def plan_full(work: dict, frame: dict, eff: dict | None = None) -> Plan:
                                    else _part("STUDIO_PART_SUBJECT_PHOTO", **values))
                         groups.append(Group(caption + ":", [pic]))
 
-    logo_sent = False
     if "logo" in codes:
         logo = blocks.logo_of(snap)
         pic = _file_picture("logo", logo.get("name") or "logo", logo["file_id"]) if logo else None
         if pic:
-            logo_sent = True
             groups.append(Group(_part("STUDIO_PART_LOGO") + ":", [pic]))
 
-    if "identity_assets" in codes:
-        pics = [p for e in blocks.elements_of(snap)
-                if (p := _file_picture("element", e.get("name") or e.get("kind") or "element", e["file_id"]))]
-        if pics:
-            groups.append(Group(_part("STUDIO_PART_ELEMENTS", count=len(pics)) + ":", pics))
-
-    references_sent = False
     anchor = W.anchor_file(work, frame)
     refs: list[Picture] = []
     if anchor and (pic := _file_picture("anchor", "pilot frame", anchor, shrink=True)):
@@ -238,22 +189,12 @@ def plan_full(work: dict, frame: dict, eff: dict | None = None) -> Plan:
         refs += [p for fid in eff["references"] if fid != anchor
                  and (p := _file_picture("reference", "reference", fid, shrink=True))]
     if refs:
-        references_sent = True
         caption = _layer("IMAGE_PART_REFERENCES", count=len(refs))
         if anchored:
             caption += _layer("IMAGE_PART_REFERENCES_ANCHOR", count=anchored)
         if subjects_sent:
             caption += _layer("IMAGE_PART_REFERENCES_SUBJECTS")
         groups.append(Group(caption + ":", refs))
-
-    sample = _style_sample(eff, codes)
-    if sample:
-        caption = _layer("IMAGE_PART_STYLE_SAMPLE")
-        if references_sent or logo_sent:
-            caption += _layer("IMAGE_PART_STYLE_SAMPLE_BRAND")
-        if subjects_sent:
-            caption += _layer("IMAGE_PART_STYLE_SAMPLE_SUBJECTS")
-        groups.append(Group(caption + ":", [sample]))
 
     if "task_attachments" in codes:
         pics = [p for fid in eff["attachments"] if (p := _file_picture("attachment", "attached photo", fid,
@@ -265,23 +206,15 @@ def plan_full(work: dict, frame: dict, eff: dict | None = None) -> Plan:
     return _checked(Plan("full", eff, f, codes, groups, text, output_target(work, eff)))
 
 
-def edit_text(edit: str, region: dict | None, text_mode: str, words: list[dict]) -> str:
-    """The correction, with the picked object's place, and the lettering rule when the
-    model draws the words."""
+def edit_text(edit: str, region: dict | None) -> str:
+    """The correction, with the picked object's place."""
     edit = clean_block(edit, MAX_EDIT)
-    if text_mode == "model":
-        listed = blocks.words_text(words)
-        if not edit:
-            return _layer("EDIT_LETTERING_REPLACE", words=listed)
     if not edit:
         raise AppError("edit_text_required", 400, "Write what to change")
-    text = edit
     if region:
-        text = _layer("IMAGE_PART_EDIT_REGION", label=region["label"] or "object",
+        return _layer("IMAGE_PART_EDIT_REGION", label=region["label"] or "object",
                       area=imaging.area_words(region["box"])) + "\n\n" + edit
-    if text_mode == "model" and blocks.words_text(words):
-        text += "\n\n" + _layer("EDIT_LETTERING_RULE", words=blocks.words_text(words))
-    return text
+    return edit
 
 
 def plan_edit(work: dict, frame: dict, edit: str, region: dict | None = None, eff: dict | None = None,
@@ -291,10 +224,7 @@ def plan_edit(work: dict, frame: dict, edit: str, region: dict | None = None, ef
     if not frame.get("file_id"):
         raise AppError("frame_no_picture", 409, "The frame has no picture to correct")
     f = facts(work, frame, eff)
-    edit = clean_block(edit, MAX_EDIT)
-    if not edit:
-        region = None   # an empty correction in "model draws the words" mode only re-letters
-    text = edit_text(edit, region, eff["text_mode"], frame.get("text_blocks_json") or [])
+    text = edit_text(edit, region)
     row = files.get(frame["file_id"])
     groups = [Group(_layer("IMAGE_PART_EDIT_BASE") + ":",
                     [Picture("edit_base", "picture being corrected", file_id=row["id"], mime=row["mime"])])]

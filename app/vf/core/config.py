@@ -17,9 +17,7 @@ class Config:
     google_mode: str = "live"
     render_url: str = "http://render:3000"
     stt_url: str = "http://stt:8000"
-    updater_url: str = "http://updater:8080"
     web_dir: Path | None = None
-    repo: str = "japanes/images-n-videos"
     # Host names the app answers to (see core/guard.py); "app" is the compose service name.
     allowed_hosts: tuple[str, ...] = DEFAULT_HOSTS
     extra: dict = field(default_factory=dict)
@@ -62,9 +60,7 @@ def load_config() -> Config:
         google_mode=env.get("VF_GOOGLE_MODE", "live").strip().lower() or "live",
         render_url=env.get("VF_RENDER_URL", "http://render:3000").rstrip("/"),
         stt_url=env.get("VF_STT_URL", "http://stt:8000").rstrip("/"),
-        updater_url=env.get("VF_UPDATER_URL", "http://updater:8080").rstrip("/"),
         web_dir=Path(web_dir) if web_dir else None,
-        repo=env.get("VF_REPO", "japanes/images-n-videos"),
         allowed_hosts=DEFAULT_HOSTS + tuple(h.strip() for h in env.get("VF_ALLOWED_HOSTS", "").split(",")
                                             if h.strip()),
     )

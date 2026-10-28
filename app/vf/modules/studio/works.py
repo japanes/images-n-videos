@@ -1,7 +1,7 @@
 """Works and frames: storage, checks of what the browser sends, the view sent back.
 
 A work is a set of frames with shared settings (brand, model, aspect, size,
-references, subjects, styles, text mode, prompt blocks). A frame is one picture
+references, subjects, photo style). A frame is one picture
 with its own brief, its overrides of the work settings, and its versions.
 """
 
@@ -14,7 +14,6 @@ from vf.core import db, models_registry
 from vf.core.errors import AppError, NotFound
 from vf.core.google import journal
 from vf.modules import brand, library
-from vf.modules.studio import blocks
 from vf.modules.studio.common import (
     ASPECTS,
     BUSY,
@@ -26,7 +25,6 @@ from vf.modules.studio.common import (
     MAX_TITLE,
     MAX_WORDS,
     SOURCES,
-    TEXT_MODES,
     TEXT_ROLES,
     clean_block,
     clean_text,
@@ -36,7 +34,6 @@ from vf.modules.studio.common import (
 )
 
 IMAGE_SIZES = ("1K", "2K", "4K")
-MAX_STYLE_WORDS = 2000
 REF_WORK = "work"   # journal refs (spend screen links back to these; names as in spend.json)
 REF_FRAME = "frame"
 
@@ -44,10 +41,6 @@ DEFAULT_SETTINGS: dict[str, Any] = {
     "references": [],          # file ids: the work's own reference pictures
     "subjects": [],            # brand subject ids
     "photo_style": None,       # library photo style id; None = plain photo
-    "style": None,             # library style reference or plain words; None = no style
-    "style_sample": False,     # also show the model the style's example picture
-    "text_mode": "none",       # none | overlay (module 06 draws the words) | model (the model draws them)
-    "blocks": {},              # prompt block tumblers changed from their defaults
     "kit_references": True,    # add the brand kit's reference pictures to the references
     "ideas_brief": "",         # the brief of the whole work (frames without their own brief use it)
     "series": False,           # first frame is a pilot; the rest follow its look once it is accepted
@@ -55,8 +48,7 @@ DEFAULT_SETTINGS: dict[str, Any] = {
     "pilot_accepted": False,
     "feedback": "",            # "what to change" for the next generation of every frame
 }
-OVERRIDE_KEYS = ("model_id", "image_size", "text_mode", "feedback", "references", "subjects", "photo_style",
-                 "attachments")
+OVERRIDE_KEYS = ("model_id", "image_size", "feedback", "references", "subjects", "photo_style", "attachments")
 
 
 # ── rows ────────────────────────────────────────────────────────────────────
@@ -80,8 +72,9 @@ def frames_of(work_id: int) -> list[dict]:
 
 
 def settings_of(work: dict) -> dict:
+    """Saved settings over the defaults; keys no longer in use (an older version) are left out."""
     out = copy.deepcopy(DEFAULT_SETTINGS)
-    out.update(work.get("settings_json") or {})
+    out.update({k: v for k, v in (work.get("settings_json") or {}).items() if k in DEFAULT_SETTINGS})
     return out
 
 
@@ -113,30 +106,12 @@ def _image_size(value: Any) -> str:
     return size
 
 
-def _text_mode(value: Any) -> str:
-    mode = str(value or "")
-    if mode not in TEXT_MODES:
-        raise AppError("bad_text_mode", 400, "Unknown text mode", mode=mode)
-    return mode
-
-
 def _photo_style(value: Any) -> Any:
     if value is None or value == "":
         return None
     if library.photo_style_text(value) is None:
         raise AppError("bad_style", 400, "This photo style is not in the library", style=value)
     return value
-
-
-def _style(value: Any) -> Any:
-    if value is None or value == "":
-        return None
-    if isinstance(value, dict) or library.is_style_ref(value):
-        if library.render_style(value) is None:
-            raise AppError("bad_style", 400, "This style is not in the library")
-        return value
-    text = str(value).strip()[:MAX_STYLE_WORDS].strip()
-    return text or None
 
 
 def _subjects(value: Any) -> list[int]:
@@ -181,15 +156,8 @@ def clean_settings(patch: Any, current: dict) -> dict:
             out[key] = _subjects(value)
         elif key == "photo_style":
             out[key] = _photo_style(value)
-        elif key == "style":
-            out[key] = _style(value)
-        elif key in ("style_sample", "kit_references"):
+        elif key == "kit_references":
             out[key] = bool(value)
-        elif key == "text_mode":
-            out[key] = _text_mode(value)
-        elif key == "blocks":
-            toggles = blocks.normalize_toggles(value)
-            out[key] = {code: on for code, on in toggles.items() if on != blocks.DEFAULTS[code]}
         elif key == "ideas_brief":
             out[key] = clean_block(value, MAX_BRIEF)
         elif key == "feedback":
@@ -222,9 +190,6 @@ def clean_overrides(value: Any) -> dict:
         elif key == "image_size":
             if raw:
                 out[key] = _image_size(raw)
-        elif key == "text_mode":
-            if raw:
-                out[key] = _text_mode(raw)
         elif key == "feedback":
             text = clean_block(raw, MAX_FEEDBACK)
             if text:
@@ -275,12 +240,8 @@ def effective(work: dict, frame: dict) -> dict:
         "references": references,
         "subjects": list(ov["subjects"] if "subjects" in ov else s["subjects"]),
         "photo_style": ov["photo_style"] if "photo_style" in ov else s["photo_style"],
-        "style": s["style"],
-        "style_sample": bool(s["style_sample"]),
-        "text_mode": ov.get("text_mode") or s["text_mode"],
         "feedback": ov.get("feedback") or s["feedback"],
         "attachments": list(ov.get("attachments") or []),
-        "blocks": s["blocks"],
     }
 
 
@@ -351,7 +312,7 @@ def current_objects(frame: dict) -> dict | None:
     return data
 
 
-def frame_public(frame: dict, work: dict | None = None, *, with_blocks: bool = True) -> dict:
+def frame_public(frame: dict, work: dict | None = None) -> dict:
     work = work or work_row(frame["work_id"])
     out = {
         "id": frame["id"], "work_id": frame["work_id"], "position": frame["position"], "brief": frame["brief"],
@@ -363,7 +324,7 @@ def frame_public(frame: dict, work: dict | None = None, *, with_blocks: bool = T
         "objects": None, "versions": _versions(frame), "job_id": frame.get("job_id"),
         "error_code": frame.get("error_code"), "error_text": frame.get("error_text"),
         "drawing_since": frame.get("drawing_since"), "cost_usd": round(frame.get("cost_usd") or 0, 6),
-        "is_pilot": is_pilot(work, frame), "effective": None, "blocks": None,
+        "is_pilot": is_pilot(work, frame), "effective": None,
         "created_at": frame["created_at"], "updated_at": frame["updated_at"],
     }
     found = current_objects(frame)
@@ -375,12 +336,8 @@ def frame_public(frame: dict, work: dict | None = None, *, with_blocks: bool = T
     except AppError as exc:
         out["effective"] = {"error": exc.code}
         return out
-    out["effective"] = {k: v for k, v in eff.items() if k not in ("model", "blocks")}
+    out["effective"] = {k: v for k, v in eff.items() if k != "model"}
     out["effective"]["model_title"] = eff["model"].get("title")
-    if with_blocks:
-        from vf.modules.studio import compose
-
-        out["blocks"] = blocks.catalog(eff["blocks"], compose.facts(work, frame, eff))
     return out
 
 

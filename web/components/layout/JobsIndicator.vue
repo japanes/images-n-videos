@@ -16,9 +16,6 @@
       class="absolute bottom-full left-0 z-50 mb-2 w-80 rounded-card border border-slate-200 bg-white p-2 shadow-modal dark:border-slate-700 dark:bg-slate-800"
     >
       <p class="px-2 pb-1 text-xs font-semibold muted">{{ t('jobs.activeTitle') }}</p>
-      <p v-if="jobs.paused" class="mx-2 mb-2 rounded-button bg-amber-50 px-2 py-1.5 text-xs text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
-        {{ t('shell.jobsPaused') }}
-      </p>
       <p v-if="!jobs.count" class="px-2 py-3 text-sm muted">{{ t('jobs.none') }}</p>
       <ul v-else class="max-h-72 space-y-1 overflow-y-auto">
         <li v-for="job in jobs.active" :key="job.id" class="rounded-button px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-700/50">

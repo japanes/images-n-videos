@@ -51,18 +51,6 @@ def test_estimate_batch(client):
     assert body["usd"] == pytest.approx(sum(i["usd"] for i in body["items"]), abs=1e-4)
 
 
-def test_updater_hooks_need_token(client, cfg):
-    assert client.post("/api/internal/updates/prepare").status_code == 403
-    token_dir = cfg.data_dir / "update"
-    token_dir.mkdir(parents=True, exist_ok=True)
-    (token_dir / "token").write_text("secret-token")
-    res = client.post("/api/internal/updates/prepare", headers={"X-VF-Token": "secret-token"})
-    assert res.json() == {"ok": True, "busy": []}
-    assert client.get("/api/meta").json()["jobs_paused"] == "update"
-    assert client.post("/api/internal/updates/resume", headers={"X-VF-Token": "secret-token"}).json()["ok"]
-    assert client.get("/api/meta").json()["jobs_paused"] is None
-
-
 def test_unknown_api_is_json_404(client):
     res = client.get("/api/nothing-here")
     assert res.status_code == 404

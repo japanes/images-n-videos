@@ -114,17 +114,6 @@
             </button>
           </div>
           <button
-            v-if="mode === 'image' && !replyKind"
-            type="button"
-            class="btn-ghost btn-sm px-1.5"
-            :disabled="dicing || room.isPending('settings')"
-            :title="t('chat.composer.dice')"
-            :aria-label="t('chat.composer.dice')"
-            @click="dice"
-          >
-            <Spinner v-if="dicing" :size="14" /><AppIcon v-else name="dice" :size="16" />
-          </button>
-          <button
             v-if="mode === 'video' && !replyKind"
             type="button"
             class="btn-ghost btn-sm"
@@ -207,11 +196,10 @@
 
 <script setup>
 import { formatUsd } from '~/utils/format.js'
-import { studioStyleSetting } from '~/utils/studioView.js'
 import { videoAttachWarnings, videoModelById } from '~/utils/videoView.js'
 import {
   CHAT_LIMITS, CHAT_MODES, chatAddPictures, chatCanSend, chatComposerButtons, chatErrorText, chatFileThumb, chatItems,
-  chatNextRole, chatRandomPick, chatReasonText, chatSendBody, chatSummaryParts, chatWarningText, chatWarnings,
+  chatNextRole, chatReasonText, chatSendBody, chatSummaryParts, chatWarningText, chatWarnings,
 } from '~/utils/chatView.js'
 
 const props = defineProps({
@@ -234,7 +222,6 @@ const sourceOpen = ref(false)
 const picturesOpen = ref(false)
 const regionOpen = ref(false)
 const briefOpen = ref(false)
-const dicing = ref(false)
 
 const chat = computed(() => props.room.chat)
 const d = computed(() => props.room.draft)
@@ -456,25 +443,7 @@ const enhanceTitle = computed(() => (enhanceInfo.value.error
   ? chatReasonText(enhanceInfo.value.error, t, te)
   : t('chat.composer.enhanceHint')))
 
-// ── helpers: random style, «Write it for me», buttons of other modules ──
-
-async function dice() {
-  dicing.value = true
-  try {
-    const res = await api.get('/api/library/styles', { kind: 'style', tab: 'all', limit: 200 })
-    const style = chatRandomPick(res?.items || [])
-    if (!style) {
-      toast.info(t('chat.composer.diceEmpty'))
-      return
-    }
-    const view = await props.room.patchImage({ style: studioStyleSetting({ kind: 'library', id: style.id, title: style.title }) })
-    if (view) toast.success(t('chat.composer.diceDone', { name: style.title }))
-  } catch (err) {
-    toast.error(chatErrorText(err, t, te))
-  } finally {
-    dicing.value = false
-  }
-}
+// ── helpers: «Write it for me», buttons of other modules ──
 
 function useBrief(brief) {
   briefOpen.value = false

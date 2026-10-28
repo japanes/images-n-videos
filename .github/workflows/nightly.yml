@@ -2,7 +2,7 @@ name: Nightly
 
 # Every night: build the whole app from the source on amd64 and arm64
 # (arm64 = the same CPU family as Apple Silicon Macs), start it without
-# Google (stub mode) and run the smoke test; repeat the updater end-to-end test.
+# Google (stub mode) and run the smoke test.
 
 on:
   schedule:
@@ -22,7 +22,6 @@ jobs:
     timeout-minutes: 60
     env:
       VF_GOOGLE_MODE: stub
-      VF_UPDATER_DEV: "1"
       VF_PORT: "8787"
       COMPOSE_PROJECT_NAME: vf-nightly
     steps:
@@ -47,7 +46,7 @@ jobs:
           exit 1
       - name: Smoke test
         if: steps.up.outputs.skip != '1'
-        run: release/smoke.sh "$VF_PORT"
+        run: scripts/smoke.sh "$VF_PORT"
       - name: Logs
         if: failure() && steps.up.outputs.skip != '1'
         run: |
@@ -57,16 +56,3 @@ jobs:
         if: always() && steps.up.outputs.skip != '1'
         run: docker compose -f docker-compose.dev.yml down -v --remove-orphans
 
-  updater-e2e:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-24.04, ubuntu-24.04-arm]
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 40
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install and update with fake images
-        env:
-          E2E_WORK: ${{ runner.temp }}/updater-e2e
-        run: updater/tests/e2e.sh

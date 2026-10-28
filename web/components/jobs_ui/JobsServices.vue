@@ -47,7 +47,7 @@ const DOT = {
   problem: 'bg-amber-500',
   unreachable: 'bg-rose-500',
 }
-const KNOWN = ['render', 'stt', 'updater']
+const KNOWN = ['render', 'stt']
 
 const serviceName = (name) => (KNOWN.includes(name) ? t(`jobsPage.services.names.${name}`) : name)
 

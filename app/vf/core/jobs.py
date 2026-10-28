@@ -184,22 +184,6 @@ def retry(job_id: int) -> dict:
     return summary(get(job_id))
 
 
-def pause_new(reason: str = "update", *, ttl_seconds: float | None = None, target: str | None = None) -> None:
-    """Hold new jobs; running ones go on. With ``ttl_seconds`` the pause lifts itself
-    after that long, so an updater that died mid-update never leaves the app paused."""
-    runner.paused = reason
-    if ttl_seconds is not None:
-        runner.paused_until = time.monotonic() + max(0.0, float(ttl_seconds))
-    runner.paused_target = target
-    events.publish("jobs.paused", {"reason": reason})
-
-
-def resume_new() -> None:
-    runner.paused = None
-    events.publish("jobs.paused", {"reason": None})
-    runner.wake()
-
-
 def running_jobs() -> list[dict]:
     return [summary(r) for r in db.fetch_all("SELECT * FROM jobs WHERE status = 'running' ORDER BY id")]
 
@@ -229,33 +213,9 @@ class Runner:
     def __init__(self):
         self.tasks: dict[int, asyncio.Task] = {}
         self.contexts: dict[int, JobContext] = {}
-        self._paused: str | None = None
-        self.paused_until: float | None = None  # time.monotonic() deadline of the pause
-        self.paused_target: str | None = None  # version an update pause is for
         self._wake: asyncio.Event | None = None
         self._loop_task: asyncio.Task | None = None
         self._stopping = False
-
-    @property
-    def paused(self) -> str | None:
-        """Why new jobs wait (e.g. "update"), or None. A pause past its deadline reads as None."""
-        if self._paused and self.paused_until is not None and time.monotonic() >= self.paused_until:
-            return None
-        return self._paused
-
-    @paused.setter
-    def paused(self, value: str | None) -> None:
-        self._paused = value
-        self.paused_until = None
-        self.paused_target = None
-
-    def lift_expired_pause(self) -> bool:
-        """End a pause whose deadline passed (tells the browser too). True if it did."""
-        if not self._paused or self.paused is not None:
-            return False
-        log.warning("the %s pause was not lifted in time; new jobs run again", self._paused)
-        resume_new()
-        return True
 
     def alive(self) -> bool:
         """True while the dispatch loop runs in this process."""
@@ -329,9 +289,6 @@ class Runner:
                 log.exception("job dispatch failed")
 
     def dispatch(self) -> None:
-        self.lift_expired_pause()
-        if self.paused:
-            return
         running = db.fetch_all("SELECT id, group_name, serial_key FROM jobs WHERE status = 'running'")
         per_group: dict[str, int] = {}
         busy_keys = set()

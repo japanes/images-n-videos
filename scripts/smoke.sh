@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Smoke test of a running Vertex AI Factory: health, web page, models API.
-# Usage: release/smoke.sh [port]     (default: $VF_PORT or 8787)
-# Used by CI; it is not shipped in the release zip.
+# Usage: scripts/smoke.sh [port]     (default: $VF_PORT or 8787)
+# Used by the nightly CI run.
 set -euo pipefail
 
 PORT="${1:-${VF_PORT:-8787}}"

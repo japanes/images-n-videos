@@ -13,7 +13,7 @@ Two checks stop both, for every request before it reaches a route:
   app's own page: ``Sec-Fetch-Site`` is ``same-origin`` or ``none``, or, from a
   browser that does not send it, ``Origin`` names this computer.
 
-Requests without these headers (the updater, curl, health checks) pass.
+Requests without these headers (curl, health checks) pass.
 """
 
 from __future__ import annotations

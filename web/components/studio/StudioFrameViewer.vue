@@ -208,13 +208,6 @@
                 <option v-for="s in sizeChoices" :key="s" :value="s">{{ s }}</option>
               </select>
             </label>
-            <label class="space-y-1 text-xs">
-              <span class="muted">{{ t('studio.settings.textMode') }}</span>
-              <select class="input py-1.5 text-sm" :value="ov.text_mode || ''" :disabled="busy" @change="setOverride('text_mode', $event.target.value || undefined)">
-                <option value="">{{ t('studio.viewer.asWork') }}</option>
-                <option v-for="m in STUDIO_TEXT_MODES" :key="m" :value="m">{{ t(`studio.textModes.${m}.name`) }}</option>
-              </select>
-            </label>
           </div>
 
           <ToggleSwitch
@@ -259,16 +252,6 @@
           </div>
         </section>
 
-        <section class="space-y-2">
-          <h3 class="text-sm font-semibold">{{ t('studio.viewer.words') }}</h3>
-          <p class="muted text-xs">{{ t(`studio.textModes.${eff?.text_mode || 'none'}.hint`) }}</p>
-          <StudioTextBlocks
-            :model-value="frame.text_blocks"
-            :disabled="busy"
-            @save="studio.patchFrame(frame.id, { text_blocks: $event })"
-          />
-        </section>
-
         <details v-if="frame.prompt_text || frame.attachments?.length" class="space-y-2">
           <summary class="cursor-pointer text-sm font-semibold">{{ t('studio.viewer.sent') }}</summary>
           <div v-if="frame.attachments?.length" class="mt-2 flex flex-wrap gap-2">
@@ -296,7 +279,7 @@
 <script setup>
 import { formatDateTime, formatUsd } from '~/utils/format.js'
 import {
-  STUDIO_LIMITS, STUDIO_MAX_PICTURES, STUDIO_TEXT_MODES, studioAspectRatio, studioEstimateRequest,
+  STUDIO_LIMITS, STUDIO_MAX_PICTURES, studioAspectRatio, studioEstimateRequest,
   studioFrameBusy, studioFrameError, studioFrameState, studioModelChoices, studioOverridesWith, studioReasonText, studioSizesFor,
 } from '~/utils/studioView.js'
 

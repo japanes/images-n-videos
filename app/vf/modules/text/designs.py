@@ -19,7 +19,7 @@ from typing import Any
 
 from vf.core import db, files, settings
 from vf.core.errors import AppError, NotFound
-from vf.modules import brand, library, studio
+from vf.modules import brand, studio
 from vf.modules.studio import works as W
 from vf.modules.studio.common import MAX_TEXT_BLOCKS
 from vf.modules.text import common as C
@@ -246,18 +246,9 @@ def apply_layout(design_id: int, layout_id: Any) -> dict:
 
 # ── «Place the text» ────────────────────────────────────────────────────────
 
-def zones_for(frame: dict, work: dict) -> Any:
-    """The frame's own text map, else the one of the work's style preset (none for typed words)."""
-    if frame.get("text_zones_json"):
-        return frame["text_zones_json"]
-    style = W.settings_of(work).get("style")
-    if not style:
-        return None
-    try:
-        resolved = library.resolve_style_value(style)
-    except AppError:
-        return None
-    return (resolved or {}).get("text_zones")
+def zones_for(frame: dict) -> Any:
+    """The frame's own text map (where the text may go), if it has one."""
+    return frame.get("text_zones_json") or None
 
 
 def default_font(design: dict, snap: dict | None) -> dict | None:
@@ -303,7 +294,7 @@ async def place(design_id: int, body: Any) -> dict:
     snap = S.snapshot_for(design, work)
     texts = _texts_to_place(design)
     _, img = _background(design, PLACEMENT_SIDE)
-    zones = zones_for(frame, work)
+    zones = zones_for(frame)
     first = frame["position"] == 0
     font = default_font(design, snap)
     current = design.get("layers_json") or []

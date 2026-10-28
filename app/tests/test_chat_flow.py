@@ -33,7 +33,6 @@ async def runner(database):
     await jobs.runner.start()
     yield jobs.runner
     await jobs.runner.stop()
-    jobs.runner.paused = None
 
 
 class FakeRender:
@@ -238,7 +237,6 @@ async def test_reload_in_the_middle_shows_placeholders_then_results(database, fa
         await frames_idle(*(i["frame_id"] for i in items))
     finally:
         await jobs.runner.stop()
-        jobs.runner.paused = None
     done = messages.list_messages(c["id"])["items"][-1]          # another reload after it finished
     assert done["status"] == "done" and all(i["file"]["kind"] == "image" for i in done["data"]["items"])
     saved = db.get("chat_messages", res_id)                      # what the read found is saved

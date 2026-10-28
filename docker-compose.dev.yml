@@ -3,8 +3,7 @@
 #   docker compose -f docker-compose.dev.yml up --build
 #
 # Opens on http://127.0.0.1:8787. Google calls are faked (VF_GOOGLE_MODE=stub)
-# unless you start it with VF_GOOGLE_MODE=live. The updater runs in developer
-# mode: it shows versions but never installs or stops anything.
+# unless you start it with VF_GOOGLE_MODE=live.
 name: vertexai-factory-dev
 
 x-logging: &logging
@@ -30,7 +29,6 @@ services:
       VF_VERSION: 0.0.0-dev
       VF_RENDER_URL: http://render:3000
       VF_STT_URL: http://stt:8000
-      VF_UPDATER_URL: http://updater:8080
       VF_GOOGLE_MODE: ${VF_GOOGLE_MODE:-stub}
       VF_ALLOWED_HOSTS: ${VF_ALLOWED_HOSTS:-}
     volumes:
@@ -59,23 +57,6 @@ services:
       VF_VERSION: 0.0.0-dev
     volumes:
       - data:/data
-    logging: *logging
-
-  updater:
-    build:
-      context: updater
-    image: vf-dev/updater:dev
-    restart: unless-stopped
-    environment:
-      VF_DATA_DIR: /data
-      VF_VERSION: 0.0.0-dev
-      VF_UPDATER_DEV: "1"
-      VF_PROJECT: vertexai-factory-dev
-      VF_DATA_VOLUME: vertexai-factory-dev-data
-      VF_PORT: ${VF_PORT:-8787}
-    volumes:
-      - data:/data
-      - /var/run/docker.sock:/var/run/docker.sock:ro
     logging: *logging
 
 volumes:

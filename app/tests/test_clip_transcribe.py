@@ -59,7 +59,6 @@ async def runner(database):
     await jobs.runner.start()
     yield jobs.runner
     await jobs.runner.stop()
-    jobs.runner.paused = None
 
 
 @pytest.fixture

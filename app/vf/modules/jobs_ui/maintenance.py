@@ -12,8 +12,7 @@ Every minute:
 
 Once a day:
 - a copy of the database into ``backups/daily-<UTC stamp>.db``; only the newest
-  ``jobs.backup_keep`` of these are kept. The updater's own copies
-  (``app-<version>-<stamp>.db``) are never touched here.
+  ``jobs.backup_keep`` of these are kept. Other files in the folder are never touched.
 - finished jobs older than ``jobs.keep_days`` are deleted. Off by default (0 keeps
   them forever): other screens may still point at old jobs.
 

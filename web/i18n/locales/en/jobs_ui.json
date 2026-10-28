@@ -68,8 +68,7 @@
       },
       "names": {
         "render": "Video assembly",
-        "stt": "Speech to text",
-        "updater": "Updates"
+        "stt": "Speech to text"
       },
       "version": "version {v}",
       "ffmpeg": "ffmpeg {v}",

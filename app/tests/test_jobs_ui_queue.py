@@ -11,7 +11,6 @@ from vf.core import db, jobs, settings
 async def runner(database):
     yield jobs.runner
     await jobs.runner.stop()
-    jobs.runner.paused = None
 
 
 async def _wait_all(ids, statuses=jobs.FINISHED, timeout=10.0):

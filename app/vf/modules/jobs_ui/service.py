@@ -8,7 +8,7 @@ from typing import Any
 
 from vf.core import db, jobs, settings
 from vf.core.errors import AppError
-from vf.core.services import render, stt, updater
+from vf.core.services import render, stt
 from vf.modules.jobs_ui import maintenance
 
 # status filter of the page → statuses in the table
@@ -138,7 +138,6 @@ def overview() -> dict:
         "counts": counts(),
         "groups": groups(),
         "kinds": kinds(),
-        "paused": jobs.runner.paused,
         "runner_alive": jobs.runner.alive(),
         "settings": {k: settings.get(k) for k in (
             "jobs.stuck_minutes", "jobs.keep_days", "jobs.backup_daily", "jobs.backup_keep")},
@@ -149,10 +148,10 @@ def overview() -> dict:
 
 # ── sibling services ────────────────────────────────────────────────────────
 
-SERVICES = {"render": render, "stt": stt, "updater": updater}
+SERVICES = {"render": render, "stt": stt}
 
 # What each service may show on the page besides ok/version (nothing else leaks).
-DETAIL_KEYS = {"render": ("ffmpeg", "queue"), "stt": ("busy",), "updater": ("state",)}
+DETAIL_KEYS = {"render": ("ffmpeg", "queue"), "stt": ("busy",)}
 
 
 async def _one(name: str) -> dict:

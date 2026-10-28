@@ -16,7 +16,6 @@ IMAGE_MIMES = ("image/png", "image/jpeg", "image/webp")
 MAX_IMAGE_BYTES = 40 * 1024 * 1024
 
 ASPECTS = ("1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9", "21:9")
-TEXT_MODES = ("none", "overlay", "model")
 TEXT_ROLES = ("headline", "body", "accent")
 SOURCES = ("generated", "upload", "library", "avatar", "video_frame", "editor")
 FRAME_STATUSES = ("empty", "queued", "drawing", "done", "error")

@@ -19,7 +19,6 @@
         <span class="truncate text-sm font-semibold">Vertex AI Factory</span>
       </header>
       <ShellNotices />
-      <UpdateNotice />
       <main class="min-h-0 flex-1 overflow-y-auto">
         <slot />
       </main>

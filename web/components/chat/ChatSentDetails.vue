@@ -30,7 +30,6 @@
 
 <script setup>
 import { formatUsd } from '~/utils/format.js'
-import { studioStyleValue } from '~/utils/studioView.js'
 import { chatFileThumb, chatWarningText } from '~/utils/chatView.js'
 
 const props = defineProps({
@@ -48,12 +47,6 @@ const onOff = (v) => (v ? t('common.on') : t('common.off'))
 
 function roleText(role) {
   return te(`chat.roles.${role}`) ? t(`chat.roles.${role}`) : role
-}
-
-function styleText(style) {
-  const v = studioStyleValue(style)
-  if (!v) return ''
-  return v.kind === 'library' ? v.title || `#${v.id}` : v.text
 }
 
 function regionText(region) {
@@ -85,8 +78,6 @@ const rows = computed(() => {
     if (v.action === 'new_image') {
       add('count', v.count)
       if (img.series && v.count > 1) add('series', t('common.on'))
-      if (img.text_mode) add('textMode', te(`studio.textModes.${img.text_mode}.name`) ? t(`studio.textModes.${img.text_mode}.name`) : img.text_mode)
-      add('style', styleText(img.style))
       if (img.photo_style) add('photoStyle', `#${img.photo_style}`)
       if (img.subjects?.length) add('subjects', img.subjects.map((id) => `#${id}`).join(', '))
       if (v.kit_id) add('kitReferences', onOff(img.kit_references !== false))

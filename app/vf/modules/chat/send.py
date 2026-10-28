@@ -152,7 +152,7 @@ def synthetic(image: dict, kit_id: int | None, *, text: str = "", mentions: list
               attachments: list[dict] | tuple = ()) -> tuple[dict, dict]:
     """A studio work and frame that are not saved: what a new picture request would be drawn with.
 
-    Gives the price and the prompt blocks of the settings panel before anything exists."""
+    Gives the price of the settings panel before anything exists."""
     kit = brand.snapshot_kit(kit_id) if kit_id else None
     work = {"id": 0, "title": "", "settings_json": W.clean_settings(_studio_part(image, text, mentions, attachments),
                                                                    copy.deepcopy(W.DEFAULT_SETTINGS)),
@@ -209,8 +209,7 @@ def _prepare_edit_base(p: Prepared) -> None:
     size = W.pick_size(model, s.get("image_size") or "1K")
     aspect = _nearest_aspect(base, s.get("aspect") or "1:1")
     work = {"id": 0, "title": "", "brand_json": None, "kit_id": None, "model_id": model["id"], "image_size": size,
-            "aspect": aspect, "settings_json": W.clean_settings({"text_mode": s.get("text_mode") or "none"},
-                                                                copy.deepcopy(W.DEFAULT_SETTINGS))}
+            "aspect": aspect, "settings_json": copy.deepcopy(W.DEFAULT_SETTINGS)}
     frame = {"id": 0, "work_id": 0, "position": 0, "brief": "", "overrides_json": {}, "text_blocks_json": [],
              "versions_json": [], "file_id": base, "status": "done", "source": "library"}
     compose.plan_edit(work, frame, p.text, None)
@@ -466,9 +465,8 @@ def _start_edit(p: Prepared, text: str) -> dict:
 
 
 def _start_edit_base(p: Prepared, text: str) -> dict:
-    s = p.image
     data = {"title": store.auto_title(text), "aspect": p.extra["aspect"], "image_size": p.extra["image_size"],
-            "frame_count": 1, "settings": {"text_mode": s.get("text_mode") or "none"}, "model_id": p.model_id}
+            "frame_count": 1, "model_id": p.model_id}
     work = studio.create_work(data)
     work_id = work["id"]
     frame_id = W.frames_of(work_id)[0]["id"]

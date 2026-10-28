@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import {
-  STUDIO_BLOCK_REASONS, STUDIO_BLOCKS, STUDIO_ERROR_CODES, STUDIO_SKIP_REASONS, STUDIO_SOURCES, STUDIO_STATUSES,
-  STUDIO_TEXT_MODES, STUDIO_TEXT_ROLES, studioAspectRatio, studioBlocksMap, studioBoxFromPoints, studioBoxStyle,
-  studioErrorText, studioEstimateRequest, studioEventMatches, studioFileThumb, studioFileUrl, studioFrameBusy,
-  studioFrameError, studioFrameState, studioModelChoices, studioMoveIds, studioOverridesWith, studioReasonText,
-  studioSizesFor, studioStyleSetting, studioStyleValue, studioTogglePicked, studioWorkProgress, studioWorkRevision,
+  STUDIO_ERROR_CODES, STUDIO_SKIP_REASONS, STUDIO_SOURCES, STUDIO_STATUSES, studioAspectRatio, studioBoxFromPoints,
+  studioBoxStyle, studioCategoryTitle, studioErrorText, studioEstimateRequest, studioEventMatches, studioFileThumb,
+  studioFileUrl, studioFrameBusy, studioFrameError, studioFrameState, studioModelChoices, studioMoveIds,
+  studioOverridesWith, studioPhotoStyleGroups, studioReasonText, studioSizesFor, studioTogglePicked,
+  studioWorkProgress, studioWorkRevision,
 } from '../utils/studioView.js'
 import en from '../i18n/locales/en/studio.json'
 import ru from '../i18n/locales/ru/studio.json'
@@ -101,13 +101,26 @@ describe('lists and boxes', () => {
 })
 
 describe('settings helpers', () => {
-  it('reads and writes the style setting', () => {
-    expect(studioStyleValue({ preset: 5, title: 'Film' })).toEqual({ kind: 'library', id: 5, title: 'Film' })
-    expect(studioStyleValue('soft pastel')).toEqual({ kind: 'words', text: 'soft pastel' })
-    expect(studioStyleValue('')).toBeNull()
-    expect(studioStyleSetting({ kind: 'library', id: 5, title: 'Film' })).toEqual({ preset: 5, title: 'Film' })
-    expect(studioStyleSetting({ kind: 'words', text: '  ' })).toBeNull()
-    expect(studioStyleSetting(null)).toBeNull()
+  it('groups photo styles by category and filters them', () => {
+    const cat = (slug, title, extra = {}) => ({ category: slug, category_path: [{ slug: 'root', title: 'Root' }, { slug, title, ...extra }] })
+    const items = [
+      { id: 1, title: 'Film grain', description: 'Kodak look', ...cat('a', 'Фотография', { title_en: 'Photography' }) },
+      { id: 2, title: 'Neon', description: '', ...cat('b', 'Креатив') },
+      { id: 3, title: 'Soft studio', description: 'film-like light', ...cat('a', 'Фотография', { title_en: 'Photography' }) },
+      { id: 4, title: 'Loose', description: '' },
+    ]
+    const all = studioPhotoStyleGroups(items, {}, 'en')
+    expect(all.categories).toEqual([{ key: 'a', title: 'Photography' }, { key: 'b', title: 'Креатив' }, { key: '', title: '' }])
+    expect(all.groups.map((g) => g.items.map((st) => st.id))).toEqual([[1, 3], [2], [4]])
+    expect(studioPhotoStyleGroups(items, {}, 'uk').categories[0].title).toBe('Фотография')
+    const film = studioPhotoStyleGroups(items, { q: ' FILM ' }, 'en')
+    expect(film.groups.map((g) => g.items.map((st) => st.id))).toEqual([[1, 3]])
+    expect(film.categories).toHaveLength(3)
+    expect(studioPhotoStyleGroups(items, { q: 'photography soft' }, 'en').groups[0].items.map((st) => st.id)).toEqual([3])
+    expect(studioPhotoStyleGroups(items, { category: 'b' }, 'en').groups.map((g) => g.key)).toEqual(['b'])
+    expect(studioPhotoStyleGroups(items, { q: 'nothing' }, 'en').groups).toEqual([])
+    expect(studioPhotoStyleGroups(null).groups).toEqual([])
+    expect(studioCategoryTitle({}, 'en')).toBe('')
   })
 
   it('sets and drops frame overrides', () => {
@@ -115,10 +128,6 @@ describe('settings helpers', () => {
     expect(studioOverridesWith(base, 'image_size', undefined)).toEqual({ model_id: 'm' })
     expect(studioOverridesWith(base, 'feedback', 'x')).toEqual({ ...base, feedback: 'x' })
     expect(base).toEqual({ model_id: 'm', image_size: '2K' })
-  })
-
-  it('sends the full blocks map', () => {
-    expect(studioBlocksMap([{ code: 'logo', on: false }, { code: 'quality', on: 1 }])).toEqual({ logo: false, quality: true })
   })
 
   it('puts revisions into price requests', () => {
@@ -178,16 +187,13 @@ describe('studio locales', () => {
   it('names every code the API can send', () => {
     const needed = [
       ...STUDIO_ERROR_CODES.map((c) => `studio.errors.${c}`),
-      ...STUDIO_BLOCK_REASONS.map((r) => `studio.reasons.${r}`),
       ...STUDIO_SKIP_REASONS.map((r) => `studio.skip.${r}`),
-      ...STUDIO_BLOCKS.flatMap((b) => [`studio.blocks.${b}.name`, `studio.blocks.${b}.hint`]),
       ...STUDIO_STATUSES.map((s) => `studio.statuses.${s}`),
-      ...STUDIO_TEXT_MODES.flatMap((m) => [`studio.textModes.${m}.name`, `studio.textModes.${m}.hint`]),
-      ...STUDIO_TEXT_ROLES.map((r) => `studio.textRoles.${r}`),
       ...STUDIO_SOURCES.map((s) => `studio.sources.${s}`),
       ...['full', 'edit', 'source'].map((m) => `studio.versionModes.${m}`),
       ...['subject', 'logo', 'element', 'anchor', 'reference', 'style_sample', 'attachment', 'edit_base', 'edit_marker']
         .map((r) => `studio.roles.${r}`),
+      ...['title', 'hint', 'search', 'all', 'other', 'noneHint', 'empty', 'more', 'noPreview'].map((k) => `studio.photoStyle.${k}`),
       'studio.jobs.frame',
     ]
     for (const lang of Object.keys(all)) {

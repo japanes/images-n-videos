@@ -61,16 +61,14 @@ def test_new_chat_takes_general_settings(api):
     c = new_chat(api)
     assert c["title"] == "" and c["title_auto"] is True and c["kind"] == "normal" and c["mode"] == "image"
     img, vid = c["image_settings"], c["video_settings"]
-    assert img["count"] == 2 and img["model_id"] and img["aspect"] == "1:1" and img["text_mode"] == "none"
-    assert img["blocks"] == {"slide_position": False} and img["series"] is False
+    assert img["count"] == 2 and img["model_id"] and img["aspect"] == "1:1" and img["series"] is False
+    assert "text_mode" not in img and "blocks" not in img and "style" not in img
     assert vid["model_id"] and vid["duration"] and vid["sound"] is True
     assert c["draft"]["text"] == "" and c["draft"]["enhance"] is False and c["draft"]["reply"] is None
     assert c["enhance"]["model_id"] and c["enhance"]["usd"] > 0 and c["enhance"]["error"] is None
     assert c["limits"]["max_attachments"] == 10 and c["limits"]["image_roles"] == ["reference", "subject", "base"]
     assert c["limits"]["video_roles"] == ["first", "last", "reference"]
-    assert c["image_blocks"]["error"] is None
-    slide = next(b for b in c["image_blocks"]["items"] if b["code"] == "slide_position")
-    assert slide["on"] is False and slide["default"] is True
+    assert "image_blocks" not in c
 
 
 def test_list_recent_first_search_rename_archive(api):
@@ -115,19 +113,14 @@ def test_settings_and_draft_are_kept_per_chat(api):
     c = new_chat(api)
     pic = stored_png()
     r = api.patch(f"/api/chat/chats/{c['id']}", json={
-        "mode": "video", "image_settings": {"count": 4, "aspect": "9:16", "blocks": {"slide_position": True}},
+        "mode": "video", "image_settings": {"count": 4, "aspect": "9:16", "style": "watercolour"},
         "video_settings": {"sound": False, "camera_move": ""},
         "draft": {"text": "A dog on the beach", "attachments": [{"file_id": pic["id"], "role": "first"}],
                   "enhance": True}})
     assert r.status_code == 200, r.text
     out = r.json()
     assert out["mode"] == "video" and out["image_settings"]["count"] == 4 and out["image_settings"]["aspect"] == "9:16"
-    assert out["image_settings"]["blocks"] == {} and out["video_settings"]["sound"] is False   # defaults only
-    slide = next(b for b in out["image_blocks"]["items"] if b["code"] == "slide_position")
-    assert slide["on"] is True
-    r = api.patch(f"/api/chat/chats/{c['id']}", json={"image_settings": {"blocks": {"slide_position": False}}})
-    r = api.patch(f"/api/chat/chats/{c['id']}", json={"image_settings": {"blocks": {"language": True}}})
-    assert r.json()["image_settings"]["blocks"] == {"slide_position": False, "language": True}   # one at a time
+    assert "style" not in out["image_settings"] and out["video_settings"]["sound"] is False   # unknown keys dropped
     assert out["draft"]["text"] == "A dog on the beach" and out["draft"]["enhance"] is True
     assert out["draft"]["attachments"][0]["file"]["id"] == pic["id"]
     other = new_chat(api)

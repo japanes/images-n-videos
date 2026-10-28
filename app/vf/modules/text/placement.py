@@ -5,8 +5,8 @@ box, in this order (strongest evidence first):
 
 1. ``layer``    — a text layer of the editor already shows this block: it stays as it is
    (unless «Place again» is on, then such layers are dropped and placed anew);
-2. ``zone``     — the picture came from a style with a text map (``text_zones``) or the
-   frame has its own map: the words go into the holes the design left for them,
+2. ``zone``     — the frame has its own text map (``text_zones``): the words go into
+   the holes the design left for them,
    with a readable colour checked against the picture under the zone — no paid call;
 3. ``vision``   — only when the person switched it on: one paid Gemini call (role
    ``text_placement``) with the picture shrunk to 512 px, for the blocks still without a place;

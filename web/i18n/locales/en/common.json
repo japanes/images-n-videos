@@ -33,21 +33,18 @@
   },
   "nav": {
     "media": "Media library",
-    "library": "Style library",
     "brand": "Brand kits and subjects",
     "spend": "Spending",
     "jobs": "Jobs",
     "connection": "Google connection",
     "models": "Models",
-    "settings": "Settings",
-    "updates": "Updates"
+    "settings": "Settings"
   },
   "shell": {
     "offline": "Can't reach the app. Check that Docker is running; this page will reconnect by itself.",
     "stubMode": "Running without Google: pictures and videos are placeholders, nothing is charged.",
     "noKey": "Google is not connected — nothing can be generated without a key.",
-    "connect": "Connect",
-    "jobsPaused": "The app is updating: new jobs will wait until it finishes."
+    "connect": "Connect"
   },
   "jobs": {
     "indicator": "No jobs running | {n} job running | {n} jobs running",
@@ -85,7 +82,6 @@
     "cancelled": "Stopped.",
     "model_disabled": "This model is turned off in settings.",
     "no_model": "No enabled model for this action.",
-    "updater_unavailable": "The update service is not responding.",
     "file_in_use": "The file is in use and cannot be deleted.",
     "invalid_setting": "This value does not fit. Check the allowed range.",
     "unknown_setting": "There is no such setting. Reload the page.",

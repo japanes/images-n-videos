@@ -27,7 +27,7 @@ from vf.modules.ideas import sets as S
 log = logging.getLogger("vf.ideas")
 
 # The studio settings of the chat a drawn card takes (the series switch is the press itself).
-STUDIO_KEYS = ("subjects", "photo_style", "style", "style_sample", "kit_references", "text_mode", "blocks")
+STUDIO_KEYS = ("subjects", "photo_style", "kit_references")
 
 
 def _chat(chat_id: int) -> tuple[dict, dict]:

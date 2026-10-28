@@ -1,5 +1,4 @@
-"""HTTP routes of the core: health, events, settings, jobs, models, estimates,
-files, and the internal hooks the updater calls."""
+"""HTTP routes of the core: health, events, settings, jobs, models, estimates, files."""
 
 from __future__ import annotations
 
@@ -8,7 +7,7 @@ import mimetypes
 from pathlib import Path
 from typing import Any
 
-from fastapi import APIRouter, Body, Header, Query, Request
+from fastapi import APIRouter, Query, Request
 from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 
@@ -16,7 +15,6 @@ from vf.core import events, files, jobs, models_registry, pricing, settings
 from vf.core.config import get_config
 from vf.core.errors import AppError, NotFound
 from vf.core.google import credentials
-from vf.core.services import updater
 
 router = APIRouter()
 
@@ -40,8 +38,6 @@ async def meta() -> dict:
         "google_mode": cfg.google_mode,
         "stub": cfg.stub,
         "has_key": credentials.has_key(),
-        "jobs_paused": jobs.runner.paused,
-        "repo": cfg.repo,
     }
 
 
@@ -79,8 +75,7 @@ async def put_settings(body: dict[str, Any]) -> dict:
 @router.get("/api/jobs")
 async def list_jobs(active: bool = False, ref_type: str | None = None, ref_id: int | None = None,
                     limit: int = Query(100, ge=1, le=500)) -> dict:
-    return {"items": jobs.list_jobs(active_only=active, ref_type=ref_type, ref_id=ref_id, limit=limit),
-            "paused": jobs.runner.paused}
+    return {"items": jobs.list_jobs(active_only=active, ref_type=ref_type, ref_id=ref_id, limit=limit)}
 
 
 @router.get("/api/jobs/{job_id}")
@@ -262,40 +257,6 @@ async def serve_preview(file_id: int):
 @router.get("/api/files/{file_id}")
 async def file_info(file_id: int) -> dict:
     return files.public(files.get(file_id))
-
-
-# ── internal: the updater asks the app to get ready ─────────────────────────
-
-
-PAUSE_TTL_DEFAULT = 1800.0  # what the updater sends; it repeats prepare while it waits
-PAUSE_TTL_RANGE = (30.0, 6 * 3600.0)
-
-
-def _pause_ttl(value: Any) -> float:
-    if isinstance(value, bool) or not isinstance(value, int | float) or not value > 0:  # also NaN
-        return PAUSE_TTL_DEFAULT
-    return min(max(float(value), PAUSE_TTL_RANGE[0]), PAUSE_TTL_RANGE[1])
-
-
-@router.post("/api/internal/updates/prepare")
-async def updates_prepare(body: dict[str, Any] | None = Body(None),
-                          x_vf_token: str | None = Header(None)) -> dict:
-    """Body ``{"target_version", "ttl_seconds"}`` (both optional). The pause lifts itself
-    ``ttl_seconds`` after the last prepare, in case the updater never calls resume."""
-    updater.check_token(x_vf_token)
-    body = body or {}
-    target = body.get("target_version")
-    jobs.pause_new("update", ttl_seconds=_pause_ttl(body.get("ttl_seconds")),
-                   target=target[:64] if isinstance(target, str) else None)
-    busy = [{"kind": j["kind"], "title": j.get("title") or j["kind"]} for j in jobs.running_jobs()]
-    return {"ok": not busy, "busy": busy}
-
-
-@router.post("/api/internal/updates/resume")
-async def updates_resume(x_vf_token: str | None = Header(None)) -> dict:
-    updater.check_token(x_vf_token)
-    jobs.resume_new()
-    return {"ok": True}
 
 
 def spa_fallback(request: Request) -> Path | None:

@@ -28,14 +28,9 @@ MAX_DRAFT_ATTACHMENTS = 14
 VIDEO_SECONDS = 8   # asked of the default video model for a new chat; snapped to what it allows
 
 # The keys of image settings handled by the studio's own checks.
-STUDIO_KEYS = ("subjects", "photo_style", "style", "style_sample", "kit_references", "text_mode", "blocks",
-               "series")
+STUDIO_KEYS = ("subjects", "photo_style", "kit_references", "series")
 IMAGE_KEYS = ("model_id", "aspect", "image_size", "count", *STUDIO_KEYS)
 VIDEO_KEYS = ("model_id", "duration", "resolution", "aspect", "camera_move", "sound")
-
-# Variants of one request are frames of one work. "Slide i of n" is a carousel rule,
-# not a rule for variants: a new chat starts with that block off (a visible tumbler).
-CHAT_BLOCKS = {"slide_position": False}
 
 
 def publish(chat_id: int, **data: Any) -> None:
@@ -54,9 +49,8 @@ def _default_image_model() -> str | None:
 def default_image_settings() -> dict:
     return {
         "model_id": _default_image_model(), "aspect": "1:1", "image_size": "1K",
-        "count": int(settings.get("general.variants", 3) or 3), "subjects": [], "style": None,
-        "photo_style": None, "style_sample": False, "kit_references": True, "text_mode": "none",
-        "blocks": dict(CHAT_BLOCKS), "series": False,
+        "count": int(settings.get("general.variants", 3) or 3), "subjects": [],
+        "photo_style": None, "kit_references": True, "series": False,
     }
 
 
@@ -111,10 +105,6 @@ def clean_image_settings(patch: Any, current: dict) -> dict:
     studio_part = {k: patch[k] for k in STUDIO_KEYS if k in patch}
     if studio_part:
         current_studio = {k: out.get(k) for k in STUDIO_KEYS}
-        current_studio["blocks"] = dict(out.get("blocks") or {})
-        if isinstance(studio_part.get("blocks"), dict):
-            # the panel sends one switch at a time; the studio replaces the whole map
-            studio_part["blocks"] = {**current_studio["blocks"], **studio_part["blocks"]}
         cleaned = studio_works.clean_settings(studio_part, current_studio)
         out.update({k: cleaned[k] for k in STUDIO_KEYS if k in cleaned})
     return {k: out.get(k) for k in IMAGE_KEYS}
@@ -222,8 +212,9 @@ def chat_row(chat_id: int) -> dict:
 
 
 def image_settings(chat: dict) -> dict:
+    """Saved settings over the defaults; keys no longer in use (an older version) are left out."""
     out = default_image_settings()
-    out.update(chat.get("image_settings_json") or {})
+    out.update({k: v for k, v in (chat.get("image_settings_json") or {}).items() if k in IMAGE_KEYS})
     return out
 
 

@@ -14,7 +14,7 @@ from vf.core.google import gateway  # noqa: E402
 @pytest.fixture
 def cfg(tmp_path):
     config = Config(data_dir=tmp_path / "data", version="1.2.3", google_mode="stub",
-                    render_url="http://render.test", stt_url="http://stt.test", updater_url="http://updater.test",
+                    render_url="http://render.test", stt_url="http://stt.test",
                     allowed_hosts=DEFAULT_HOSTS + ("testserver", "test"))
     config.data_dir.mkdir(parents=True)
     set_config(config)

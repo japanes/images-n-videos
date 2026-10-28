@@ -274,11 +274,6 @@ export function chatTime(ts, locale = 'en', now = new Date()) {
   return d.toLocaleString(locale, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
 }
 
-export function chatRandomPick(list, rand = Math.random) {
-  if (!list?.length) return null
-  return list[Math.min(list.length - 1, Math.floor(rand() * list.length))]
-}
-
 /** Where a picture lives in the media library. */
 export function chatMediaLink(fileId) {
   return fileId ? `/media?file=${fileId}` : ''

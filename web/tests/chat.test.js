@@ -4,7 +4,7 @@ import {
   chatAspectRatio, chatAttachmentsBody, chatCanSend, chatComposerButtons, chatDefaultRole, chatErrorText,
   chatEventTouches, chatFileThumb, chatFindQuery, chatImageActions, chatItemError, chatItemRatio, chatItemReady,
   chatKindComponent, chatKindFileName, chatMediaLink, chatMergeMessages, chatMessageBusy, chatNextRole, chatProgress,
-  chatQueryId, chatRandomPick, chatReasonText, chatRegisterComposerButton, chatRegisterImageAction, chatRegisterKind,
+  chatQueryId, chatReasonText, chatRegisterComposerButton, chatRegisterImageAction, chatRegisterKind,
   chatResetRegistries, chatRolesFor, chatRolesForMode, chatSendBody, chatSummaryParts, chatTime, chatWaitingCount,
   chatWarnings, chatWarningText,
 } from '../utils/chatView.js'
@@ -227,12 +227,6 @@ describe('small helpers', () => {
     expect(chatFileThumb(null)).toBe('')
     expect(chatMediaLink(4)).toBe('/media?file=4')
     expect(chatMediaLink(null)).toBe('')
-  })
-
-  it('picks at random from a list', () => {
-    expect(chatRandomPick([], () => 0)).toBeNull()
-    expect(chatRandomPick(['a', 'b'], () => 0.99)).toBe('b')
-    expect(chatRandomPick(['a', 'b'], () => 1)).toBe('b')
   })
 
   it('shows only the time for today', () => {

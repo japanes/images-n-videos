@@ -101,7 +101,6 @@ def test_health_reports_each_service(client, monkeypatch):
         "render.test": (200, {"ok": True, "version": "0.4.0", "ffmpeg": "5.1", "queue": {"running": 1, "queued": 3},
                               "secret": "x"}),
         "stt.test": httpx.ConnectError("refused"),
-        "updater.test": (200, {"ok": True, "version": "1.0.0", "state": "idle"}),
     })
     res = client.get("/api/jobs_ui/health")
     assert res.status_code == 200
@@ -109,21 +108,17 @@ def test_health_reports_each_service(client, monkeypatch):
     assert by_name["render"]["state"] == "ok"
     assert by_name["render"]["details"] == {"ffmpeg": "5.1", "queue": {"running": 1, "queued": 3}}
     assert by_name["stt"]["state"] == "unreachable" and by_name["stt"]["error_code"] == "stt_unavailable"
-    assert by_name["updater"] == {"name": "updater", "state": "ok", "version": "1.0.0",
-                                  "details": {"state": "idle"}, "error_code": None, "message": None}
 
 
 def test_health_shows_render_problem_text(client, monkeypatch):
     _mock_services(monkeypatch, {
         "render.test": (503, {"ok": False, "version": "0.4.0", "error": "ffmpeg is not available: ENOENT"}),
         "stt.test": (200, {"ok": True, "version": "0.1.0", "busy": True}),
-        "updater.test": httpx.ReadTimeout("slow"),
     })
     by_name = {s["name"]: s for s in client.get("/api/jobs_ui/health").json()["services"]}
     assert by_name["render"]["state"] == "problem"
     assert by_name["render"]["message"] == "ffmpeg is not available: ENOENT"
     assert by_name["stt"]["details"] == {"busy": True}
-    assert by_name["updater"]["state"] == "unreachable"
 
 
 def test_routes_list_and_overview(client):

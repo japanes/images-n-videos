@@ -10,7 +10,6 @@ async def runner(database):
     await jobs.runner.start()
     yield jobs.runner
     await jobs.runner.stop()
-    jobs.runner.paused = None
 
 
 async def _wait(job_id, statuses=jobs.FINISHED, timeout=5.0):
@@ -68,15 +67,6 @@ async def test_serial_key_runs_one_at_a_time(runner):
     assert jobs.get(second)["status"] == "queued"
     jobs.cancel(first)
     jobs.cancel(second)
-
-
-async def test_pause_holds_new_jobs(runner):
-    jobs.pause_new("update")
-    job_id = jobs.enqueue("test.echo", {"value": 1})
-    await asyncio.sleep(0.2)
-    assert jobs.get(job_id)["status"] == "queued"
-    jobs.resume_new()
-    assert (await _wait(job_id))["status"] == "done"
 
 
 async def test_running_rows_are_interrupted_after_restart(database):

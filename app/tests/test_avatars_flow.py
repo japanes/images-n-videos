@@ -53,7 +53,6 @@ async def runner(database):
     await jobs.runner.start()
     yield jobs.runner
     await jobs.runner.stop()
-    jobs.runner.paused = None
 
 
 @pytest.fixture
@@ -266,10 +265,10 @@ async def test_an_interrupted_pack_is_finished_without_paying_twice(runner, monk
     assert e.value.code == "avatar_nothing_to_draw"
 
 
-async def test_a_slot_that_got_a_picture_in_the_queue_is_not_paid_for(runner):
+async def test_a_slot_that_got_a_picture_in_the_queue_is_not_paid_for(runner, monkeypatch):
     a = await with_face()
     avatar_id = a["id"]
-    jobs.runner.paused = "update"
+    monkeypatch.setattr(jobs.runner, "dispatch", lambda: None)   # hold the queue
     started = draw.finish(avatar_id)
     assert len(started["queued"]) == 35
     target = a["slots"][5]
@@ -279,7 +278,7 @@ async def test_a_slot_that_got_a_picture_in_the_queue_is_not_paid_for(runner):
     # it gets a picture another way while waiting (as after a restore of the database)
     own = files.save_bytes(png((1, 2, 3)), mime="image/png", name="own.png", origin="upload")
     db.update("avatar_photos", target["id"], {"file_id": own["id"]})
-    jobs.runner.paused = None
+    monkeypatch.undo()
     jobs.runner.wake()
     await until(idle, timeout=90)
     assert len(calls("avatar_shot", "success")) == 34

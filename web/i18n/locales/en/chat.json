@@ -53,9 +53,6 @@
       "lengthAfter": "{n} s in total",
       "enhance": "Improve the prompt",
       "enhanceHint": "Before sending, a text model rewrites your words in more detail. It costs a little; you will see both texts.",
-      "dice": "Random style",
-      "diceDone": "Style: {name}",
-      "diceEmpty": "There are no styles in the library yet",
       "brief": "Write it for me",
       "briefHint": "A text model writes a detailed description of the video from your words and pictures",
       "tooMany": "At most {max} pictures"
@@ -67,7 +64,6 @@
       "seriesHint": "The first picture is made first; after you accept it, the others follow its look.",
       "people": "People and objects",
       "mentionsHint": "You can also write {'@'}name in the text: the person or object with that name is added to the request.",
-      "blocksHint": "The parts of the request to the model. Grey ones do not apply right now.",
       "videoHint": "These settings apply to the next videos of this chat."
     },
     "room": {
@@ -135,8 +131,6 @@
       "size": "Size",
       "count": "How many",
       "series": "Series",
-      "textMode": "Text on the picture",
-      "style": "Style",
       "photoStyle": "Photo style",
       "subjects": "People and objects",
       "kitReferences": "Brand kit pictures",

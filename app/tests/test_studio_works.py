@@ -53,8 +53,14 @@ def new_work(api, **body) -> dict:
     return r.json()
 
 
-def block_of(frame: dict, code: str) -> dict:
-    return next(b for b in frame["blocks"] if b["code"] == code)
+def sent_blocks(frame: dict) -> list[str]:
+    """The blocks this frame would send to the model now."""
+    from vf.modules.studio import compose
+    from vf.modules.studio import works as W
+
+    row = W.frame_row(frame["id"])
+    work = W.work_row(row["work_id"])
+    return blocks.active(compose.facts(work, row, W.effective(work, row)))
 
 
 # ── works ───────────────────────────────────────────────────────────────────
@@ -64,7 +70,8 @@ def test_create_work_with_defaults(api):
     work = new_work(api, frame_count=3)
     assert work["status"] == "draft" and work["aspect"] == "4:5" and work["image_size"] == "1K"
     assert [f["position"] for f in work["frames"]] == [0, 1, 2]
-    assert work["settings"]["text_mode"] == "none" and work["settings"]["series"] is False
+    assert work["settings"]["series"] is False
+    assert not {"text_mode", "style", "blocks"} & set(work["settings"])
     assert work["pilot"] == {"frame_id": None, "accepted": False, "ready": False}
     assert work["cost_usd"] == 0
 
@@ -73,10 +80,8 @@ def test_create_work_with_defaults(api):
     default = models_registry.default_for("image")
     assert frame["effective"]["model_id"] == default["id"]
     assert frame["effective"]["model_title"] == default["title"]
-    assert [b["code"] for b in frame["blocks"]] == list(blocks.CODES)
-    assert block_of(frame, "output_size")["applies"] is True          # 4:5 has a configured size
-    assert block_of(frame, "brand_colors")["reason"] == "no_brand"
-    assert block_of(frame, "slide_position")["applies"] is True        # 3 frames, words not drawn
+    assert "blocks" not in frame
+    assert sent_blocks(frame) == ["output_size"]                       # 4:5 has a configured size, nothing else
 
 
 @pytest.mark.parametrize(("body", "status", "code"), [
@@ -85,7 +90,6 @@ def test_create_work_with_defaults(api):
     ({"frame_count": 0}, 400, "too_many_frames"),
     ({"frame_count": 11}, 400, "too_many_frames"),
     ({"frame_count": "many"}, 400, "too_many_frames"),
-    ({"settings": {"text_mode": "loud"}}, 400, "bad_text_mode"),
     ({"settings": {"references": [999999]}}, 400, "bad_file"),
     ({"settings": {"photo_style": 999999}}, 400, "bad_style"),
     ({"model_id": "no-such-model"}, 404, "model_unknown"),
@@ -108,16 +112,14 @@ def test_update_work_settings(api):
     work = new_work(api)
     r = api.patch(f"/api/studio/works/{work['id']}", json={
         "title": "  Spring   sale ",
-        "settings": {"blocks": {"quality": False, "language": False, "bogus": True},
+        "settings": {"blocks": {"quality": False}, "style": "Watercolour", "text_mode": "model",
                      "ideas_brief": "Fresh bread on a table", "pilot_accepted": True, "whatever": 1},
     })
     assert r.status_code == 200, r.text
     work = r.json()
     assert work["title"] == "Spring sale"
-    assert work["settings"]["blocks"] == {"quality": False}          # only changes from the defaults
     assert work["settings"]["pilot_accepted"] is False                # not set from outside
-    assert "whatever" not in work["settings"]
-    assert block_of(work["frames"][0], "quality")["on"] is False
+    assert not {"whatever", "blocks", "style", "text_mode"} & set(work["settings"])
 
     # Series on, then off: the pilot is forgotten.
     work = api.patch(f"/api/studio/works/{work['id']}", json={"settings": {"series": True}}).json()
@@ -227,14 +229,14 @@ def test_update_frame(api):
     assert [b["role"] for b in frame["text_blocks"]] == ["headline", "body", "body"]
     eff = frame["effective"]
     assert eff["model_id"] == big["id"] and eff["image_size"] == "2K" and eff["references"] == [ref]
-    assert block_of(frame, "output_size")["reason"] == "large_size"    # 2K keeps the model's own size
-    assert block_of(frame, "project_references")["applies"] is True
+    assert "output_size" not in sent_blocks(frame)                     # 2K keeps the model's own size
+    assert "project_references" in sent_blocks(frame)
 
     # References [] means "none" for this frame, even when the work has some.
     api.patch(f"/api/studio/works/{work['id']}", json={"settings": {"references": [ref]}})
     frame = api.patch(f"/api/studio/frames/{fid}", json={"overrides": {"references": []}}).json()
     assert frame["effective"]["references"] == []
-    assert block_of(frame, "project_references")["reason"] == "no_references"
+    assert "project_references" not in sent_blocks(frame)
 
     r = api.patch(f"/api/studio/frames/{fid}", json={"text_blocks": [{"text": f"w{i}"} for i in range(7)]})
     assert r.status_code == 400 and err(r) == "too_many_text_blocks"
@@ -252,15 +254,13 @@ def test_size_is_what_the_model_makes(api):
     assert eff["image_size"] == "1K" and eff["size_wanted"] == "4K"
 
 
-def test_photo_and_image_style(api):
+def test_photo_style(api):
     photo = library.create_style({"title": "Film", "prompt": "Shot on 35mm film", "kind": "photo_style"})
     work = new_work(api, settings={"photo_style": photo["id"], "style": "Soft pastel watercolour"})
-    frame = work["frames"][0]
-    assert block_of(frame, "photo_style")["applies"] is True
-    assert block_of(frame, "image_style")["applies"] is True
-    work = api.patch(f"/api/studio/works/{work['id']}", json={"settings": {"photo_style": None, "style": ""}}).json()
-    assert block_of(work["frames"][0], "photo_style")["reason"] == "no_photo_style"
-    assert block_of(work["frames"][0], "image_style")["reason"] == "no_style"
+    assert work["settings"]["photo_style"] == photo["id"] and "style" not in work["settings"]
+    assert "photo_style" in sent_blocks(work["frames"][0])
+    work = api.patch(f"/api/studio/works/{work['id']}", json={"settings": {"photo_style": None}}).json()
+    assert "photo_style" not in sent_blocks(work["frames"][0])
 
 
 # ── brand kit ───────────────────────────────────────────────────────────────
@@ -272,11 +272,8 @@ def test_kit_snapshot_feeds_the_blocks(api):
     work = new_work(api, kit_id=kit["id"])
     assert work["brand"]["name"] == "Bakery" and work["kit_changed"] is False
     frame = work["frames"][0]
-    assert block_of(frame, "brand_colors")["applies"] is True
-    assert block_of(frame, "tone_of_voice")["applies"] is True
-    assert block_of(frame, "logo")["reason"] == "no_logo"
-    assert block_of(frame, "brand_fonts")["reason"] == "no_fonts"
-    assert block_of(frame, "identity_assets")["reason"] == "no_elements"
+    sent = sent_blocks(frame)
+    assert "brand_colors" in sent and "tone_of_voice" in sent and "logo" not in sent
     assert frame["effective"]["references"] == [ref["file_id"]]       # kit references join in
 
     work = api.patch(f"/api/studio/works/{work['id']}", json={"settings": {"kit_references": False}}).json()
@@ -285,10 +282,10 @@ def test_kit_snapshot_feeds_the_blocks(api):
     kits.add_image_asset(kit["id"], "logo", png((0, 0, 0)), filename="logo.png")
     work = api.get(f"/api/studio/works/{work['id']}").json()
     assert work["kit_changed"] is True
-    assert block_of(work["frames"][0], "logo")["reason"] == "no_logo"   # the copy is not changed by itself
+    assert "logo" not in sent_blocks(work["frames"][0])               # the copy is not changed by itself
     work = api.post(f"/api/studio/works/{work['id']}/refresh-brand").json()
     assert work["kit_changed"] is False
-    assert block_of(work["frames"][0], "logo")["applies"] is True
+    assert "logo" in sent_blocks(work["frames"][0])
 
     plain = new_work(api)
     r = api.post(f"/api/studio/works/{plain['id']}/refresh-brand")
@@ -486,15 +483,12 @@ def test_prompt_files_are_sound(database):
 def full_facts() -> blocks.Facts:
     brand = {
         "name": "Bakery", "tone": "Warm", "colors": [{"hex": "#AA5500", "label": "crust"}, {"hex": "#FFFFFF"}],
-        "fonts": [{"category": "serif"}, {"category": "serif"}, {"category": "mono"}],
-        "logos": [{"file_id": 1, "name": "logo"}], "elements": [{"kind": "frame", "file_id": 2, "name": "Ribbon"}],
+        "logos": [{"file_id": 1, "name": "logo"}],
     }
     return blocks.Facts(
-        text_mode="model", words=[{"role": "headline", "text": "Fresh"}, {"role": "body", "text": "Daily"}],
         brand=brand, references=2, attachments=1,
         subjects=[{"name": "Loaf", "kind": "product", "description": "Round  rye loaf"}],
-        style="Watercolour", photo_style="35mm film", position=2, frame_count=4, size=(1080, 1350),
-        variant=3, feedback="Less blue", language="uk",
+        photo_style="35mm film", size=(1080, 1350), variant=3, feedback="Less blue",
     )
 
 
@@ -507,44 +501,21 @@ def test_every_block_gets_all_its_values(database):
     assert len(texts) == len(blocks.CODES)
     joined = "\n".join(texts)
     assert "{{" not in joined
-    for piece in ("1080", "#AA5500 (crust)", "Warm", "Loaf [product]: Round rye loaf", "Watercolour",
-                  "35mm film", "[headline]\nFresh", "Less blue", "Ukrainian", "frame: Ribbon"):
+    for piece in ("1080", "#AA5500 (crust)", "Warm", "Loaf [product]: Round rye loaf", "35mm film", "Less blue"):
         assert piece in joined, piece
 
 
-def reasons(f: blocks.Facts) -> dict:
-    return {b["code"]: b["reason"] for b in blocks.catalog({}, f)}
-
-
-def test_block_reasons():
-    empty = reasons(blocks.Facts())
-    assert empty == {
-        "output_size": "no_size", "language": "text_not_drawn", "brand_colors": "no_brand",
-        "brand_fonts": "no_brand", "tone_of_voice": "no_brand", "logo": "no_brand",
-        "project_references": "no_references", "task_attachments": "no_attachments", "subjects": "no_subjects",
-        "identity_assets": "no_brand", "image_style": "no_style", "photo_style": "no_photo_style",
-        "slide_position": "single_frame", "slide_text": "no_overlay", "draw_text": "text_not_drawn",
-        "no_lettering": None, "quality": None, "variant_diversity": "first_version", "feedback": "no_feedback",
-    }
-    bare_brand = reasons(blocks.Facts(brand={"name": "x"}, large=True, text_mode="overlay", frame_count=3))
-    assert bare_brand["output_size"] == "large_size"
-    assert bare_brand["brand_colors"] == "no_colors" and bare_brand["brand_fonts"] == "no_fonts"
-    assert bare_brand["tone_of_voice"] == "no_tone" and bare_brand["logo"] == "no_logo"
-    assert bare_brand["identity_assets"] == "no_elements" and bare_brand["slide_text"] == "no_words"
-    assert bare_brand["slide_position"] is None
-
-    full = reasons(full_facts())
-    assert full["slide_position"] == "text_drawn" and full["no_lettering"] == "text_drawn"
-    assert all(full[c] is None for c in blocks.CODES if c not in ("slide_position", "no_lettering", "slide_text"))
-
-    # Off by default, or turned off: not sent even when it applies.
-    on = blocks.active({"quality": False}, full_facts())
-    assert "quality" not in on and "language" not in on and "draw_text" in on
-    assert blocks.active({"language": True}, full_facts())[1] == "language"
+def test_blocks_go_only_when_the_frame_has_their_data():
+    assert blocks.active(blocks.Facts()) == []
+    assert blocks.active(full_facts()) == list(blocks.CODES)
+    # A brand without colours, tone or logo sends none of them; 2K keeps the model's own size.
+    bare = blocks.active(blocks.Facts(brand={"name": "x"}, size=(1080, 1350), large=True))
+    assert bare == []
+    assert blocks.active(blocks.Facts(size=(1080, 1350), variant=2)) == ["output_size", "variant_diversity"]
 
 
 def test_subjects_feed_the_block(api):
     loaf = subjects.create_subject("Loaf", kind="product", description="Round rye loaf")
     subjects.add_photo_upload(loaf["id"], png(), filename="loaf.png")
     work = new_work(api, settings={"subjects": [loaf["id"]]})
-    assert block_of(work["frames"][0], "subjects")["applies"] is True
+    assert "subjects" in sent_blocks(work["frames"][0])

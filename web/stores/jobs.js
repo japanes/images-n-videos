@@ -7,7 +7,7 @@ import { defineStore } from 'pinia'
 const ACTIVE = new Set(['queued', 'running'])
 
 export const useJobsStore = defineStore('jobs', {
-  state: () => ({ active: [], paused: null, loaded: false }),
+  state: () => ({ active: [], loaded: false }),
   getters: {
     running: (s) => s.active.filter((j) => j.status === 'running'),
     count: (s) => s.active.length,
@@ -18,7 +18,6 @@ export const useJobsStore = defineStore('jobs', {
       try {
         const res = await useApi().get('/api/jobs', { active: true })
         this.active = res.items
-        this.paused = res.paused || null
       } finally {
         this.loaded = true
       }
@@ -39,7 +38,6 @@ export const useJobsStore = defineStore('jobs', {
         const j = this.active.find((x) => x.id === p.id)
         if (j) { j.progress = p.progress; j.progress_note = p.note }
       })
-      on('jobs.paused', (d) => { this.paused = d.reason || null })
       on('reconnect', () => this.load())
     },
     async cancel(id) {

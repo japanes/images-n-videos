@@ -12,11 +12,31 @@ export const NAV_SECTIONS = [
   {
     key: 'manage',
     items: [
-      { to: '/spend', icon: 'spend', labelKey: 'nav.spend' },
-      { to: '/jobs', icon: 'jobs', labelKey: 'nav.jobs' },
-      { to: '/connection', icon: 'key', labelKey: 'nav.connection' },
-      { to: '/models', icon: 'models', labelKey: 'nav.models' },
       { to: '/settings', icon: 'settings', labelKey: 'nav.settings' },
     ],
   },
 ]
+
+// Tabs of the Settings screen; the label is `settings.tabs.<key>`.
+export const SETTINGS_TABS = [
+  { key: 'general', to: '/settings', icon: 'settings' },
+  { key: 'spend', to: '/settings/spend', icon: 'spend' },
+  { key: 'jobs', to: '/settings/jobs', icon: 'jobs' },
+  { key: 'connection', to: '/settings/connection', icon: 'key' },
+  { key: 'models', to: '/settings/models', icon: 'models' },
+]
+
+/** The Settings tab a path belongs to; "general" for /settings itself. */
+export function settingsTabKey(path) {
+  const tab = SETTINGS_TABS.find((t) => t.key !== 'general' && (path === t.to || path.startsWith(`${t.to}/`)))
+  return tab ? tab.key : 'general'
+}
+
+// Screens that used to be menu items and now are Settings tabs: old links and
+// bookmarks still open the right tab.
+export const MOVED_PATHS = {
+  '/spend': '/settings/spend',
+  '/jobs': '/settings/jobs',
+  '/connection': '/settings/connection',
+  '/models': '/settings/models',
+}

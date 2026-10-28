@@ -234,7 +234,7 @@ describe('the chat', () => {
     expect(avatarsJobRoute(1, { result_json: { chat_id: 8, message_id: 30 } })).toBe('/chat/8?message=30')
     expect(avatarsJobRoute(1, { result_json: { chat_id: 8 } })).toBe('/chat/8')
     expect(avatarsJobRoute(1, {})).toBe(null)
-    expect(avatarsSpendLink('avatar_photo', 5)).toBe('/spend?ref_type=avatar_photo&ref_id=5&period=all')
+    expect(avatarsSpendLink('avatar_photo', 5)).toBe('/settings/spend?ref_type=avatar_photo&ref_id=5&period=all')
     expect(avatarsSpendLink('avatar_photo', 0)).toBe('')
     expect(avatarsExportUrl(3)).toBe('/api/avatars/3/export')
     expect(avatarsThumb(9, 200)).toBe('/files/9?w=200')

@@ -48,7 +48,7 @@
           <p class="mt-1 text-2xl font-semibold muted">—</p>
           <p class="mt-1 text-xs muted">
             {{ t('spend.summary.noTrialDate') }}
-            <NuxtLink to="/connection" class="text-primary hover:underline">{{ t('spend.summary.setTrialDate') }}</NuxtLink>
+            <NuxtLink to="/settings/connection" class="text-primary hover:underline">{{ t('spend.summary.setTrialDate') }}</NuxtLink>
           </p>
         </template>
       </section>

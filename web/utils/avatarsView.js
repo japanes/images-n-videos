@@ -226,7 +226,7 @@ export function avatarsShotNumber(code) {
 
 /** The spend screen with the calls of one thing (an avatar, a picture, a chat message). */
 export function avatarsSpendLink(refType, id) {
-  return refType && id ? `/spend?ref_type=${refType}&ref_id=${id}&period=all` : ''
+  return refType && id ? `/settings/spend?ref_type=${refType}&ref_id=${id}&period=all` : ''
 }
 
 /** The card opens on the step the avatar is at. */

@@ -31,8 +31,8 @@ const notices = computed(() => {
     return list
   }
   if (meta.stub) list.push({ key: 'stub', tone: 'info', text: t('shell.stubMode') })
-  if (!meta.hasKey && !meta.stub && route.path !== '/connection') {
-    list.push({ key: 'nokey', tone: 'warn', text: t('shell.noKey'), to: hasPage('/connection') ? '/connection' : null, action: t('shell.connect') })
+  if (!meta.hasKey && !meta.stub && route.path !== '/settings/connection') {
+    list.push({ key: 'nokey', tone: 'warn', text: t('shell.noKey'), to: hasPage('/settings/connection') ? '/settings/connection' : null, action: t('shell.connect') })
   }
   return list
 })

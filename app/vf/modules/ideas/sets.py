@@ -116,7 +116,7 @@ def view(row: dict) -> dict:
         "draw_error_code": options.get("draw_error_code"), "draw_error": options.get("draw_error"),
         "cost_usd": round(float(row.get("cost_usd") or 0), 6), "model_id": row.get("model_id"),
         "prompt": {"code": C.PROMPT_IDEAS, "version": row.get("prompt_version")} if row.get("prompt_version") else None,
-        "spend_link": f"/spend?ref_type={C.REF_SET}&ref_id={row['id']}&period=all",
+        "spend_link": f"/settings/spend?ref_type={C.REF_SET}&ref_id={row['id']}&period=all",
         "created_at": row["created_at"], "updated_at": row["updated_at"],
     }
 

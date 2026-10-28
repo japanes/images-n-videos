@@ -34,7 +34,7 @@
 
       <p class="rounded-button bg-slate-50 px-3 py-2 text-xs muted dark:bg-slate-900">
         {{ t('spend.settings.trialDateHint') }}
-        <NuxtLink to="/connection" class="text-primary hover:underline" @click="$emit('close')">{{ t('spend.summary.setTrialDate') }}</NuxtLink>
+        <NuxtLink to="/settings/connection" class="text-primary hover:underline" @click="$emit('close')">{{ t('spend.summary.setTrialDate') }}</NuxtLink>
       </p>
       <p v-if="saveError" class="text-sm text-rose-600 dark:text-rose-400">{{ saveError }}</p>
     </form>

@@ -1,9 +1,8 @@
 <template>
-  <div class="page space-y-4">
+  <div class="space-y-4">
     <header class="flex flex-wrap items-start gap-3">
       <div class="min-w-0 flex-1">
-        <h1 class="page-title">{{ t('jobsPage.title') }}</h1>
-        <p class="mt-1 text-sm muted">{{ t('jobsPage.subtitle') }}</p>
+        <p class="text-sm muted">{{ t('jobsPage.subtitle') }}</p>
       </div>
       <button type="button" class="btn-secondary" :disabled="loading" @click="reloadAll">
         <AppIcon name="refresh" :size="16" />{{ t('jobsPage.refresh') }}

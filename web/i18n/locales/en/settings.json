@@ -2,6 +2,13 @@
   "settings": {
     "title": "Settings",
     "subtitle": "How the app works for you. Changes take effect after you press Save.",
+    "tabs": {
+      "general": "General",
+      "spend": "Spending",
+      "jobs": "Jobs",
+      "connection": "Google connection",
+      "models": "Models"
+    },
     "loadFailed": "Could not load the settings.",
     "language": {
       "title": "Interface language",

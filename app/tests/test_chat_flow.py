@@ -151,7 +151,7 @@ async def test_four_pictures_edit_one_animate_and_extend(runner, fake):
     assert res["status"] == "done" and len({i["file_id"] for i in res["data"]["items"]}) == 4
     assert all(i["file"]["kind"] == "image" and i["cost_usd"] > 0 for i in res["data"]["items"])
     assert res["cost_usd"] == pytest.approx(sum(i["cost_usd"] for i in res["data"]["items"]))
-    assert all(i["spend_link"] == f"/spend?ref_type=frame&ref_id={i['frame_id']}&period=all"
+    assert all(i["spend_link"] == f"/settings/spend?ref_type=frame&ref_id={i['frame_id']}&period=all"
                for i in res["data"]["items"])
     drawn = calls("frame")
     assert len(drawn) == 4 and all(("work", work_id) in refs_of(c["id"]) for c in drawn)
@@ -271,7 +271,7 @@ async def test_improve_prompt_is_journaled_and_shown(runner):
     assert call["status"] == "success" and call["cost_usd"] > 0 and call["prompt_code"] == "chat.enhance"
     assert refs_of(call["id"]) == {("chat", c["id"]), ("chat_message", req["id"])}
     assert req["cost_usd"] == pytest.approx(call["cost_usd"]) and snap["enhance_model_id"] == call["model_id"]
-    assert req["spend_link"] == f"/spend?ref_type=chat_message&ref_id={req['id']}&period=all"
+    assert req["spend_link"] == f"/settings/spend?ref_type=chat_message&ref_id={req['id']}&period=all"
     work = studio.get_work(out["result"]["refs"]["work_id"])
     assert work["settings"]["ideas_brief"] == snap["sent_text"]          # the improved text was drawn
     await finished(out["result"]["id"])
@@ -351,7 +351,7 @@ async def test_failed_start_is_a_result_with_the_reason(runner):
     out = await send.send(c["id"], {"mode": "image", "text": "[stub:blocked] A fight"})
     res = await finished(out["result"]["id"])
     assert res["status"] == "error" and res["error_code"] == "safety_blocked"
-    assert res["data"]["items"][0]["spend_link"].startswith("/spend?ref_type=frame&ref_id=")
+    assert res["data"]["items"][0]["spend_link"].startswith("/settings/spend?ref_type=frame&ref_id=")
 
 
 # ── pictures from a video and from the viewer ───────────────────────────────

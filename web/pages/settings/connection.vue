@@ -1,5 +1,5 @@
 <template>
-  <div class="page space-y-4">
+  <div class="space-y-4">
     <div v-if="!state && loading" class="flex justify-center py-16"><Spinner :size="28" /></div>
 
     <div v-else-if="!state && loadError" class="flex flex-wrap items-center gap-3 rounded-card bg-rose-50 px-4 py-3 text-sm text-rose-800 dark:bg-rose-500/10 dark:text-rose-200">
@@ -11,7 +11,7 @@
     <!-- First run: a step-by-step wizard -->
     <section v-else-if="state && showWizard" class="mx-auto max-w-3xl space-y-4">
       <header>
-        <h1 class="page-title">{{ t('connection.wizard.title') }}</h1>
+        <h2 class="text-lg font-semibold">{{ t('connection.wizard.title') }}</h2>
         <p class="mt-1 text-sm muted">{{ t('connection.wizard.subtitle') }}</p>
       </header>
       <ConnectionStepper :step="step" />
@@ -96,10 +96,7 @@
     <!-- The connection screen -->
     <template v-else-if="state">
       <header class="flex flex-wrap items-start gap-3">
-        <div class="min-w-0 flex-1">
-          <h1 class="page-title">{{ t('connection.title') }}</h1>
-          <p class="mt-1 text-sm muted">{{ t('connection.subtitle') }}</p>
-        </div>
+        <p class="min-w-0 flex-1 text-sm muted">{{ t('connection.subtitle') }}</p>
         <button type="button" class="btn-secondary" @click="openGuide('')">
           <AppIcon name="info" :size="16" />{{ t('connection.openGuide') }}
         </button>

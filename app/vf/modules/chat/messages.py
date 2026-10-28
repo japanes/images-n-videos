@@ -233,7 +233,7 @@ def _file(file_id: Any) -> dict | None:
 
 
 def _spend_link(ref_type: str, ref_id: Any) -> str | None:
-    return f"/spend?ref_type={ref_type}&ref_id={ref_id}&period=all" if ref_id else None
+    return f"/settings/spend?ref_type={ref_type}&ref_id={ref_id}&period=all" if ref_id else None
 
 
 def _item_view(kind: str, item: dict) -> dict:

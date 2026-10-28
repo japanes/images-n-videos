@@ -34,7 +34,7 @@
           <p v-if="job.progress_note" class="mt-0.5 truncate text-[11px] muted">{{ job.progress_note }}</p>
         </li>
       </ul>
-      <NuxtLink v-if="hasJobsPage" to="/jobs" class="mt-1 block rounded-button px-2 py-1.5 text-xs text-primary hover:bg-slate-50 dark:hover:bg-slate-700/50" @click="open = false">
+      <NuxtLink v-if="hasJobsPage" to="/settings/jobs" class="mt-1 block rounded-button px-2 py-1.5 text-xs text-primary hover:bg-slate-50 dark:hover:bg-slate-700/50" @click="open = false">
         {{ t('jobs.all') }}
       </NuxtLink>
     </div>
@@ -54,7 +54,7 @@ const router = useRouter()
 const open = ref(false)
 const root = ref(null)
 onClickOutside(root, () => { open.value = false })
-const hasJobsPage = computed(() => router.resolve('/jobs').name !== 'all' && router.resolve('/jobs').matched.length > 0)
+const hasJobsPage = computed(() => router.resolve('/settings/jobs').name !== 'all' && router.resolve('/settings/jobs').matched.length > 0)
 
 async function cancel(job) {
   if (!await confirm({ message: t('jobs.cancelAsk', { title: job.title || job.kind }), tone: 'danger', confirmLabel: t('jobs.cancel') })) return

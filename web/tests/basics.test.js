@@ -6,6 +6,7 @@ import { apiErrorText } from '../utils/apiErrorText.js'
 import { ApiError, toApiError } from '../composables/useApi.js'
 import { useConfirm } from '../composables/useConfirm.js'
 import { dispatchEvent, useEvents } from '../composables/useEvents.js'
+import { MOVED_PATHS, NAV_SECTIONS, SETTINGS_TABS, settingsTabKey } from '../utils/nav.js'
 
 describe('slavicPlural', () => {
   it('picks one/few/many', () => {
@@ -99,5 +100,23 @@ describe('useEvents', () => {
     scope.stop()
     dispatchEvent(JSON.stringify({ type: 'job.updated', data: { id: 2 } }))
     expect(seen).toHaveBeenCalledTimes(1)
+  })
+})
+
+describe('settings tabs', () => {
+  it('finds the tab of a path', () => {
+    expect(settingsTabKey('/settings')).toBe('general')
+    expect(settingsTabKey('/settings/spend')).toBe('spend')
+    expect(settingsTabKey('/settings/jobs')).toBe('jobs')
+    expect(settingsTabKey('/settings/connection')).toBe('connection')
+    expect(settingsTabKey('/settings/models')).toBe('models')
+    expect(settingsTabKey('/settings/spendings')).toBe('general')
+  })
+  it('sends every old menu address to its tab, not to the menu', () => {
+    const menu = NAV_SECTIONS.flatMap((s) => s.items.map((i) => i.to))
+    for (const [from, to] of Object.entries(MOVED_PATHS)) {
+      expect(menu).not.toContain(from)
+      expect(SETTINGS_TABS.map((t) => t.to)).toContain(to)
+    }
   })
 })

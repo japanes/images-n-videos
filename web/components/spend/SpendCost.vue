@@ -36,7 +36,7 @@ const text = computed(() => {
 })
 const title = computed(() => t('spend.cost.title', { n: cost.value?.calls || 0 }))
 const link = computed(() => ({
-  path: '/spend',
+  path: '/settings/spend',
   query: { period: 'all', ref_type: props.refType, ref_id: String(props.refId), stub: cost.value?.stub_calls ? '1' : undefined },
 }))
 </script>
